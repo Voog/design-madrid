@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 
         'tests': [
           'flexbox',
+          'backgroundsize',
           'svg'
         ],
 
@@ -38,22 +39,16 @@ module.exports = function(grunt) {
 
     // Concatenates the javascript source files to the javascripts folder.
     concat: {
-      build_global: {
+      build: {
         src: [
           'bower_components/jquery/dist/jquery.js',
           'bower_components/overthrow/src/overthrow-polyfill.js',
-          'javascripts/src/concat/global/*.js'
+          'javascripts/src/concat/*.js'
         ],
-        dest: 'javascripts/global-application.js'
+        dest: 'javascripts/application.js'
       },
 
-      build_blog_and_news: {
-        src: [
-          'bower_components/moment/min/moment-with-locales.js',
-          'javascripts/src/concat/blog-and-news/*.js'
-        ],
-        dest: 'javascripts/blog-and-news-application.js'
-      },
+      
     },
 
     // Minifies the javascript files.
@@ -149,8 +144,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: [
-          'javascripts/src/concat/global/*.js',
-          'javascripts/src/concat/blog-and-news/*.js',
+          'javascripts/src/concat/*.js',
         ],
         tasks: ['newer:concat', 'newer:uglify']
       },

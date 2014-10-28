@@ -4,38 +4,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // Copys the source files from the bower directory to the project's source locations.
-    bowercopy: {
-      options: {
-        srcPrefix: 'bower_components'
-      },
-
-      javascripts: {
-        options: {
-          destPrefix: 'javascripts/src/'
-        },
-        files: {
-          'concat/global/jquery.js': 'jquery/dist/jquery.js',
-          'concat/global/overthrow.js': 'overthrow/src/overthrow-polyfill.js',
-          'concat/blog-and-news/moment-with-locales.js': 'moment/min/moment-with-locales.js',
-          'modernizr.js': 'modernizr/modernizr.js'
-        }
-      },
-
-      stylesheets: {
-        options: {
-          destPrefix: 'stylesheets/scss/'
-        },
-        files: {
-          'bourbon': 'bourbon/dist'
-        }
-      }
-    },
-
     // Builds custom modernizr script.
     modernizr: {
       build: {
-        'devFile' : 'javascripts/src/modernizr.js',
+        'devFile' : 'bower_components/modernizr/modernizr.js',
         'outputFile' : 'javascripts/modernizr.js',
 
         'tests': [
@@ -68,18 +40,19 @@ module.exports = function(grunt) {
     concat: {
       build_global: {
         src: [
-          'javascripts/src/concat/global/jquery.js',
+          'bower_components/jquery/dist/jquery.js',
+          'bower_components/overthrow/src/overthrow-polyfill.js',
           'javascripts/src/concat/global/*.js'
         ],
-        dest: 'javascripts/global.js'
+        dest: 'javascripts/global-application.js'
       },
 
       build_blog_and_news: {
         src: [
-          'javascripts/src/concat/blog-and-news/moment-with-locales.js',
+          'bower_components/moment/min/moment-with-locales.js',
           'javascripts/src/concat/blog-and-news/*.js'
         ],
-        dest: 'javascripts/blog-and-news.js'
+        dest: 'javascripts/blog-and-news-application.js'
       },
     },
 
@@ -196,20 +169,19 @@ module.exports = function(grunt) {
     },
   });
 
-  grunt.loadNpmTasks('grunt-bowercopy');
-  grunt.loadNpmTasks('grunt-modernizr');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-exec');
+  grunt.loadNpmTasks('grunt-modernizr');
+  grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-svgmin');
 
-  grunt.registerTask('default', ['bowercopy', 'modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {

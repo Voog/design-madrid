@@ -1,20 +1,29 @@
-// CUSTOM MIXINS
-// Comment out the "_mixins.scss" partial in the "main.scss" file if not used.
-
-// GENERAL
-@mixin calc($property, $expression) {
-  #{$property}: -webkit-calc(#{$expression});
-  #{$property}: calc(#{$expression});
+@mixin hyphenate($boolean) {
+  @if $boolean == true {
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  } @else {
+    word-break: normal;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
 }
 
-// COLORS
-@mixin bg($color, $opacity: 1) {
-  @if $opacity == 1 {
-    background-color: rgba($color, $opacity);
-  } @else {
-    background-color: $color;
-    background-color: rgba($color, $opacity);
-  }
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+     -moz-box-sizing: $box-model;
+          box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
 }
 
 @mixin color($color, $opacity: 1) {
@@ -26,58 +35,97 @@
   }
 }
 
-@mixin fill($color, $opacity: 1) {
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+     -moz-box-shadow: $top $left $blur $color #{$inset};
+          box-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin bg($color, $opacity: 1) {
   @if $opacity == 1 {
-    fill: rgba($color, $opacity);
+    background-color: rgba($color, $opacity);
   } @else {
-    fill: $color;
-    fill: rgba($color, $opacity);
+    background-color: $color;
+    background-color: rgba($color, $opacity);
   }
 }
 
-// BORDERS
-@mixin border($side, $width, $style, $color, $opacity: 1) {
-  @if $side == 'all' {
-    @if $opacity == 1 {
-      border: $width $style rgba($color, $opacity);
-    } @else {
-      border: $width $style $color;
-      border: $width $style rgba($color, $opacity);
-    }
-  } @else {
-    @if $opacity == 1 {
-      border-#{$side}: $width $style rgba($color, $opacity);
-    } @else {
-      border-#{$side}: $width $style $color;
-      border-#{$side}: $width $style rgba($color, $opacity);
-    }
-  }
+@mixin rotate($value) {
+  -webkit-transform: rotate($value);
+     -moz-transform: rotate($value);
+          transform: rotate($value);
 }
 
-// PERSPECTIVE
-@mixin perspective($value: 1000) {
-  -webkit-perspective: $value;
-  -webkit-backface-visibility: hidden;
-}
-
-// WEBKIT INPUT BUTTON STYLE RESET
-@mixin inputiosreset {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-          border-radius: 0;
-}
-
-// OPACITY
-@mixin opacity($value){
-  $IEValue: $value*100;
-  opacity: $value;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
-  filter: alpha(opacity=$IEValue);
-}
-
-// MEDIA QUERY
-@mixin query($value: $tablet-2) {
+@mixin query($value: $tablet-1) {
   @media screen and (max-width: $value) {
     @content;
   }
 }
+
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+@mixin word-wrap($wrap: break-word) {
+  word-wrap: $wrap;
+
+  @if $wrap == break-word {
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+}
+
+// Adds keyframes blocks for supported prefixes, removing redundant prefixes in the block's content
+@mixin keyframes($name) {
+  $original-prefix-for-webkit:    $prefix-for-webkit;
+  $original-prefix-for-mozilla:   $prefix-for-mozilla;
+  $original-prefix-for-microsoft: $prefix-for-microsoft;
+  $original-prefix-for-opera:     $prefix-for-opera;
+  $original-prefix-for-spec:      $prefix-for-spec;
+
+  @if $original-prefix-for-webkit {
+    @include disable-prefix-for-all();
+    $prefix-for-webkit: true !global;
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+  @if $original-prefix-for-mozilla {
+    @include disable-prefix-for-all();
+    $prefix-for-mozilla: true !global;
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  $prefix-for-webkit:    $original-prefix-for-webkit    !global;
+  $prefix-for-mozilla:   $original-prefix-for-mozilla   !global;
+  $prefix-for-microsoft: $original-prefix-for-microsoft !global;
+  $prefix-for-opera:     $original-prefix-for-opera     !global;
+  $prefix-for-spec:      $original-prefix-for-spec      !global;
+
+  @if $original-prefix-for-spec {
+    @keyframes #{$name} {
+      @content;
+    }
+  }
+}
+
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+@mixin user-select($arg: none) {
+  @include prefixer(user-select, $arg, webkit moz ms spec);
+}
+
+

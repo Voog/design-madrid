@@ -1,0 +1,121 @@
+/* HEADER */
+// Styling rules for the site's header. These rules affect the entire site.
+.header {
+  position: relative;
+
+  .front-page & {
+    min-height: 623px;
+
+    @include query($mobile-1 - 58) {
+      min-height: 423px;
+    }
+  }
+
+  .search-open & {
+    position: static;
+  }
+}
+
+.header-top {
+  @include bg($white);
+  @include border(bottom, 1px, solid, $primary-color, 0.1);
+
+  .front-page & {
+    @include bg($white, 0.9);
+  }
+
+  .wrap {
+    @extend %clearfix;
+    @extend %wide-wrap;
+    padding: 20px;
+
+    @include query($tablet-2) {
+      .flexbox & {
+        @include display(flex);
+      }
+
+      .no-flexbox & {
+        display: table;
+        width: 100%;
+        @include box-sizing(border-box);
+      }
+    }
+  }
+}
+
+.header-left {
+  @extend %header-footer-left;
+}
+
+.header-right {
+  @extend %header-footer-right;
+  text-align: right;
+}
+
+@include query($tablet-2) {
+  .header-left,
+  .header-right {
+    float: none;
+
+    .no-flexbox & {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+
+  .header-left {
+    @include flex(1);
+    margin-right: 20px;
+  }
+
+  .header-right {
+    display: inline-block;
+  }
+}
+
+.header-title {
+  @extend %hyphenate;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  vertical-align: middle;
+  min-width: 140px;
+  min-height: 40px;
+  line-height: 1.3em;
+  font-weight: 700;
+  font-size: 30px;
+
+  a {
+    @include color($primary-color, 0.73);
+
+    &:hover {
+      @include color($primary-color, 0.5);
+    }
+  }
+}
+
+.header-bottom-inner {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+
+  a {
+    @include color($white);
+  }
+
+  .wrap {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 60px 20px;
+    height: 422px;
+  }
+
+  @include query($mobile-1 - 58) {
+    .wrap {
+      height: 222px;
+    }
+  }
+}

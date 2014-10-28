@@ -1,0 +1,94 @@
+@import 'bourbon/bourbon';
+@import '_mixins';
+@import '_variables';
+
+// MENUS
+.menu-lang-btn {
+  &:before,
+  &:after {
+    margin-top: -6px;
+    margin-left: -1px;
+  }
+}
+
+.menu-lang-btn,
+.menu-lang .menu-item .lang-flag {
+  .no-svg &:after {
+    background-image: url('../images/ico-flags-small.png');
+  }
+}
+
+.menu-lang-popover {
+  &.expanded {
+    @include border(all, 1px, solid, $primary-color);
+  }
+}
+
+// GENERAL
+
+// HEADER
+
+// TOPBAR
+
+// SIDEBAR
+
+// CONTENT
+
+/* FRONT PAGE */
+.front-page {
+  .content {
+    .background-color {
+      -ms-filter: "alpha(opacity=50)";
+    }
+  }
+}
+
+// COMMON PAGE
+
+// BLOG & ARTICLE
+.post {
+  .post-right {
+    display: inline-block;
+    vertical-align: top;
+    width: 722px;
+  }
+}
+
+// GALLERY
+
+// TABLES
+
+// SEARCH
+.search {
+  @include border(all,1px,solid,#e5e5e5);
+  .search-left {
+    line-height: 1.5;
+  }
+}
+
+// FORMS
+.content-formatted {
+  .form_field_checkbox,
+  .form_field_radio {
+    position: relative;
+    visibility: visible;
+    padding-left: 0;
+    top: 2px;
+
+    + .form_control_indicator {
+      display: none;
+    }
+  }
+}
+
+// COMMENTS
+
+// FOOTER
+
+.footer {
+  .voog-reference {
+    a {
+      @include border(all,1px,solid,#e5e5e5);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+/* FONTS */
+@include font-face('Arvo', '../assets/arvo-regular', 400);
+@include font-face('Arvo', '../assets/arvo-italic', 400, italic);
+@include font-face('Arvo', '../assets/arvo-bold', 700);
+@include font-face('Arvo', '../assets/arvo-bold-italic', 700, italic);

@@ -1,0 +1,91 @@
+/* FOOTER */
+// Styling rules for the site's footer. These rules affect the entire site.
+.footer-positioner {
+  height: 80px;
+}
+
+.footer {
+  position:absolute;
+  left:0;
+  right: 0;
+  bottom:0;
+}
+
+.footer-inner {
+  min-height: 80px;
+  @include color($white, 0.5);
+  @include bg($primary-color, 0.73);
+
+  &.dark-backrgound {
+    .content-formatted {
+      @include color($white, 0.5);
+    }
+  }
+
+  .wrap {
+    @extend %clearfix;
+    @extend %wide-wrap;
+    padding: 24px 20px 22px;
+  }
+
+  .footer-left,
+  .footer-right {
+    min-width: 188px;
+  }
+
+  .footer-left {
+    @extend %header-footer-left;
+    position: relative;
+    top: 2px;
+    margin-right: 20px;
+  }
+
+  .footer-right {
+    @extend %header-footer-right;
+    position: relative;
+    top: 4px;
+  }
+
+  .voog-reference {
+    margin-top: 30px;
+    text-align: center;
+
+    a {
+      @extend %inline-block;
+      padding: 7px 9px;
+      font-size: 10px;
+      @include color($secondary-color, 0.75);
+      line-height: 1em;
+      @include bg($white);
+      @include border(all, 1px, solid, $primary-color, 0.1);
+
+      &:hover {
+        @include color($secondary-color, 0.75);
+        @include border(all, 1px, solid, $primary-color, 0.75);
+      }
+    }
+  }
+
+  @include query($tablet-3 - 67) {
+    .footer-right {
+      float: left;
+    }
+  }
+
+  @include query($mobile-1) {
+    .footer-left,
+    .footer-right {
+      float: none;
+      text-align: center;
+    }
+
+    .footer-left {
+      margin-right: 0;
+    }
+
+    .footer-right {
+      margin-top: 5px;
+    }
+  }
+
+}

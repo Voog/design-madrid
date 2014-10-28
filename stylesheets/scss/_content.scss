@@ -1,0 +1,209 @@
+/* CONTENT */
+// Styling rules for the site's main content area. These rules affect the entire site.
+.content {
+  @include bg($white);
+
+  .wrap {
+    padding: 60px 20px 20px;
+
+    &.with-submenu {
+      padding: 20px;
+    }
+
+    .content-page & {
+      max-width: 600px;
+    }
+  }
+}
+
+.main-feature,
+.summary {
+  .wrap {
+    @extend %clearfix;
+    padding: 0 20px;
+  }
+
+  @include query($mobile-1 - 58) {
+    .wrap {
+      padding: 0;
+    }
+  }
+}
+
+.main-feature {
+  .wrap {
+    .flexbox & {
+      @include display(flex);
+    }
+
+    .no-flexbox & {
+      display: table;
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+  }
+
+  .inner {
+    @include box-sizing(border-box);
+
+    &:empty {
+      display: none;
+    }
+
+    .flexbox & {
+      @include flex(1);
+      @include align-self(center);
+      min-width: 50%;
+    }
+
+    .no-flexbox & {
+      display: table-cell;
+
+      &:empty {
+        display: none;
+      }
+    }
+  }
+
+  .inner-left {
+    padding: 48px 20px;
+  }
+
+  .inner-right {
+    padding: 48px 20px 48px 50px;
+  }
+
+  @include query($mobile-1 - 58) {
+    .wrap {
+      .flexbox &,
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
+    .inner {
+      padding: 30px 20px;
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
+    .feature-left {
+      padding-bottom: 10px;
+    }
+
+    .feature-right {
+      padding-top: 10px;
+    }
+  }
+}
+
+%front-page-content-left {
+  max-width: 468px;
+  padding: 48px 20px;
+}
+
+%front-page-content-right {
+ max-width: 442px;
+ padding: 48px 0 48px 50px;
+}
+
+.summary {
+  @include bg($secondary-color);
+
+  .wrap {
+    .flexbox & {
+      @include display(flex);
+    }
+
+    .no-flexbox & {
+      display: table;
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+  }
+
+  .inner {
+    .flexbox & {
+      @include flex(1);
+    }
+
+    .no-flexbox & {
+      display: table-cell;
+      width: 50%;
+    }
+  }
+
+  .inner-left {
+    padding: 43px 50px 43px 20px;
+  }
+
+  .inner-right {
+    padding: 43px 20px 43px 50px;
+
+    &:first-child {
+      padding: 43px 20px;
+    }
+  }
+
+  .blog {
+    max-width: 428px;
+    @include border(right, 2px, solid, $white);
+  }
+
+  .quotation {
+    position: relative;
+    font-size: 24px;
+    @include border(left, 2px, solid, $white);
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  @include query($mobile-1 - 58) {
+    .wrap {
+      .flexbox &,
+      .no-flexbox & {
+        display: block;
+      }
+    }
+
+    .inner {
+      padding: 30px 20px;
+
+      .no-flexbox & {
+        display: block;
+        width: auto;
+      }
+    }
+
+    .blog {
+      max-width: none;
+      border-right: none;
+      @include border(bottom, 4px, solid, $white);
+    }
+
+    .quotation {
+      border-left: 0;
+    }
+  }
+}
+
+.contacts {
+  .wrap {
+    padding: 60px 20px;
+  }
+
+  @include query($tablet-2) {
+    .wrap {
+      padding: 30px 20px;
+    }
+  }
+}
+
+.map {
+  .embed-container {
+    min-height: 270px;
+  }
+}

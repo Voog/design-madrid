@@ -1,0 +1,321 @@
+/* SEARCH */
+// Styling rules for the site's search box. These rules affect the entire site.
+.search,
+.search-form {
+  @extend %clearfix;
+}
+
+.search {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 18px;
+  height: $search-height-1;
+  line-height: 1em;
+  @include bg($grey);
+
+  @include query($tablet-2) {
+    top: 4px;
+  }
+
+  @include query($mobile-1) {
+    position: static;
+    display: none;
+
+    &.active {
+      display: block;
+      height: 0;
+    }
+  }
+}
+
+.search-form {
+  position: relative;
+  z-index: 20;
+  @include bg($white);
+
+  .search-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @include query($mobile-1) {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+
+    &, &.active {
+      max-width: 100%;
+      margin: 0 auto;
+      border: none;
+    }
+  }
+}
+
+.search-input,
+.search-submit {
+  &:focus {
+    outline: none;
+  }
+}
+
+.search-btn {
+  position: relative;
+  top: 4px;
+  right: -5px;
+  @extend %button;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: $search-height-1;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  svg {
+    vertical-align: middle;
+    fill: rgba($primary-color, 0.73);
+
+    .search-open-btn &,
+    .search-close-btn & {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-submit & {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .no-svg & {
+    background-image: url("../images/ico-search.png");
+  }
+
+  .not-empty & {
+    display: block;
+  }
+}
+
+.search-input {
+  vertical-align: middle;
+  width: 140px;
+  height: $search-height-1;
+  margin: 0;
+  padding-left: 9px;
+  padding-right: 30px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1em;
+  @include color($primary-color, 0.73);
+  @include bg($grey);
+  @include box-sizing(border-box);
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+
+  // Removes the "clear input" buttons
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration,
+  &::-ms-clear {
+    display: none;
+  }
+
+  /* Reset HTML5 Search Input in Webkit */
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-decoration,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+
+  &::-webkit-input-placeholder {
+    padding: 2px 0 4px 0;
+    line-height: 1em;
+  }
+
+  @include query($mobile-1) {
+    width: 100%;
+    height: $search-height-2;
+    font-size: 20px;
+    padding: 0 42px 0 20px;
+    @include bg($primary-color, 0.1);
+  }
+}
+
+.search-submit {
+  @include query($mobile-1) {
+    width: 45px;
+    height: $search-height-2;
+  }
+}
+
+.search-open-btn,
+.search-close-btn {
+  display: none;
+
+  svg {
+    fill: rgba($secondary-color, 1);
+  }
+}
+
+.search-open-btn {
+  @include query($mobile-1) {
+    display: inline-block;
+    vertical-align: middle;
+
+    &.open {
+      display: none;
+    }
+  }
+}
+
+.search-close-btn {
+  @include query($mobile-1) {
+    display: none;
+
+    &.open {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.voog-search-modal {
+  position: absolute;
+  top: 37px;
+  left: -217px;
+  right: -41px;
+  z-index: 999;
+
+  @include query($tablet-1) {
+    left: -223px;
+    right: -35px;
+  }
+
+  @include query($mobile-1) {
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include bg($white);
+
+    .editmode & {
+      bottom: 40px;
+    }
+  }
+}
+
+.voog-search-modal-inner {
+  display: none;
+  max-height: 760px;
+  padding: 20px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5em;
+  @include bg($white);
+  box-shadow: 0 0 30px rgba($primary-color, 0.3);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &.search-results-active {
+    display: block;
+  }
+
+  &.no-content.search-results-active {
+    text-align: center;
+  }
+
+  @include query($mobile-1) {
+    display: block;
+    @include box-sizing(border-box);
+    height: 100%;
+    max-height: none;
+    box-shadow: none;
+
+    &.no-content.search-results-active {
+      display: table;
+      table-layout: fixed;
+      padding: 0;
+
+      &,
+      .voog-search-modal-results {
+        width: 100%;
+      }
+
+      .voog-search-modal-results {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @media screen and (min-width: $mobile-1) and (max-height: 900px) {
+    max-height: 660px;
+  }
+
+  @media screen and (min-width: $mobile-1) and (max-height: 800px) {
+    max-height: 560px;
+  }
+
+  @media screen and (min-width: $mobile-1) and (max-height: 700px) {
+    max-height: 460px;
+  }
+
+  @media screen and (min-width: $mobile-1) and (max-height: 600px) {
+    max-height: 360px;
+  }
+
+  @media screen and (min-width: $mobile-1) and (max-height: 500px) {
+    max-height: 260px;
+  }
+
+  @media screen and (min-width: $mobile-1) and (max-height: 400px) {
+    max-height: 160px;
+  }
+}
+
+.voog-search-modal-result {
+  margin-top: 18px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      @include color($primary-color, 0.73);
+
+      &:hover {
+        @include color($primary-color, 0.5);
+      }
+    }
+  }
+
+  p {
+    margin: 5px 0 0;
+    font-size: 14px;
+  }
+
+  em {
+    font-style: normal;
+    @include bg($yellow, 0.5);
+    border-radius: 2px;
+    padding: 0 0.2em;
+  }
+}

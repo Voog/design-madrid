@@ -1,0 +1,147 @@
+/* BLOG & BLOG ARTICLE */
+.post-title {
+  &, & a {
+    @extend %hyphenate;
+  }
+}
+
+// Style rules for the front page blog listing only.
+.front-page {
+  .blog-title {
+    margin: 0;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    @include color($white, 0.5);
+  }
+
+  .post {
+    margin-top: 13px;
+
+    &:first-of-type {
+      margin-top: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 7px;
+    }
+  }
+
+  .post-title {
+    display: inline;
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    @include border(bottom, 1px, solid, $white);
+
+    &:hover {
+      border: none;
+    }
+
+    &, & a {
+      @include color($white);
+    }
+  }
+
+  .post-date {
+    display: block;
+    line-height: 1em;
+    font-size: 14px;
+    @include color($white, 0.5);
+  }
+}
+
+// Style rules for the blog listing & single article view.
+.blog-page,
+.post-page {
+  .post {
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .post-header {
+    text-align: center;
+  }
+
+  .post-title {
+    display: inline;
+    min-width: 100px;
+    margin: 0;
+    padding-bottom: 2px;
+    line-height: 1.2em;
+    @include border(bottom, solid, 1px, $primary-color, 0.23);
+    box-shadow: inset 0 -3px 0 rgba($primary-color, 0.23);
+
+    .editmode & {
+      display: inline-block;
+      min-width: 300px;
+    }
+
+    &, a {
+      font-size: 36px;
+    }
+
+    a {
+      @include color($primary-color, 0.73);
+
+      &:hover {
+        @include color($primary-color, 0.5);
+      }
+    }
+  }
+
+  .post-date {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 1.3em;
+    font-size: 18px;
+    @include color($primary-color, 0.1);
+  }
+
+  .post-content {
+    margin: 32px auto 0;
+  }
+
+  @include query($mobile-1) {
+    .post-title {
+      &, a {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+// Style rules for the blog listing view only
+.blog-page {
+  .post-add-btn {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .post {
+    padding-top: 50px;
+
+    &:last-child {
+      .post-content {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .post-content {
+    max-width: 600px;
+    padding-bottom: 50px;
+    @include border(bottom, 1px, solid, $primary-color, 0.1);
+  }
+}
+
+// Style rules for the blog single article view only
+.post-page {
+  .post-body {
+    margin-top: 47px;
+  }
+}
+
+

@@ -11,3 +11,5 @@ node_modules/
 .sass-cache
 
 sftp-config.json
+
+TODO.txt

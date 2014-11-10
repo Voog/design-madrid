@@ -1111,6 +1111,24 @@ a:hover {
 .post-tags {
   padding-top: 20px;
 }
+.post-tags ul {
+  margin: 0;
+  padding: 0;
+}
+.post-tags ul li {
+  display: inline-block;
+}
+.post-tags ul a {
+  display: inline-block;
+  background: #818181;
+  color: white;
+  font-size: 12px;
+  line-height: 1.1;
+  padding: 3px 10px;
+  -webkit-border-radius: 19px;
+  -moz-border-radius: 19px;
+  border-radius: 19px;
+}
 
 .post-bottom {
   padding: 45px 0 0;

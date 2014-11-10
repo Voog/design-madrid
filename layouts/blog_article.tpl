@@ -22,9 +22,17 @@
               <div class="post-excerpt cfx formatted">{% editable article.excerpt %}</div>
               <div class="post-body cfx formatted">{% editable article.body %}</div>
 
-              {% if editmode %}
+              {% if editmode or article.tags.size > 0 %}
               <div class="post-tags">
-              {% editable article.tags %}
+                {% if editmode %}
+                  {% editable article.tags %}
+                {% else %}
+                  <ul>
+                  {% for tag in article.tags %}
+                    <li><a href="{{ page.url }}/tagged/{{ tag.path }}" class="post-tag">{{ tag.name }}</a></li>
+                  {% endfor %}
+                  </ul>
+                {% endif %}
               </div>
               {% endif %}
             </section>

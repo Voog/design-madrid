@@ -36,6 +36,55 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/article-image.tpl",
+      "layout_name": "article-image",
+      "title": "article-image"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/bg-picker.tpl",
+      "layout_name": "bg-picker",
+      "title": "bg-picker"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/comment-form.tpl",
+      "layout_name": "comment-form",
+      "title": "comment-form"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/comments.tpl",
+      "layout_name": "comments",
+      "title": "comments"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/edicy-tools-variables.tpl",
+      "layout_name": "edicy-tools-variables",
+      "title": "edicy-tools-variables"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/footer.tpl",
+      "layout_name": "footer",
+      "title": "footer"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/header.tpl",
+      "layout_name": "header",
+      "title": "header"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/html-head.tpl",
       "layout_name": "html-head",
       "title": "html-head"
@@ -43,12 +92,133 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/javascripts.tpl",
+      "layout_name": "javascripts",
+      "title": "javascripts"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/langmenu-mobile.tpl",
+      "layout_name": "langmenu-mobile",
+      "title": "langmenu-mobile"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/langmenu.tpl",
+      "layout_name": "langmenu",
+      "title": "langmenu"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/mainmenu.tpl",
+      "layout_name": "mainmenu",
+      "title": "mainmenu"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/open-graph.tpl",
       "layout_name": "open-graph",
       "title": "open-graph"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/search-svg.tpl",
+      "layout_name": "search-svg",
+      "title": "search-svg"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/search.tpl",
+      "layout_name": "search",
+      "title": "search"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/submenu.tpl",
+      "layout_name": "submenu",
+      "title": "submenu"
     }
   ],
   "assets": [
+    {
+      "content_type": "text/unknown",
+      "file": "assets/.DS_Store",
+      "kind": "assets",
+      "filename": ".DS_Store"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-flags.svg",
+      "kind": "assets",
+      "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "file": "assets/loader.svg",
+      "kind": "assets",
+      "filename": "loader.svg"
+    },
+    {
+      "content_type": "application/x-wais-source",
+      "file": "javascripts/src",
+      "kind": "javascripts",
+      "filename": "src"
+    },
+    {
+      "content_type": "text/unknown",
+      "file": "assets/.DS_Store",
+      "kind": "assets",
+      "filename": ".DS_Store"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/check.png",
+      "kind": "images",
+      "filename": "check.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/check_small.png",
+      "kind": "images",
+      "filename": "check_small.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/close.png",
+      "kind": "images",
+      "filename": "close.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ico-flags.png",
+      "kind": "images",
+      "filename": "ico-flags.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/ico-search-black.png",
+      "kind": "images",
+      "filename": "ico-search-black.png"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/new_article.png",
+      "kind": "images",
+      "filename": "new_article.png"
+    },
+    {
+      "content_type": "application/x-wais-source",
+      "file": "javascripts/src",
+      "kind": "javascripts",
+      "filename": "src"
+    },
     {
       "content_type": "application/javascript",
       "file": "javascripts/application.js",

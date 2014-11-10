@@ -11,15 +11,17 @@ module.exports = function(grunt) {
         'outputFile' : 'javascripts/modernizr.js',
 
         'tests': [
-          'flexbox',
           'backgroundsize',
-          'svg'
+          'flexbox',
+          'svg',
+          'boxshadow',
+          'forms_placeholder',
+          'touch'
         ],
 
         'uglify' : false
       }
     },
-
     // Copys the standalone (not concatenated) javascript source files to the javascripts folder.
     copy: {
       javascripts: {
@@ -46,7 +48,7 @@ module.exports = function(grunt) {
           'javascripts/src/concat/*.js'
         ],
         dest: 'javascripts/application.js'
-      },
+      }
 
       
     },
@@ -137,14 +139,14 @@ module.exports = function(grunt) {
           dest: 'assets/',
           ext: '.svg'
         }]
-      },
+      }
     },
 
     // Watches the project for changes and recompiles the output files.
     watch: {
       js: {
         files: [
-          'javascripts/src/concat/*.js',
+          'javascripts/src/concat/*.js'
         ],
         tasks: ['newer:concat', 'newer:uglify']
       },
@@ -160,7 +162,7 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
-    },
+    }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');

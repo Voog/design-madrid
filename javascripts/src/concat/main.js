@@ -1,212 +1,454 @@
+
 ;(function($) {
-  var editmode = $('html').hasClass('editmode');
+    
+    
+    $(function() {
+        
+        (new Headroom($('.header').get(0), {
+            offset : 200,
+            tolerance : 20
+        })).init();
+        
+        
+        $('.js-popup-menu').jsPopupMenu();
+        
+        $('.js-main-menu-toggler').click(function(e) {
+            if (e) { e.preventDefault(); }
+            
+            $('body').addClass('main-menu-open');
+            
+            setTimeout(function() {
+                $(document).on('click.js-main-menu-toggler-click', function(event) {
+                    var c = $('.header .main-menu').get(0); 
+                    if (!$.contains(c, event.target) && event.target !== c) {
+                        $('body').removeClass('mobile-main-menu-open');
+                        if (!$('body').hasClass('front-page')) {
+                            $('body').removeClass('main-menu-open');
+                        }
+                        $(this).off('.js-main-menu-toggler-click');
+                    }
+                });
+            },0);
+        });
+        
+        $('.js-mobile-main-menu-toggler').click(function(event) {
+            event.preventDefault();
+            $('body').addClass('mobile-main-menu-open');
+        });
+        
+        $('.js-mobile-main-menu-close').click(function(event) {
+            event.preventDefault();
+            $('body').removeClass('mobile-main-menu-open');
+        });
+        
+        $('.js-mobile-lang-menu-btn').click(function(event) {
+            event.preventDefault();
+            $('body').removeClass('mobile-main-menu-open').addClass('mobile-lang-menu-open');
+        });
+        
+        $('.js-mobile-lang-menu-close').click(function(event) {
+            event.preventDefault();
+            $('body').removeClass('mobile-lang-menu-open').addClass('mobile-main-menu-open');
+        });
+        
+        $('.js-search-toggler').click(function(e) {
+            e.preventDefault();
+            
+            if (!$('body').hasClass('search-visible')) {
+                $('body').addClass('search-visible');
+            
+                var $c = $('.header .search-holder');
+            
+                $c.find('.search-input').get(0).focus();
+            
+                setTimeout(function() {
+                    $(document).on('click.js-search-toggler-click', function(event) {
+                        var c = $c.get(0); 
+                        if (!$.contains(c, event.target) && event.target !== c) {
+                            $('body').removeClass('search-visible');
+                            $(this).off('.js-search-toggler-click');
+                        }
+                    });
+                },0);
+            }
+            else {
+                $('body').removeClass('search-visible');
+                $(document).off('.js-search-toggler-click');
+            }
+        });
+        
+        $('.js-search-input')
+            .focus(function() { 
+                $(this).addClass('search-input-focus');
+            })
+            .blur(function() {
+                $(this).removeClass('search-input-focus');
+            });
+        
+        $('.js-search-reset').click(function(e) {
+            e.preventDefault();
+            $('.js-search-form').removeClass('not-empty').find('.search-input').val('');
+            var $c = $('.header .search-holder');
+            $c.find('.search-input').get(0).focus();
+        });
+        
+        $('.scroller-arrow').click(function(e) {
+            e.preventDefault();
+            var $main = $('.main'),
+                w = $main.width();
+                
+            $main.animate({ scrollLeft: "+=" + w + "px" });
+        });
+        
+        $(".js-autogrow").autoGrow();
 
-  // Handles mouse clicks on different buttons and sections of the web page.
-  var handleElementsClick = function() {
-    // Hides opened popups and modals if clicked on any other element.
-    $('html').click(function() {
-      if ($('.js-popover').hasClass('expanded')) {
-        $('.js-popover').removeClass('expanded');
-      }
+        if ($('html').hasClass('no-placeholder')) {
+            $('input[type="text"],textarea').each(function() {
+                if ($(this).attr('placeholder') && !$(this).val()) {
+                    $(this).val($(this).attr('placeholder'));
+                }
+                $(this).focus(function() {
+                    if ($(this).val() == $(this).attr('placeholder')) {
+                        $(this).val('');
+                    }
+                }).blur(function() {
+                    if (!$(this).val() && $(this).attr('placeholder')) {
+                        $(this).val($(this).attr('placeholder'));
+                    }
+                });
+            });
+        }
+        
+        $('.form_fields:not(.edy-fe-fields) select, .custom-select').jqSelect();
+        
+        var $form_error = $('.form_area .form_error');
+        if ($form_error.length) {
+            $(window).scrollTop($form_error.offset().top);
+        }
+        
+        if ($('body').hasClass('blog-list-page')) {
+            setBlogListHeight();
+            $(window).resize(setBlogListHeight);
+        }
+        
+        
+        
+        
+        $('html:not(.editmode) table').each(function() {
+            $(this).wrap('<div class="table-holder" />');
+        });
+        
+        
+        
+        var scrollTimeout = null,
+            isMobile = ((document.body.clientWidth || window.innerWidth) <= 600);
+            isScrolling = false,
+            oldie = window.oldie || false;
 
-      if ($('.js-search-close-btn').hasClass('open') && $('.voog-search-modal').length === 0) {
-        $('.js-search-close-btn').trigger('click');
-      }
+
+        // Stream
+        var initScrollOverride = function() {
+            if ($('html').hasClass('no-touch') && $('.blog-list-page .main').length > 0 && $.fn.mousewheel) {
+                
+                if (oldie) {
+                    $(document.body).mousewheel(handleMouseWheel);
+                } 
+                else {
+                    $(window).mousewheel(handleMouseWheel);
+                }
+                
+                
+                $('.blog-list-page .main, window').on("scroll", function(event) {
+                    event.preventDefault();
+                });
+            }
+        };
+        
+        var handleMouseWheel = function(event, delta, x, y) {
+            event.preventDefault();
+            
+            var dir, dx;
+            isScrolling = true;
+
+            
+            if (typeof x != "undefined" && typeof y  != "undefined" && !isNaN(x) && !isNaN(y)) {
+                var nx = x *-1, // reverse axis
+                    d = nx+y;
+                
+                dir = (d >> 31) + (d > 0 ? 1 : 0); // fast sign operation
+                    
+                if (navigator.appVersion && navigator.appVersion.indexOf("Mac") > -1) {
+                    dx = Math.round(Math.sqrt(x*x + y*y) * dir * 1.3);
+                    } 
+                    else {
+                        dx = Math.abs(delta) * dir;
+                    }
+            } 
+            else {
+                dir = (delta >> 31) + (delta > 0 ? 1 : 0); // fast sign operation
+                dx = Math.abs(delta) * dir;
+            }
+            if (navigator.appVersion && navigator.appVersion.indexOf("Mac") == -1) {
+                dx = dx * 30;
+            } else {
+                if (Math.abs(dx) > 100) {
+                    dx = dx / (Math.log(Math.abs(dx)/3)) ;
+                }
+            }
+            
+            $('.blog-list-page .main').scrollLeft($('.blog-list-page .main').scrollLeft() - (dx * 3));
+            $('.blog-list-page .main').addClass("is-scrolling");
+            
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(function() {
+                isScrolling = false;
+                
+                $('.blog-list-page .main').removeClass("is-scrolling");
+            }, 200);
+        }; 
+        
+        initScrollOverride();
+        
     });
-
-    // Toggles the popover main menu (visible on smalles screens).
-    $('.js-menu-btn').click(function(event) {
-      event.stopPropagation();
-      $(this).toggleClass('open');
-      $('.js-menu-main').toggleClass('expanded');
-
-      if ($('.js-search-close-btn').hasClass('open')) {
-        $('.js-search-close-btn').trigger('click');
-      }
-    });
-
-    // Toggles the popover language menu.
-    $('.js-menu-lang-btn').click(function(event) {
-      event.stopPropagation();
-      $('.js-menu-lang-popover').toggleClass('expanded');
-    });
-
-    // Opens the search modal.
-    $('.js-search-open-btn').click(function(event) {
-      event.stopPropagation();
-      if ($('.js-menu-main').hasClass('expanded')) {
-        $('.js-menu-main').removeClass('expanded');
-        $('.js-menu-btn').removeClass('open');
-      }
-
-      $(this).addClass('open');
-      $('body').addClass('search-open');
-      $('.js-search-close-btn').addClass('open');
-      $('.js-search').addClass('active');
-      $('.js-search-inner').css({'margin-top': '-25px'});
-      $('.js-search-input').val('').focus();
-    });
-
-    // Closes the search modal.
-    $('.js-search-close-btn').click(function(event) {
-      $(this).removeClass('open');
-      $('body').removeClass('search-open');
-      $('.js-search-open-btn').removeClass('open');
-      $('.js-search').removeClass('active');
-    });
-
-    // Prevents search modal closing on click
-    $('.js-search').click(function(event) {
-      event.stopPropagation();
-    });
-  };
-
-  // Switches the search input and menu button location in DOM for mobile view.
-  var handleSearchPositionChange = function() {
-    var windowWidth = $(window).width(),
-        search = $('.js-search'),
-        menuBtn = $('.js-menu-btn');
-
-    if (windowWidth <= 640) {
-      if (search.next().is(menuBtn)) {
-        search.before(menuBtn);
-      }
-    } else {
-      if (search.prev().is(menuBtn)) {
-        search.after(menuBtn);
-      }
-    }
-  };
-
-  // Closes the soft keyboards on mobile devices on search submit.
-  var handleSearchSubmit = function() {
-    $('.js-search-submit').on('click', function() {
-      $('.js-search-input').parent().blur();
-    });
-  };
-
-  // Reduces opacity of the gallery images that are not under the cursor.
-  var handleGalleryHover = function() {
-    $('.edys-gallery').mouseover(function() {
-      $(this).find('.edys-gallery-item').addClass('inactive');
-    });
-
-    $('.edys-gallery').mouseout(function() {
-      $(this).find('.edys-gallery-item').removeClass('inactive');
-    });
-  };
-
-  // scrolls to the comment-form if comment submit failed (to show the error messages to the user)
-  var focusFormWithErrors = function() {
-    $(document).ready(function() {
-      if ($('.comment-form').hasClass('form_with_errors')) {
-        $('html, body').scrollTop($('.comment-form').offset().top);
-      } else if ($('form').find('.form_error, .form_notice').length > 0) {
-        $('html, body').scrollTop($('.form_error, .form_notice').closest('form').offset().top);
-      }
-    });
-  };
-
-  // TODO: Remove if Edicy is going to wrap table with the container
-  var wrapTables = function() {
-    if (!editmode) {
-      $.each($('.content-formatted:not(".js-custom-content-formatted") table'), function() {
-          $(this).wrap('<div class="table-container overthrow"></div>');
-      });
-    }
-  };
-
-  // Sets the position of the footer to the bottom of the page
-  var handleFooterPositioning = function() {
-    $(document).ready(function() {
-      footerHeight = $('.js-footer').height();
-      $('.js-footer-positioner').css({'height' : footerHeight});
-    });
-  };
-
-  var handleFooterContentEdit = function() {
-    $('.js-footer').find('.text_partial').keydown(function() {
-      handleFooterPositioning();
-    });
-  };
-
-  // Checks the presence of the table scrollbar.
-  var checkScrollBar = function() {
-    jQuery.fn.hasScrollBar = function(direction) {
-      if (direction == 'vertical') {
-        return this.get(0).scrollHeight > this.innerHeight();
-      } else if (direction == 'horizontal') {
-        return this.get(0).scrollWidth > this.innerWidth();
-      }
-      return false;
-    }
-  };
-
-  // Adds horizontal scroll to tables that don't fit into the content area
-  var handleTableHorizontalScrolling = function() {
-    $.each($('.table-container'), function() {
-      if ($(this).hasScrollBar('horizontal') === true) {
-        $(this).addClass('horizontal-scroll');
-      } else {
-        $(this).removeClass('horizontal-scroll');
-      }
-    });
-  };
-
-  // Initiates the table horisontal scroll function when window is resized
-  var handleWindowResize = function() {
-    $(window).resize(function() {
-      handleTableHorizontalScrolling();
-      handleFooterPositioning();
-      handleSearchPositionChange();
-    });
-  };
-
-  // Initiations
-  var initBlogPage = function() {
-    // ADD BLOG LISTING layout specific FUNCTIONS HERE
-  };
-
-  var initArticlePage = function() {
-    // ADD SINGLE POST layout specific FUNCTIONS HERE
-  };
-
-  var initCommonPage = function() {
-    // ADD COMMON PAGE SPECIFIC FUNCTIONS HER
-  };
-
-  var initFrontPage = function() {
-    // ADD COMMON PAGE SPECIFIC FUNCTIONS HER
-  };
-
-  var init = function() {
-    // ADD SITE WIDE FUNCTIONS HERE
-    handleElementsClick();
-    handleFooterContentEdit();
-    handleSearchPositionChange();
-    handleSearchSubmit();
-    handleGalleryHover();
-    focusFormWithErrors();
-    handleWindowResize();
-    wrapTables();
-
-    if ($('.table-container').length > 0) {
-      checkScrollBar();
-      handleTableHorizontalScrolling();
-    }
-
-    $(document).ready(function() {
-      handleFooterPositioning();
-    });
-  };
-
-  // Enables the usage of the initiations outside this file
-  window.site = $.extend(window.site || {}, {
-    initBlogPage: initBlogPage,
-    initArticlePage: initArticlePage,
-    initCommonPage: initCommonPage,
-    initFrontPage: initFrontPage
-  });
-
-  init();
+    
+    var setBlogListHeight = function() {
+        $('.main-inner').height($(window).height()-parseInt($('.main-inner').css('padding-top'),10)-parseInt($('.main-inner').css('padding-bottom'),10));
+    };
+    
+ 
+    
 })(jQuery);
+
+
+(function($) {
+    $.fn.extend({
+        jsPopupMenu: function(options) {
+            this.each(function() {
+                var $menu = $(this),
+                    $btn = $menu.find('.js-popup-menu-btn'),
+                    $pop = $menu.find('.js-popup-menu-popover');
+
+                $pop.hide();
+                $btn.on('click', function(event) {
+                    event.preventDefault();
+                    if ($pop.is(':hidden')) {
+                        $pop.show();
+                        $btn.addClass('open');
+
+                        setTimeout(function() {
+                            $(document).on('click.js-popup-menu-click', function() {
+                                $pop.hide();
+                                $btn.removeClass('open');
+                                $(this).off('.js-popup-menu-click');
+                            });
+                        },0);
+
+                    }
+                });
+            });
+            return this;
+        }
+    });
+
+})(jQuery);
+
+(function($) {
+    $.jquerySelect = function() {
+
+        return {
+            init: function($elem, settings) {
+                $elem.wrap('<div class="jq-select" />');
+
+                var $holder = $elem.parent(),
+                    $arrow = $('<div class="jq-select-arrow"></div>'),
+                    $content = $('<div class="jq-select-content" />'),
+                    $inner = $('<div class="jq-select-inner" />').text($elem.children(':selected').text());
+
+                $content.append($inner);
+                $holder.append($content);
+                $holder.append($arrow);
+
+                if ($elem.hasClass('form_field_size_large')) {
+                    $elem.removeClass('form_field_size_large');
+                    $holder.addClass('form_field_size_large');
+                }
+
+                else if ($elem.hasClass('form_field_size_medium')) {
+                    $elem.removeClass('form_field_size_medium');
+                    $holder.addClass('form_field_size_medium');
+                }
+
+                else if ($elem.hasClass('form_field_size_small')) {
+                    $elem.removeClass('form_field_size_small');
+                    $holder.addClass('form_field_size_small');
+                }
+                else {
+                    $holder.addClass('form_field_size_small');
+                }
+
+                $elem.change($.proxy(function() {
+                    $inner.text($elem.children(':selected').text());
+                }, this));
+
+                $elem.keyup($.proxy(function() {
+                    $inner.text($elem.children(':selected').text());
+                }, this));
+
+                $elem.bind('update', $.proxy(function() {
+                    $inner.text($elem.children(':selected').text());
+                }, this));
+            }
+        };
+    }();
+
+    $.fn.extend({
+        jqSelect: function(options) {
+            this.each(function() {
+                var settings = $.extend({}, options);
+                $.jquerySelect.init($(this), settings);
+            });
+            return this;
+        }
+    });
+
+})(jQuery);
+
+
+;(function ( $ ) {
+
+    var pluginName = 'lazyLoad',
+        defaults = {
+            className: '--lazy',
+            urlData: 'image',
+            windowResize : true, // trigger on window resize
+            loadOnInit: true, // trigger on init
+            debounceTime: 100, // debounce time 
+            distance: 100, // load distance in pixels,
+            stopIfAll: true // no more loading if all loaded, set false if adding items with ajax
+        };
+
+    function Plugin( element, options ) {
+        
+        this.element    = element;
+        this.$element   = $(element);
+
+        this.options    = $.extend( {}, defaults, options );
+        this._defaults  = defaults;
+        this._name      = pluginName;
+        
+        this.init();
+    }
+    
+    
+    var debounce = function( func, wait, immediate ) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if ( !immediate ) func.apply( context, args );
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout( timeout );
+            timeout = setTimeout( later, wait );
+            if ( callNow ) func.apply( context, args );
+        };
+    };
+    
+    
+    Plugin.prototype.load = function () {  
+        
+        var $parent = this.element === window ? $('body') : this.$element;      
+        
+        var $objs = $parent.find( '.' + this.options.className ).filter(function( i, el ) {
+            return !$(el).data( 'lazyLoaded' );
+        }).each($.proxy(function( i, obj ) {
+            
+            var $obj = $(obj),
+                left = $obj.offset().left,
+                top = $obj.offset().top;
+             
+            
+            var $parents = $obj.parentsUntil( 'body' ).each(function( i, e ) {
+                left = left + e.scrollLeft;
+                top = top + e.scrollTop;
+            });
+            
+            var offset = {
+                top: top,
+                left: left
+            };
+            
+            if ($( window ).scrollTop() + $( window ).height() + ( this.element !== window ? this.$element.scrollTop() : 0 ) + this.options.distance > offset.top && 
+                $( window ).scrollLeft() + $( window ).width() + ( this.element !== window ? this.$element.scrollLeft() : 0 ) + this.options.distance > offset.left) {
+                
+                $obj.data( 'lazyLoaded', true );
+                
+                var urlData = $obj.data( this.options.urlData );
+                
+                if (urlData) {
+                    
+                    if ( $obj.get(0).tagName.toLowerCase() == 'img' ) {
+                        $obj.attr( 'src', urlData );
+                    }
+                    else {
+                        $obj.css( 'background-image', 'url("' + urlData + '")' );
+                    }
+                }
+            } 
+        }, this));
+        
+        if ( !$objs.length && this.options.stopIfAll ) {
+            this.destroy();
+        }
+        
+    };
+    
+
+    Plugin.prototype.init = function () {
+        
+        this.page = this.options.page;
+        
+        if ( this.options.loadOnInit ) {
+            this.load();
+        }
+        
+        this.$element.on( 'scroll.' + this._name, debounce( this.load.bind(this), this.options.debounceTime ));
+        
+        if ( this.element !== window ) {
+            $( window ).on( 'scroll.' + this._name, debounce( this.load.bind(this), this.options.debounceTime )); 
+        }
+        
+        if ( this.options.windowResize ) {
+            $( window ).on( 'resize.' + this._name, debounce( this.load.bind(this), this.options.debounceTime ));
+        }
+    };
+    
+    
+    Plugin.prototype.destroy = function () {
+        $.data( this.element, this._name, null );
+        this.$element.off( '.' + this._name );
+    };
+
+    $.fn[ pluginName ] = function ( arg ) {
+        
+        var args = arguments;
+        
+        return this.each(function () {
+            var d = $.data( this, pluginName );
+            
+            if ( !d && ( typeof arg === 'object' || typeof arg === 'undefined' )) {
+                $.data( this, pluginName, 
+                new Plugin( this, arg ));
+            }
+            else if ( d && typeof arg === 'string' && typeof d[arg] === 'function' ) {
+                d[ arg ].apply( d, Array.prototype.slice.call( args, 1 ));
+            }
+            
+            return this;
+        });
+    };
+
+})( jQuery );

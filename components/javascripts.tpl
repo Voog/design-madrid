@@ -36,7 +36,6 @@
         $('.js-option-toggle-flags').on('click', function(event) {
           event.preventDefault();
           
-          console.log('click');
           var flagsState = !$(this).hasClass('js-flags-enabled');
           siteData.set("flags_state", flagsState);
 

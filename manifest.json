@@ -148,12 +148,6 @@
   ],
   "assets": [
     {
-      "content_type": "text/unknown",
-      "file": "assets/.DS_Store",
-      "kind": "assets",
-      "filename": ".DS_Store"
-    },
-    {
       "content_type": "image/svg+xml",
       "file": "assets/ico-flags.svg",
       "kind": "assets",
@@ -170,12 +164,6 @@
       "file": "javascripts/src",
       "kind": "javascripts",
       "filename": "src"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "assets/.DS_Store",
-      "kind": "assets",
-      "filename": ".DS_Store"
     },
     {
       "content_type": "image/png",

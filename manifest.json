@@ -160,12 +160,6 @@
       "filename": "loader.svg"
     },
     {
-      "content_type": "application/x-wais-source",
-      "file": "javascripts/src",
-      "kind": "javascripts",
-      "filename": "src"
-    },
-    {
       "content_type": "image/png",
       "file": "images/check.png",
       "kind": "images",
@@ -202,12 +196,6 @@
       "filename": "new_article.png"
     },
     {
-      "content_type": "application/x-wais-source",
-      "file": "javascripts/src",
-      "kind": "javascripts",
-      "filename": "src"
-    },
-    {
       "content_type": "application/javascript",
       "file": "javascripts/application.js",
       "kind": "javascripts",
@@ -232,12 +220,6 @@
       "filename": "modernizr.min.js"
     },
     {
-      "content_type": "application/x-wais-source",
-      "file": "javascripts/src",
-      "kind": "javascripts",
-      "filename": "src"
-    },
-    {
       "content_type": "text/css",
       "file": "stylesheets/main.css",
       "kind": "stylesheets",
@@ -248,12 +230,6 @@
       "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
       "filename": "main.min.css"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "stylesheets/scss",
-      "kind": "stylesheets",
-      "filename": "scss"
     }
   ]
 }

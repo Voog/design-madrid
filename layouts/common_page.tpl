@@ -15,8 +15,6 @@
         <div class="wrap">
           <div class="content formatted cfx">
             {% content %}
-            
-            <div class="--lazy" style="height: 200px; background-color: rgba(0,0,0,0.5)" data-article-image="/images/new_article.png"></div>
           </div>
         </div>
       </div>

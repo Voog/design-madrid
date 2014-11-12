@@ -1865,6 +1865,7 @@ a:hover {
   .sub-menu li {
     padding-left: 0;
     padding-right: 20px;
+    padding-bottom: 5px;
   }
   .sub-menu a {
     line-height: 1.05;

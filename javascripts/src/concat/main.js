@@ -6,7 +6,7 @@
         
         (new Headroom($('.header').get(0), {
             offset : 200,
-            tolerance : 20
+            tolerance : 0
         })).init();
         
         
@@ -142,8 +142,6 @@
         
         initScrollOverride();
         
-        
-        $('body').addClass('main-menu-fits');
         checkMainmenuFitting();
         setLayout();
         
@@ -152,8 +150,8 @@
             debounce(setLayout(), 50);
         });
         
-        
         $('.site-title-inner').contentMutations({
+            debounceTime: 50,
             callback: function() {
                 checkMainmenuFitting();
                 setLayout();

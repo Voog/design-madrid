@@ -10666,7 +10666,7 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
         
         (new Headroom($('.header').get(0), {
             offset : 200,
-            tolerance : 20
+            tolerance : 0
         })).init();
         
         
@@ -10802,8 +10802,6 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
         
         initScrollOverride();
         
-        
-        $('body').addClass('main-menu-fits');
         checkMainmenuFitting();
         setLayout();
         
@@ -10812,8 +10810,8 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
             debounce(setLayout(), 50);
         });
         
-        
         $('.site-title-inner').contentMutations({
+            debounceTime: 50,
             callback: function() {
                 checkMainmenuFitting();
                 setLayout();

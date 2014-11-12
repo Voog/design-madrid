@@ -426,7 +426,12 @@ $break-small: 500px;
   body {
     @extend %nulling;
     font: #{$font-size}/#{$line-height} $font-main;
-    height: 100% !important;
+  }
+  
+  html.blog-list-page {
+    &, body {
+      height: 100% !important;
+    }
   }
   
   body {
@@ -474,16 +479,12 @@ $break-small: 500px;
     background: $fourth-color;
     -webkit-transition: -webkit-transform 200ms linear;
     transition: transform 200ms linear;
-    
-    min-height: 75px;
-    
-    .front-page & {
-      min-height: 100px;
-    }
+    min-height: 100px;
     
     &.headroom--not-top {
       -webkit-transform: translateY(-100%);
       transform: translateY(-100%);
+      min-height: 75px;
     }
     
     &.headroom--pinned {
@@ -493,15 +494,11 @@ $break-small: 500px;
     
     .header-inner {
       float: right;
-      padding: 25px 50px 0 0;
+      padding: 37px 50px 0 0;
       position: relative;
       z-index: 20;
       min-width: 24px;
       min-height: 24px;
-      
-      .front-page & {
-        padding-top: 37px;
-      }
       
       .main-menu-fits & {
         display: none;
@@ -517,6 +514,10 @@ $break-small: 500px;
       }
     }
     
+    &.headroom--not-top .header-inner {
+      padding-top: 25px;
+    }
+    
     .main-menu-toggler {
       display: block;
       float: left;
@@ -527,7 +528,6 @@ $break-small: 500px;
       color: $main-color;
       text-transform: uppercase;
       position: relative;
-      
       
       .main-menu-fits & {
         display: none;
@@ -580,11 +580,11 @@ $break-small: 500px;
     line-height: 1.2;
     text-transform: uppercase;
     color: $second-color;
-    padding: 25px 0 25px 50px;
+    padding: 37px 0 37px 50px;
     
-    .front-page & {
-      padding-top: 37px;
-      padding-bottom: 37px;
+    .headroom--not-top & {
+      padding-top: 25px;
+      padding-bottom: 25px;
     }
     
     .site-title-inner {
@@ -852,11 +852,11 @@ $break-small: 500px;
     }
     
     ul {
-      padding: 24px 45px;
+      padding: 36px 45px;
       
-      .front-page & {
-        padding-top: 36px;
-        padding-bottom: 36px;
+      .headroom--not-top & {
+        padding-top: 24px;
+        padding-bottom: 24px;
       }
       
       .search-enabled & {
@@ -1019,14 +1019,20 @@ $break-small: 500px;
   .main {
     position: relative;
     @include box-sizing(border-box);
-    padding: 75px 0 75px;
     min-height: 100%;
     max-width: 100%;
     background: $bg-color;
     
+    .main-inner {
+      padding-top: 100px;
+    }
+    
     .blog-list-page & {
-      height: 100%; min-height: 0;
-      font-size: 0; line-height: 0; white-space: nowrap;
+      height: 100%; 
+      min-height: 0;
+      font-size: 0; 
+      line-height: 0; 
+      white-space: nowrap;
       overflow: auto;
       -webkit-overflow-scrolling: touch;
       
@@ -1095,7 +1101,7 @@ $break-small: 500px;
       
       .main-inner {
         height: 100vh;
-        padding: 75px 0 75px;
+        padding-bottom: 80px;
         @include box-sizing(border-box);
       }
       
@@ -1105,7 +1111,7 @@ $break-small: 500px;
         width: 80px;
         outline: 0;
         position: fixed;
-        top: 75px;
+        top: 100px;
         right: 0;
         z-index: 100;
         
@@ -1136,16 +1142,6 @@ $break-small: 500px;
             @include rotate(135deg);
           }
         }
-      }
-    }
-    
-    .front-page & {
-      .main-inner {
-        padding: 100px 0 90px;
-      }
-      
-      .scroller-arrow {
-        top: 100px;
       }
     }
     
@@ -1384,11 +1380,16 @@ $break-small: 500px;
 /* footer */
   .footer {
     background: $fourth-color;
-    position: absolute;
-    bottom: 0; 
-    left: 0; 
-    right: 0;
     z-index: 200;
+    min-height: 75px;
+    
+    .blog-list-page & {
+      position: absolute;
+      bottom: 0; 
+      left: 0; 
+      right: 0;
+      height: 80px;
+    }
     
     .inner {
       display: table;
@@ -1408,10 +1409,6 @@ $break-small: 500px;
       font-size: 10px;
       line-height: 1.4;
       padding: 5px 0;
-      
-      .front-page & {
-        height: 80px;
-      }
     }
     
     .voog-reference {
@@ -1660,13 +1657,6 @@ $break-small: 500px;
   
       &.add-lang-btn {
         padding: 5px 0 4px 10px;
-  
-        /*
-        @media screen and (max-width: $break-small) {
-          padding: 5px 10px 4px 0;
-          text-align: right;
-        }
-        */
       }
     }
   
@@ -1690,19 +1680,6 @@ $break-small: 500px;
         &:hover {
           @include bg(#cccccc, .5);
         }
-        
-        /*
-        @media screen and (max-width: $break-small) {
-          padding: 6px 40px 5px 13px;
-          text-align: right;
-  
-          &:before,
-          &:after {
-            left: auto;
-            right: 12px;
-          }
-        }
-        */
       }
   
       &.edy-menu-langadd {
@@ -1836,7 +1813,7 @@ $break-small: 500px;
     
     @include box-shadow(0, 0, 5px, rgba(0,0,0,0.2));
     
-    .front-page &, & {
+    &, &.headroom--not-top {
       min-height: $header-height;
     }
     
@@ -1853,7 +1830,7 @@ $break-small: 500px;
       display: block !important;
       
       .front-page &, & {
-        padding: 0;
+        padding: 0 !important;
       }
     }
     
@@ -1895,7 +1872,7 @@ $break-small: 500px;
   .site-title {
     .front-page &, & {
       font-size: 18px;
-      padding: 10px 45px 10px 15px;
+      padding: 10px 45px 8px 15px !important;
     }
   }
   
@@ -2016,12 +1993,9 @@ $break-small: 500px;
   }
   
   .main {
-    
-    padding: $header-height 0 0 0;
-    
+
     .main-inner {
-      
-      .blog-list-page & {
+      &, .blog-list-page & {
         padding: $header-height 0 0;
       }
     }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html class="{% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
+<html class="blog-list-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% assign blog_page = true %}
   {% include "edicy-tools-variables" %}
   {% include "html-head" %}
 </head>
-<body class="blog-list-page {% if site.search.enabled %} search-enabled{% endif %}">
+<body class="main-menu-fits {% if site.search.enabled %} search-enabled{% endif %}">
   
   <div class="holder">
     {% include "header" %}

@@ -4,52 +4,54 @@
   {% include "edicy-tools-variables" %}
   {% include "html-head" %}
 </head>
-<body class="{% if site.search.enabled %} search-enabled{% endif %}">
+<body class="main-menu-fits{% if site.search.enabled %} search-enabled{% endif %}">
 
   <div class="holder">
     {% include "header" %}
   
     <main class="main" data-search-indexing-allowed="true">
-      <div class="content-wrap">
-        {% include "submenu" %}
-        <div class="wrap">
-          <div class="content formatted cfx">
+      <div class="main-inner">
+        <div class="content-wrap">
+          {% include "submenu" %}
+          <div class="wrap">
+            <div class="content formatted cfx">
           
-            <header class="post-header">
-              <h1>{% editable article.title %}<time class="post-date" datetime="{{ article.created_at | date : "%Y %m %d" }}">{{ article.created_at | date : "%d.%m" }}</time></h1>
-            </header>
-            <section class="post-content">
-              <div class="post-excerpt cfx formatted">{% editable article.excerpt %}</div>
-              <div class="post-body cfx formatted">{% editable article.body %}</div>
+              <header class="post-header">
+                <h1>{% editable article.title %}<time class="post-date" datetime="{{ article.created_at | date : "%Y %m %d" }}">{{ article.created_at | date : "%d.%m" }}</time></h1>
+              </header>
+              <section class="post-content">
+                <div class="post-excerpt cfx formatted">{% editable article.excerpt %}</div>
+                <div class="post-body cfx formatted">{% editable article.body %}</div>
 
-              {% if editmode or article.tags.size > 0 %}
-              <div class="post-tags">
-                {% if editmode %}
-                  {% editable article.tags %}
-                {% else %}
-                  <ul>
-                  {% for tag in article.tags %}
-                    <li><a href="{{ page.url }}/tagged/{{ tag.path }}" class="post-tag">{{ tag.name }}</a></li>
-                  {% endfor %}
-                  </ul>
+                {% if editmode or article.tags.size > 0 %}
+                <div class="post-tags">
+                  {% if editmode %}
+                    {% editable article.tags %}
+                  {% else %}
+                    <ul>
+                    {% for tag in article.tags %}
+                      <li><a href="{{ page.url }}/tagged/{{ tag.path }}" class="post-tag">{{ tag.name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                </div>
                 {% endif %}
-              </div>
-              {% endif %}
-            </section>
+              </section>
           
-            <section class="post-bottom cfx">
-              <div class="left">
-                {% if editmode %}
-                  {% include "article-image" %}
-                {% else %}
-                  {% include "comment-form" %}
-                {% endif %}
-              </div>
+              <section class="post-bottom cfx">
+                <div class="left">
+                  {% if editmode %}
+                    {% include "article-image" %}
+                  {% else %}
+                    {% include "comment-form" %}
+                  {% endif %}
+                </div>
 
-              {% include "comments" %}
+                {% include "comments" %}
               
-            </section>
+              </section>
           
+            </div>
           </div>
         </div>
       </div>

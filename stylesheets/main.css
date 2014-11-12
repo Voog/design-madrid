@@ -451,6 +451,9 @@ a:hover {
 .front-page .header .header-inner {
   padding-top: 37px;
 }
+.main-menu-fits .header .header-inner {
+  display: none;
+}
 .main-menu-open .header .header-inner {
   display: none;
 }
@@ -470,6 +473,9 @@ a:hover {
   color: #333333;
   text-transform: uppercase;
   position: relative;
+}
+.main-menu-fits .header .main-menu-toggler {
+  display: none;
 }
 .main-menu-open .header .main-menu-toggler {
   display: none;
@@ -527,7 +533,7 @@ a:hover {
 }
 
 .search-toggler {
-  display: block;
+  display: none;
   width: 28px;
   height: 28px;
   background: url("../images/ico-search-black.png") no-repeat center center;
@@ -550,6 +556,9 @@ a:hover {
   top: 50%;
   left: 50%;
   margin: -9px 0 0 -9px;
+}
+.search-enabled .search-toggler {
+  display: block;
 }
 .search-visible .search-toggler {
   display: none;
@@ -705,15 +714,18 @@ a:hover {
   line-height: 1.1;
   text-transform: uppercase;
   color: black;
-  padding: 25px 0 25px 50px;
+  padding: 10px 0 10px 50px;
 }
 .front-page .site-title {
-  padding-top: 37px;
-  padding-bottom: 37px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 .site-title .site-title-inner {
   display: inline-block;
   white-space: nowrap;
+  line-height: 55px;
+  height: 55px;
+  overflow: hidden;
 }
 .site-title a {
   color: black;
@@ -734,6 +746,9 @@ a:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.main-menu-fits .main-menu {
+  display: block;
 }
 .main-menu-open .main-menu {
   display: block;
@@ -1254,6 +1269,7 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 200;
 }
 .footer .inner {
   display: table;
@@ -1733,6 +1749,7 @@ a:hover {
   }
   .header .header-inner {
     min-height: 40px;
+    display: block !important;
   }
   .front-page .header .header-inner, .header .header-inner {
     padding: 0;
@@ -1743,10 +1760,10 @@ a:hover {
     margin-left: 0;
   }
   .main-menu-open .header .main-menu-toggler, .search-visible .header .main-menu-toggler, .header .main-menu-toggler {
-    display: none;
+    display: none !important;
   }
   .header .main-menu-toggler.main-menu-toggler-mobile {
-    display: block;
+    display: block !important;
   }
   .header .main-menu-toggler span {
     padding-left: 0;
@@ -1767,7 +1784,11 @@ a:hover {
 
   .front-page .site-title, .site-title {
     font-size: 18px;
-    padding: 10px 45px 10px 15px;
+    padding: 0px 45px 0px 15px;
+  }
+  .site-title .site-title-inner {
+    height: 40px;
+    line-height: 40px;
   }
 
   .search-holder {
@@ -1785,6 +1806,7 @@ a:hover {
     transition: none !important;
     -webkit-transform: none !important;
     transform: none !important;
+    display: none !important;
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) ;
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) ;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) ;
@@ -1799,7 +1821,7 @@ a:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    display: block;
+    display: block !important;
     overflow: auto;
     background-color: #2b2b2b;
     background-color: rgba(43, 43, 43, 0.9);

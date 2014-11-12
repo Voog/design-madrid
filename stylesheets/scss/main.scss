@@ -502,6 +502,9 @@ $break-small: 500px;
         padding-top: 37px;
       }
       
+      .main-menu-fits & {
+        display: none;
+      }
       .main-menu-open & {
         display: none;
       }
@@ -525,6 +528,9 @@ $break-small: 500px;
       position: relative;
       
       
+      .main-menu-fits & {
+        display: none;
+      }
       .main-menu-open & {
         display: none;
       }
@@ -591,7 +597,7 @@ $break-small: 500px;
   }
   
   .search-toggler {
-    display: block;
+    display: none;
     width: $header-inner-height;
     height: $header-inner-height;
     background: url('../images/ico-search-black.png') no-repeat center center;
@@ -617,6 +623,10 @@ $break-small: 500px;
         left: 50%;
         margin: -9px 0 0 -9px;
       }
+    }
+    
+    .search-enabled & {
+      display: block;
     }
     
     .search-visible & {
@@ -782,16 +792,19 @@ $break-small: 500px;
     line-height: 1.1;
     text-transform: uppercase;
     color: $second-color;
-    padding: 25px 0 25px 50px;
+    padding: 10px 0 10px 50px;
     
     .front-page & {
-      padding-top: 37px;
-      padding-bottom: 37px;
+      padding-top: 22px;
+      padding-bottom: 22px;
     }
     
     .site-title-inner {
       display: inline-block;
       white-space: nowrap;
+      line-height: 55px;
+      height: 55px;
+      overflow: hidden;
     }
     
     a {
@@ -815,6 +828,9 @@ $break-small: 500px;
     @include box-sizing(border-box);
     
     
+    .main-menu-fits & {
+      display: block;
+    }
     .main-menu-open & {
       display: block;
     }
@@ -1358,7 +1374,10 @@ $break-small: 500px;
   .footer {
     background: $fourth-color;
     position: absolute;
-    bottom: 0; left: 0; right: 0;
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    z-index: 200;
     
     .inner {
       display: table;
@@ -1809,6 +1828,7 @@ $break-small: 500px;
     
     .header-inner {
       min-height: $header-height;
+      display: block !important;
       
       .front-page &, & {
         padding: 0;
@@ -1821,11 +1841,11 @@ $break-small: 500px;
       margin-left: 0;
       
       .main-menu-open &, .search-visible &, & {
-        display: none;
+        display: none !important;
       }
       
       &.main-menu-toggler-mobile {
-        display: block;
+        display: block !important;
       }
       
       span {
@@ -1853,7 +1873,12 @@ $break-small: 500px;
   .site-title {
     .front-page &, & {
       font-size: 18px;
-      padding: 10px 45px 10px 15px;
+      padding: 0px 45px 0px 15px;
+    }
+    
+    .site-title-inner {
+      height: $header-height;
+      line-height: $header-height;
     }
   }
   
@@ -1874,6 +1899,8 @@ $break-small: 500px;
     -webkit-transform: none !important;
     transform: none !important;
     
+    display: none !important;
+    
     @include box-shadow(0, 0, 5px, rgba(0,0,0,0.2));
     
     .main-menu-open &, & {
@@ -1887,7 +1914,7 @@ $break-small: 500px;
       right: 0;
       bottom: 0;
       left: 0;
-      display: block;
+      display: block !important;
       overflow: auto;
       @include bg(#2b2b2b, .9);
       -webkit-overflow-scrolling: touch;

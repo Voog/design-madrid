@@ -5,7 +5,7 @@
   {% include "edicy-tools-variables" %}
   {% include "html-head" %}
 </head>
-<body class="front-page blog-list-page main-menu-open{% if site.search.enabled %} search-enabled{% endif %}">
+<body class="front-page blog-list-page {% if site.search.enabled %} search-enabled{% endif %}">
 
   <div class="holder">
   

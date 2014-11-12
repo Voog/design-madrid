@@ -10682,9 +10682,11 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
                     var c = $('.header .main-menu').get(0); 
                     if (!$.contains(c, event.target) && event.target !== c) {
                         $('body').removeClass('mobile-main-menu-open');
-                        if (!$('body').hasClass('front-page')) {
-                            $('body').removeClass('main-menu-open');
-                        }
+                        //if (!$('body').hasClass('front-page')) {
+                        //    $('body').removeClass('main-menu-open');
+                        //}
+                        $('body').removeClass('main-menu-open');
+                        
                         $(this).off('.js-main-menu-toggler-click');
                     }
                 });
@@ -10727,6 +10729,7 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
                         if (!$.contains(c, event.target) && event.target !== c) {
                             $('body').removeClass('search-visible');
                             $(this).off('.js-search-toggler-click');
+                            checkMainmenuFitting();
                         }
                     });
                 },0);
@@ -10735,6 +10738,8 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
                 $('body').removeClass('search-visible');
                 $(document).off('.js-search-toggler-click');
             }
+            
+            checkMainmenuFitting();
         });
         
         $('.js-search-input')
@@ -10795,85 +10800,119 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
             $(this).wrap('<div class="table-holder" />');
         });
         
-        
-        
-        var scrollTimeout = null,
-            isMobile = ((document.body.clientWidth || window.innerWidth) <= 600);
-            isScrolling = false,
-            oldie = window.oldie || false;
-
-
-        // Stream
-        var initScrollOverride = function() {
-            if ($('html').hasClass('no-touch') && $('.blog-list-page .main').length > 0 && $.fn.mousewheel) {
-                
-                if (oldie) {
-                    $('.blog-list-page .main').mousewheel(handleMouseWheel);
-                } 
-                else {
-                    $('.blog-list-page .main').mousewheel(handleMouseWheel);
-                }
-                
-                
-                $('.blog-list-page .main').on("scroll", function(event) {
-                    event.preventDefault();
-                });
-            }
-        };
-        
-        var handleMouseWheel = function(event, delta, x, y) {
-            event.preventDefault();
-            
-            var dir, dx;
-            isScrolling = true;
-
-            
-            if (typeof x != "undefined" && typeof y  != "undefined" && !isNaN(x) && !isNaN(y)) {
-                var nx = x *-1, // reverse axis
-                    d = nx+y;
-                
-                dir = (d >> 31) + (d > 0 ? 1 : 0); // fast sign operation
-                    
-                if (navigator.appVersion && navigator.appVersion.indexOf("Mac") > -1) {
-                    dx = Math.round(Math.sqrt(x*x + y*y) * dir * 1.3);
-                    } 
-                    else {
-                        dx = Math.abs(delta) * dir;
-                    }
-            } 
-            else {
-                dir = (delta >> 31) + (delta > 0 ? 1 : 0); // fast sign operation
-                dx = Math.abs(delta) * dir;
-            }
-            if (navigator.appVersion && navigator.appVersion.indexOf("Mac") == -1) {
-                dx = dx * 30;
-            } else {
-                if (Math.abs(dx) > 100) {
-                    dx = dx / (Math.log(Math.abs(dx)/3)) ;
-                }
-            }
-            
-            $('.blog-list-page .main').scrollLeft($('.blog-list-page .main').scrollLeft() - (dx * 3));
-            $('.blog-list-page .main').addClass("is-scrolling");
-            
-            if (scrollTimeout) {
-                clearTimeout(scrollTimeout);
-            }
-            scrollTimeout = setTimeout(function() {
-                isScrolling = false;
-                
-                $('.blog-list-page .main').removeClass("is-scrolling");
-            }, 200);
-        }; 
-        
         initScrollOverride();
         
+        
+        $('body').addClass('main-menu-fits');
+        checkMainmenuFitting();
+        $(window).on('resize', debounce(checkMainmenuFitting, 10));
+        
     });
+    
+    var debounce = function( func, wait, immediate ) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if ( !immediate ) func.apply( context, args );
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout( timeout );
+            timeout = setTimeout( later, wait );
+            if ( callNow ) func.apply( context, args );
+        };
+    };
     
     var setBlogListHeight = function() {
         $('.main-inner').height($(window).height()-parseInt($('.main-inner').css('padding-top'),10)-parseInt($('.main-inner').css('padding-bottom'),10));
     };
     
+    var checkMainmenuFitting = function() {
+        var $site_title_inner = $('.site-title-inner'),
+            $body = $('body'),
+            ww = $(window).width(),
+            mw = $('.main-menu').width(),
+            tw = $site_title_inner.width() + $site_title_inner.offset().left;
+            
+        if (ww > mw + tw) {
+            console.log(ww, mw, tw);
+            $body.addClass('main-menu-fits'); 
+        }
+        else {
+            $body.removeClass('main-menu-fits');
+        }
+    };
+    
+    
+    var scrollTimeout = null,
+        isMobile = ((document.body.clientWidth || window.innerWidth) <= 600);
+        isScrolling = false,
+        oldie = window.oldie || false;
+
+
+    // Stream
+    var initScrollOverride = function() {
+        if ($('html').hasClass('no-touch') && $('.blog-list-page .main').length > 0 && $.fn.mousewheel) {
+            
+            if (oldie) {
+                $('.blog-list-page .main').mousewheel(handleMouseWheel);
+            } 
+            else {
+                $('.blog-list-page .main').mousewheel(handleMouseWheel);
+            }
+            
+            
+            $('.blog-list-page .main').on("scroll", function(event) {
+                event.preventDefault();
+            });
+        }
+    };
+    
+    var handleMouseWheel = function(event, delta, x, y) {
+        event.preventDefault();
+        
+        var dir, dx;
+        isScrolling = true;
+
+        
+        if (typeof x != "undefined" && typeof y  != "undefined" && !isNaN(x) && !isNaN(y)) {
+            var nx = x *-1, // reverse axis
+                d = nx+y;
+            
+            dir = (d >> 31) + (d > 0 ? 1 : 0); // fast sign operation
+                
+            if (navigator.appVersion && navigator.appVersion.indexOf("Mac") > -1) {
+                dx = Math.round(Math.sqrt(x*x + y*y) * dir * 1.3);
+                } 
+                else {
+                    dx = Math.abs(delta) * dir;
+                }
+        } 
+        else {
+            dir = (delta >> 31) + (delta > 0 ? 1 : 0); // fast sign operation
+            dx = Math.abs(delta) * dir;
+        }
+        if (navigator.appVersion && navigator.appVersion.indexOf("Mac") == -1) {
+            dx = dx * 30;
+        } else {
+            if (Math.abs(dx) > 100) {
+                dx = dx / (Math.log(Math.abs(dx)/3)) ;
+            }
+        }
+        
+        $('.blog-list-page .main').scrollLeft($('.blog-list-page .main').scrollLeft() - (dx * 3));
+        $('.blog-list-page .main').addClass("is-scrolling");
+        
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+        }
+        scrollTimeout = setTimeout(function() {
+            isScrolling = false;
+            
+            $('.blog-list-page .main').removeClass("is-scrolling");
+        }, 200);
+    }; 
  
     
 })(jQuery);

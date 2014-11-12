@@ -717,6 +717,9 @@ $break-small: 500px;
     @include bg($white, 0.95);
     @include box-sizing(border-box);
     @include box-shadow(0, 0, 40px, rgba(0,0,0,0.1));
+    @include hyphenate(true);
+    overflow: auto;
+    max-height: 400px;
     
     &.search-results-active {
       display: block;
@@ -1086,7 +1089,7 @@ $break-small: 500px;
         position: fixed;
         top: 75px;
         right: 0;
-        z-index: 1005;
+        z-index: 100;
         
         span {
           position: relative;
@@ -1139,6 +1142,14 @@ $break-small: 500px;
 /* formatted */
   .formatted {
     @include hyphenate(true);
+    
+    pre,
+    code,
+    iframe,
+    table,
+    form {
+      @include hyphenate(false);
+    }
     
     ul,
     ol {
@@ -1742,7 +1753,7 @@ $break-small: 500px;
   
 }
 
-@media screen and (max-width: $break-small), screen and (max-height: $break-small)  {
+@media screen and (max-width: $break-small), screen and (max-height: 325px)  {
   
   $header-height: 40px;
   
@@ -1931,9 +1942,8 @@ $break-small: 500px;
   
   .main {
     
-    
-    
     padding: $header-height 0 0 0;
+    
     .main-inner {
       
       .blog-list-page & {
@@ -2215,6 +2225,7 @@ $break-small: 500px;
     width: auto; 
     @include box-shadow(0,0,0,none);
     -webkit-overflow-scrolling: touch;
+    max-height: auto;
     
     .voog-search-loader {
       height: 100%;

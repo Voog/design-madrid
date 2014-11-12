@@ -13,7 +13,7 @@
       <div class="content-wrap">
         {% include "submenu" %}
         <div class="wrap">
-          <div class="content cfx">
+          <div class="content formatted cfx">
           
             <header class="post-header">
               <h1>{% editable article.title %}<time class="post-date" datetime="{{ article.created_at | date : "%Y %m %d" }}">{{ article.created_at | date : "%d.%m" }}</time></h1>
@@ -45,10 +45,9 @@
                   {% include "comment-form" %}
                 {% endif %}
               </div>
-            
-              <div class="right">
-                {% include "comments" %}
-              </div>
+
+              {% include "comments" %}
+              
             </section>
           
           </div>

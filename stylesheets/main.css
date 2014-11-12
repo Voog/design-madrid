@@ -647,6 +647,13 @@ a:hover {
   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) ;
   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) ;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) ;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow: auto;
+  max-height: 400px;
 }
 .search-results.search-results-active {
   display: block;
@@ -984,7 +991,7 @@ a:hover {
   position: fixed;
   top: 75px;
   right: 0;
-  z-index: 1005;
+  z-index: 100;
 }
 .blog-list-page .main .scroller-arrow span {
   position: relative;
@@ -1036,6 +1043,17 @@ a:hover {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+.formatted pre,
+.formatted code,
+.formatted iframe,
+.formatted table,
+.formatted form {
+  word-break: normal;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 .formatted ul,
 .formatted ol {
@@ -1658,7 +1676,7 @@ a:hover {
     padding-top: 30px;
   }
 }
-@media screen and (max-width: 500px), screen and (max-height: 500px) {
+@media screen and (max-width: 500px), screen and (max-height: 325px) {
   html,
   body {
     font-size: 16px;
@@ -2080,6 +2098,7 @@ a:hover {
     -moz-box-shadow: 0 0 0 none ;
     box-shadow: 0 0 0 none ;
     -webkit-overflow-scrolling: touch;
+    max-height: auto;
   }
   .search-results .voog-search-loader {
     height: 100%;

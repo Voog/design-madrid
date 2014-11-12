@@ -13,7 +13,10 @@
       <div class="content-wrap">
         {% include "submenu" %}
         <div class="wrap">
+          
           <div class="content formatted cfx">
+            <div class="content-header">{% contentblock name="content_header" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
+            {% include "submenu" %}
             {% content %}
           </div>
         </div>

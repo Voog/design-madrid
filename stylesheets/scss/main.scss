@@ -466,7 +466,6 @@ $break-small: 500px;
   $header-inner-height: 28px;
   
   .header {
-    height: 75px; 
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -476,8 +475,10 @@ $break-small: 500px;
     -webkit-transition: -webkit-transform 200ms linear;
     transition: transform 200ms linear;
     
+    min-height: 75px;
+    
     .front-page & {
-      height: 100px;
+      min-height: 100px;
     }
     
     &.headroom--not-top {
@@ -572,7 +573,30 @@ $break-small: 500px;
       }
     }
   }
-  
+
+/* site-title */
+  .site-title {
+    font-size: 24px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $second-color;
+    padding: 25px 0 25px 50px;
+    
+    .front-page & {
+      padding-top: 37px;
+      padding-bottom: 37px;
+    }
+    
+    .site-title-inner {
+      display: inline-block;
+      line-height: 1.1;
+      @include hyphenate(true);
+    }
+    
+    a {
+      color: $second-color;
+    }
+  }
 
 /* search */
   .search-holder {
@@ -785,32 +809,7 @@ $break-small: 500px;
   }
   
   
-/* site-title */
-  .site-title {
-    overflow: hidden;
-    font-size: 24px;
-    line-height: 1.1;
-    text-transform: uppercase;
-    color: $second-color;
-    padding: 10px 0 10px 50px;
-    
-    .front-page & {
-      padding-top: 22px;
-      padding-bottom: 22px;
-    }
-    
-    .site-title-inner {
-      display: inline-block;
-      white-space: nowrap;
-      line-height: 55px;
-      height: 55px;
-      overflow: hidden;
-    }
-    
-    a {
-      color: $second-color;
-    }
-  }
+
   
   
 /* main-menu */
@@ -896,6 +895,10 @@ $break-small: 500px;
     font-size: 14px;
     text-align: right;
     word-wrap: break-word;
+    
+    .content & {
+      display: none;
+    }
   
     li {
       display: inline-block;
@@ -909,7 +912,7 @@ $break-small: 500px;
       color: $third-color;
     
       &:hover, &.active {
-        color: $main-color;
+        color: $second-color;
       }
       &.edy-cbtn {
         padding: 0;
@@ -1151,6 +1154,15 @@ $break-small: 500px;
     }
     .content {
       padding: 40px 0 70px;
+    }
+    
+    .content-header {
+      margin-bottom: 24px;
+      h1, 
+      h2, 
+      h3 {
+        margin-bottom: 0;
+      }
     }
   }
   
@@ -1806,6 +1818,9 @@ $break-small: 500px;
   h2 { font-size: 22px; }
   h3 { font-size: 18px; }
 
+  iframe {
+    max-width: 100%;
+  }
   
   .wrap {
     padding: 0 25px;
@@ -1822,7 +1837,15 @@ $break-small: 500px;
     @include box-shadow(0, 0, 5px, rgba(0,0,0,0.2));
     
     .front-page &, & {
-      height: $header-height;
+      min-height: $header-height;
+    }
+    
+    &.headroom--not-top {
+      display: none;
+    }
+    
+    &.headroom--pinned {
+      display: block;
     }
     
     .header-inner {
@@ -1872,12 +1895,7 @@ $break-small: 500px;
   .site-title {
     .front-page &, & {
       font-size: 18px;
-      padding: 0px 45px 0px 15px;
-    }
-    
-    .site-title-inner {
-      height: $header-height;
-      line-height: $header-height;
+      padding: 10px 45px 10px 15px;
     }
   }
   
@@ -1959,15 +1977,41 @@ $break-small: 500px;
   .sub-menu {
     text-align: left;
     padding: 0 25px;
+    display: none;
+    
+    background: white; 
+    padding: 10px 0px 5px;
+    max-width: 50%;
+    float: right;
+    
+    margin-left: 15px; 
+    margin-bottom: 15px;
+    margin-right: -25px;
+    
+    
+    .content & {
+      display: block;
+    }
+    
+    ul {
+      padding: 5px 15px;
+      margin: 0;
+    }
     
     li {
+      display: block;
       padding-left: 0;
-      padding-right: 20px;
-      padding-bottom: 5px;
+      padding-right: 0px;
+      padding-bottom: 8px;
+      text-align: left;
     }
     
     a {
       line-height: 1.05;
+      display: block;
+      &.active {
+        text-transform: uppercase;
+      }
     }
   }
   

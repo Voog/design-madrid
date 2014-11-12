@@ -813,7 +813,6 @@ a:hover {
 }
 .sub-menu a {
   display: inline-block;
-  white-space: nowrap;
   color: #818181;
 }
 .sub-menu a:hover, .sub-menu a.active {

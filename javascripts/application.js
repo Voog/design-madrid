@@ -10661,6 +10661,20 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
 
 ;(function($) {
     
+    var debounce = function( func, wait, immediate ) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if ( !immediate ) func.apply( context, args );
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout( timeout );
+            timeout = setTimeout( later, wait );
+            if ( callNow ) func.apply( context, args );
+        };
+    };
     
     $(function() {
         
@@ -10681,12 +10695,7 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
                 $(document).on('click.js-main-menu-toggler-click', function(event) {
                     var c = $('.header .main-menu').get(0); 
                     if (!$.contains(c, event.target) && event.target !== c) {
-                        $('body').removeClass('mobile-main-menu-open');
-                        //if (!$('body').hasClass('front-page')) {
-                        //    $('body').removeClass('main-menu-open');
-                        //}
-                        $('body').removeClass('main-menu-open');
-                        
+                        $('body').removeClass('mobile-main-menu-open main-menu-open');
                         $(this).off('.js-main-menu-toggler-click');
                     }
                 });
@@ -10818,21 +10827,27 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
             }
         });
         
+        if ($('.scroller-arrow').length) {
+            setScrollerArrow();
+            $('.main').on('scroll', debounce(setScrollerArrow, 100));
+        }
+        
     });
     
-    var debounce = function( func, wait, immediate ) {
-        var timeout;
-        return function() {
-            var context = this, args = arguments;
-            var later = function() {
-                timeout = null;
-                if ( !immediate ) func.apply( context, args );
-            };
-            var callNow = immediate && !timeout;
-            clearTimeout( timeout );
-            timeout = setTimeout( later, wait );
-            if ( callNow ) func.apply( context, args );
-        };
+    var setScrollerArrow = function() {
+        var $arrow = $('.scroller-arrow'),
+            $main = $('.main'),
+            main = $main.get(0);
+         
+        if ($arrow.length && main.scrollWidth && (main.scrollLeft || main.scrollLeft === 0)) {  
+            if (main.scrollWidth > main.scrollLeft + $main.width()) {
+                $arrow.show().css('display', 'block');
+            }
+            else {
+                setTimeout(function() { $arrow.fadeOut('slow'); }, 1500);
+                
+            }
+        }
     };
     
     var setLayout = function() {

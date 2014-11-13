@@ -528,6 +528,7 @@ a:hover {
 }
 .site-title .site-title-inner {
   display: inline-block;
+  min-width: 150px;
   line-height: 1.1;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -1005,7 +1006,7 @@ a:hover {
   box-sizing: border-box;
 }
 .blog-list-page .main .scroller-arrow {
-  display: block;
+  display: none;
   height: 80px;
   width: 80px;
   outline: 0;
@@ -1265,6 +1266,7 @@ a:hover {
   padding-top: 5px;
   color: #818181;
   height: 23px;
+  line-height: 23px;
 }
 .comment .comment-info .edy-site-btn-removecomment {
   vertical-align: -2px;

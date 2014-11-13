@@ -589,6 +589,7 @@ $break-small: 500px;
     
     .site-title-inner {
       display: inline-block;
+      min-width: 150px;
       line-height: 1.1;
       @include hyphenate(true);
     }
@@ -1106,7 +1107,7 @@ $break-small: 500px;
       }
       
       .scroller-arrow {
-        display: block;
+        display: none;
         height: 80px;
         width: 80px;
         outline: 0;
@@ -1368,8 +1369,11 @@ $break-small: 500px;
     padding-bottom: 15px;
     
     .comment-info {
-      font-size: 10px; padding-top: 5px;
-      color: $third-color; height: 23px;
+      font-size: 10px; 
+      padding-top: 5px;
+      color: $third-color; 
+      height: 23px;
+      line-height: 23px;
       
       .edy-site-btn-removecomment {
         vertical-align: -2px;

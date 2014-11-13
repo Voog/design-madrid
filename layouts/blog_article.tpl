@@ -17,7 +17,7 @@
             <div class="content formatted cfx">
           
               <header class="post-header">
-                <h1>{% editable article.title %}<time class="post-date" datetime="{{ article.created_at | date : "%Y %m %d" }}">{{ article.created_at | date : "%d.%m" }}</time></h1>
+                <h1>{% editable article.title %}<time class="post-date" datetime="{{ article.created_at | date : "%Y %m %d" }}">{{ article.created_at | format_date: "long" }}</time></h1>
               </header>
               <section class="post-content">
                 <div class="post-excerpt cfx formatted">{% editable article.excerpt %}</div>
@@ -40,11 +40,7 @@
           
               <section class="post-bottom cfx">
                 <div class="left">
-                  {% if editmode %}
-                    {% include "article-image" %}
-                  {% else %}
-                    {% include "comment-form" %}
-                  {% endif %}
+                  {% include "comment-form" %}
                 </div>
 
                 {% include "comments" %}
@@ -70,7 +66,7 @@
        
     $('.comment-created').each(function() {
       var $el = $(this);
-      $el.text(moment($el.data('date'), "YYYY MM DD").locale(langCode).fromNow())
+      $el.text(moment($el.data('date'), "YYYY-MM-DD HH:mm:ss Z").locale(langCode).fromNow())
     });
   });
   </script>

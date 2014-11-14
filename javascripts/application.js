@@ -10864,6 +10864,8 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
         $m.css('padding-top', $('.header').height()).css('min-height', $(window).height()-parseInt($m.css('padding-top'), 10)-$('.footer').height());
     
         $('.blog-list-page .main-inner').css('padding-bottom', $('footer').height());
+        
+        $('.scroller-arrow').css('top', $('.header').height());
     };
     
     var setBlogListHeight = function() {

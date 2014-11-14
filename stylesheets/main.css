@@ -1240,6 +1240,7 @@ a:hover {
 }
 .post-header .post-date {
   display: block;
+  font-weight: normal;
   font-size: 18px;
   color: #818181;
   padding-top: 10px;

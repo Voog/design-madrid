@@ -1219,6 +1219,7 @@ $break-small: 500px;
     
     .content-header {
       margin-bottom: 24px;
+      
       h1, 
       h2, 
       h3 {
@@ -1359,6 +1360,7 @@ $break-small: 500px;
     
     .post-date {
       display: block;
+      font-weight: normal;
       font-size: 18px;
       color: $third-color;
       padding-top: 10px;

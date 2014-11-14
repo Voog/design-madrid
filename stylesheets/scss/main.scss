@@ -495,7 +495,7 @@ $break-small: 500px;
     
     .header-inner {
       float: right;
-      padding: 37px 50px 0 0;
+      padding: 37px 50px 0 20px; 
       position: relative;
       z-index: 20;
       min-width: 24px;
@@ -589,10 +589,11 @@ $break-small: 500px;
     }
     
     .site-title-inner {
-      display: inline-block;
+      display: inline;
       min-width: 150px;
       line-height: 1.1;
       @include hyphenate(true);
+
     }
     
     a {
@@ -1301,7 +1302,7 @@ $break-small: 500px;
 /* new-article */
   .new-article {
     background: $bg-color-dark;
-    opacity: 0.8;
+    opacity: 0.95;
     
     &, h3 {
       color: $fourth-color;
@@ -1354,6 +1355,8 @@ $break-small: 500px;
   
 /* post */
   .post-header {
+    @include hyphenate(true);
+    
     .post-date {
       display: block;
       font-size: 18px;
@@ -1514,7 +1517,6 @@ $break-small: 500px;
       bottom: 0; 
       left: 0; 
       right: 0;
-      height: 80px;
     }
     
     .inner {
@@ -1534,7 +1536,7 @@ $break-small: 500px;
       text-align: center;
       font-size: 10px;
       line-height: 1.4;
-      padding: 5px 0;
+      padding: 15px 0;
     }
     
     .voog-reference {

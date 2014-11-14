@@ -444,7 +444,7 @@ a:hover {
 }
 .header .header-inner {
   float: right;
-  padding: 37px 50px 0 0;
+  padding: 37px 50px 0 20px;
   position: relative;
   z-index: 20;
   min-width: 24px;
@@ -528,7 +528,7 @@ a:hover {
   padding-bottom: 25px;
 }
 .site-title .site-title-inner {
-  display: inline-block;
+  display: inline;
   min-width: 150px;
   line-height: 1.1;
   word-break: break-word;
@@ -1184,7 +1184,7 @@ a:hover {
 /* new-article */
 .new-article {
   background: #2b2b2b;
-  opacity: 0.8;
+  opacity: 0.95;
 }
 .new-article, .new-article h3 {
   color: white;
@@ -1231,6 +1231,13 @@ a:hover {
 }
 
 /* post */
+.post-header {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
 .post-header .post-date {
   display: block;
   font-size: 18px;
@@ -1384,7 +1391,6 @@ a:hover {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 80px;
 }
 .footer .inner {
   display: table;
@@ -1403,7 +1409,7 @@ a:hover {
   text-align: center;
   font-size: 10px;
   line-height: 1.4;
-  padding: 5px 0;
+  padding: 15px 0;
 }
 .footer .voog-reference {
   display: block;

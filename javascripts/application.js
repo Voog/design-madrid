@@ -10804,6 +10804,9 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
         
         var $form_error = $('.form_field_with_errors');
         if ($form_error.length) {
+            $('.js-comment-form-toggler').hide();
+            $('.comment-form-inner').show();
+            $(".js-autogrow").autoGrow();
             $(window).scrollTop($form_error.eq(0).offset().top);
         }
         
@@ -10859,6 +10862,8 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
     var setLayout = function() {
         var $m = $('.main-inner');
         $m.css('padding-top', $('.header').height()).css('min-height', $(window).height()-parseInt($m.css('padding-top'), 10)-$('.footer').height());
+    
+        $('.blog-list-page .main-inner').css('padding-bottom', $('footer').height());
     };
     
     var setBlogListHeight = function() {

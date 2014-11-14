@@ -10,8 +10,8 @@ $focus-color: #f9ec5a;
 $black: $second-color;
 $white: $fourth-color;
 
-
 $bg-color: #f4f4f4;
+$bg-color-dark: #2b2b2b;
 
 $error-color: #c70909;
 $success-color: #409e13;
@@ -132,9 +132,10 @@ $break-small: 500px;
   pre {
     overflow: auto;
     padding: 10px;
+    margin: 0 20px;
 
     code {
-      display: inline;
+      display: inline-block;
       padding: 0;
       line-height: inherit;
       white-space: pre;
@@ -894,6 +895,7 @@ $break-small: 500px;
     min-height: 35px;
     padding: 0 50px;
     font-size: 14px;
+    line-height: 1.1;
     text-align: right;
     word-wrap: break-word;
     
@@ -904,6 +906,7 @@ $break-small: 500px;
     li {
       display: inline-block;
       padding-left: 20px;
+      padding-bottom: 5px;
       &.edy-btn {
         vertical-align: middle;
       }
@@ -1029,6 +1032,7 @@ $break-small: 500px;
     }
     
     .blog-list-page & {
+      
       height: 100%; 
       min-height: 0;
       font-size: 0; 
@@ -1067,17 +1071,45 @@ $break-small: 500px;
           text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
         }
         
+        .article-bg-color {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 4;
+          background: $bg-color-dark;
+        } 
         .article-inner {
           height: 100%;
           overflow: hidden;
           position: relative;
-          @include box-shadow(-15px, -130px, 40px, rgba(0, 0, 0, 0.1), inset);
+          z-index: 5;
+          
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 67%, rgba(0,0,0,0.3) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(67%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3)));
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 67%,rgba(0,0,0,0.3) 100%);
+            background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 67%,rgba(0,0,0,0.3) 100%);
+            background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 67%,rgba(0,0,0,0.3) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 67%,rgba(0,0,0,0.3) 100%);
+          }
+          
         }
         
         .article-content {
           position: absolute;
-          left: 30px; right: 30px;
+          left: 30px; 
+          right: 30px;
           bottom: 50px;
+          z-index: 10;
         }
         
         img { 
@@ -1096,6 +1128,20 @@ $break-small: 500px;
         }
       }
       
+      .article {
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(0,0,0,0.05);
+          z-index: 1;
+        }
+      }
+      
       padding: 0;
       position: relative;
       overflow-y: hidden;
@@ -1108,7 +1154,7 @@ $break-small: 500px;
       
       .scroller-arrow {
         display: none;
-        height: 80px;
+        height: 94px;
         width: 80px;
         outline: 0;
         position: fixed;
@@ -1135,12 +1181,26 @@ $break-small: 500px;
           
           &:before {
             
-            top: 30px;
+            top: 37px;
             @include rotate(45deg);
           }
           &:after {
-            top: 50px; 
+            top: 57px; 
             @include rotate(135deg);
+          }
+        }
+      }
+      
+      &:hover {
+        .article {
+          &:before {
+            background: rgba(0,0,0,0.1);
+          }
+          
+          &:hover {
+            &:before {
+              background: none;
+            }
           }
         }
       }
@@ -1151,6 +1211,9 @@ $break-small: 500px;
     }
     .content {
       padding: 40px 0 70px;
+      p:first-child {
+        margin-top: 0;
+      }
     }
     
     .content-header {
@@ -1167,6 +1230,26 @@ $break-small: 500px;
   .formatted {
     @include hyphenate(true);
     
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    pre,
+    code {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+      
     pre,
     code,
     iframe,
@@ -1189,13 +1272,40 @@ $break-small: 500px;
     li {
       padding-left: 3px;
     }
+    
+    pre,
+    .embed-container,
+    .table-container,
+    .editmode & table {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    
+    span[style*="font-size"] {
+      line-height: 1.7em;
+    }
+    
+    iframe {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .overthrow {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    
   }
   
   
 /* new-article */
   .new-article {
-    opacity: 0.5;
-    color: $second-color;
+    background: $bg-color-dark;
+    opacity: 0.8;
+    
+    &, h3 {
+      color: $fourth-color;
+    }
     
     .tbl { 
       width: 100%;
@@ -1236,8 +1346,8 @@ $break-small: 500px;
       }
     }
     &:hover {
-      color: $second-color;
-      opacity: 0.8;
+      color: $fourth-color;
+      opacity: 1;
     }
   }
   
@@ -1276,23 +1386,30 @@ $break-small: 500px;
   }
   
   .post-bottom {  
-    padding: 45px 0 0;
+    padding: 20px 0 0;
+    
+    .left, .right {
+      width: 50%;
+      @include box-sizing(border-box);
+    }
     
     .left { 
       float: left; 
       padding-right: 5%;
+    }
+    .left-wide {
+      float: none;
+      padding-right: 0;
+      width: 100%;
     }
     .right { 
       float: right;
       padding-left: 5%;
        
     }
-    .left, .right {
-      width: 50%;
-      @include box-sizing(border-box);
-    }
     
-     h2 { margin: 0 0 20px; padding: 0; }
+    
+     h2 { margin: 25px 0 20px; padding: 0; }
   }
   
   .post-cover-holder {
@@ -1345,6 +1462,11 @@ $break-small: 500px;
     position: relative;
     min-height: 30px;
     padding-bottom: 10px;
+    
+    .comment-form-toggler {
+      font-weight: bold;
+      font-size: 13px;
+    }
 
     .form_field, .edy-fe-field {
       margin-bottom: 10px;
@@ -1740,6 +1862,49 @@ $break-small: 500px;
     }
   }
   
+/* image title */
+  .edy-image-container-with-title {
+    &:after {
+      display: block;
+      padding: 2px;
+      font-size: 11px;
+      content: attr(data-title);
+    }
+  }
+  
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-positionable-container-center-block {
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .edy-positionable-container-left,
+  .edy-positionable-container-right {
+    width: 45%;
+  }
+  .edy-positionable-container-left {
+    margin-right: 20px;    
+  }
+  .edy-positionable-container-right {
+    margin-left: 20px;
+  }
+  
+  .voog-bg-picker-btn {
+    position: absolute;
+    z-index: 50;
+    @extend %button;
+  }
+  
+  
 @media screen and (max-width: $break-medium) {
   
   blockquote {
@@ -1751,7 +1916,7 @@ $break-small: 500px;
   
   .post-bottom {
     
-    padding-top: 30px;
+    padding-top: 20px;
     
     .left, .right {
       padding: 0;
@@ -1760,8 +1925,11 @@ $break-small: 500px;
     .right {
       padding-top: 30px;
     }
+    
+    h2 {
+      margin-top: 20px;
+    }
   }
-  
 }
 
 @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
@@ -2017,7 +2185,7 @@ $break-small: 500px;
       }
       
       .scroller-arrow {
-        height: 60px;
+        height: 74px;
         width: 60px;
         top: $header-height;
         span {
@@ -2027,10 +2195,10 @@ $break-small: 500px;
           }
           
           &:before {
-            top: 23px;
+            top: 29px;
           }
           &:after {
-            top: 37px; 
+            top: 43px; 
           }
         }
       }
@@ -2283,5 +2451,12 @@ $break-small: 500px;
     .voog-search-loader {
       height: 100%;
     }
+  }
+  
+  .form_field_textfield,
+  .form_field_textarea,
+  .form_field_select,
+  .form_field .jq-select {
+    width: 100% !important;
   }
 }

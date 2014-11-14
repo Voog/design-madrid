@@ -3,7 +3,6 @@
 
 {% if site.search.enabled %}
   <script src="{{ site.static_asset_host }}/libs/edicy-search/latest/edicy-search.js"></script>
-  <!-- script src="{{ javascripts_path }}/search.min.js"></script -->
   <script>
 
     $(function() {
@@ -46,6 +45,4 @@
       
     })(jQuery);
   </script>
-  
-  {% include "bg-picker" %}
 {% endeditorjsblock %}

@@ -39,12 +39,8 @@
               </section>
           
               <section class="post-bottom cfx">
-                <div class="left">
-                  {% include "comment-form" %}
-                </div>
-
+                {% include "comment-form" %}
                 {% include "comments" %}
-              
               </section>
           
             </div>

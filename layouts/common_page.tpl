@@ -29,6 +29,5 @@
   
   {% include "langmenu-mobile" %}
   {% include "javascripts" %}
-  
 </body>
 </html>

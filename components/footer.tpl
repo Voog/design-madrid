@@ -1,4 +1,4 @@
-  <footer class="footer">
+  <footer class="footer" data-search-indexing-allowed="false">
     <div class="wrap">
       <div class="inner">
         <div class="row">

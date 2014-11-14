@@ -1724,6 +1724,7 @@ $break-small: 500px;
     position: relative;
     font-family: inherit;
     vertical-align: middle;
+    white-space: nowrap;
     
     .flags-enabled & {
       width: 21px;

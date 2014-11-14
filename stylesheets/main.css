@@ -1667,6 +1667,7 @@ a:hover {
   position: relative;
   font-family: inherit;
   vertical-align: middle;
+  white-space: nowrap;
 }
 .flags-enabled .lang-menu-btn {
   width: 21px;

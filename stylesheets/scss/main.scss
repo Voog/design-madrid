@@ -680,6 +680,9 @@ $break-small: 500px;
       font-size: 16px;
       line-height: 1.1;
       @include box-sizing(border-box);
+      &::-ms-clear {
+        display: none;
+      }
     }
     .search-submit {
       @extend %button;
@@ -2173,6 +2176,7 @@ $break-small: 500px;
     .main-inner {
       &, .blog-list-page & {
         padding: $header-height 0 0;
+        padding-bottom: 0 !important;
       }
     }
     

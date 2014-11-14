@@ -19,11 +19,15 @@
         
           // Body background image and color preview logic (runs after changing the background image or color).
           preview: function(data) {
+            var $link = $article.find('a');
             if (data.image && data.image !== '') {
-              $article.find('a').css('background-image', 'url("' + data.image + '")');
+              $link.css('background-image', 'url("' + data.image + '")');
+            }
+            else {
+              $link.css('background-image', 'none');
             }
             var bg_color = (data.color && data.color !== '') ? data.color : 'transparent';
-            $article.find('.article-bg-color').css('background-color', data.color);
+            $article.find('.article-bg-color').css('background-color', bg_color);
           },
           
       

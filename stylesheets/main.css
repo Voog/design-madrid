@@ -615,6 +615,9 @@ a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.search .search-input::-ms-clear {
+  display: none;
+}
 .search .search-submit {
   display: block;
   width: 28px;
@@ -2048,6 +2051,7 @@ a:hover {
 
   .main .main-inner, .blog-list-page .main .main-inner {
     padding: 40px 0 0;
+    padding-bottom: 0 !important;
   }
   .blog-list-page .main .article, .blog-list-page .main .new-article {
     width: 100%;

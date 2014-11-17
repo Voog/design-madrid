@@ -522,13 +522,17 @@ a:hover {
   text-transform: uppercase;
   color: black;
   padding: 37px 0 37px 50px;
+  overflow: hidden;
 }
 .headroom--not-top .site-title {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+.site-title .site-title-wrap {
+  margin-right: 4px;
+}
 .site-title .site-title-inner {
-  display: inline;
+  display: inline-block;
   min-width: 150px;
   line-height: 1.1;
   word-break: break-word;
@@ -536,6 +540,9 @@ a:hover {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+.site-title .site-title-inner .edy-editable {
+  display: inline-block;
 }
 .site-title a {
   color: black;

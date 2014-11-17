@@ -15,8 +15,10 @@
   </div>
   
   <div class="site-title">
-    <div class="site-title-inner">
-      {% editable site.header %}
+    <div class="site-title-wrap">
+      <div class="site-title-inner">
+        {% editable site.header %}
+      </div>
     </div>
   </div>
   

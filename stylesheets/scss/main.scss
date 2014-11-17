@@ -582,18 +582,25 @@ $break-small: 500px;
     text-transform: uppercase;
     color: $second-color;
     padding: 37px 0 37px 50px;
+    overflow: hidden;
     
     .headroom--not-top & {
       padding-top: 25px;
       padding-bottom: 25px;
     }
     
+    .site-title-wrap {
+      margin-right: 4px;
+    }
     .site-title-inner {
-      display: inline;
+      display: inline-block;
       min-width: 150px;
       line-height: 1.1;
       @include hyphenate(true);
-
+      
+      .edy-editable {
+        display: inline-block;
+      }
     }
     
     a {

@@ -201,9 +201,10 @@
     var setLayout = function() {
         var $m = $('.main-inner'),
             $bm = $('.blog-list-page .main-inner'),
-            mh = $(window).height() - $('.header').height() -$('.footer').height();
+            $h = $('.header'),
+            mh = $(window).height() - $h.height() -$('.footer').height();
            
-        $m.css('padding-top', $('.header').height()).css('min-height', mh);
+        $m.css('padding-top', $h.height()).css('min-height', mh);
         $bm.css('padding-bottom', $('footer').height());
         
         $('.scroller-arrow').css('top', $('.header').height());

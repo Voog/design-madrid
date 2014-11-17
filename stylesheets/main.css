@@ -22,7 +22,7 @@ body, .lang-menu-btn {
   cursor: pointer;
   border: none;
   background: none;
-  font-family: "Montserrat", Helvetica, Arial, "sans-serif";
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 .search .search-submit:focus, .lang-menu-btn:focus, .lang-options .option-btn:focus, .voog-bg-picker-btn:focus {
   outline: none;
@@ -51,12 +51,12 @@ input[type=text],
 textarea {
   border-radius: 0;
   -webkit-appearance: none;
-  font-family: "Montserrat", Helvetica, Arial, "sans-serif";
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 /* paragraphs */
 h1, h2, h3 {
-  font: bold 40px/1.1 "Montserrat", Helvetica, Arial, "sans-serif";
+  font: bold 40px/1.1 "Montserrat", Helvetica, Arial, sans-serif;
   color: black;
 }
 
@@ -72,7 +72,7 @@ h2 {
 
 h3 {
   margin: 40px 0 20px;
-  font-family: "Montserrat", Helvetica, Arial, "sans-serif";
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
@@ -134,7 +134,7 @@ blockquote {
 /* select */
 .jq-select {
   position: relative;
-  font: 18px/1.45 "Montserrat", Helvetica, Arial, "sans-serif";
+  font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   color: #333333;
   background: white;
@@ -149,7 +149,7 @@ blockquote {
   height: 100%;
   margin: 0;
   padding: 0;
-  font: 18px/1.45 "Montserrat", Helvetica, Arial, "sans-serif";
+  font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   opacity: 0;
   color: #333333;
@@ -215,7 +215,7 @@ blockquote {
 .form_field_textarea {
   width: 30%;
   padding: 4px 10px;
-  font: 18px/1.45 "Montserrat", Helvetica, Arial, "sans-serif";
+  font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
   color: #333333;
   border: none;
   outline: none;
@@ -278,7 +278,7 @@ blockquote {
 .form_submit input,
 .submit {
   height: 45px;
-  font: 18px/1.45 "Montserrat", Helvetica, Arial, "sans-serif";
+  font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   border: 0;
   outline: 0;
@@ -381,7 +381,7 @@ table th {
 /* body */
 html,
 body {
-  font: 18px/1.45 "Montserrat", Helvetica, Arial, "sans-serif";
+  font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
 }
 
 html.blog-list-page, html.blog-list-page body {
@@ -918,6 +918,7 @@ a:hover {
 
 /* main */
 .main {
+  display: block;
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -935,7 +936,8 @@ a:hover {
   font-size: 0;
   line-height: 0;
   white-space: nowrap;
-  overflow: auto;
+  overflow: hidden;
+  width: 100%;
   -webkit-overflow-scrolling: touch;
   padding: 0;
   position: relative;
@@ -1039,6 +1041,7 @@ a:hover {
   z-index: 1;
 }
 .blog-list-page .main .main-inner {
+  height: 100%;
   height: 100vh;
   padding-bottom: 80px;
   -webkit-box-sizing: border-box;
@@ -1054,6 +1057,7 @@ a:hover {
   top: 100px;
   right: 0;
   z-index: 100;
+  display: none\9 !important;
 }
 .blog-list-page .main .scroller-arrow span {
   position: relative;
@@ -1077,12 +1081,14 @@ a:hover {
   top: 37px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .blog-list-page .main .scroller-arrow span:after {
   top: 57px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 .blog-list-page .main:hover .article:before {
@@ -1693,6 +1699,7 @@ a:hover {
   top: -1px;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -2208,11 +2215,13 @@ a:hover {
   .mobile-dialog-close:before {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   .mobile-dialog-close:after {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
 
@@ -2281,11 +2290,13 @@ a:hover {
   .search-visible .search-toggler:before {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
   .search-visible .search-toggler:after {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
 

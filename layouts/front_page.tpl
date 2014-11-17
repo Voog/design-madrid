@@ -11,7 +11,7 @@
   
     {% include "header" %}
   
-    <main class="main swipe" data-search-indexing-allowed="true">
+    <main class="main" data-search-indexing-allowed="true">
       <a href="#" class="scroller-arrow "><span class="animated-bounce"></span></a>
       <div class="main-inner">
         {% if editmode %}

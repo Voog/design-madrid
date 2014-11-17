@@ -936,7 +936,7 @@ a:hover {
   font-size: 0;
   line-height: 0;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   -webkit-overflow-scrolling: touch;
   padding: 0;
@@ -1057,7 +1057,6 @@ a:hover {
   top: 100px;
   right: 0;
   z-index: 100;
-  display: none\9 !important;
 }
 .blog-list-page .main .scroller-arrow span {
   position: relative;

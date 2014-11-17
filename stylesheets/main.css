@@ -934,6 +934,9 @@ a:hover {
   max-width: 100%;
   background: #f4f4f4;
 }
+.main .slider-conter {
+  display: none;
+}
 .main .main-inner {
   padding-top: 100px;
 }
@@ -960,6 +963,7 @@ a:hover {
   vertical-align: top;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -968,8 +972,12 @@ a:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  /*
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  */
 }
-.blog-list-page .main .article a, .blog-list-page .main .new-article a {
+.blog-list-page .main .article .link, .blog-list-page .main .new-article .link {
   display: block;
   position: absolute;
   top: 0;
@@ -1048,12 +1056,12 @@ a:hover {
   z-index: 1;
 }
 .blog-list-page .main .main-inner {
-  height: 100%;
-  height: 100vh;
   padding-bottom: 80px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  height: 100%;
+  /*height: 100vh;*/
 }
 .blog-list-page .main .scroller-arrow {
   display: none;
@@ -2063,6 +2071,35 @@ a:hover {
     text-transform: uppercase;
   }
 
+  .main .slider-counter {
+    display: block;
+    height: 10px;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    line-height: 0;
+    font-size: 0;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .main .slider-counter .slider-dot {
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    background: white;
+    margin: 2px 6px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  .main .slider-counter .slider-dot-active {
+    margin: 0 4px;
+    background: #2b2b2b;
+    height: 9px;
+    width: 9px;
+  }
   .main .main-inner, .blog-list-page .main .main-inner {
     padding: 40px 0 0;
     padding-bottom: 0 !important;

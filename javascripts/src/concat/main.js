@@ -112,14 +112,6 @@
             $(".js-autogrow").autoGrow();
         });
         
-        $('.scroller-arrow').click(function(e) {
-            e.preventDefault();
-            var $main = $('.main'),
-                w = $main.width();
-                
-            $main.animate({ scrollLeft: "+=" + w + "px" });
-        });
-        
         $(".js-autogrow").autoGrow();
 
         if ($('html').hasClass('no-placeholder')) {
@@ -149,15 +141,19 @@
             $(window).scrollTop($form_error.eq(0).offset().top);
         }
         
-        if ($('body').hasClass('blog-list-page')) {
-            setBlogListHeight();
-            $(window).resize(setBlogListHeight);
-        }
         
         $('html:not(.editmode) table').each(function() {
             $(this).wrap('<div class="table-holder" />');
         });
         
+        
+        if ($('.blog-list-page .main').length > 0) {
+            $('.article .link, .new-article').click(function() {
+                window.location = $(this).attr('data-href');
+            });
+        }
+        
+        initMobileSwipe();
         initScrollOverride();
         
         checkMainmenuFitting();
@@ -198,20 +194,81 @@
         }
     };
     
+    var initMobileSwipe = function() {
+        if ($('html').hasClass('touch') && $('.blog-list-page .main').length > 0 && $(window).width() <= 500) {
+            
+            var swipeindex = 0,
+                max = $('.main-inner').children().length;
+            
+            if (max <= 10 ) {
+                var html = '<div class="slider-counter">';
+                for (var i = 0; i<max; i++) {
+                    html += '<div class="slider-dot"></div>';
+                }
+                html += '</div>';
+                            
+                            
+                $('.main').prepend(html);
+            }
+            $('.main').scrollLeft(0);
+            
+            $('.slider-counter .slider-dot').removeClass('slider-dot-active').eq(swipeindex).addClass('slider-dot-active');
+            
+            $('.article .link, .new-article').swipe( {
+                //Default is 75px, set to 0 for demo so any distance triggers swipe
+                swipeLeft: function() {
+                    $('.main').animate({ scrollLeft: "+=" + $(window).width() + "px" }, 200, 'swing', function() {
+                        swipeindex ++;
+                        if (swipeindex > max-1) { swipeindex = max - 1; } 
+                        $('.slider-counter .slider-dot').removeClass('slider-dot-active').eq(swipeindex).addClass('slider-dot-active');
+                    });
+                },
+                swipeRight: function() {
+                    $('.main').animate({ scrollLeft: "-=" + $(window).width() + "px" }, 200, 'swing', function() {
+                        swipeindex--;
+                        if (swipeindex < 0) { swipeindex = 0; }
+                        $('.slider-counter .slider-dot').removeClass('slider-dot-active').eq(swipeindex).addClass('slider-dot-active');
+                    }); 
+                    
+                },
+                threshold: 30
+            });
+            
+            $('.scroller-arrow').click(function(e) {
+                e.preventDefault();
+                var $main = $('.main'),
+                    w = $main.width();
+                
+                $main.animate({ scrollLeft: "+=" + w + "px" }, 200, 'swing', function() {
+                    swipeindex ++;
+                    if (swipeindex > max) { swipeindex = max; } 
+                    console.log(swipeindex);
+                });
+            });
+        }
+        else {
+            $('.scroller-arrow').click(function(e) {
+                e.preventDefault();
+                var $main = $('.main'),
+                    w = $main.width();
+                
+                $main.animate({ scrollLeft: "+=" + w + "px" });
+            });
+        }
+    };
+    
     var setLayout = function() {
         var $m = $('.main-inner'),
             $bm = $('.blog-list-page .main-inner'),
             $h = $('.header'),
-            mh = $(window).height() - $h.height() -$('.footer').height();
+            mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height());
            
+        
+ 
         $m.css('padding-top', $h.height()).css('min-height', mh);
-        $bm.css('padding-bottom', $('footer').height());
+        $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').height())).height(mh);
         
         $('.scroller-arrow').css('top', $('.header').height());
-    };
-    
-    var setBlogListHeight = function() {
-        $('.main-inner').height($(window).height()-parseInt($('.main-inner').css('padding-top'),10)-parseInt($('.main-inner').css('padding-bottom'),10));
     };
     
     var checkMainmenuFitting = function() {

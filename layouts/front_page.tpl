@@ -17,7 +17,7 @@
         {% if editmode %}
           {% for item in site.menuitems_with_hidden %}
             {% if item.blog? %}
-              <a class="new-article" href="{{ item.url }}?new">
+              <div class="new-article link" data-href="{{ item.url }}?new">
                 <div class="tbl">
                   <div class="tbl-row">
                     <div class="tbl-cell">
@@ -37,7 +37,7 @@
                     </div>
                   </div>
                 </div>
-              </a>
+              </div>
               {% break %}
             {% endif %}
           {% endfor %}
@@ -64,7 +64,7 @@
           {% endcapture %}
           
           <article class="article" data-article-id="{{ article.id }}">
-            <a href="{{ article.url }}" class="--lazy" {% if article.data.background.image %}{% if forloop.index < 6 %} style="background-image: url('{{ article.data.background.image }}');" data-lazy-loaded="true"{% else %} data-article-image="{{ article.data.background.image }}" {% endif %}{% endif %} >
+            <div data-href="{{ article.url }}" class="--lazy link" {% if article.data.background.image %}{% if forloop.index < 6 %} style="background-image: url('{{ article.data.background.image }}');" data-lazy-loaded="true"{% else %} data-article-image="{{ article.data.background.image }}" {% endif %}{% endif %} >
               <div class="article-bg-color" style="{{ bg_color_style }}"></div>
               <div class="article-inner">
                 {% if editmode %}                
@@ -75,7 +75,7 @@
                   <div class="article-date">{{ article.created_at | format_date: "short" }}</div>
                 </div>
               </div>
-            </a>
+            </div>
           </article>
         {% endfor %}
       </div>

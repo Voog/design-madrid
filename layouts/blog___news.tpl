@@ -14,7 +14,7 @@
       <a href="#" class="scroller-arrow "><span class="animated-bounce"></span></a>
       <div class="main-inner">
         {% if editmode %}
-          <a class="new-article" href="{{ blog.page.url }}?new">
+          <div class="new-article" data-href="{{ item.url }}?new">
             <div class="tbl">
               <div class="tbl-row">
                 <div class="tbl-cell">
@@ -34,7 +34,7 @@
                 </div>
               </div>
             </div>
-          </a>
+          </div>
         {% endif %}
     
         {% for article in articles %}
@@ -58,7 +58,7 @@
           {% endcapture %}
           
           <article class="article" data-article-id="{{ article.id }}">
-            <a href="{{ article.url }}" class="--lazy" {% if article.data.background.image %}{% if forloop.index < 6 %} style="background-image: url('{{ article.data.background.image }}');" data-lazy-loaded="true"{% else %} data-article-image="{{ article.data.background.image }}" {% endif %}{% endif %} >
+            <div data-href="{{ article.url }}" class="--lazy link" {% if article.data.background.image %}{% if forloop.index < 6 %} style="background-image: url('{{ article.data.background.image }}');" data-lazy-loaded="true"{% else %} data-article-image="{{ article.data.background.image }}" {% endif %}{% endif %} >
               <div class="article-bg-color" style="{{ bg_color_style }}"></div>
               <div class="article-inner">
                 {% if editmode %}                
@@ -69,7 +69,7 @@
                   <div class="article-date">{{ article.created_at | format_date: "short" }}</div>
                 </div>
               </div>
-            </a>
+            </div>
           </article>
         {% endfor %}
       </div>

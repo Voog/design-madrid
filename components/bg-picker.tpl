@@ -19,7 +19,7 @@
         
           // Body background image and color preview logic (runs after changing the background image or color).
           preview: function(data) {
-            var $link = $article.find('a');
+            var $link = $article.find('.link');
             if (data.image && data.image !== '') {
               $link.css('background-image', 'url("' + data.image + '")');
             }

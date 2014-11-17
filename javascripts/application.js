@@ -10813,6 +10813,8 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
             });
         }
         
+        $('.voog-bg-picker-btn').click(function(e) { e.stopPropagation(); });
+        
         initMobileSwipe();
         initScrollOverride();
         

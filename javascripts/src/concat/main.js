@@ -153,6 +153,8 @@
             });
         }
         
+        $('.voog-bg-picker-btn').click(function(e) { e.stopPropagation(); });
+        
         initMobileSwipe();
         initScrollOverride();
         

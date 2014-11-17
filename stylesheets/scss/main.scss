@@ -1929,7 +1929,7 @@ $break-small: 500px;
   
   .voog-bg-picker-btn {
     position: absolute;
-    z-index: 50;
+    z-index: 50 !important;
     @extend %button;
   }
   

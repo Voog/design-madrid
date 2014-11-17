@@ -1843,7 +1843,7 @@ a:hover {
 
 .voog-bg-picker-btn {
   position: absolute;
-  z-index: 50;
+  z-index: 50 !important;
 }
 
 @media screen and (max-width: 600px) {

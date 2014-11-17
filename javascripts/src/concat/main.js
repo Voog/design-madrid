@@ -237,12 +237,12 @@
             $('.scroller-arrow').click(function(e) {
                 e.preventDefault();
                 var $main = $('.main'),
-                    w = $main.width();
+                    w = $(window).width();
                 
                 $main.animate({ scrollLeft: "+=" + w + "px" }, 200, 'swing', function() {
                     swipeindex ++;
-                    if (swipeindex > max) { swipeindex = max; } 
-                    console.log(swipeindex);
+                    if (swipeindex > max-1) { swipeindex = max - 1; } 
+                    $('.slider-counter .slider-dot').removeClass('slider-dot-active').eq(swipeindex).addClass('slider-dot-active');
                 });
             });
         }

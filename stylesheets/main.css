@@ -1846,6 +1846,13 @@ a:hover {
   z-index: 50 !important;
 }
 
+.edy-bar-open:after {
+  height: 150px;
+  content: "";
+  display: table;
+  clear: both;
+}
+
 @media screen and (max-width: 600px) {
   blockquote {
     font-size: 36px;

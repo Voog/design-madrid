@@ -1934,6 +1934,14 @@ $break-small: 500px;
   }
   
   
+  .edy-bar-open:after {
+     height: 150px;
+     content: "";
+     display: table;
+     clear: both;
+  }
+  
+  
 @media screen and (max-width: $break-medium) {
   
   blockquote {

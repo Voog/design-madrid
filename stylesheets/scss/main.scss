@@ -482,6 +482,10 @@ $break-small: 500px;
     transition: transform 200ms linear;
     min-height: 100px;
     
+    .editmode & {
+      position: absolute !important;
+    }
+    
     &.headroom--not-top {
       -webkit-transform: translateY(-100%);
       transform: translateY(-100%);

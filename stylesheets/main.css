@@ -433,6 +433,9 @@ a:hover {
   transition: transform 200ms linear;
   min-height: 100px;
 }
+.editmode .header {
+  position: absolute !important;
+}
 .header.headroom--not-top {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);

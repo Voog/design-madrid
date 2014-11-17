@@ -10928,6 +10928,8 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
         $m.css('padding-top', $h.height()).css('min-height', mh);
         $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').height())).height(mh);
         
+        $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
+        
         $('.scroller-arrow').css('top', $('.header').height());
     };
     

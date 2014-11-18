@@ -1346,6 +1346,7 @@ $break-small: 500px;
       text-align: center;
       position: relative;
       padding: 80px 20px 0;
+      opacity: 0.3;
       
       @include box-sizing(border-box);
       background: url('../images/new_article.png') no-repeat center top;
@@ -1374,6 +1375,10 @@ $break-small: 500px;
     &:hover {
       color: $fourth-color;
       opacity: 1;
+      
+      .new-article-inner {
+        opacity: 0.5;
+      }
     }
   }
   
@@ -1547,9 +1552,9 @@ $break-small: 500px;
     
     .inner {
       display: table;
-      width: 100%;
       border-collapse: collapse;
       border: none;
+      margin: 0 auto;
     }
     .row {
       display: table-row;
@@ -1573,7 +1578,15 @@ $break-small: 500px;
       } 
     }
     
-    .tbl { margin: 0 auto;}
+    .tbl { 
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .wrap {
+      max-width: none;
+      text-align: center;
+    }
   }
 
 
@@ -1935,7 +1948,6 @@ $break-small: 500px;
   
   
   .edy-bar-open:after {
-     height: 150px;
      content: "";
      display: table;
      clear: both;

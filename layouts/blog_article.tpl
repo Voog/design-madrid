@@ -12,7 +12,6 @@
     <main class="main" data-search-indexing-allowed="true">
       <div class="main-inner">
         <div class="content-wrap">
-          {% include "submenu" %}
           <div class="wrap">
             <div class="content cfx">
           

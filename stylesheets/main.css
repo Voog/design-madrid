@@ -384,8 +384,15 @@ body {
   font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
 }
 
-html.blog-list-page, html.blog-list-page body {
+html.front-page,
+html.front-page body,
+html.blog-list-page,
+html.blog-list-page body {
   height: 100% !important;
+}
+html.front-page.editmode,
+html.blog-list-page.editmode {
+  height: calc(100% - 40px) !important;
 }
 
 body {
@@ -943,7 +950,52 @@ a:hover {
 .main .main-inner {
   padding-top: 100px;
 }
-.blog-list-page .main {
+.main .content-half {
+  float: left;
+  width: 50%;
+  height: 100%;
+  font-size: 24px;
+}
+.flexbox .main .content-half {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+.no-flexbox .main .content-half {
+  display: table;
+}
+.main .content-half .inner {
+  width: 100%;
+  padding: 45px;
+  white-space: normal;
+  line-height: 1.45em;
+  color: white;
+}
+.no-flexbox .main .content-half .inner {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: red;
+}
+.main .content-left {
+  background-color: yellow;
+}
+.main .content-right {
+  background-color: red;
+}
+.blog-list-page .main, .front-page .main {
   height: 100%;
   min-height: 0;
   font-size: 0;
@@ -956,7 +1008,7 @@ a:hover {
   position: relative;
   overflow-y: hidden;
 }
-.blog-list-page .main .article, .blog-list-page .main .new-article {
+.blog-list-page .main .article, .blog-list-page .main .new-article, .front-page .main .article, .front-page .main .new-article {
   font-size: 18px;
   line-height: 1.45;
   display: inline-block;
@@ -980,7 +1032,7 @@ a:hover {
   transform: translateX(0px);
   */
 }
-.blog-list-page .main .article .link, .blog-list-page .main .new-article .link {
+.blog-list-page .main .article .link, .blog-list-page .main .new-article .link, .front-page .main .article .link, .front-page .main .new-article .link {
   display: block;
   position: absolute;
   top: 0;
@@ -998,7 +1050,7 @@ a:hover {
   box-sizing: border-box;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
-.blog-list-page .main .article .article-bg-color, .blog-list-page .main .new-article .article-bg-color {
+.blog-list-page .main .article .article-bg-color, .blog-list-page .main .new-article .article-bg-color, .front-page .main .article .article-bg-color, .front-page .main .new-article .article-bg-color {
   position: absolute;
   top: 0;
   left: 0;
@@ -1007,13 +1059,13 @@ a:hover {
   z-index: 4;
   background: #2b2b2b;
 }
-.blog-list-page .main .article .article-inner, .blog-list-page .main .new-article .article-inner {
+.blog-list-page .main .article .article-inner, .blog-list-page .main .new-article .article-inner, .front-page .main .article .article-inner, .front-page .main .new-article .article-inner {
   height: 100%;
   overflow: hidden;
   position: relative;
   z-index: 5;
 }
-.blog-list-page .main .article .article-inner:after, .blog-list-page .main .new-article .article-inner:after {
+.blog-list-page .main .article .article-inner:after, .blog-list-page .main .new-article .article-inner:after, .front-page .main .article .article-inner:after, .front-page .main .new-article .article-inner:after {
   content: "";
   display: block;
   position: absolute;
@@ -1028,26 +1080,26 @@ a:hover {
   background: -ms-linear-gradient(top, transparent 0%, transparent 67%, rgba(0, 0, 0, 0.3) 100%);
   background: linear-gradient(to bottom, transparent 0%, transparent 67%, rgba(0, 0, 0, 0.3) 100%);
 }
-.blog-list-page .main .article .article-content, .blog-list-page .main .new-article .article-content {
+.blog-list-page .main .article .article-content, .blog-list-page .main .new-article .article-content, .front-page .main .article .article-content, .front-page .main .new-article .article-content {
   position: absolute;
   left: 30px;
   right: 30px;
   bottom: 50px;
   z-index: 10;
 }
-.blog-list-page .main .article img, .blog-list-page .main .new-article img {
+.blog-list-page .main .article img, .blog-list-page .main .new-article img, .front-page .main .article img, .front-page .main .new-article img {
   display: none;
 }
-.blog-list-page .main .article h2, .blog-list-page .main .new-article h2 {
+.blog-list-page .main .article h2, .blog-list-page .main .new-article h2, .front-page .main .article h2, .front-page .main .new-article h2 {
   margin: 0;
   padding: 0;
   color: white;
 }
-.blog-list-page .main .article .article-date, .blog-list-page .main .new-article .article-date {
+.blog-list-page .main .article .article-date, .blog-list-page .main .new-article .article-date, .front-page .main .article .article-date, .front-page .main .new-article .article-date {
   font-size: 12px;
   padding-top: 8px;
 }
-.blog-list-page .main .article:before {
+.blog-list-page .main .article:before, .front-page .main .article:before {
   content: "";
   display: block;
   position: absolute;
@@ -1058,7 +1110,7 @@ a:hover {
   background: rgba(0, 0, 0, 0.05);
   z-index: 1;
 }
-.blog-list-page .main .main-inner {
+.blog-list-page .main .main-inner, .front-page .main .main-inner {
   padding-bottom: 80px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1066,7 +1118,7 @@ a:hover {
   height: 100%;
   /*height: 100vh;*/
 }
-.blog-list-page .main .scroller-arrow {
+.blog-list-page .main .scroller-arrow, .front-page .main .scroller-arrow {
   display: none;
   height: 94px;
   width: 80px;
@@ -1076,13 +1128,13 @@ a:hover {
   right: 0;
   z-index: 100;
 }
-.blog-list-page .main .scroller-arrow span {
+.blog-list-page .main .scroller-arrow span, .front-page .main .scroller-arrow span {
   position: relative;
   height: 100%;
   width: 100%;
   display: block;
 }
-.blog-list-page .main .scroller-arrow span:before, .blog-list-page .main .scroller-arrow span:after {
+.blog-list-page .main .scroller-arrow span:before, .blog-list-page .main .scroller-arrow span:after, .front-page .main .scroller-arrow span:before, .front-page .main .scroller-arrow span:after {
   display: block;
   content: "";
   position: absolute;
@@ -1094,24 +1146,24 @@ a:hover {
   -moz-border-radius: 2px;
   border-radius: 2px;
 }
-.blog-list-page .main .scroller-arrow span:before {
+.blog-list-page .main .scroller-arrow span:before, .front-page .main .scroller-arrow span:before {
   top: 37px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.blog-list-page .main .scroller-arrow span:after {
+.blog-list-page .main .scroller-arrow span:after, .front-page .main .scroller-arrow span:after {
   top: 57px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-.blog-list-page .main:hover .article:before {
+.blog-list-page .main:hover .article:before, .front-page .main:hover .article:before {
   background: rgba(0, 0, 0, 0.1);
 }
-.blog-list-page .main:hover .article:hover:before {
+.blog-list-page .main:hover .article:hover:before, .front-page .main:hover .article:hover:before {
   background: none;
 }
 .main .content-wrap {
@@ -1417,7 +1469,7 @@ a:hover {
   z-index: 200;
   min-height: 75px;
 }
-.blog-list-page .footer {
+.blog-list-page .footer, .front-page .footer {
   position: absolute;
   bottom: 0;
   left: 0;

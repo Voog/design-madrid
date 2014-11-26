@@ -48,4 +48,43 @@
       background-color: {{ content_left_bg_color }};
     }
   {% endif %}
+
+
+
+
+
+  {% comment %}/* Body background image */{% endcomment %}
+  {% if content_right_bg.imageSizes != nil %}
+    {% if content_right_bg.imageSizes == "" %}
+      .content-right {
+        background-image: none;
+      }
+    {% else %}
+      /* is not nill*/
+      {% for imageSize in page.data.content_right_bg.imageSizes %}
+        {% if forloop.first %}
+          .content-right {
+            background-image: url("{{ imageSize.url }}");
+          }
+        {% else %}
+          @media screen and (max-width: {{ imageSize.width }}px) and (max-height: {{ imageSize.height }}px) {
+            .content-right {
+              background-image: url("{{ imageSize.url }}");
+            }
+          }
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endif %}
+
+  {% comment %}/* Body Background color */{% endcomment %}
+  {% if content_right_bg.color %}
+    .content-right .background-color {
+      background-color: {{ page.data.content_right_bg.color }};
+    }
+  {% else %}
+    .content-right .background-color {
+      background-color: {{ content_right_bg_color }};
+    }
+  {% endif %}
 </style>

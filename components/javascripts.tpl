@@ -46,57 +46,81 @@
             id: '{{ page.id }}'
           });
 
-          // contentHalf BACKGROUND PICKER LOGIC.
-          var contentHalfLeftBg = new Edicy.BgPicker($('.content-half .js-background-settings'), {
+          // contentHalf background image and color preview logic function.
+          var contentHalfBgPreview = function(data, contentHalf) {
+            // Returns the suitable version of the image depending on the viewport width.
+            var getImageByWidth = function(sizes, targetWidth) {
+              var prevImage;
+
+              for (var i = sizes.length; i--;) {
+                if (sizes[i].width > targetWidth) {
+                  return prevImage || sizes[i];
+                }
+              }
+              // Makes sure that smallest is returned if all images bigger than targetWidth.
+              return sizes[sizes.length - 1]
+            };
+
+            // Defines the suitable image based on the viewport width.
+            var suitableImage = data.imageSizes ? getImageByWidth(data.imageSizes, $(window).width()) : 'none';
+
+            var contentHalfBgImage = (data.image && data.image !== '') ? 'url(' + suitableImage.url + ')' : 'none',
+                contentHalfBgColor = (data.color && data.color !== '') ? data.color : 'transparent',
+                contentHalfBgColorOpacity = (data.colorData && data.colorData !== '') ? data.colorData.a : 'none',
+                contentHalfBgColorLightness = (data.colorData && data.colorData !== '' && data.colorData.lightness) ? data.colorData.lightness : 'none';
+
+            // Removes the current lightness class.
+            $(contentHalf).find('.js-background-type').removeClass('light-background dark-background');
+            // Checks the opacity of the contentHalf background color and sets the lightness class depending on it's value.
+            if (contentHalfBgColorOpacity >= 0.2) {
+              $(contentHalf).find('.js-background-type').addClass(contentHalfBgColorLightness >= 0.5 ? 'light-background' : 'dark-background');
+            } else {
+              $(contentHalf).find('.js-background-type').addClass('light-background');
+            };
+
+            // Updates the contentHalf background image and background color.
+            $(contentHalf).css({'background-image' : contentHalfBgImage});
+            $(contentHalf).find('.background-color').css({'background-color' : contentHalfBgColor});
+          };
+
+          // contentHalf background image and color save logic function.
+          var contentHalfBgCommit = function(data, dataName) {
+            var commitData = $.extend(true, {}, data);
+            commitData.image = data.image || '';
+            commitData.imageSizes = data.imageSizes || '';
+            commitData.color = data.color || 'transparent';
+            pageData.set(dataName, commitData);
+          }
+
+          // Front page left content area background picker.
+          var contentHalfLeftBg = new Edicy.BgPicker($('.content-left .js-background-settings'), {
               picture: true,
               target_width: 600,
               color: true,
               showAlpha: true,
 
-            // contentHalf background image and color preview logic (runs after changing the background image or color).
             preview: function(data) {
-              // Returns the suitable version of the image depending on the viewport width.
-              var getImageByWidth = function(sizes, targetWidth) {
-                var prevImage;
-
-                for (var i = sizes.length; i--;) {
-                  if (sizes[i].width > targetWidth) {
-                    return prevImage || sizes[i];
-                  }
-                }
-                // Makes sure that smallest is returned if all images bigger than targetWidth.
-                return sizes[sizes.length - 1]
-              };
-
-              // Defines the suitable image based on the viewport width.
-              var suitableImage = data.imageSizes ? getImageByWidth(data.imageSizes, $(window).width()) : 'none';
-
-              var contentHalfBgImage = (data.image && data.image !== '') ? 'url(' + suitableImage.url + ')' : 'none',
-                  contentHalfBgColor = (data.color && data.color !== '') ? data.color : 'transparent',
-                  contentHalfBgColorOpacity = (data.colorData && data.colorData !== '') ? data.colorData.a : 'none',
-                  contentHalfBgColorLightness = (data.colorData && data.colorData !== '' && data.colorData.lightness) ? data.colorData.lightness : 'none';
-
-              // Removes the current lightness class.
-              $('.js-content-left.js-background-type').removeClass('light-background dark-background');
-              // Checks the opacity of the contentHalf background color and sets the lightness class depending on it's value.
-              if (contentHalfBgColorOpacity >= 0.2) {
-                $('.js-content-left.js-background-type').addClass(contentHalfBgColorLightness >= 0.5 ? 'light-background' : 'dark-background');
-              } else {
-                $('.js-content-left.js-background-type').addClass('light-background');
-              };
-
-              // Updates the contentHalf background image and background color.
-              $('.js-content-left').css({'background-image' : contentHalfBgImage});
-              $('.js-content-left .background-color').css({'background-color' : contentHalfBgColor});
+              contentHalfBgPreview(data, '.js-content-left');
             },
 
-            // contentHalf background image and color save logic (runs after closing the background picker).
             commit: function(data) {
-              var commitData = $.extend(true, {}, data);
-              commitData.image = data.image || '';
-              commitData.imageSizes = data.imageSizes || '';
-              commitData.color = data.color || 'transparent';
-              pageData.set("content_left_bg", commitData);
+              contentHalfBgCommit(data, 'content_left_bg');
+            }
+          });
+
+          // Front page left content area background picker.
+          var contentHalfLeftBg = new Edicy.BgPicker($('.content-right .js-background-settings'), {
+              picture: true,
+              target_width: 600,
+              color: true,
+              showAlpha: true,
+
+            preview: function(data) {
+              contentHalfBgPreview(data, '.js-content-right');
+            },
+
+            commit: function(data) {
+              contentHalfBgCommit(data, 'content_right_bg');
             }
           });
         {% endif %}

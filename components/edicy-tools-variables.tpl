@@ -49,6 +49,46 @@
   {% else %}
     {% assign content_left_bg_color_data_str = content_left_bg_color_data | json %}
   {% endif %}
+
+  {% comment %}Assign variables based on page type.{% endcomment %}
+  {% assign content_right_bg = page.data.content_right_bg %}
+  {% assign content_right_bg_image = page.data.content_right_bg.image %}
+  {% assign content_right_bg_image_sizes = page.data.content_right_bg.imageSizes %}
+  {% assign content_right_bg_color = page.data.content_right_bg.color %}
+  {% assign content_right_bg_color_data = page.data.content_right_bg.colorData %}
+  {% assign content_right_bg_color_opacity = page.data.content_right_bg.colorData.a %}
+  {% assign content_right_bg_color_lightness = page.data.content_right_bg.colorData.lightness %}
+
+  {% comment %}Sets the body background type.{% endcomment %}
+  {% if content_right_bg %}
+    {% if content_right_bg_color_opacity >= 0.2 %}
+      {% if content_right_bg_color_lightness >= 0.5 %}
+        {% assign content_right_bg_type = 'light-background' %}
+      {% else %}
+        {% assign content_right_bg_type = 'dark-background' %}
+      {% endif %}
+    {% else %}
+      {% assign content_right_bg_type = 'light-background' %}
+    {% endif %}
+  {% else %}
+    {% assign content_right_bg_type = 'dark-background' %}
+  {% endif %}
+
+  {% if content_right_bg_image_sizes == nil %}
+    {% assign content_right_bg_image_sizes_str = '' %}
+  {% else %}
+    {% assign content_right_bg_image_sizes_str = content_right_bg_image_sizes | json %}
+  {% endif %}
+
+  {% if content_right_bg_color == nil %}
+    {% assign content_right_bg_color = 'rgba(255,78,0,1)' %}
+  {% endif %}
+
+  {% if content_right_bg_color_data == nil %}
+    {% assign content_right_bg_color_data_str = '{"r": 249, "g": 205, "b": 0, "a": 0.1, "lightness": 0.78}' %}
+  {% else %}
+    {% assign content_right_bg_color_data_str = content_right_bg_color_data | json %}
+  {% endif %}
 {% endcapture %}
 
 

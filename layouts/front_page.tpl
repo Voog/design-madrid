@@ -14,7 +14,6 @@
 
     <main class="main" data-search-indexing-allowed="true">
       <div class="main-inner">
-        <script>console.log('{{ page.id }}');</script>
         <div class="content-half content-left js-content-left">
           {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_left_bg_image }}" data-bg-image-sizes="{{ content_left_bg_image_sizes_str | escape }}" data-bg-color="{{ content_left_bg_color }}" data-bg-color-data="{{ content_left_bg_color_data_str | escape }}"></button>{% endif %}
           <div class="background-color"></div>

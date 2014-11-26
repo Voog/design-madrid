@@ -1084,6 +1084,7 @@ $header-inner-height: 28px;
     }
 
     .inner {
+      position: relative;
       width: 100%;
       padding: 45px;
       white-space: normal;
@@ -2604,4 +2605,26 @@ $flags:
   .form_field .jq-select {
     width: 100% !important;
   }
+}
+
+// Editmode CMS style overrides
+.dark-background .edy-empty-bordered {
+  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed #FFFFFF;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+.dark-background .placeholder {
+  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-background .edy-content-element-hover {
+  border: 1px solid #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark-background .edy-texteditor-active {
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+}
+.dark-background .edy-texteditor-active:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.63);
 }

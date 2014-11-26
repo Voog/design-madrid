@@ -45,7 +45,7 @@
   {% endif %}
 
   {% if content_left_bg_color_data == nil %}
-    {% assign content_left_bg_color_data_str = '{"r": 249, "g": 205, "b": 0, "a": 0.1, "lightness": 0}' %}
+    {% assign content_left_bg_color_data_str = '{"r": 249, "g": 205, "b": 0, "a": 0.1, "lightness": 0.78}' %}
   {% else %}
     {% assign content_left_bg_color_data_str = content_left_bg_color_data | json %}
   {% endif %}

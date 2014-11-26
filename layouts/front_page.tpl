@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="front-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
+<html class="front-page height-calculation {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% assign front_page = true %}
   {% include "edicy-tools-variables" %}

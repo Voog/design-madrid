@@ -49,10 +49,6 @@
     }
   {% endif %}
 
-
-
-
-
   {% comment %}/* Body background image */{% endcomment %}
   {% if content_right_bg.imageSizes != nil %}
     {% if content_right_bg.imageSizes == "" %}

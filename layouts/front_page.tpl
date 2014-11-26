@@ -4,6 +4,7 @@
   {% assign front_page = true %}
   {% include "edicy-tools-variables" %}
   {% include "html-head" %}
+  {% include "edicy-tools-styles" %}
 </head>
 <body class="main-menu-fits{% if site.search.enabled %} search-enabled{% endif %}">
 
@@ -13,11 +14,15 @@
 
     <main class="main" data-search-indexing-allowed="true">
       <div class="main-inner">
-        <div class="content-half content-left">
+        <script>console.log('{{ page.id }}');</script>
+        <div class="content-half content-left js-content-left js-background-type {{ content_left_bg_type }}">
+          {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_left_bg_image }}" data-bg-image-sizes="{{ content_left_bg_image_sizes_str | escape }}" data-bg-color="{{ content_left_bg_color }}" data-bg-color-data="{{ content_left_bg_color_data_str | escape }}"></button>{% endif %}
+          <div class="background-color"></div>
           <div class="inner">
             <div class="content formatted cfx">{% content name="left" %}</div>
           </div>
         </div>
+
         <div class="content-half content-right">
           <div class="inner">
             <div class="content formatted cfx">{% content %}</div>
@@ -29,7 +34,7 @@
 
   {% include "footer" %}
   {% include "langmenu-mobile" %}
-  {% include "javascripts" %}
-  {% include "bg-picker" %}
+  {% include "javascripts" with "front_page" %}
+
 </body>
 </html>

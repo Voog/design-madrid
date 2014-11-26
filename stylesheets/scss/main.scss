@@ -1058,10 +1058,13 @@ $header-inner-height: 28px;
   }
 
   .content-half {
+    position: relative;
     float: left;
     width: 50%;
     height: 100%;
     font-size: 24px;
+    background-size: cover;
+    background-position: center center;
 
     .flexbox & {
       @include display(flex);
@@ -1070,6 +1073,14 @@ $header-inner-height: 28px;
 
     .no-flexbox & {
       display: table;
+    }
+
+    .background-color {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
     }
 
     .inner {
@@ -1088,7 +1099,7 @@ $header-inner-height: 28px;
   }
 
   .content-left {
-    background-color: yellow;
+
   }
 
   .content-right {

@@ -8,13 +8,13 @@
 
   <div class="holder">
     {% include "header" %}
-  
+
     <main class="main" data-search-indexing-allowed="true">
       <div class="main-inner">
         <div class="content-wrap">
           <div class="wrap">
             <div class="content cfx">
-          
+
               <header class="post-header ">
                 <h1>{% editable article.title %}<time class="post-date" datetime="{{ article.created_at | date : "%Y %m %d" }}">{{ article.created_at | format_date: "long" }}</time></h1>
               </header>
@@ -36,12 +36,12 @@
                 </div>
                 {% endif %}
               </section>
-          
+
               <section class="post-bottom formatted cfx">
                 {% include "comment-form" %}
                 {% include "comments" %}
               </section>
-          
+
             </div>
           </div>
         </div>
@@ -49,16 +49,16 @@
       {% include "footer" %}
     </main>
   </div>
-  
+
   {% include "langmenu-mobile" %}
   {% include "javascripts" %}
   {% include "bg-picker" with 'article' %}
-  
+
   <script>
   $(function() {
-    
+
     var langCode ='{% if page.language_code == 'zh'%}zh-cn{% else %}{{ page.language_code }}{% endif %}';
-       
+
     $('.comment-created').each(function() {
       var $el = $(this);
       $el.text(moment($el.data('date'), "YYYY-MM-DD HH:mm:ss Z").locale(langCode).fromNow())

@@ -64,6 +64,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/edicy-tools-styles.tpl",
+      "layout_name": "edicy-tools-styles",
+      "title": "edicy-tools-styles"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/edicy-tools-variables.tpl",
       "layout_name": "edicy-tools-variables",
       "title": "edicy-tools-variables"
@@ -176,6 +183,18 @@
       "file": "images/close.png",
       "kind": "images",
       "filename": "close.png"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-page-left-bg.jpg",
+      "kind": "images",
+      "filename": "front-page-left-bg.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "file": "images/front-page-left-bg_block.jpg",
+      "kind": "images",
+      "filename": "front-page-left-bg_block.jpg"
     },
     {
       "content_type": "image/png",

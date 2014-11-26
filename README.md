@@ -1,4 +1,4 @@
-#The Barcelona design template for Voog
+#The Madrid design template for Voog
 
 To modify this template [Node.js](http://www.nodejs.org/), [Node Package Manager](https://www.npmjs.org/), [Grunt](http://www.gruntjs.com/) and [Bower](http://www.bower.io/) must be installed.
 

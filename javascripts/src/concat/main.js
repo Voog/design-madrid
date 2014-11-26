@@ -265,10 +265,8 @@
             $h = $('.header'),
             mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height());
 
-
-
         $m.css('padding-top', $h.height()).css('min-height', mh);
-        $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').height())).height(mh);
+        $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').height() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh - ($('html').hasClass('editmode') ? 40 : 0));
 
         $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
 

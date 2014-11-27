@@ -57,7 +57,13 @@ textarea {
 /* paragraphs */
 h1, h2, h3 {
   font: bold 40px/1.1 "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
   color: black;
+}
+.dark-background h1, .dark-background h2, .dark-background h3, .dark-background h4, .dark-background h5, .dark-background h6 {
+  color: white;
 }
 
 h1 {
@@ -226,6 +232,10 @@ blockquote {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.light-background .form_field_textfield, .light-background
+.form_field_textarea {
+  background: #C8C8C8;
 }
 
 .form_field_textfield,
@@ -410,10 +420,16 @@ body {
 /* link */
 a {
   text-decoration: none;
-  color: #919191;
+  color: rgba(0, 0, 0, 0.43);
 }
 a:hover {
   color: black;
+}
+.dark-background a {
+  color: rgba(255, 255, 255, 0.43);
+}
+.dark-background a:hover {
+  color: white;
 }
 
 /* holder */
@@ -978,8 +994,12 @@ a:hover {
   line-height: 1.45em;
   color: white;
 }
+.main .content-half .light-background {
+  color: black;
+}
 .main .content-half .align-middle {
   display: table;
+  table-layout: fixed;
   width: 100%;
   height: 100%;
 }
@@ -1251,6 +1271,13 @@ a:hover {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+.formatted .edys-gallery {
+  text-align: center;
+}
+.formatted .edys-gallery-item {
+  display: inline-block;
+  float: none;
+}
 
 /* new-article */
 .new-article {
@@ -1293,7 +1320,10 @@ a:hover {
   top: 0;
   margin-left: -36px;
 }
-.new-article .new-article-inner h3 {
+.new-article .new-article-inner h3,
+.new-article .new-article-inner h4,
+.new-article .new-article-inner h5,
+.new-article .new-article-inner h6 {
   margin: 0;
   padding: 0;
 }
@@ -1931,6 +1961,18 @@ a:hover {
   padding: 63px 40px 57px;
 }
 
+.content-half .edy-gallery-area {
+  text-align: center;
+  font-size: 0;
+}
+.content-half .edy-gallery-area .edy-gallery-thumb,
+.content-half .edy-gallery-area .edy-gallery-sortable-placeholder {
+  float: none;
+}
+.formatted .edy-gallery-area .edy-gallery-thumb {
+  margin: 3px 5px 3px 0;
+}
+
 @media screen and (max-width: 600px) {
   blockquote {
     font-size: 36px;
@@ -1986,7 +2028,7 @@ a:hover {
     font-size: 22px;
   }
 
-  h3 {
+  h3, h4, h5, h6 {
     font-size: 18px;
   }
 

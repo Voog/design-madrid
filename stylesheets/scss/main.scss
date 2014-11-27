@@ -89,7 +89,14 @@ textarea {
 h1, h2, h3 {
   @extend %nulling;
   font: bold 40px/1.1 $font-main;
+}
+
+h1, h2, h3, h4, h5, h6 {
   color: $second-color;
+
+  .dark-background & {
+    color: $white;
+  }
 }
 
 h1 {
@@ -254,6 +261,10 @@ blockquote {
   background: white;
   @include border-radius(0);
   @include box-sizing(border-box);
+
+  .light-background & {
+    background: #C8C8C8;
+  }
 }
 
 .form_field_textfield,
@@ -457,10 +468,18 @@ body {
 /* link */
 a {
   text-decoration: none;
-  color: $link-color;
+  color: rgba($black, .43);
 
   &:hover {
     @include color($second-color);
+  }
+
+  .dark-background & {
+    color: rgba($white, .43);
+
+    &:hover {
+      @include color($white);
+    }
   }
 }
 
@@ -1087,8 +1106,13 @@ $header-inner-height: 28px;
       color: $white;
     }
 
+    .light-background {
+      color: black;
+    }
+
     .align-middle {
       display: table;
+      table-layout: fixed;
       width: 100%;
       height: 100%;
     }
@@ -1376,6 +1400,14 @@ $header-inner-height: 28px;
       -webkit-overflow-scrolling: touch;
     }
 
+    .edys-gallery {
+      text-align: center;
+    }
+
+    .edys-gallery-item {
+      display: inline-block;
+      float: none;
+    }
   }
 
 
@@ -1422,7 +1454,10 @@ $header-inner-height: 28px;
         }
       }
 
-      h3 {
+      h3,
+      h4,
+      h5,
+      h6 {
         margin: 0;
         padding: 0;
       }
@@ -2041,6 +2076,26 @@ $flags:
 }
 
 
+
+.edy-gallery-area {
+  .content-half & {
+    text-align: center;
+    font-size: 0;
+
+    .edy-gallery-thumb,
+    .edy-gallery-sortable-placeholder {
+      float: none;
+    }
+  }
+
+  .edy-gallery-thumb {
+    .formatted & {
+      margin: 3px 5px 3px 0;
+    }
+  }
+}
+
+
 @media screen and (max-width: $break-medium) {
 
   blockquote {
@@ -2102,7 +2157,7 @@ $flags:
 
   h1 { font-size: 36px; }
   h2 { font-size: 22px; }
-  h3 { font-size: 18px; }
+  h3, h4, h5, h6 { font-size: 18px; }
 
   iframe {
     max-width: 100%;

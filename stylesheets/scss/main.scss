@@ -2008,6 +2008,37 @@ $flags:
    clear: both;
  }
 
+ // Editmode CMS style overrides
+.dark-background {
+  .edy-empty-bordered {
+    color: $white;
+    color: rgba($white, .5);
+    border: 1px dashed #FFFFFF;
+    border: 1px dashed rgba($white, .5);
+  }
+  .placeholder {
+    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .edy-content-element-hover {
+    border: 1px solid #FFFFFF;
+    border: 1px solid rgba($white, .2);
+  }
+  .edy-texteditor-active {
+    outline: 1px solid rgba($white, .4);
+
+    &:hover {
+      outline: 1px solid rgba($white, .63);
+    }
+  }
+}
+
+.edy-empty-bordered {
+  .content-half & {
+    padding: 63px 40px 57px
+  }
+}
+
 
  @media screen and (max-width: $break-medium) {
 
@@ -2039,6 +2070,7 @@ $flags:
 @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
 
   $header-height: 40px;
+
 
   html,
   body {
@@ -2306,6 +2338,17 @@ $flags:
       }
     }
 
+    .content-half {
+      float: none;
+      width: auto;
+      min-height: 50%;
+
+      .inner {
+        padding: 15px;
+        min-height: 200px;
+      }
+    }
+
     .blog-list-page & {
       .article, .new-article {
         width: 100%;
@@ -2340,9 +2383,6 @@ $flags:
 
     .content-wrap {
       padding: 15px 0 0;
-    }
-    .content {
-      padding: 25px 0 40px;
     }
 
     .blog-list-page.touch & {
@@ -2598,36 +2638,5 @@ $flags:
   .form_field_select,
   .form_field .jq-select {
     width: 100% !important;
-  }
-}
-
-// Editmode CMS style overrides
-.dark-background {
-  .edy-empty-bordered {
-    color: $white;
-    color: rgba($white, .5);
-    border: 1px dashed #FFFFFF;
-    border: 1px dashed rgba($white, .5);
-  }
-  .placeholder {
-    color: #FFFFFF;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  .edy-content-element-hover {
-    border: 1px solid #FFFFFF;
-    border: 1px solid rgba($white, .2);
-  }
-  .edy-texteditor-active {
-    outline: 1px solid rgba($white, .4);
-
-    &:hover {
-      outline: 1px solid rgba($white, .63);
-    }
-  }
-}
-
-.edy-empty-bordered {
-  .content-half & {
-    padding: 63px 40px 57px
   }
 }

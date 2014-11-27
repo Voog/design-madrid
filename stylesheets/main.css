@@ -1918,6 +1918,31 @@ a:hover {
   clear: both;
 }
 
+.dark-background .edy-empty-bordered {
+  color: white;
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px dashed #FFFFFF;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+.dark-background .placeholder {
+  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.5);
+}
+.dark-background .edy-content-element-hover {
+  border: 1px solid #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark-background .edy-texteditor-active {
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+}
+.dark-background .edy-texteditor-active:hover {
+  outline: 1px solid rgba(255, 255, 255, 0.63);
+}
+
+.content-half .edy-empty-bordered {
+  padding: 63px 40px 57px;
+}
+
 @media screen and (max-width: 600px) {
   blockquote {
     font-size: 36px;
@@ -2179,6 +2204,15 @@ a:hover {
     padding: 40px 0 0;
     padding-bottom: 0 !important;
   }
+  .main .content-half {
+    float: none;
+    width: auto;
+    min-height: 50%;
+  }
+  .main .content-half .inner {
+    padding: 15px;
+    min-height: 200px;
+  }
   .blog-list-page .main .article, .blog-list-page .main .new-article {
     width: 100%;
     -webkit-transform: translateZ(0);
@@ -2205,9 +2239,6 @@ a:hover {
   }
   .main .content-wrap {
     padding: 15px 0 0;
-  }
-  .main .content {
-    padding: 25px 0 40px;
   }
 
   .footer {
@@ -2441,28 +2472,4 @@ a:hover {
   .form_field .jq-select {
     width: 100% !important;
   }
-}
-.dark-background .edy-empty-bordered {
-  color: white;
-  color: rgba(255, 255, 255, 0.5);
-  border: 1px dashed #FFFFFF;
-  border: 1px dashed rgba(255, 255, 255, 0.5);
-}
-.dark-background .placeholder {
-  color: #FFFFFF;
-  color: rgba(255, 255, 255, 0.5);
-}
-.dark-background .edy-content-element-hover {
-  border: 1px solid #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.dark-background .edy-texteditor-active {
-  outline: 1px solid rgba(255, 255, 255, 0.4);
-}
-.dark-background .edy-texteditor-active:hover {
-  outline: 1px solid rgba(255, 255, 255, 0.63);
-}
-
-.content-half .edy-empty-bordered {
-  padding: 63px 40px 57px;
 }

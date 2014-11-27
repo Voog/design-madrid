@@ -78,7 +78,6 @@
               $('body').removeClass('search-visible');
               $(this).off('.js-search-toggler-click');
               checkMainmenuFitting();
-              checkBodyScrolling();
             }
           });
         },0);
@@ -89,7 +88,6 @@
       }
 
       checkMainmenuFitting();
-      checkBodyScrolling();
     });
 
     $('.js-search-input')
@@ -161,12 +159,10 @@
     initScrollOverride();
 
     checkMainmenuFitting();
-    checkBodyScrolling();
     setLayout();
 
     $(window).on('resize', function() {
       debounce(checkMainmenuFitting(), 50);
-      debounce(checkBodyScrolling(), 50);
       debounce(setLayout(), 50);
 
       if ($(window).width() < 500) {
@@ -180,7 +176,6 @@
       debounceTime: 50,
       callback: function() {
         checkMainmenuFitting();
-        checkBodyScrolling();
         setLayout();
       }
     });
@@ -282,18 +277,6 @@ var setLayout = function() {
   $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
 
   $('.scroller-arrow').css('top', $('.header').height());
-};
-
-var checkBodyScrolling = function() {
-  var windowHeight = $(window).height(),
-  siteTitleHeight = $('.site-title').height(),
-  mainInnerHeight = $('.main-inner').height(),
-  footerHeight = $('.footer').height();
-
-  console.log('windowHeight is: ' + windowHeight);
-  console.log('siteTitleHeight is: ' + siteTitleHeight);
-  console.log('mainInnerHeight is: ' + mainInnerHeight);
-  console.log('footerHeight is: ' + footerHeight);
 };
 
 var checkMainmenuFitting = function() {

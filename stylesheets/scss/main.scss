@@ -1066,15 +1066,6 @@ $header-inner-height: 28px;
     background-size: cover;
     background-position: center center;
 
-    .flexbox & {
-      @include display(flex);
-      @include align-items(center);
-    }
-
-    .no-flexbox & {
-      display: table;
-    }
-
     .background-color {
       position: absolute;
       top: 0;
@@ -1084,18 +1075,28 @@ $header-inner-height: 28px;
     }
 
     .inner {
-      position: relative;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      overflow-y: auto;
       width: 100%;
-      padding: 45px;
       white-space: normal;
       line-height: 1.45em;
       color: $white;
+    }
 
-      .no-flexbox & {
-        display: table-cell;
-        vertical-align: middle;
-        background-color: red;
-      }
+    .align-middle {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+
+    .content {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 45px;
     }
   }
 
@@ -2009,7 +2010,7 @@ $flags:
  }
 
  // Editmode CMS style overrides
-.dark-background {
+ .dark-background {
   .edy-empty-bordered {
     color: $white;
     color: rgba($white, .5);
@@ -2040,7 +2041,7 @@ $flags:
 }
 
 
- @media screen and (max-width: $break-medium) {
+@media screen and (max-width: $break-medium) {
 
   blockquote {
     font-size: 36px;

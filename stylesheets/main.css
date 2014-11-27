@@ -1129,7 +1129,6 @@ a:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
-  /*height: 100vh;*/
 }
 .blog-list-page .main .scroller-arrow, .front-page .main .scroller-arrow {
   display: none;
@@ -2020,6 +2019,10 @@ a:hover {
     width: 100%;
   }
 
+  .holder {
+    height: auto;
+  }
+
   h1 {
     font-size: 36px;
   }
@@ -2230,6 +2233,9 @@ a:hover {
     height: 9px;
     width: 9px;
   }
+  .front-page .main .main-inner {
+    height: auto !important;
+  }
   .main .main-inner, .blog-list-page .main .main-inner {
     padding: 40px 0 0;
     padding-bottom: 0 !important;
@@ -2237,11 +2243,20 @@ a:hover {
   .main .content-half {
     float: none;
     width: auto;
-    min-height: 50%;
   }
   .main .content-half .inner {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .main .content-half .align-middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .main .content-half .content {
+    display: block;
     padding: 15px;
-    min-height: 200px;
   }
   .blog-list-page .main .article, .blog-list-page .main .new-article {
     width: 100%;
@@ -2271,7 +2286,7 @@ a:hover {
     padding: 15px 0 0;
   }
 
-  .footer {
+  .front-page .footer {
     position: static;
     left: auto;
     right: auto;

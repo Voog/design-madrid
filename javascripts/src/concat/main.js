@@ -164,12 +164,6 @@
     $(window).on('resize', function() {
       debounce(checkMainmenuFitting(), 50);
       debounce(setLayout(), 50);
-
-      if ($(window).width() < 500) {
-        $('.holder').css('height', 'auto');
-        $('.main-inner').css({'min-height': '0', 'height': 'auto'});
-        $('.footer').css('position', 'static');
-      }
     });
 
     $('.site-title-inner, .footer').contentMutations({
@@ -266,17 +260,25 @@ var initMobileSwipe = function() {
 };
 
 var setLayout = function() {
-  var $m = $('.main-inner'),
-  $bm = $('.height-calculation .main-inner'),
-  $h = $('.header'),
-  mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height());
+    var $m = $('.main-inner'),
+    $bm = $('.height-calculation .main-inner'),
+    $h = $('.header'),
+    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height());
 
-  $m.css('padding-top', $h.height()).css('min-height', mh);
-  $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').height() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh - ($('html').hasClass('editmode') ? 40 : 0));
+    $m.css({'padding-top': $h.height(), 'min-height': mh});
+    $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').height() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh - ($('html').hasClass('editmode') ? 40 : 0));
+    $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
+    $('.scroller-arrow').css('top', $('.header').height());
 
-  $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
-
-  $('.scroller-arrow').css('top', $('.header').height());
+  if ($(window).width() > 500) {
+    console.log('doit');
+    $('.content-half').css('min-height', 0);
+  } else {
+    console.log('dontdoit');
+    var contentHalfHeight = ($(window).height() - $h.height() - $('.footer').height() - ($('html').hasClass('editmode') ? 40 : 0)) / 2;
+    $('.content-half').css('min-height', contentHalfHeight);
+    console.log(contentHalfHeight);
+  }
 };
 
 var checkMainmenuFitting = function() {

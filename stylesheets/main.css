@@ -136,6 +136,9 @@ blockquote {
   line-height: 1.1;
   text-align: center;
 }
+.dark-background blockquote {
+  color: rgba(255, 255, 255, 0.5);
+}
 
 /* select */
 .jq-select {

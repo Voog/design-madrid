@@ -271,13 +271,10 @@ var setLayout = function() {
     $('.scroller-arrow').css('top', $('.header').height());
 
   if ($(window).width() > 500) {
-    console.log('doit');
     $('.content-half').css('min-height', 0);
   } else {
-    console.log('dontdoit');
     var contentHalfHeight = ($(window).height() - $h.height() - $('.footer').height() - ($('html').hasClass('editmode') ? 40 : 0)) / 2;
     $('.content-half').css('min-height', contentHalfHeight);
-    console.log(contentHalfHeight);
   }
 };
 

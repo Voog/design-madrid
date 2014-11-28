@@ -1106,7 +1106,7 @@ $header-inner-height: 28px;
       overflow-y: auto;
       width: 100%;
       white-space: normal;
-      line-height: 1.45em;
+      line-height: 1.45;
       color: $white;
     }
 
@@ -2087,13 +2087,11 @@ $flags:
 
     .edy-gallery-thumb,
     .edy-gallery-sortable-placeholder {
-      float: none;
-    }
-  }
-
-  .edy-gallery-thumb {
-    .formatted & {
-      margin: 3px 5px 3px 0;
+      .front-page & {
+        font-size: 0;
+        float: none;
+        margin: 3px 5px 3px 0;
+      }
     }
   }
 }

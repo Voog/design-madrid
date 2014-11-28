@@ -994,7 +994,7 @@ a:hover {
   overflow-y: auto;
   width: 100%;
   white-space: normal;
-  line-height: 1.45em;
+  line-height: 1.45;
   color: white;
 }
 .main .content-half .light-background {
@@ -1967,11 +1967,10 @@ a:hover {
   text-align: center;
   font-size: 0;
 }
-.content-half .edy-gallery-area .edy-gallery-thumb,
+.front-page .content-half .edy-gallery-area .edy-gallery-thumb, .front-page
 .content-half .edy-gallery-area .edy-gallery-sortable-placeholder {
+  font-size: 0;
   float: none;
-}
-.formatted .edy-gallery-area .edy-gallery-thumb {
   margin: 3px 5px 3px 0;
 }
 

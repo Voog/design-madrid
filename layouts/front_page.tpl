@@ -19,7 +19,7 @@
           <div class="background-color"></div>
           <div class="inner js-background-type {{ content_left_bg_type }}">
             <div class="align-middle">
-              <div class="content formatted cfx">{% content name="left" %}</div>
+              <div class="content formatted cfx">{% content %}</div>
             </div>
           </div>
         </div>

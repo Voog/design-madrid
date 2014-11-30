@@ -16,24 +16,18 @@
     <meta property="og:image" content="{{ content_right_bg_image }}">
   {% endif %}
 
-{% elsif blog_page %}
-
-  {% for article in articles limit: 1 %}
-    {% if article.data.post_image.url %}
-      <meta property="og:image" content="{{ article.data.post_image.url }}">
-    {% elsif page.data.fb_image %}
-      <meta property="og:image" content="{{ page.data.fb_image }}">
-    {% elsif site.data.fb_image %}
-      <meta property="og:image" content="{{ site.data.fb_image }}">
-    {% endif %}
-  {% endfor %}
-
 {% else %}
-
-  {% if article and (article.data.fb_image == nil or article.data.fb_image == "") %}
-    <meta property="og:image" content="{{ article.data.post_image.url }}">
-  {% elsif article and article.data.fb_image %}
+  {% if article and article.data.fb_image %}
     <meta property="og:image" content="{{ article.data.fb_image }}">
+  {% elsif article and article.data.background.image != nil and article.data.background.image != "" %}
+    <meta property="og:image" content="{{ article.data.background.image }}">
+  {% elsif blog_page %}
+    {% for article in articles %}
+      {% if article.data.background.image != nil and article.data.background.image != "" %}
+        <meta property="og:image" content="{{ article.data.background.image }}">
+        {% break %}
+      {% endif %}
+    {% endfor %}
   {% elsif page.data.fb_image %}
     <meta property="og:image" content="{{ page.data.fb_image }}">
   {% elsif site.data.fb_image %}

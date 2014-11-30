@@ -6,7 +6,6 @@
         background-image: none;
       }
     {% else %}
-      /* is not nill*/
       {% for imageSize in page.data.content_left_bg.imageSizes %}
         {% if forloop.first %}
           .content-left {
@@ -23,8 +22,6 @@
     {% endif %}
 
   {% else %}
-    /* is nill*/
-
     {% assign bg_image_prefix = images_path | append: "/front-page-left-bg" %}
 
     .content-left {
@@ -56,7 +53,6 @@
         background-image: none;
       }
     {% else %}
-      /* is not nill*/
       {% for imageSize in page.data.content_right_bg.imageSizes %}
         {% if forloop.first %}
           .content-right {

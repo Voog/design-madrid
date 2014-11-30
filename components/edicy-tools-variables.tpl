@@ -12,13 +12,11 @@
   {% assign content_left_bg_image_sizes = page.data.content_left_bg.imageSizes %}
   {% assign content_left_bg_color = page.data.content_left_bg.color %}
   {% assign content_left_bg_color_data = page.data.content_left_bg.colorData %}
-  {% assign content_left_bg_color_opacity = page.data.content_left_bg.colorData.a %}
-  {% assign content_left_bg_color_lightness = page.data.content_left_bg.colorData.lightness %}
 
   {% comment %}Sets the body background type.{% endcomment %}
   {% if content_left_bg %}
-    {% if content_left_bg_color_opacity >= 0.2 %}
-      {% if content_left_bg_color_lightness >= 0.5 %}
+    {% if content_left_bg_color_data.a >= 0.2 %}
+      {% if content_left_bg_color_data.lightness >= 0.5 %}
         {% assign content_left_bg_type = 'light-background' %}
       {% else %}
         {% assign content_left_bg_type = 'dark-background' %}
@@ -31,6 +29,7 @@
   {% endif %}
 
   {% if content_left_bg_image == nil %}
+    {% assign content_left_bg_image_original = images_path | append: '/front-page-left-bg.jpg' %}
     {% assign content_left_bg_image = images_path | append: '/front-page-left-bg_block.jpg' %}
   {% endif %}
 
@@ -56,13 +55,11 @@
   {% assign content_right_bg_image_sizes = page.data.content_right_bg.imageSizes %}
   {% assign content_right_bg_color = page.data.content_right_bg.color %}
   {% assign content_right_bg_color_data = page.data.content_right_bg.colorData %}
-  {% assign content_right_bg_color_opacity = page.data.content_right_bg.colorData.a %}
-  {% assign content_right_bg_color_lightness = page.data.content_right_bg.colorData.lightness %}
 
   {% comment %}Sets the body background type.{% endcomment %}
   {% if content_right_bg %}
-    {% if content_right_bg_color_opacity >= 0.2 %}
-      {% if content_right_bg_color_lightness >= 0.5 %}
+    {% if content_right_bg_color_data.a >= 0.2 %}
+      {% if content_right_bg_color_data.lightness >= 0.5 %}
         {% assign content_right_bg_type = 'light-background' %}
       {% else %}
         {% assign content_right_bg_type = 'dark-background' %}

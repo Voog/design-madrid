@@ -7,8 +7,18 @@
 <meta property="og:site_name" content="{{ page.site_title | escape }}">
 
 {% comment %}Open Graph image{% endcomment %}
-{% if front_page == true %}
-  {% for article in site.latest_1_articles %}
+{% if front_page %}
+  {% if content_left_bg.image == nil and content_right_bg.image == nil %}
+    <meta property="og:image" content="{% if images_path contains "http://" or images_path contains "https://" %}{{ content_left_bg_image_original }}{% else %}{{ site.url }}{{ content_left_bg_image_original | remove_first: '/' }}{% endif %}">
+  {% elsif content_left_bg.image != nil and content_left_bg.image != "" %}
+    <meta property="og:image" content="{{ content_left_bg_image }}">
+  {% elsif content_right_bg.image != nil and content_right_bg.image != "" %}
+    <meta property="og:image" content="{{ content_right_bg_image }}">
+  {% endif %}
+
+{% elsif blog_page %}
+
+  {% for article in articles limit: 1 %}
     {% if article.data.post_image.url %}
       <meta property="og:image" content="{{ article.data.post_image.url }}">
     {% elsif page.data.fb_image %}
@@ -17,19 +27,13 @@
       <meta property="og:image" content="{{ site.data.fb_image }}">
     {% endif %}
   {% endfor %}
-{% elsif blog_page == true %}
-  {% for article in articles limit:1 %}
-    {% if article.data.post_image.url %}
-      <meta property="og:image" content="{{ article.data.post_image.url }}">
-    {% elsif page.data.fb_image %}
-      <meta property="og:image" content="{{ page.data.fb_image }}">
-    {% elsif site.data.fb_image %}
-      <meta property="og:image" content="{{ site.data.fb_image }}">
-    {% endif %}
-  {% endfor %}
+
 {% else %}
-  {% if article and article.data.fb_image %}
+
+  {% if article and (article.data.fb_image == nil or article.data.fb_image == "") %}
     <meta property="og:image" content="{{ article.data.post_image.url }}">
+  {% elsif article and article.data.fb_image %}
+    <meta property="og:image" content="{{ article.data.fb_image }}">
   {% elsif page.data.fb_image %}
     <meta property="og:image" content="{{ page.data.fb_image }}">
   {% elsif site.data.fb_image %}
@@ -43,6 +47,9 @@
   <meta property="og:description" content="{{ excerpt_description }}">
   <meta name="description" content="{{ excerpt_description }}">
 {% else %}
-    <meta property="og:description" content="{% if article %}{{ article.description }}{% else %}{{ page.description }}{% endif %}">
-    <meta name="description" content="{% if article %}{{ article.description }}{% else %}{{ page.description }}{% endif %}">
+  {% if article %}{% assign description = article.description %}{% else %}{% assign description = page.description %}{% endif %}
+  {% if description != nil and description != "" %}
+    <meta property="og:description" content="{{ description }}">
+    <meta name="description" content="{{ description }}">
+  {% endif %}
 {% endif %}

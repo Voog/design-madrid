@@ -2303,6 +2303,9 @@ a:hover {
     height: auto;
     padding: 20px 0;
   }
+  .footer .lang-menu-wrap {
+    display: none;
+  }
 
   .lang-menu-btn-holder {
     position: absolute;

@@ -29,7 +29,7 @@
           <div class="background-color"></div>
           <div class="inner js-background-type {{ content_right_bg_type }}">
             <div class="align-middle">
-              <div class="content formatted cfx">{% content name="right_half" %}</div>
+              <div class="content formatted cfx">{% content name="default" %}</div>
             </div>
           </div>
         </div>

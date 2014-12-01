@@ -275,6 +275,7 @@ var setLayout = function() {
   } else {
     var contentHalfHeight = ($(window).height() - $h.height() - $('.footer').height() - ($('html').hasClass('editmode') ? 40 : 0)) / 2;
     $('.content-half').css('min-height', contentHalfHeight);
+    $('.content-half .inner').css('height', contentHalfHeight);
   }
 };
 

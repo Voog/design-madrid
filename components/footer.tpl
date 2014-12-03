@@ -11,9 +11,7 @@
                 </div>
                 <div class="tbl-cell">
 
-                  <div class="formatted">
-                    {% xcontent name="footer" %}
-                  </div>
+                  <div class="formatted">{% xcontent name="footer" %}</div>
 
                   <div class="voog-reference">
                     {% loginblock %}

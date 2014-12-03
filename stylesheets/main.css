@@ -473,7 +473,7 @@ a:hover {
 }
 .header .header-inner {
   float: right;
-  padding: 37px 50px 0 20px;
+  padding: 36px 50px 0 20px;
   position: relative;
   z-index: 20;
   min-width: 24px;
@@ -550,7 +550,7 @@ a:hover {
   line-height: 1.2;
   text-transform: uppercase;
   color: black;
-  padding: 37px 0 37px 50px;
+  padding: 36px 0 36px 50px;
   overflow: hidden;
 }
 .headroom--not-top .site-title {
@@ -1162,7 +1162,7 @@ a:hover {
   border-radius: 2px;
 }
 .blog-list-page .main .scroller-arrow span:before, .front-page .main .scroller-arrow span:before {
-  top: 37px;
+  top: 36px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -1505,7 +1505,6 @@ a:hover {
 .footer {
   background: white;
   z-index: 200;
-  min-height: 75px;
 }
 .blog-list-page .footer, .front-page .footer {
   position: absolute;
@@ -1513,28 +1512,45 @@ a:hover {
   left: 0;
   right: 0;
 }
+.footer .wrap {
+  min-height: 0;
+}
 .footer .inner {
   display: table;
   border-collapse: collapse;
   border: none;
-  margin: 0 auto;
+  margin: 35px auto 50px;
 }
 .footer .row {
   display: table-row;
 }
 .footer .footer-content {
-  height: 65px;
   vertical-align: middle;
   display: table-cell;
   border: none;
   text-align: center;
   font-size: 10px;
   line-height: 1.4;
-  padding: 15px 0;
+}
+.footer .footer-content .formatted {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 100px;
+  margin-right: 15px;
+}
+.footer .footer-content .formatted:empty {
+  display: none;
+}
+.footer .footer-content .formatted .edy-empty-bordered {
+  padding: 10px 10px 8px;
+}
+.footer .footer-content .formatted .edy-empty-header {
+  font-size: 12px;
 }
 .footer .voog-reference {
-  display: block;
-  padding-top: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
 }
 .footer .voog-reference svg {
   fill: #333333;
@@ -2260,7 +2276,7 @@ a:hover {
   }
   .main .content-half .content {
     display: block;
-    padding: 15px;
+    padding: 30px;
   }
   .blog-list-page .main .article, .blog-list-page .main .new-article {
     width: 100%;
@@ -2299,9 +2315,17 @@ a:hover {
   .blog-list-page .footer {
     display: none;
   }
+  .footer .inner {
+    margin: 0;
+  }
   .footer .footer-content {
     height: auto;
     padding: 20px 0;
+  }
+  .footer .footer-content .formatted {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 15px;
   }
   .footer .lang-menu-wrap {
     display: none;

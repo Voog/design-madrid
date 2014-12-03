@@ -531,7 +531,7 @@ $header-inner-height: 28px;
 
   .header-inner {
     float: right;
-    padding: 37px 50px 0 20px;
+    padding: 36px 50px 0 20px;
     position: relative;
     z-index: 20;
     min-width: 24px;
@@ -617,7 +617,7 @@ $header-inner-height: 28px;
   line-height: 1.2;
   text-transform: uppercase;
   color: $second-color;
-  padding: 37px 0 37px 50px;
+  padding: 36px 0 36px 50px;
   overflow: hidden;
 
   .headroom--not-top & {
@@ -1287,7 +1287,7 @@ $header-inner-height: 28px;
 
           &:before {
 
-            top: 37px;
+            top: 36px;
             @include rotate(45deg);
           }
           &:after {
@@ -1647,7 +1647,6 @@ $header-inner-height: 28px;
   .footer {
     background: $fourth-color;
     z-index: 200;
-    min-height: 75px;
 
     .blog-list-page &,
     .front-page & {
@@ -1657,28 +1656,51 @@ $header-inner-height: 28px;
       right: 0;
     }
 
+    .wrap {
+      min-height: 0;
+    }
+
     .inner {
       display: table;
       border-collapse: collapse;
       border: none;
-      margin: 0 auto;
+      margin: 35px auto 50px;
     }
     .row {
       display: table-row;
     }
     .footer-content {
-      height: 65px;
       vertical-align: middle;
       display: table-cell;
       border: none;
       text-align: center;
       font-size: 10px;
       line-height: 1.4;
-      padding: 15px 0;
+
+      .formatted {
+        display: inline-block;
+        vertical-align: top;
+        min-width: 100px;
+        margin-right: 15px;
+
+        &:empty {
+          display: none;
+        }
+
+        .edy-empty-bordered {
+          padding: 10px 10px 8px;
+        }
+
+        .edy-empty-header {
+          font-size: 12px;
+        }
+      }
     }
 
     .voog-reference {
-      display: block; padding-top: 5px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
 
       svg {
         fill: $main-color;
@@ -2421,7 +2443,7 @@ $flags:
 
       .content {
         display: block;
-        padding: 15px;
+        padding: 30px;
       }
     }
 
@@ -2480,9 +2502,19 @@ $flags:
       display: none;
     }
 
+    .inner {
+      margin: 0;
+    }
+
     .footer-content {
       height: auto;
       padding: 20px 0;
+
+      .formatted {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
 
     .lang-menu-wrap {

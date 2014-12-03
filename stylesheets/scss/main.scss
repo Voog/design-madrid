@@ -1253,7 +1253,7 @@ $header-inner-height: 28px;
       overflow-y: hidden;
 
       .main-inner {
-        padding-bottom: 95px;
+        padding-bottom: 85px;
         @include box-sizing(border-box);
         height: 100%;
       }
@@ -1339,7 +1339,7 @@ $header-inner-height: 28px;
   .front-page.editmode {
     .main-inner {
       height: calc(100% + 40px);
-      padding-bottom: 135px;
+      padding-bottom: 125px;
     }
   }
 

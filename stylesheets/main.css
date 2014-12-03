@@ -1127,7 +1127,7 @@ a:hover {
   z-index: 1;
 }
 .blog-list-page .main .main-inner, .front-page .main .main-inner {
-  padding-bottom: 95px;
+  padding-bottom: 85px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1202,7 +1202,7 @@ a:hover {
 .blog-list-page.editmode .main-inner,
 .front-page.editmode .main-inner {
   height: calc(100% + 40px);
-  padding-bottom: 135px;
+  padding-bottom: 125px;
 }
 
 /* formatted */

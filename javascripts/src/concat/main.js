@@ -263,10 +263,10 @@ var setLayout = function() {
     var $m = $('.main-inner'),
     $bm = $('.height-calculation .main-inner'),
     $h = $('.header'),
-    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height());
+    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight());
 
     $m.css({'padding-top': $h.height(), 'min-height': mh});
-    $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').height() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh - ($('html').hasClass('editmode') ? 40 : 0));
+    $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh - ($('html').hasClass('editmode') ? 40 : 0));
     $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
     $('.scroller-arrow').css('top', $('.header').height());
 
@@ -274,7 +274,7 @@ var setLayout = function() {
     $('.content-half').css('min-height', 0);
     $('.content-half .inner').css('height', 'auto');
   } else {
-    var contentHalfHeight = ($(window).height() - $h.height() - $('.footer').height() - ($('html').hasClass('editmode') ? 40 : 0)) / 2;
+    var contentHalfHeight = ($(window).height() - $h.height() - $('.footer').innerHeight() - ($('html').hasClass('editmode') ? 40 : 0)) / 2;
     $('.content-half').css('min-height', contentHalfHeight);
     $('.content-half .inner').css('height', contentHalfHeight);
   }

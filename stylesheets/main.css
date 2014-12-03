@@ -1519,7 +1519,7 @@ a:hover {
   display: table;
   border-collapse: collapse;
   border: none;
-  margin: 35px auto 50px;
+  margin: 35px auto;
 }
 .footer .row {
   display: table-row;

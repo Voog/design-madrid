@@ -108,8 +108,8 @@
             }
           });
 
-          // Front page left content area background picker.
-          var contentHalfLeftBg = new Edicy.BgPicker($('.content-right .js-background-settings'), {
+          // Front page right content area background picker.
+          var contentHalfRightBg = new Edicy.BgPicker($('.content-right .js-background-settings'), {
               picture: true,
               target_width: 600,
               color: true,

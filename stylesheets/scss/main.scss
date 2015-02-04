@@ -633,10 +633,6 @@ $header-inner-height: 28px;
     min-width: 150px;
     line-height: 1.1;
     @include hyphenate(true);
-
-    .edy-editable {
-      display: inline-block;
-    }
   }
 
   a {

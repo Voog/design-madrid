@@ -18,7 +18,7 @@
                     <span class="enable-text">{{ "enable_lang_flags" | lc }}</span>
                   </a>
               </div>
-            </div>
+            </li>
           {% endif %}
         </ul>
       </div>

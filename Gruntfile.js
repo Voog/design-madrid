@@ -22,24 +22,8 @@ module.exports = function(grunt) {
         'uglify' : false
       }
     },
-    // Copys the standalone (not concatenated) javascript source files to the javascripts folder.
-    copy: {
-      javascripts: {
-        files: [
-          {
-            expand: true,
-            cwd: 'javascripts/src',
-            src: [
-              '*.js',
-              '!modernizr.js'
-            ],
-            dest: 'javascripts/'
-          }
-        ]
-      }
-    },
 
-    // Concatenates the javascript source files to the javascripts folder.
+    // Concatenates the javascript source files into the one file in "javascripts" folder.
     concat: {
       build: {
         src: [
@@ -49,8 +33,6 @@ module.exports = function(grunt) {
         ],
         dest: 'javascripts/application.js'
       }
-
-      
     },
 
     // Minifies the javascript files.
@@ -139,34 +121,31 @@ module.exports = function(grunt) {
           dest: 'assets/',
           ext: '.svg'
         }]
-      }
+      },
     },
 
     // Watches the project for changes and recompiles the output files.
     watch: {
       js: {
-        files: [
-          'javascripts/src/concat/*.js'
-        ],
-        tasks: ['newer:concat', 'newer:uglify']
+        files: 'javascripts/src/concat/*.js',
+        tasks: ['concat:build', 'uglify:build', 'exec:kit:javascripts/*.js']
       },
 
       css: {
         files: 'stylesheets/scss/*.scss',
-        tasks: ['sass:build', 'newer:cssmin:build']
+        tasks: ['sass:build', 'cssmin:build', 'exec:kit:stylesheets/*.css']
       },
 
       voog: {
-        files: ['javascripts/*.js', 'stylesheets/*.css', 'layouts/*.tpl', 'components/*.tpl'],
+        files: ['layouts/*.tpl', 'components/*.tpl'],
         options: {
           spawn: false
         }
       }
-    }
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -174,10 +153,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-modernizr');
-  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-svgmin');
 
-  grunt.registerTask('default', ['modernizr', 'copy', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
+  grunt.registerTask('default', ['modernizr', 'concat', 'uglify', 'sass', 'cssmin', 'imagemin', 'svgmin']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {

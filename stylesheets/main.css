@@ -232,8 +232,6 @@ blockquote {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .light-background .form_field_textfield, .light-background
@@ -414,8 +412,6 @@ body {
   color: #333333;
   background: #f4f4f4;
   max-width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
 }
@@ -631,8 +627,6 @@ a:hover {
   height: 28px;
   padding: 0 38px 0 10px;
   background: #f4f4f4;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .search .search-input {
@@ -644,8 +638,6 @@ a:hover {
   border: none;
   font-size: 16px;
   line-height: 1.1;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .search .search-input::-ms-clear {
@@ -714,8 +706,6 @@ a:hover {
   padding: 15px 25px;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) ;
   -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) ;
@@ -783,8 +773,6 @@ a:hover {
   transition: transform 200ms linear;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.95);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .main-menu-fits .main-menu {
@@ -953,8 +941,6 @@ a:hover {
 .main {
   display: block;
   position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   min-height: 100%;
   max-width: 100%;
@@ -1037,8 +1023,6 @@ a:hover {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /*
   -webkit-transform: translateX(0px);
@@ -1058,8 +1042,6 @@ a:hover {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -1125,8 +1107,6 @@ a:hover {
 }
 .blog-list-page .main .main-inner, .front-page .main .main-inner {
   padding-bottom: 85px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 100%;
 }
@@ -1314,8 +1294,6 @@ a:hover {
   position: relative;
   padding: 80px 20px 0;
   opacity: 0.3;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: url("../images/new_article.png") no-repeat center top;
 }
@@ -1394,8 +1372,6 @@ a:hover {
 }
 .post-bottom .left, .post-bottom .right {
   width: 50%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .post-bottom .left {

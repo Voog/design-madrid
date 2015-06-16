@@ -263,7 +263,7 @@ blockquote {
   outline: none;
   background: white;
   @include border-radius(0);
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 
   .light-background & {
     background: #C8C8C8;
@@ -464,7 +464,7 @@ body {
   color: $main-color;
   background: $bg-color;
   max-width: 100%;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   -webkit-text-size-adjust: none;
 }
 
@@ -706,7 +706,7 @@ $header-inner-height: 28px;
   height: $header-inner-height;
   padding: 0 $header-inner-height + 10px 0 10px;
   background: $bg-color;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 
   .search-input {
     background: none;
@@ -717,7 +717,7 @@ $header-inner-height: 28px;
     border: none;
     font-size: 16px;
     line-height: 1.1;
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     &::-ms-clear {
       display: none;
     }
@@ -793,7 +793,7 @@ $header-inner-height: 28px;
   width: 400px;
   padding: 15px 25px;
   @include bg($white, 0.95);
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   @include box-shadow(0, 0, 40px, rgba(0,0,0,0.1));
   @include hyphenate(true);
   overflow: auto;
@@ -868,7 +868,7 @@ $header-inner-height: 28px;
   transition: transform 200ms linear;
 
   @include bg($fourth-color, 0.95);
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 
 
   .main-menu-fits & {
@@ -1065,7 +1065,7 @@ $header-inner-height: 28px;
 .main {
   display: block;
   position: relative;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   min-height: 100%;
   max-width: 100%;
   background: $bg-color;
@@ -1148,7 +1148,7 @@ $header-inner-height: 28px;
       overflow: hidden;
       cursor: pointer;
       @include hyphenate(true);
-      @include box-sizing(border-box);
+      box-sizing: border-box;
 
         /*
         -webkit-transform: translateX(0px);
@@ -1168,7 +1168,7 @@ $header-inner-height: 28px;
           background-size: cover;
           background-position: center top;
           background-repeat: no-repeat;
-          @include box-sizing(border-box);
+          box-sizing: border-box;
           text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
         }
 
@@ -1249,7 +1249,7 @@ $header-inner-height: 28px;
 
       .main-inner {
         padding-bottom: 85px;
-        @include box-sizing(border-box);
+        box-sizing: border-box;
         height: 100%;
       }
 
@@ -1446,7 +1446,7 @@ $header-inner-height: 28px;
       padding: 80px 20px 0;
       opacity: 0.3;
 
-      @include box-sizing(border-box);
+      box-sizing: border-box;
       background: url('../images/new_article.png') no-repeat center top;
 
       .svg & {
@@ -1525,7 +1525,7 @@ $header-inner-height: 28px;
 
     .left, .right {
       width: 50%;
-      @include box-sizing(border-box);
+      box-sizing: border-box;
     }
 
     .left {

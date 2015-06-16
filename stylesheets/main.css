@@ -1468,7 +1468,7 @@ a:hover {
   padding-top: 5px;
   color: #818181;
   height: 23px;
-  line-height: 23px;
+  line-height: 2.3;
 }
 .comment .comment-info .edy-site-btn-removecomment {
   vertical-align: -2px;

@@ -10702,6 +10702,30 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
 
 }));
 ;(function($) {
+  var articleBgPreview = function(data, article) {
+      var $link = article.find('.link');
+
+      if (data.image && data.image !== '') {
+          $link.css('background-image', 'url("' + data.image + '")');
+      }
+      else {
+          $link.css('background-image', 'none');
+      }
+      var bg_color = (data.color && data.color !== '') ? data.color : 'transparent';
+      article.find('.article-bg-color').css('background-color', bg_color);
+  };
+
+  var articleBgCommit = function(data, articleData, key) {
+      var commitData = $.extend(true, {}, data);
+      commitData.image = commitData.image || '';
+      commitData.color = commitData.color || '';
+      articleData.set(key, commitData);
+  };
+
+  window.site = $.extend(window.site || {}, {
+      articleBgPreview: articleBgPreview,
+      articleBgCommit: articleBgCommit
+  });
 
   var debounce = function( func, wait, immediate ) {
     var timeout;

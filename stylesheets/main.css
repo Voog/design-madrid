@@ -2015,13 +2015,6 @@ a:hover {
     overflow: hidden;
     width: 100%;
   }
-  body.mobile-main-menu-open .holder, body.search-visible .holder, body.mobile-lang-menu-open .holder {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
 
   .holder {
     height: auto;

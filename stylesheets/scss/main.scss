@@ -1123,6 +1123,21 @@ $header-inner-height: 28px;
       vertical-align: middle;
       padding: 45px;
     }
+
+    a {
+      text-decoration: underline;
+      color: rgba($black, 1);
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .dark-background {
+      a {
+        color: rgba($white, 1);
+      }
+    }
   }
 
   .blog-list-page &,
@@ -2411,12 +2426,7 @@ $flags:
     .content-half {
       float: none;
       width: auto;
-
-      // &,
-      // .inner {
-      //   min-height: 200px;
-      //   min-height: calc(50vh - 85px);
-      // }
+      font-size: 18px;
 
       .inner {
         position: relative;
@@ -2432,7 +2442,7 @@ $flags:
 
       .content {
         display: block;
-        padding: 15px;
+        padding: 30px;
       }
     }
 

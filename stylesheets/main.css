@@ -1004,6 +1004,16 @@ a:hover {
   vertical-align: middle;
   padding: 45px;
 }
+.main .content-half a {
+  text-decoration: underline;
+  color: black;
+}
+.main .content-half a:hover {
+  text-decoration: none;
+}
+.main .content-half .dark-background a {
+  color: white;
+}
 .blog-list-page .main, .front-page .main {
   height: 100%;
   min-height: 0;
@@ -2240,6 +2250,7 @@ a:hover {
   .main .content-half {
     float: none;
     width: auto;
+    font-size: 18px;
   }
   .main .content-half .inner {
     position: relative;
@@ -2253,7 +2264,7 @@ a:hover {
   }
   .main .content-half .content {
     display: block;
-    padding: 15px;
+    padding: 30px;
   }
   .blog-list-page .main .article, .blog-list-page .main .new-article {
     width: 100%;

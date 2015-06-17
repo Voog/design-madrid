@@ -810,6 +810,11 @@ a:hover {
   padding: 0 5px;
 }
 .main-menu ul a {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   font-size: 16px;
   line-height: 1.1;
   color: #818181;
@@ -845,6 +850,11 @@ a:hover {
   vertical-align: middle;
 }
 .sub-menu a {
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   display: inline-block;
   color: #818181;
 }
@@ -2155,11 +2165,6 @@ a:hover {
     text-align: center;
   }
   .main-menu ul a {
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
     font-size: 20px;
     line-height: 1.05;
     color: white;
@@ -2196,11 +2201,6 @@ a:hover {
     text-align: left;
   }
   .sub-menu a {
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
     line-height: 1.05;
     display: block;
   }

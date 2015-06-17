@@ -913,6 +913,7 @@ $header-inner-height: 28px;
     }
 
     a {
+      @include hyphenate(true);
       font-size: 16px;
       line-height: 1.1;
       color: $third-color;
@@ -954,6 +955,7 @@ $header-inner-height: 28px;
     }
   }
   a {
+    @include hyphenate(true);
     display: inline-block;
     color: $third-color;
 
@@ -2320,7 +2322,6 @@ $flags:
       }
 
       a {
-        @include hyphenate(true);
         font-size: 20px;
         line-height: 1.05;
         @include color($fourth-color, .5);
@@ -2365,7 +2366,6 @@ $flags:
     }
 
     a {
-      @include hyphenate(true);
       line-height: 1.05;
       display: block;
       &.active {

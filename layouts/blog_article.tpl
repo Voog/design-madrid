@@ -52,7 +52,7 @@
 
   {% include "langmenu-mobile" %}
   {% include "javascripts" %}
-  {% include "bg-picker" with 'article' %}
+  {% include "edicy-tools" with 'article' %}
 
   <script>
   $(function() {

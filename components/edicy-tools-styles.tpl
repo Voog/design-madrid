@@ -1,5 +1,5 @@
 <style>
-  {% comment %}/* Body background image */{% endcomment %}
+  {% comment %}/* Front page left content area background styles */{% endcomment %}
   {% if content_left_bg.imageSizes != nil %}
     {% if content_left_bg.imageSizes == "" %}
       .content-left {
@@ -35,18 +35,16 @@
     }
   {% endif %}
 
-  {% comment %}/* Body Background color */{% endcomment %}
-  {% if content_left_bg.color %}
-    .content-left .background-color {
+  {% comment %}/* Front page left content area background color style */{% endcomment %}
+  .content-left .background-color {
+    {% if content_left_bg.color %}
       background-color: {{ page.data.content_left_bg.color }};
-    }
-  {% else %}
-    .content-left .background-color {
+    {% else %}
       background-color: {{ content_left_bg_color }};
-    }
-  {% endif %}
+    {% endif %}
+  }
 
-  {% comment %}/* Body background image */{% endcomment %}
+  {% comment %}/* Front page right content area background styles */{% endcomment %}
   {% if content_right_bg.imageSizes != nil %}
     {% if content_right_bg.imageSizes == "" %}
       .content-right {
@@ -69,14 +67,12 @@
     {% endif %}
   {% endif %}
 
-  {% comment %}/* Body Background color */{% endcomment %}
-  {% if content_right_bg.color %}
-    .content-right .background-color {
+  {% comment %}/* Front page right content area background color style */{% endcomment %}
+  .content-right .background-color {
+    {% if content_right_bg.color %}
       background-color: {{ page.data.content_right_bg.color }};
-    }
-  {% else %}
-    .content-right .background-color {
+    {% else %}
       background-color: {{ content_right_bg_color }};
-    }
-  {% endif %}
+    {% endif %}
+  }
 </style>

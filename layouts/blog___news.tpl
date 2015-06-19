@@ -79,7 +79,7 @@
   {% include "footer" %}
   {% include "langmenu-mobile" %}
   {% include "javascripts" %}
-  {% include "edicy-tools" %}
+  {% include "edicy-tools" with "blog_list_page" %}
 
   <script>
     $(window).load(function() {

@@ -6,7 +6,7 @@
   {% include "html-head" %}
   {% include "edicy-tools-styles" %}
 </head>
-<body class="main-menu-fits{% if site.search.enabled %} search-enabled{% endif %}">
+<body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
   <div class="holder">
 
     {% include "header" %}

@@ -529,6 +529,7 @@ $header-inner-height: 28px;
   }
 
   .header-inner {
+    display: block;
     float: right;
     padding: 36px 50px 0 20px;
     position: relative;
@@ -536,7 +537,7 @@ $header-inner-height: 28px;
     min-width: 24px;
     min-height: 24px;
 
-    .main-menu-fits & {
+    .main-menu-not-fitting & {
       display: none;
     }
     .main-menu-open & {
@@ -555,7 +556,7 @@ $header-inner-height: 28px;
   }
 
   .main-menu-toggler {
-    display: block;
+    display: none;
     float: left;
     height: $header-inner-height;
     margin-left: 10px;
@@ -565,9 +566,10 @@ $header-inner-height: 28px;
     text-transform: uppercase;
     position: relative;
 
-    .main-menu-fits & {
-      display: none;
+    &.menu-not-visible {
+      display: block;
     }
+
     .main-menu-open & {
       display: none;
     }
@@ -858,7 +860,7 @@ $header-inner-height: 28px;
 
 /* main-menu */
 .main-menu {
-  display: none;
+  display: block;
   position: absolute;
   z-index: 0;
   top: 0;
@@ -871,8 +873,8 @@ $header-inner-height: 28px;
   box-sizing: border-box;
 
 
-  .main-menu-fits & {
-    display: block;
+  .main-menu-not-fitting & {
+    display: none;
   }
   .main-menu-open & {
     display: block;

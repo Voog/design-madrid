@@ -468,6 +468,7 @@ a:hover {
   transform: translateY(0%);
 }
 .header .header-inner {
+  display: block;
   float: right;
   padding: 36px 50px 0 20px;
   position: relative;
@@ -475,7 +476,7 @@ a:hover {
   min-width: 24px;
   min-height: 24px;
 }
-.main-menu-fits .header .header-inner {
+.main-menu-not-fitting .header .header-inner {
   display: none;
 }
 .main-menu-open .header .header-inner {
@@ -491,7 +492,7 @@ a:hover {
   padding-top: 25px;
 }
 .header .main-menu-toggler {
-  display: block;
+  display: none;
   float: left;
   height: 28px;
   margin-left: 10px;
@@ -501,8 +502,8 @@ a:hover {
   text-transform: uppercase;
   position: relative;
 }
-.main-menu-fits .header .main-menu-toggler {
-  display: none;
+.header .main-menu-toggler.menu-not-visible {
+  display: block;
 }
 .main-menu-open .header .main-menu-toggler {
   display: none;
@@ -763,7 +764,7 @@ a:hover {
 
 /* main-menu */
 .main-menu {
-  display: none;
+  display: block;
   position: absolute;
   z-index: 0;
   top: 0;
@@ -775,8 +776,8 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.95);
   box-sizing: border-box;
 }
-.main-menu-fits .main-menu {
-  display: block;
+.main-menu-not-fitting .main-menu {
+  display: none;
 }
 .main-menu-open .main-menu {
   display: block;

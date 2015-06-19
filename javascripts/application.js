@@ -11140,15 +11140,18 @@ var setLayout = function() {
 var checkMainmenuFitting = function() {
   var $site_title_inner = $('.site-title-inner'),
   $body = $('body'),
+  $mainMenuToggler = $('.js-main-menu-toggler'),
   ww = $(window).width(),
   mw = $('.main-menu').width(),
   tw = $site_title_inner.width() + $site_title_inner.offset().left;
 
   if (ww > mw + tw) {
-    $body.addClass('main-menu-fits');
+    $body.removeClass('main-menu-not-fitting');
+    $mainMenuToggler.removeClass('menu-not-visible');
   }
   else {
-    $body.removeClass('main-menu-fits');
+    $body.addClass('main-menu-not-fitting');
+    $mainMenuToggler.addClass('menu-not-visible');
   }
 };
 

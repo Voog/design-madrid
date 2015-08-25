@@ -4,5 +4,8 @@
     "jquery": "~1.11.0",
     "modernizr": "~2.8.3",
     "overthrow": "~0.7.0"
+  },
+  "devDependencies": {
+    "bourbon": "~4.2.4"
   }
 }

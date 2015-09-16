@@ -534,7 +534,7 @@ $header-inner-height: 28px;
   }
 
   .header-inner {
-    display: block;
+    display: none;
     float: right;
     padding: 36px 50px 0 20px;
     position: relative;
@@ -543,7 +543,7 @@ $header-inner-height: 28px;
     min-height: 24px;
 
     .main-menu-not-fitting & {
-      display: none;
+      display: block;
     }
     .main-menu-open & {
       display: none;

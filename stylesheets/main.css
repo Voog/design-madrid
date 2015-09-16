@@ -481,7 +481,7 @@ a:hover {
   transform: translateY(0%);
 }
 .header .header-inner {
-  display: block;
+  display: none;
   float: right;
   padding: 36px 50px 0 20px;
   position: relative;
@@ -490,7 +490,7 @@ a:hover {
   min-height: 24px;
 }
 .main-menu-not-fitting .header .header-inner {
-  display: none;
+  display: block;
 }
 .main-menu-open .header .header-inner {
   display: none;

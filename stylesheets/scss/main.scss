@@ -175,6 +175,25 @@ blockquote {
   }
 }
 
+.custom-btn {
+  display: inline-block;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font: #{$font-size}/#{$line-height} $font-main;
+  cursor: pointer;
+  color: white;
+  background: #2b2b2b;
+
+  &,
+  &:hover {
+    color: $fourth-color;
+  }
+
+  &:hover {
+    @include bg(#2b2b2b, .8);
+  }
+}
 
 /* select */
 .jq-select {
@@ -1138,11 +1157,26 @@ $header-inner-height: 28px;
       &:hover {
         text-decoration: none;
       }
+
+      &.custom-btn {
+        text-decoration: none;
+        color: rgba($white, 1);
+
+      }
     }
 
     .dark-background {
       a {
         color: rgba($white, 1);
+
+        &.custom-btn {
+          color: rgba($black, 1);
+          background-color: rgba($white, 1);
+
+          &:hover {
+            background-color: rgba($white, .8);
+          }
+        }
       }
     }
   }

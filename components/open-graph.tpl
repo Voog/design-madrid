@@ -7,9 +7,9 @@
 {% comment %}Open Graph image{% endcomment %}
 {% if page.image == nil and front_page %}
   {% if content_left_bg_image_sizes != nil and content_left_bg_image_sizes != '' %}
-    {% assign og_image = content_left_bg_image_sizes[0] %}
+    {% assign og_image = content_left_bg_image_sizes[2] %}
   {% elsif content_right_bg_image_sizes != nil and content_right_bg_image_sizes != '' %}
-    {% assign og_image = content_right_bg_image_sizes[0] %}
+    {% assign og_image = content_right_bg_image_sizes[2] %}
   {% endif %}
 {% else %}
   {% if article %}

@@ -7,9 +7,21 @@
 {% comment %}Open Graph image{% endcomment %}
 {% if page.image == nil and front_page %}
   {% if content_left_bg_image_sizes != nil and content_left_bg_image_sizes != '' %}
-    {% assign og_image = content_left_bg_image_sizes[2] %}
+    {% for size in content_left_bg_image_sizes reversed %}
+      {% if size.width <= 1280 %}
+        {% assign og_image = size %}
+      {% else %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
   {% elsif content_right_bg_image_sizes != nil and content_right_bg_image_sizes != '' %}
-    {% assign og_image = content_right_bg_image_sizes[2] %}
+    {% for size in content_right_bg_image_sizes reversed %}
+      {% if size.width <= 1280 %}
+        {% assign og_image = size %}
+      {% else %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
 {% else %}
   {% if article %}

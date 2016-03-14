@@ -288,12 +288,6 @@
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/modernizr.js",
-      "kind": "javascripts",
-      "filename": "modernizr.js"
-    },
-    {
-      "content_type": "application/javascript",
       "file": "javascripts/modernizr.min.js",
       "kind": "javascripts",
       "filename": "modernizr.min.js"

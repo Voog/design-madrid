@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/footer.tpl",
-      "layout_name": "footer",
-      "title": "footer"
+      "file": "components/header.tpl",
+      "layout_name": "header",
+      "title": "header"
     },
     {
       "content_type": "component",
@@ -78,16 +78,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/article-image.tpl",
-      "layout_name": "article-image",
-      "title": "article-image"
+      "file": "components/footer.tpl",
+      "layout_name": "footer",
+      "title": "footer"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/header.tpl",
-      "layout_name": "header",
-      "title": "header"
+      "file": "components/article-image.tpl",
+      "layout_name": "article-image",
+      "title": "article-image"
     },
     {
       "content_type": "component",
@@ -151,6 +151,20 @@
       "file": "components/submenu.tpl",
       "layout_name": "submenu",
       "title": "submenu"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-design.tpl",
+      "layout_name": "template-design",
+      "title": "template-design"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-variables.tpl",
+      "layout_name": "template-variables",
+      "title": "template-variables"
     }
   ],
   "assets": [
@@ -285,6 +299,12 @@
       "file": "javascripts/application.min.js",
       "kind": "javascripts",
       "filename": "application.min.js"
+    },
+    {
+      "content_type": "application/javascript",
+      "file": "javascripts/modernizr.js",
+      "kind": "javascripts",
+      "filename": "modernizr.js"
     },
     {
       "content_type": "application/javascript",

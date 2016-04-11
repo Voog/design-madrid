@@ -6,55 +6,22 @@ module.exports = function(grunt) {
 
     // Removes old files.
     clean: {
-      assets: ['assets'],
-      images: ['images'],
-      javascripts: ['javascripts'],
-      stylesheets: ['stylesheets']
+      reset: {
+        src: ['assets', 'images', 'javascripts', 'stylesheets']
+      },
+
+      remove: {
+        src: ['sources/components/tmp']
+      }
     },
 
     modernizr_builder: {
       build: {
         options: {
           config: 'modernizr-config.json',
-          dest: 'javascripts/modernizr.min.js',
-          uglify: true
+          dest: 'javascripts/modernizr.js',
+          uglify: false
         }
-      }
-    },
-
-    // Copys the files from the source folders to the layout folders.
-    copy: {
-      assets: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/assets/copy',
-            src: '*',
-            dest: 'assets/'
-          }
-        ]
-      },
-
-      images: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/images/copy',
-            src: '*',
-            dest: 'images/'
-          }
-        ]
-      },
-
-      javascripts: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/javascripts/copy',
-            src: '*',
-            dest: 'javascripts/'
-          }
-        ]
       }
     },
 
@@ -87,7 +54,7 @@ module.exports = function(grunt) {
 
     // Compiles the stylesheet files.
     sass: {
-      build: {
+      build_main: {
         options: {
           style: 'expanded',
           sourcemap: 'none'
@@ -97,6 +64,20 @@ module.exports = function(grunt) {
           cwd: 'sources/stylesheets',
           src: 'main.scss',
           dest: 'stylesheets/',
+          ext: '.css'
+        }]
+      },
+
+      build_components: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'none'
+        },
+        files: [{
+          expand: true,
+          cwd: 'sources/components/',
+          src: '*.scss',
+          dest: 'sources/components/tmp',
           ext: '.css'
         }]
       }
@@ -151,6 +132,84 @@ module.exports = function(grunt) {
       }
     },
 
+    // Copys the files from the source folders to the layout folders.
+    copy: {
+      assets: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/assets/copy',
+            src: '*',
+            dest: 'assets/'
+          }
+        ]
+      },
+
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/images/copy',
+            src: '*',
+            dest: 'images/'
+          }
+        ]
+      },
+
+      javascripts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/javascripts/copy',
+            src: '*',
+            dest: 'javascripts/'
+          }
+        ]
+      },
+
+      components: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/components/tmp',
+            src: '*.css',
+            dest: 'components',
+            ext: '.tpl'
+          }
+        ]
+      }
+    },
+
+    // Appends common required parts to files. Unfortunately this task script is
+    // not allowing to insert "*.ext" as input and output so each file must be
+    // added/removed manually.
+    file_append: {
+      template_editor: {
+        files: [
+          {
+            prepend: "{% comment %}\n================================================================================\nTEMPLATE DESIGN EDITOR STYLES.\nAdds template design editor style overrides.\n================================================================================\n{% endcomment %}\n<style data-voog-style>\n",
+            append: "</style>\n\n{{ site.style_tag }}",
+            input: 'components/template-design.tpl',
+            output: 'components/template-design.tpl'
+          }
+        ]
+      }
+      // Template for adding new files. Uppercase values should be changed.
+      // NB! Don't forget to add comma after previous file settings.
+      // NB! Add the new task to "watch" list also.
+
+      // NAME_OF_THE_TASK: {
+      //   files: [
+      //     {
+      //       prepend: "{% comment %}\n================================================================================\nTEMPLATE DESIGN EDITOR STYLES.\nAdds template design editor style overrides.\n================================================================================\n{% endcomment %}\n<style type=\"text/css+voog\" data-edy-stylesheet=\"true\">\n",
+      //       append: "</style>",
+      //       input: 'FILE_PATH',
+      //       output: 'FILE_PATH'
+      //     }
+      //   ]
+      // }
+    },
+
     // Executes the Voog Kit toolkit manifest generation and file upload commands.
     exec: {
       kitmanifest: {
@@ -187,12 +246,17 @@ module.exports = function(grunt) {
         tasks: ['concat:build', 'uglify:build', 'exec:kitmanifest']
       },
 
-      css: {
+      css_main: {
         files: [
           'sources/stylesheets/*.scss',
           'sources/stylesheets/*/*.scss'
         ],
-        tasks: ['sass:build', 'postcss', 'cssmin:build', 'exec:kitmanifest']
+        tasks: ['sass:build_main', 'postcss', 'cssmin:build', 'exec:kitmanifest']
+      },
+
+      template_design: {
+        files: 'sources/components/*.scss',
+        tasks: ['sass:build_components', 'copy:components', 'clean:remove', 'file_append:template_editor', 'exec:kitmanifest']
       },
 
       img_copy: {
@@ -233,10 +297,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-file-append');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin']);
+  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin', 'copy', 'file_append', 'clean:remove']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% include "template-variables" %}
 <html class="blog-list-page height-calculation {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% assign blog_page = true %}

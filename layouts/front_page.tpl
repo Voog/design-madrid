@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% include "template-variables" %}
 <html class="front-page height-calculation {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% assign front_page = true %}

@@ -1,0 +1,266 @@
+:root {
+  // ===========================================================================
+  // Blog list styles
+  // ===========================================================================  
+ 
+  /* VoogStyle
+     "path": ["Blog list"],
+     "title": "Width",
+     "editor": "rangePicker",
+     "min": 200,
+     "max": 600,
+     "unit": "px",
+     "scope": "global"
+  */
+  --blog-list-article-width: 300px; 
+
+  /* VoogStyle
+     "path": ["Blog list"],
+     "title": "Area alignment",
+     "editor": "listPicker",
+     "list": {{ base_alignment_set }},
+     "scope": "global"
+  */
+  --blog-list-alignment: left; 
+
+  /* VoogStyle
+     "path": ["Blog list"],
+     "title": "Padding",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 99,
+     "unit": "px",
+     "scope": "global"
+  */
+  --blog-list-padding: 30px;
+
+  /* VoogStyle
+     "path": ["Blog list", "Headings"],
+     "title": "Font family",
+     "editor": "listPicker",
+     "list": {{ base_font_set }},
+     "featured": true,
+     "scope": "global",
+     "boundVariables": [
+     "--blog-list-date-font-family"
+     ]
+  */
+  --blog-list-headings-font-family: $font-main;
+
+  /* VoogStyle
+     "path": ["Blog list", "Headings"],
+     "title": "Letter spacing",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 20,
+     "unit": "px",
+     "scope": "global"
+  */
+  --blog-list-headings-letter-spacing: 0;
+
+  /* VoogStyle
+     "path": ["Blog list", "Headings"],
+     "title": "Line height",
+     "editor": "rangePicker",
+     "min": 0.8,
+     "max": 3,
+     "step": 0.1,
+     "unit": "em",
+     "scope": "global"
+  */
+  --blog-list-headings-line-height: 1.45em;
+
+  /* VoogStyle
+    "path": ["Blog list", "Headings"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --blog-list-headings-font-size: $h2-size;
+
+  /* VoogStyle
+    "path": ["Blog list", "Headings"],
+    "title": "Font weight",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --blog-list-headings-font-weight: 600;
+
+  /* VoogStyle
+    "path": ["Blog list", "Headings"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --blog-list-headings-font-style: normal;  
+
+  /* VoogStyle
+    "path": ["Blog list", "Headings"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --blog-list-headings-text-decoration: none;
+
+  /* VoogStyle
+    "path": ["Blog list", "Headings"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --blog-list-headings-text-transform: none;
+
+  /* VoogStyle
+    "path": ["Blog list", "Headings"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true,
+    "boundVariables": [
+      "--blog-list-date-color"
+     ]
+  */
+  --blog-list-headings-color: $color-white;
+
+  /* VoogStyle
+     "path": ["Blog list", "Date"],
+     "title": "Font family",
+     "editor": "listPicker",
+     "list": {{ base_font_set }},
+     "featured": true,
+     "scope": "global"
+  */
+  --blog-list-date-font-family: $font-main;  
+
+  /* VoogStyle
+     "path": ["Blog list", "Date"],
+     "title": "Character spacing",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 20,
+     "unit": "px",
+     "scope": "global"
+  */
+  --blog-list-date-letter-spacing: 0;
+
+  /* VoogStyle
+     "path": ["Blog list", "Date"],
+     "title": "Padding top",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 50,
+     "step": 1,
+     "unit": "px",
+     "scope": "global"
+  */
+  --blog-list-date-padding-top: 8px;
+
+  /* VoogStyle
+    "path": ["Blog list", "Date"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --blog-list-date-font-size: $font-size - 6px;
+
+  /* VoogStyle
+    "path": ["Blog list", "Date"],
+    "title": "Font weight",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --blog-list-date-font-weight: 400;
+
+  /* VoogStyle
+    "path": ["Blog list", "Date"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --blog-list-date-font-style: normal;  
+
+  /* VoogStyle
+    "path": ["Blog list", "Date"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --blog-list-date-text-decoration: none;
+
+  /* VoogStyle
+    "path": ["Blog list", "Date"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --blog-list-date-text-transform: none;
+
+  /* VoogStyle
+    "path": ["Blog list", "Date"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --blog-list-date-color: $color-white; 
+}

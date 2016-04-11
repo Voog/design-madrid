@@ -1,36 +1,23 @@
-@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '_mixins';
+/* Voog.com template: Madrid */
 
-/* FONTS */
+// MODULES
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'mixins';
+@import 'modules/variables';
+
+// FONTS
 @include font-face('Montserrat', '../assets/montserrat-regular', 400);
 @include font-face('Montserrat', '../assets/montserrat-bold', 700);
 
-$main-color: #333333;
-$second-color: black;
-$third-color: #818181;
-$fourth-color: white;
-$link-color: #919191;
-$focus-color: #f9ec5a;
+// CONTENT AREAS
+@import 'content/tables';
+@import 'content/forms';
 
-$black: $second-color;
-$white: $fourth-color;
+// COMPONENTS
+@import 'components/search';
+@import 'components/site_header';
 
-$bg-color: #f4f4f4;
-$bg-color-dark: #2b2b2b;
-
-$error-color: #c70909;
-$success-color: #409e13;
-
-$font-size: 18px;
-$line-height: 1.45;
-$font-main: 'Montserrat', Helvetica, Arial, sans-serif;
-
-$main-width: 700px;
-
-$break-medium: 600px;
-$break-small: 500px;
-
-/* nulling */
+// nulling
 %nulling {
   margin: 0;
   padding: 0;

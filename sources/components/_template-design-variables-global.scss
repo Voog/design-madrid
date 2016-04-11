@@ -1,0 +1,100 @@
+:root {
+  // scss-lint:disable Comment, Indentation
+
+  // ===========================================================================
+  // Global layout styles.
+  // ===========================================================================
+	
+  /* VoogStyle
+     "path": ["Main Styles"],
+     "title": "Font",
+     "editor": "listPicker",
+     "list": {{ base_font_set }},
+     "featured": true,
+     "scope": "global",
+     "boundVariables": [
+      "--site-title-font-family",
+      "--main-menu-font-family",
+      "--blog-list-headings-font-family",
+      "--h1-font-family",
+      "--h2-font-family",
+      "--h3-font-family",
+      "--content-font-family",
+      "--footer-font-family"
+     ]
+  */
+  --font-main: $font-main; 
+
+  /* VoogStyle
+     "path": ["Main Styles"],
+     "title": "Background",
+     "editor": "colorPicker",
+     "scope": "global",
+     "boundVariables": [
+      "--header-background-color",
+      "--footer-background-color"
+    ]
+  */
+  --global-background-color: $bg-color;
+
+  /* VoogStyle
+     "path": ["Main Styles", "Colors"],
+     "title": "Primary color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "boundVariables": [
+        "--site-title-color",
+        "--main-menu-hover-color",
+        "--main-menu-active-color",
+        "--submenu-hover-color",
+        "--submenu-active-color",
+        "--h1-color",
+        "--h2-color",
+        "--h3-color",
+        "--content-links-hover-color"
+     ]
+  */
+  --second-color: $second-color;
+
+  /* VoogStyle
+     "path": ["Main Styles", "Colors"],
+     "title": "Secondary color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "boundVariables": [
+        "--content-color",
+        "--form-field-text-color"
+     ]
+  */
+  --main-color: $main-color;
+
+  /* VoogStyle
+     "path": ["Main Styles", "Colors"],
+     "title": "Third color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "boundVariables": [
+      "--main-menu-color",
+      "--submenu-color",
+      "--content-links-color",
+      "--table-border-color"
+     ]
+  */
+  --third-color: $third-color;
+
+  /* VoogStyle
+     "path": ["Main Styles", "Colors"],
+     "title": "Fourth color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "boundVariables": [
+      "--blog-list-headings-color",
+      "--form-field-background-color"
+    ]
+  */
+  --fourth-color: $fourth-color;
+ }

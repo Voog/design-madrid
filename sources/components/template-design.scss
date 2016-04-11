@@ -1,0 +1,21 @@
+// =============================================================================
+// TEMPLATE DESIGN EDITOR STYLES.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// MODULES
+@import '../stylesheets/modules/variables';
+
+@import 'template-design-variables-global';
+@import 'template-design-variables-header';
+@import 'template-design-variables-blog-list';
+@import 'template-design-variables-headings';
+@import 'template-design-variables-content';
+@import 'template-design-variables-footer';
+@import 'template-design-variables-details';
+
+@import 'template-design-styles';

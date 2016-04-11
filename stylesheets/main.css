@@ -1,4 +1,4 @@
-/* FONTS */
+/* Voog.com template: Madrid */
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -11,7 +11,6 @@
   font-weight: 700;
   src: url("../assets/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("../assets/montserrat-bold.woff2") format("woff2"), url("../assets/montserrat-bold.woff") format("woff"), url("../assets/montserrat-bold.ttf") format("truetype"), url("../assets/montserrat-bold.svg#Montserrat") format("svg");
 }
-/* nulling */
 ul,
 ol, ul li,
 ol li, h1, h2, h3, html,
@@ -176,7 +175,7 @@ blockquote {
   position: relative;
   font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
-  color: #333333;
+  color: #333;
   background: white;
 }
 .jq-select select {
@@ -192,7 +191,7 @@ blockquote {
   font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   opacity: 0;
-  color: #333333;
+  color: #333;
   border: none;
   -webkit-appearance: none;
   filter: alpha(opacity=0);
@@ -220,7 +219,7 @@ blockquote {
   pointer-events: none;
   border: solid transparent;
   border-width: 6px;
-  border-top-color: #333333;
+  border-top-color: #333;
 }
 
 .jq-select-content {
@@ -256,7 +255,7 @@ blockquote {
   width: 30%;
   padding: 4px 10px;
   font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
-  color: #333333;
+  color: #333;
   border: none;
   outline: none;
   background: white;
@@ -367,7 +366,7 @@ label .form_field_radio + .form_control_indicator:before {
   border: 3px solid white;
 }
 label .form_field_radio:checked + .form_control_indicator:before {
-  background-color: #333333;
+  background-color: #333;
 }
 label .form_control_indicator {
   position: relative;
@@ -438,7 +437,7 @@ html.blog-list-page.editmode {
 body {
   position: relative;
   text-align: left;
-  color: #333333;
+  color: #333;
   background: #f4f4f4;
   max-width: 100%;
   box-sizing: border-box;
@@ -530,7 +529,7 @@ a:hover {
   margin-left: 10px;
   font-size: 0;
   line-height: 0;
-  color: #333333;
+  color: #333;
   text-transform: uppercase;
   position: relative;
 }
@@ -561,7 +560,7 @@ a:hover {
   left: 5px;
   width: 18px;
   height: 3px;
-  background: #333333;
+  background: #333;
   border-radius: 3px;
 }
 .header .main-menu-toggler:before {
@@ -1445,8 +1444,8 @@ a:hover {
 .post-cover .post-cover-inner {
   display: table-cell;
   vertical-align: middle;
-  border: 1px dashed #919191;
-  border-color: rgba(145, 145, 145, 0.3);
+  border: 1px dashed #818181;
+  border-color: rgba(129, 129, 129, 0.3);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1555,7 +1554,7 @@ a:hover {
   padding-top: 1px;
 }
 .footer .voog-reference svg {
-  fill: #333333;
+  fill: #333;
 }
 .footer .tbl {
   margin: 0 auto;
@@ -1898,7 +1897,7 @@ a:hover {
 .lang-options .option-btn {
   font-size: 11px;
   line-height: 1.1;
-  color: #919191;
+  color: #818181;
 }
 .lang-options .option-btn:hover {
   color: black;

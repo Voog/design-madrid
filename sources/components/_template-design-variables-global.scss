@@ -13,8 +13,8 @@
      "featured": true,
      "scope": "global",
      "boundVariables": [
-      "--site-title-font-family",
-      "--main-menu-font-family",
+      "--header-site-title-font-family",
+      "--header-mainmenu-font-family",
       "--blog-list-headings-font-family",
       "--h1-font-family",
       "--h2-font-family",
@@ -27,6 +27,7 @@
   */
   --font-main: $font-main; 
 
+
   /* VoogStyle
      "path": ["Main Styles"],
      "title": "Background",
@@ -37,7 +38,7 @@
       "--footer-background-color"
     ]
   */
-  --global-background-color: $bg-color;
+  --bg-color: $bg-color;
 
   /* VoogStyle
      "path": ["Main Styles", "Colors"],
@@ -46,11 +47,11 @@
      "scope": "global",
      "featured": true,
      "boundVariables": [
-        "--site-title-color",
-        "--main-menu-hover-color",
-        "--main-menu-active-color",
-        "--submenu-hover-color",
-        "--submenu-active-color",
+        "--header-site-title-color",
+        "--header-mainmenu-hover-color",
+        "--header-mainmenu-active-color",
+        "--content-submenu-hover-color",
+        "--content-submenu-active-color",
         "--h1-color",
         "--h2-color",
         "--h3-color",
@@ -80,8 +81,8 @@
      "scope": "global",
      "featured": true,
      "boundVariables": [
-      "--main-menu-color",
-      "--submenu-color",
+      "--header-mainmenu-color",
+      "--content-submenu-color",
       "--content-links-color",
       "--table-border-color"
      ]
@@ -102,3 +103,4 @@
   */
   --fourth-color: $fourth-color;
  }
+ 

@@ -10,7 +10,7 @@
 @import '../stylesheets/modules/variables';
 
 .main {
-  background-color: var(--global-background-color);
+  background-color: var(--bg-color);
 }
 
 .header,
@@ -183,15 +183,15 @@ main .post-content {
 // HEADER
 // site-title
 .site-title {
-  color: var(--site-title-color);
-  font-family: var(--site-title-font-family);
-  font-style: var(--site-title-font-style);
-  font-weight: var(--site-title-font-weight);
-  letter-spacing: var(--site-title-letter-spacing);
-  text-transform: var(--site-title-text-transform);
+  color: var(--header-site-title-color);
+  font-family: var(--header-site-title-font-family);
+  font-style: var(--header-site-title-font-style);
+  font-weight: var(--header-site-title-font-weight);
+  letter-spacing: var(--header-site-title-letter-spacing);
+  text-transform: var(--header-site-title-text-transform);
 
   .site-title-inner {
-    text-decoration: var(--site-title-text-decoration);
+    text-decoration: var(--header-site-title-text-decoration);
   }
 
   a {
@@ -203,31 +203,31 @@ main .post-content {
 .main-menu {
   ul {
     a {
-      color: var(--main-menu-color);
-      font-family: var(--main-menu-font-family);
-      font-size: var(--main-menu-font-size);
-      font-style: var(--main-menu-font-style);
-      font-weight: var(--main-menu-font-weight);
-      letter-spacing: var(--main-menu-letter-spacing);
-      text-decoration: var(--main-menu-text-decoration);
-      text-transform: var(--main-menu-text-transform);
+      color: var(--header-mainmenu-color);
+      font-family: var(--header-mainmenu-font-family);
+      font-size: var(--header-mainmenu-font-size);
+      font-style: var(--header-mainmenu-font-style);
+      font-weight: var(--header-mainmenu-font-weight);
+      letter-spacing: var(--header-mainmenu-letter-spacing);
+      text-decoration: var(--header-mainmenu-text-decoration);
+      text-transform: var(--header-mainmenu-text-transform);
 
       &:hover {
-        color: var(--main-menu-hover-color);
-        font-size: var(--main-menu-hover-font-size);
-        font-style: var(--main-menu-hover-font-style);
-        font-weight: var(--main-menu-hover-font-weight);
-        text-decoration: var(--main-menu-hover-text-decoration);
-        text-transform: var(--main-menu-hover-text-transform);        
+        color: var(--header-mainmenu-hover-color);
+        font-size: var(--header-mainmenu-hover-font-size);
+        font-style: var(--header-mainmenu-hover-font-style);
+        font-weight: var(--header-mainmenu-hover-font-weight);
+        text-decoration: var(--header-mainmenu-hover-text-decoration);
+        text-transform: var(--header-mainmenu-hover-text-transform);        
       }
 
       &.active {
-        color: var(--main-menu-active-color);
-        font-size: var(--main-menu-active-font-size);
-        font-style: var(--main-menu-active-font-style);
-        font-weight: var(--main-menu-active-font-weight);
-        text-decoration: var(--main-menu-active-text-decoration);
-        text-transform: var(--main-menu-active-text-transform);           
+        color: var(--header-mainmenu-active-color);
+        font-size: var(--header-mainmenu-active-font-size);
+        font-style: var(--header-mainmenu-active-font-style);
+        font-weight: var(--header-mainmenu-active-font-weight);
+        text-decoration: var(--header-mainmenu-active-text-decoration);
+        text-transform: var(--header-mainmenu-active-text-transform);           
       }
     }
   }
@@ -237,31 +237,31 @@ main .post-content {
 
 .sub-menu {
   a {
-      color: var(--submenu-color);
-      font-family: var(--submenu-font-family);
-      font-size: var(--submenu-font-size);
-      font-style: var(--submenu-font-style);
-      font-weight: var(--submenu-font-weight);
-      letter-spacing: var(--submenu-letter-spacing);
-      text-decoration: var(--submenu-text-decoration);
-      text-transform: var(--submenu-text-transform);
+      color: var(--content-submenu-color);
+      font-family: var(--content-submenu-font-family);
+      font-size: var(--content-submenu-font-size);
+      font-style: var(--content-submenu-font-style);
+      font-weight: var(--content-submenu-font-weight);
+      letter-spacing: var(--content-submenu-letter-spacing);
+      text-decoration: var(--content-submenu-text-decoration);
+      text-transform: var(--content-submenu-text-transform);
 
       &:hover {
-        color: var(--submenu-hover-color);
-        font-size: var(--submenu-hover-font-size);
-        font-style: var(--submenu-hover-font-style);
-        font-weight: var(--submenu-hover-font-weight);
-        text-decoration: var(--submenu-hover-text-decoration);
-        text-transform: var(--submenu-hover-text-transform);        
+        color: var(--content-submenu-hover-color);
+        font-size: var(--content-submenu-hover-font-size);
+        font-style: var(--content-submenu-hover-font-style);
+        font-weight: var(--content-submenu-hover-font-weight);
+        text-decoration: var(--content-submenu-hover-text-decoration);
+        text-transform: var(--content-submenu-hover-text-transform);        
       } 
       
       &.active {
-        color: var(--submenu-active-color);
-        font-size: var(--submenu-active-font-size);
-        font-style: var(--submenu-active-font-style);
-        font-weight: var(--submenu-active-font-weight);
-        text-decoration: var(--submenu-active-text-decoration);
-        text-transform: var(--submenu-active-text-transform);           
+        color: var(--content-submenu-active-color);
+        font-size: var(--content-submenu-active-font-size);
+        font-style: var(--content-submenu-active-font-style);
+        font-weight: var(--content-submenu-active-font-weight);
+        text-decoration: var(--content-submenu-active-text-decoration);
+        text-transform: var(--content-submenu-active-text-transform);           
       }
     }
   }
@@ -288,7 +288,7 @@ main .post-content {
 @media screen and (min-width: $break-small) {
   // HEADER
   .site-title {
-    font-size: var(--site-title-font-size);
+    font-size: var(--header-site-title-font-size);
   }
 
   // BLOG LIST

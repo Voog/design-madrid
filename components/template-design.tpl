@@ -21,7 +21,9 @@ Adds template design editor style overrides.
       "--h2-font-family",
       "--h3-font-family",
       "--content-font-family",
-      "--footer-font-family"
+      "--footer-font-family",
+      "--form-field-text-font-family",
+      "--focus-area-font-family"
      ]
   */
   --font-main: "Montserrat", Helvetica, Arial, sans-serif;
@@ -63,7 +65,8 @@ Adds template design editor style overrides.
      "featured": true,
      "boundVariables": [
         "--content-color",
-        "--form-field-text-color"
+        "--form-field-text-color",
+        "--footer-text-color"
      ]
   */
   --main-color: #333;
@@ -89,7 +92,8 @@ Adds template design editor style overrides.
      "featured": true,
      "boundVariables": [
       "--blog-list-headings-color",
-      "--form-field-background-color"
+      "--form-field-background-color",
+      "--focus-area-color"
     ]
   */
   --fourth-color: white;
@@ -449,6 +453,144 @@ Adds template design editor style overrides.
   "scope": "global"
 */
   --main-menu-active-color: black;
+}
+
+:root {
+  /* VoogStyle
+     "path": ["Focus area"],
+     "title": "Area alignment",
+     "editor": "listPicker",
+     "list": {{ base_alignment_set }},
+     "scope": "global"
+  */
+  --focus-area-alignment: left;
+  /* VoogStyle
+     "path": ["Focus area"],
+     "title": "Vertical alignment",
+     "editor": "listPicker",
+     "list": {{ base_alignment_vertical_set }},
+     "scope": "global"
+  */
+  --focus-area-vertical-alignment: middle;
+  /* VoogStyle
+     "path": ["Focus area"],
+     "title": "Padding",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 99,
+     "unit": "px",
+     "scope": "global"
+  */
+  --focus-area-padding: 45px;
+  /* VoogStyle
+     "path": ["Focus area", "Headings"],
+     "title": "Font family",
+     "editor": "listPicker",
+     "list": {{ base_font_set }},
+     "featured": true,
+     "scope": "global",
+     "boundVariables": [
+     "--focus-area-date-font-family"
+     ]
+  */
+  --focus-area-font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  /* VoogStyle
+     "path": ["Focus area", "Headings"],
+     "title": "Letter spacing",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 20,
+     "unit": "px",
+     "scope": "global"
+  */
+  --focus-area-letter-spacing: 0;
+  /* VoogStyle
+     "path": ["Focus area", "Headings"],
+     "title": "Line height",
+     "editor": "rangePicker",
+     "min": 0.8,
+     "max": 3,
+     "step": 0.1,
+     "unit": "em",
+     "scope": "global"
+  */
+  --focus-area-line-height: 1.45;
+  /* VoogStyle
+    "path": ["Focus area", "Headings"],
+    "title": "Size",
+    "type": "button",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --focus-area-font-size: 24px;
+  /* VoogStyle
+    "path": ["Focus area", "Headings"],
+    "title": "Font weight",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --focus-area-font-weight: 400;
+  /* VoogStyle
+    "path": ["Focus area", "Headings"],
+    "title": "Font style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --focus-area-font-style: normal;
+  /* VoogStyle
+    "path": ["Focus area", "Headings"],
+    "title": "Text decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --focus-area-text-decoration: none;
+  /* VoogStyle
+    "path": ["Focus area", "Headings"],
+    "title": "Text transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --focus-area-text-transform: none;
+  /* VoogStyle
+    "path": ["Focus area", "Headings"],
+    "title": "Color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true,
+    "boundVariables": [
+      "--focus-area-date-color"
+     ]
+  */
+  --focus-area-color: white;
 }
 
 :root {
@@ -1405,7 +1547,8 @@ Adds template design editor style overrides.
     "scope": "global",
     "featured": true,
     "boundVariables": [
-      "--form-field-text-font-size"
+      "--form-field-text-font-size",
+      "--content-links-font-size"
     ]
   */
   --content-font-size: 18px;
@@ -1748,7 +1891,7 @@ Adds template design editor style overrides.
     "scope": "global",
     "featured": true
   */
-  --footer-color: #333;
+  --footer-text-color: #333;
 }
 
 :root {
@@ -1758,7 +1901,7 @@ Adds template design editor style overrides.
     "editor": "colorPicker",
     "scope": "global"
   */
-  --table-background-color: black;
+  --table-background-color: rgba(255, 255, 255, 0);
   /* VoogStyle
     "path": ["Tables"],
     "title": "Border color",
@@ -1964,7 +2107,7 @@ blockquote,
   max-width: var(--main-width);
 }
 
-main .content.formatted {
+.content-page main .content.formatted {
   background-color: var(--content-background-color);
   padding: var(--content-padding);
 }
@@ -2011,6 +2154,21 @@ main .post-content a {
 main .content-body a:hover,
 main .post-content a:hover {
   font-size: var(--content-links-hover-font-size);
+}
+
+.main .content-half .content {
+  color: var(--focus-area-color);
+  font-family: var(--focus-area-font-family);
+  font-size: var(--focus-area-font-size);
+  font-style: var(--focus-area-font-style);
+  font-weight: var(--focus-area-font-weight);
+  letter-spacing: var(--focus-area-letter-spacing);
+  line-height: var(--focus-area-line-height);
+  padding: var(--focus-area-padding);
+  text-align: var(--focus-area-alignment);
+  text-decoration: var(--focus-area-text-decoration);
+  text-transform: var(--focus-area-text-transform);
+  vertical-align: var(--focus-area-vertical-alignment);
 }
 
 .formatted h1 {
@@ -2190,6 +2348,20 @@ main .post-content a:hover {
   text-transform: var(--blog-list-date-text-transform);
 }
 
+main .content table {
+  background-color: var(--table-background-color);
+}
+main .content table td,
+main .content table th {
+  border: var(--table-border-width) var(--table-border-color) solid;
+  padding: var(--table-cell-padding);
+}
+
+.form_field_textfield,
+.form_field_textarea,
+.form_submit input,
+input[type=submit],
+input[type=text],
 textarea {
   font-family: var(--form-field-text-font-family);
 }
@@ -2199,7 +2371,6 @@ textarea {
   background-color: var(--form-field-background-color);
   border: var(--form-field-border-width) var(--form-field-border-color) solid;
   color: var(--form-field-text-color);
-  font-family: var(--form-field-text-font-family);
   font-size: var(--form-field-text-font-size);
   line-height: var(--form-field-text-line-height);
   font-style: var(--form-field-text-font-style);

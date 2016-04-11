@@ -14,7 +14,7 @@
       <div class="main-inner">
         <div class="content-wrap">
           <div class="wrap">
-            <div class="content cfx">
+            <div class="content formatted cfx">
 
               <header class="post-header ">
                 <h1>{% editable article.title %}<time class="post-date" datetime="{{ article.created_at | date : "%Y %m %d" }}">{{ article.created_at | format_date: "long" }}</time></h1>

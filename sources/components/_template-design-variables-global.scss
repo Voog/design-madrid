@@ -20,7 +20,9 @@
       "--h2-font-family",
       "--h3-font-family",
       "--content-font-family",
-      "--footer-font-family"
+      "--footer-font-family",
+      "--form-field-text-font-family",
+      "--focus-area-font-family"
      ]
   */
   --font-main: $font-main; 
@@ -65,7 +67,8 @@
      "featured": true,
      "boundVariables": [
         "--content-color",
-        "--form-field-text-color"
+        "--form-field-text-color",
+        "--footer-text-color"
      ]
   */
   --main-color: $main-color;
@@ -93,7 +96,8 @@
      "featured": true,
      "boundVariables": [
       "--blog-list-headings-color",
-      "--form-field-background-color"
+      "--form-field-background-color",
+      "--focus-area-color"
     ]
   */
   --fourth-color: $fourth-color;

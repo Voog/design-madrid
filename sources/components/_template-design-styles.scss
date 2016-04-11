@@ -58,8 +58,8 @@ blockquote,
 .wrap {
   max-width: var(--main-width);
 }
-
-main .content.formatted {
+ 
+.content-page main .content.formatted {
   background-color: var(--content-background-color);
   padding: var(--content-padding);
 }
@@ -109,6 +109,22 @@ main .post-content {
       font-size: var(--content-links-hover-font-size);
     }
   }
+}
+
+// FOCUS AREA
+.main .content-half .content {
+  color: var(--focus-area-color);
+  font-family:  var(--focus-area-font-family);
+  font-size: var(--focus-area-font-size);
+  font-style:  var(--focus-area-font-style);
+  font-weight: var(--focus-area-font-weight);
+  letter-spacing: var(--focus-area-letter-spacing);
+  line-height: var(--focus-area-line-height);
+  padding: var(--focus-area-padding);
+  text-align: var(--focus-area-alignment);
+  text-decoration: var(--focus-area-text-decoration);
+  text-transform: var(--focus-area-text-transform);
+  vertical-align: var(--focus-area-vertical-alignment);
 }
 
 // Headings and content
@@ -326,6 +342,24 @@ main .post-content {
 }
 
 // TABLES
+main .content {
+  table {
+    background-color: var(--table-background-color);
+
+    td,
+    th {
+      border: var(--table-border-width) var(--table-border-color) solid;
+      padding: var(--table-cell-padding);
+    }
+  }
+}
+
+// FORMS
+.form_field_textfield,
+.form_field_textarea,
+.form_submit input,
+input[type=submit],
+input[type=text],
 textarea {
   font-family: var(--form-field-text-font-family);
 }
@@ -336,7 +370,6 @@ textarea {
   background-color: var(--form-field-background-color);
   border: var(--form-field-border-width) var(--form-field-border-color) solid;
   color: var(--form-field-text-color);
-  font-family: var(--form-field-text-font-family);
   font-size: var(--form-field-text-font-size);
   line-height: var(--form-field-text-line-height);
   font-style: var(--form-field-text-font-style);

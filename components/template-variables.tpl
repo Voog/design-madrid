@@ -118,3 +118,20 @@
     }
   ]
 {% endcapture %}
+
+{% capture base_alignment_vertical_set %}
+  [
+    {
+      "title": "Top",
+      "value": "top"
+    },
+    {
+      "title": "Middle",
+      "value": "middle"
+    },
+    {
+      "title": "Bottom",
+      "value": "bottom"
+    }
+  ]
+{% endcapture %}

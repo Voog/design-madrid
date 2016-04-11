@@ -1,53 +1,63 @@
 :root {
-
   // ===========================================================================
-  // Footer styles
+  // Focus area styles
   // ===========================================================================  
 
   /* VoogStyle
-     "path": ["Footer"],
-     "title": "Footer background",
-     "editor": "colorPicker",
-     "scope": "global"
-  */
-  --footer-background-color: $bg-color;
-
-  // ===========================================================================
-  // Footer styles - Text
-  // ===========================================================================  
-
-  /* VoogStyle
-     "path": ["Footer", "Text"],
-     "title": "Font family",
-     "editor": "listPicker",
-     "list": {{ base_font_set }},
-     "featured": true,
-     "scope": "global"
-  */
-  --footer-font-family: $font-main;
-
-  /* VoogStyle
-     "path": ["Footer", "Text"],
-     "title": "Alignment",
+     "path": ["Focus area"],
+     "title": "Area alignment",
      "editor": "listPicker",
      "list": {{ base_alignment_set }},
      "scope": "global"
   */
-  --footer-alignment: center;
+  --focus-area-alignment: left; 
 
   /* VoogStyle
-     "path": ["Footer", "Text"],
-     "title": "Letter spacing",
+     "path": ["Focus area"],
+     "title": "Vertical alignment",
+     "editor": "listPicker",
+     "list": {{ base_alignment_vertical_set }},
+     "scope": "global"
+  */
+  --focus-area-vertical-alignment: middle; 
+
+  /* VoogStyle
+     "path": ["Focus area"],
+     "title": "Padding",
      "editor": "rangePicker",
      "min": 0,
-     "max": 40,
+     "max": 99,
      "unit": "px",
      "scope": "global"
   */
-  --footer-letter-spacing: 0;
+  --focus-area-padding: 45px;
 
   /* VoogStyle
-     "path": ["Footer", "Text"],
+     "path": ["Focus area", "Headings"],
+     "title": "Font family",
+     "editor": "listPicker",
+     "list": {{ base_font_set }},
+     "featured": true,
+     "scope": "global",
+     "boundVariables": [
+     "--focus-area-date-font-family"
+     ]
+  */
+  --focus-area-font-family: $font-main;
+
+  /* VoogStyle
+     "path": ["Focus area", "Headings"],
+     "title": "Letter spacing",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 20,
+     "unit": "px",
+     "scope": "global"
+  */
+  --focus-area-letter-spacing: 0;
+
+  /* VoogStyle
+     "path": ["Focus area", "Headings"],
      "title": "Line height",
      "editor": "rangePicker",
      "min": 0.8,
@@ -56,10 +66,10 @@
      "unit": "em",
      "scope": "global"
   */
-  --footer-line-height: $line-height#em;
+  --focus-area-line-height: $line-height;
 
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Focus area", "Headings"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
@@ -69,10 +79,10 @@
     "scope": "global",
     "featured": true
   */
-  --footer-font-size: 10px;
+  --focus-area-font-size: $h2-size;
 
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Focus area", "Headings"],
     "title": "Font weight",
     "type": "button",
     "editor": "toggleIcon",
@@ -83,10 +93,10 @@
     "icon": "bold",
     "scope": "global"
   */
-  --footer-font-weight: 400;
+  --focus-area-font-weight: 400;
 
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Focus area", "Headings"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -97,10 +107,10 @@
     "icon": "italic",
     "scope": "global"
   */
-  --footer-font-style: normal;  
+  --focus-area-font-style: normal;  
 
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Focus area", "Headings"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -111,10 +121,10 @@
     "icon": "underline",
     "scope": "global"
   */
-  --footer-text-decoration: none;
+  --focus-area-text-decoration: none;
 
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Focus area", "Headings"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -125,16 +135,19 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --footer-text-transform: none;
+  --focus-area-text-transform: none;
 
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Focus area", "Headings"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",
-    "featured": true
+    "featured": true,
+    "boundVariables": [
+      "--focus-area-date-color"
+     ]
   */
-  --footer-text-color: $main-color;  
+  --focus-area-color: $fourth-color;
 
 }

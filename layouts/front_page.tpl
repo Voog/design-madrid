@@ -4,7 +4,7 @@
 <head prefix="og: http://ogp.me/ns#">
   {% assign front_page = true %}
   {% include "edicy-tools-variables" %}
-  {% include "html-head" %}
+  {% include "html-head" with "front_page" %}
   {% include "edicy-tools-styles" %}
 </head>
 <body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">

@@ -1,61 +1,23 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/modules/variables';
+
+// =============================================================================
+// Design editor configuration.
+// =============================================================================
 :root {
-
-  // ===========================================================================
-  // Button styles
-  // ===========================================================================  
-
-
-  // ===========================================================================
-  // List styles
-  // ===========================================================================  
-
-
-  // ===========================================================================
-  // Table styles
-  // ===========================================================================  
-
-  /* VoogStyle
-    "path": ["Tables"],
-    "title": "Background",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --table-background-color: rgba($color-white, .0);
-
-  /* VoogStyle
-    "path": ["Tables"],
-    "title": "Border color",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --table-border-color: $third-color;  
-
-  /* VoogStyle
-     "path": ["Tables"],
-     "title": "Border width",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 20,
-     "unit": "px",
-     "scope": "global"
-  */
-  --table-border-width: 1px;
-
-  /* VoogStyle
-     "path": ["Tables"],
-     "title": "Padding",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 100,
-     "unit": "px",
-     "scope": "global"
-  */
-  --table-cell-padding: 10px;
-
-
-  // ===========================================================================
-  // Forms styles
-  // ===========================================================================  
+  // scss-lint:disable Comment, Indentation
 
   /* VoogStyle
     "path": ["Forms"],
@@ -71,7 +33,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --form-field-border-color: $color-black;  
+  --form-field-border-color: $color-black;
 
   /* VoogStyle
      "path": ["Forms"],
@@ -156,7 +118,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --form-field-text-font-style: normal;  
+  --form-field-text-font-style: normal;
 
   /* VoogStyle
     "path": ["Forms", "Text"],
@@ -195,5 +157,4 @@
     "featured": true
   */
   --form-field-text-color: $main-color;
-
 }

@@ -1,8 +1,4 @@
 :root {
-  // ===========================================================================
-  // Focus area styles
-  // ===========================================================================  
-
   /* VoogStyle
      "path": ["Focus area"],
      "title": "Area alignment",
@@ -10,8 +6,7 @@
      "list": {{ base_alignment_set }},
      "scope": "global"
   */
-  --focus-area-alignment: left; 
-
+  --focus-area-alignment: left;
   /* VoogStyle
      "path": ["Focus area"],
      "title": "Vertical alignment",
@@ -19,8 +14,7 @@
      "list": {{ base_alignment_vertical_set }},
      "scope": "global"
   */
-  --focus-area-vertical-alignment: middle; 
-
+  --focus-area-vertical-alignment: middle;
   /* VoogStyle
      "path": ["Focus area"],
      "title": "Padding",
@@ -31,7 +25,6 @@
      "scope": "global"
   */
   --focus-area-padding: 45px;
-
   /* VoogStyle
      "path": ["Focus area", "Headings"],
      "title": "Font family",
@@ -43,8 +36,7 @@
      "--focus-area-date-font-family"
      ]
   */
-  --focus-area-font-family: $font-main;
-
+  --focus-area-font-family: "Montserrat", Helvetica, Arial, sans-serif;
   /* VoogStyle
      "path": ["Focus area", "Headings"],
      "title": "Letter spacing",
@@ -55,7 +47,6 @@
      "scope": "global"
   */
   --focus-area-letter-spacing: 0;
-
   /* VoogStyle
      "path": ["Focus area", "Headings"],
      "title": "Line height",
@@ -66,8 +57,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --focus-area-line-height: $line-height;
-
+  --focus-area-line-height: 1.45;
   /* VoogStyle
     "path": ["Focus area", "Headings"],
     "title": "Size",
@@ -79,8 +69,7 @@
     "scope": "global",
     "featured": true
   */
-  --focus-area-font-size: $h2-size;
-
+  --focus-area-font-size: 24px;
   /* VoogStyle
     "path": ["Focus area", "Headings"],
     "title": "Font weight",
@@ -94,7 +83,6 @@
     "scope": "global"
   */
   --focus-area-font-weight: 400;
-
   /* VoogStyle
     "path": ["Focus area", "Headings"],
     "title": "Font style",
@@ -107,8 +95,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --focus-area-font-style: normal;  
-
+  --focus-area-font-style: normal;
   /* VoogStyle
     "path": ["Focus area", "Headings"],
     "title": "Text decoration",
@@ -122,7 +109,6 @@
     "scope": "global"
   */
   --focus-area-text-decoration: none;
-
   /* VoogStyle
     "path": ["Focus area", "Headings"],
     "title": "Text transform",
@@ -136,7 +122,6 @@
     "scope": "global"
   */
   --focus-area-text-transform: none;
-
   /* VoogStyle
     "path": ["Focus area", "Headings"],
     "title": "Color",
@@ -148,6 +133,5 @@
       "--focus-area-date-color"
      ]
   */
-  --focus-area-color: $fourth-color;
-
+  --focus-area-color: white;
 }

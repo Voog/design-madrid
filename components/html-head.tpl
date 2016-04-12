@@ -22,7 +22,26 @@
 {% comment %}Custom fonts{% endcomment %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Lato:400,400italic,700,700italic|Montserrat:400,700|Open+Sans:400,400italic,700,700italic|Roboto:400,400italic,700,700italic|Source+Sans+Pro:400,400italic,700,700italic|Ubuntu:400,400italic,700,700italic|Arvo|Crimson+Text:400,400italic,700,700italic|Lora:400,400italic,700,700italic|Noto+Serif|Playfair+Display:400,400italic,700italic,700|PT+Serif:400,400italic,700,700italic|Roboto+Slab:400,700|Anonymous+Pro:400,400italic,700,700italic|Cousine:400,400italic,700,700italic|Roboto+Mono:400,400italic,700,700italic|Ubuntu+Mono:400,400italic,700,700italic&subset=latin,greek,cyrillic-ext,latin-ext,cyrillic,greek-ext,vietnamese,hebrew">
 
-{% include "template-design" %}
+<style data-voog-style>
+  {% include "template-cs-main-styles" %}
+  {% include "template-cs-header" %}
+  {% if html-head == "front_page" %}
+    {% include "template-cs-focus-area" %}
+  {% endif %}
+  {% include "template-cs-headings" %}
+  {% if html-head == "blog_listing_page" %}
+    {% include "template-cs-blog-list" %}
+  {% else %}
+    {% include "template-cs-content" %}
+  {% endif %}
+  {% comment %}{% include "template-cs-list" %}{% endcomment %}
+  {% include "template-cs-table" %}
+  {% include "template-cs-form" %}
+  {% include "template-cs-footer" %}
+  {% include "template-cs-style-rules" %}
+</style>
+
+{{ site.style_tag }}
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr.min.js"></script>
@@ -35,4 +54,3 @@
 
 {% if blog %}{{ blog.rss_link }}{% endif %}
 {{ site.stats_header }}
-

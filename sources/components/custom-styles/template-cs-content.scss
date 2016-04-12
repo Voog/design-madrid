@@ -1,7 +1,23 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/modules/variables';
+
+// =============================================================================
+// Design editor configuration.
+// =============================================================================
 :root {
-  // ===========================================================================
-  // Content styles - General
-  // ===========================================================================  
+  // scss-lint:disable Comment, Indentation
 
   /* VoogStyle
     "path": ["Content"],
@@ -34,10 +50,6 @@
   */
   --main-width: $main-width;
 
-  // ===========================================================================
-  // Content styles: submenu links
-  // ===========================================================================  
- 
   /* VoogStyle
      "path": ["Content", "Submenu links", "Normal"],
      "title": "Font family",
@@ -98,7 +110,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --content-submenu-active-font-size: $font-size - 4px;  
+  --content-submenu-active-font-size: $font-size - 4px;
 
   /* VoogStyle
     "path": ["Content", "Submenu links", "Normal"],
@@ -144,7 +156,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --content-submenu-active-font-weight: 400;    
+  --content-submenu-active-font-weight: 400;
 
   /* VoogStyle
     "path": ["Content", "Submenu links", "Normal"],
@@ -162,7 +174,7 @@
       "--content-submenu-active-font-style"
     ]
   */
-  --content-submenu-font-style: normal;  
+  --content-submenu-font-style: normal;
 
   /* VoogStyle
     "path": ["Content", "Submenu links", "Hover"],
@@ -190,7 +202,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --content-submenu-active-font-style: normal;  
+  --content-submenu-active-font-style: normal;
 
   /* VoogStyle
     "path": ["Content", "Submenu links", "Normal"],
@@ -282,7 +294,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --content-submenu-active-text-transform: none;   
+  --content-submenu-active-text-transform: none;
 
   /* VoogStyle
     "path": ["Content", "Submenu links", "Normal"],
@@ -311,10 +323,6 @@
     "scope": "global"
   */
   --content-submenu-active-color: $second-color;
-
-  // ===========================================================================
-  // Content styles - Text
-  // ===========================================================================  
 
   /* VoogStyle
      "path": ["Content", "Text"],
@@ -404,7 +412,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --content-font-style: normal;  
+  --content-font-style: normal;
 
   /* VoogStyle
     "path": ["Content", "Text"],
@@ -443,10 +451,6 @@
     "featured": true
   */
   --content-color: $main-color;
-
-  // ===========================================================================
-  // Content styles - Links
-  // ===========================================================================  
 
   /* VoogStyle
     "path": ["Content", "Links", "Normal"],
@@ -504,7 +508,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --content-links-hover-font-weight: 400;   
+  --content-links-hover-font-weight: 400;
 
   /* VoogStyle
     "path": ["Content", "Links", "Normal"],
@@ -521,7 +525,7 @@
       "--content-links-hover-font-style"
     ]
   */
-  --content-links-font-style: normal;  
+  --content-links-font-style: normal;
 
   /* VoogStyle
     "path": ["Content", "Links", "Hover"],
@@ -535,7 +539,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --content-links-hover-font-style: normal; 
+  --content-links-hover-font-style: normal;
 
   /* VoogStyle
     "path": ["Content", "Links", "Normal"],

@@ -1,10 +1,4 @@
 :root {
-  // scss-lint:disable Comment, Indentation
-
-  // ===========================================================================
-  // Global layout styles.
-  // ===========================================================================
-	
   /* VoogStyle
      "path": ["Main Styles"],
      "title": "Font",
@@ -25,9 +19,7 @@
       "--focus-area-font-family"
      ]
   */
-  --font-main: $font-main; 
-
-
+  --font-main: "Montserrat", Helvetica, Arial, sans-serif;
   /* VoogStyle
      "path": ["Main Styles"],
      "title": "Background",
@@ -38,8 +30,7 @@
       "--footer-background-color"
     ]
   */
-  --bg-color: $bg-color;
-
+  --bg-color: #f4f4f4;
   /* VoogStyle
      "path": ["Main Styles", "Colors"],
      "title": "Primary color",
@@ -58,8 +49,7 @@
         "--content-links-hover-color"
      ]
   */
-  --second-color: $second-color;
-
+  --second-color: black;
   /* VoogStyle
      "path": ["Main Styles", "Colors"],
      "title": "Secondary color",
@@ -72,8 +62,7 @@
         "--footer-text-color"
      ]
   */
-  --main-color: $main-color;
-
+  --main-color: #333;
   /* VoogStyle
      "path": ["Main Styles", "Colors"],
      "title": "Third color",
@@ -87,8 +76,7 @@
       "--table-border-color"
      ]
   */
-  --third-color: $third-color;
-
+  --third-color: #818181;
   /* VoogStyle
      "path": ["Main Styles", "Colors"],
      "title": "Fourth color",
@@ -101,6 +89,5 @@
       "--focus-area-color"
     ]
   */
-  --fourth-color: $fourth-color;
- }
- 
+  --fourth-color: white;
+}

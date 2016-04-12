@@ -1,8 +1,23 @@
-:root { 
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
 
-  // ===========================================================================
-  // Headings styles - H1
-  // ===========================================================================  
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/modules/variables';
+
+// =============================================================================
+// Design editor configuration.
+// =============================================================================
+:root {
+  // scss-lint:disable Comment, Indentation
 
   /* VoogStyle
      "path": ["Headings", "Title"],
@@ -96,7 +111,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --h1-font-style: normal;  
+  --h1-font-style: normal;
 
   /* VoogStyle
     "path": ["Headings", "Title"],
@@ -135,10 +150,6 @@
     "featured": true
   */
   --h1-color: $second-color;
-
-  // ===========================================================================
-  // Headings styles - H2
-  // ===========================================================================  
 
   /* VoogStyle
      "path": ["Headings", "Heading"],
@@ -232,7 +243,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --h2-font-style: normal;  
+  --h2-font-style: normal;
 
   /* VoogStyle
     "path": ["Headings", "Heading"],
@@ -271,11 +282,6 @@
     "featured": true
   */
   --h2-color: $second-color;
-
-
-  // ===========================================================================
-  // Headings styles - H3
-  // ===========================================================================  
 
   /* VoogStyle
      "path": ["Headings", "Subheading"],
@@ -380,7 +386,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --h3-font-style: normal;  
+  --h3-font-style: normal;
 
   /* VoogStyle
     "path": ["Headings", "Subheading"],
@@ -419,5 +425,4 @@
     "featured": true
   */
   --h3-color: $second-color;
-
 }

@@ -1,5 +1,6 @@
 // =============================================================================
-// STYLE OVERRIDES
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
 //
 // This file will be converted to CSS, copied under "/components" and renamed to
 // "*.tpl".
@@ -7,8 +8,14 @@
 // The output component can be included in any "layout" or "component".
 // =============================================================================
 
-@import '../stylesheets/modules/variables';
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/modules/variables';
 
+// =============================================================================
+// Default stylesheet override styles.
+// =============================================================================
 .main {
   background-color: var(--bg-color);
 }
@@ -35,7 +42,7 @@ textarea,
   font-family: var(--font-main);
 }
 
-body, 
+body,
 .header .main-menu-toggler
  {
   color: var(--main-color);
@@ -58,7 +65,7 @@ blockquote,
 .wrap {
   max-width: var(--main-width);
 }
- 
+
 .content-page main .content.formatted {
   background-color: var(--content-background-color);
   padding: var(--content-padding);
@@ -90,15 +97,15 @@ main .footer-content {
     text-decoration: var(--content-links-text-decoration);
     text-transform: var(--content-links-text-transform);
 
-    &:hover {    
+    &:hover {
       color: var(--content-links-hover-color);
       font-style: var(--content-links-hover-font-style);
       font-weight: var(--content-links-hover-font-weight);
       text-decoration: var(--content-links-hover-text-decoration);
-      text-transform: var(--content-links-hover-text-transform);        
+      text-transform: var(--content-links-hover-text-transform);
     }
   }
-} 
+}
 
 main .content-body,
 main .post-content {
@@ -218,7 +225,7 @@ main .post-content {
         font-style: var(--header-mainmenu-hover-font-style);
         font-weight: var(--header-mainmenu-hover-font-weight);
         text-decoration: var(--header-mainmenu-hover-text-decoration);
-        text-transform: var(--header-mainmenu-hover-text-transform);        
+        text-transform: var(--header-mainmenu-hover-text-transform);
       }
 
       &.active {
@@ -227,7 +234,7 @@ main .post-content {
         font-style: var(--header-mainmenu-active-font-style);
         font-weight: var(--header-mainmenu-active-font-weight);
         text-decoration: var(--header-mainmenu-active-text-decoration);
-        text-transform: var(--header-mainmenu-active-text-transform);           
+        text-transform: var(--header-mainmenu-active-text-transform);
       }
     }
   }
@@ -252,16 +259,16 @@ main .post-content {
         font-style: var(--content-submenu-hover-font-style);
         font-weight: var(--content-submenu-hover-font-weight);
         text-decoration: var(--content-submenu-hover-text-decoration);
-        text-transform: var(--content-submenu-hover-text-transform);        
-      } 
-      
+        text-transform: var(--content-submenu-hover-text-transform);
+      }
+
       &.active {
         color: var(--content-submenu-active-color);
         font-size: var(--content-submenu-active-font-size);
         font-style: var(--content-submenu-active-font-style);
         font-weight: var(--content-submenu-active-font-weight);
         text-decoration: var(--content-submenu-active-text-decoration);
-        text-transform: var(--content-submenu-active-text-transform);           
+        text-transform: var(--content-submenu-active-text-transform);
       }
     }
   }

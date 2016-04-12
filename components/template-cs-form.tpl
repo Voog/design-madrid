@@ -1,53 +1,49 @@
 :root {
-
-  // ===========================================================================
-  // Footer styles
-  // ===========================================================================  
-
   /* VoogStyle
-     "path": ["Footer"],
-     "title": "Footer background",
-     "editor": "colorPicker",
+    "path": ["Forms"],
+    "title": "Field background",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --form-field-background-color: white;
+  /* VoogStyle
+    "path": ["Forms"],
+    "title": "Field border color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --form-field-border-color: black;
+  /* VoogStyle
+     "path": ["Forms"],
+     "title": "Field border width",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 20,
+     "unit": "px",
      "scope": "global"
   */
-  --footer-background-color: $bg-color;
-
-  // ===========================================================================
-  // Footer styles - Text
-  // ===========================================================================  
-
+  --form-field-border-width: 0;
   /* VoogStyle
-     "path": ["Footer", "Text"],
+     "path": ["Forms"],
+     "title": "Field padding",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 100,
+     "unit": "px",
+     "scope": "global"
+  */
+  --form-field-padding: 10px;
+  /* VoogStyle
+     "path": ["Forms", "Text"],
      "title": "Font family",
      "editor": "listPicker",
      "list": {{ base_font_set }},
      "featured": true,
      "scope": "global"
   */
-  --footer-font-family: $font-main;
-
+  --form-field-text-font-family: "Montserrat", Helvetica, Arial, sans-serif;
   /* VoogStyle
-     "path": ["Footer", "Text"],
-     "title": "Alignment",
-     "editor": "listPicker",
-     "list": {{ base_alignment_set }},
-     "scope": "global"
-  */
-  --footer-alignment: center;
-
-  /* VoogStyle
-     "path": ["Footer", "Text"],
-     "title": "Letter spacing",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 40,
-     "unit": "px",
-     "scope": "global"
-  */
-  --footer-letter-spacing: 0;
-
-  /* VoogStyle
-     "path": ["Footer", "Text"],
+     "path": ["Forms", "Text"],
      "title": "Line height",
      "editor": "rangePicker",
      "min": 0.8,
@@ -56,10 +52,9 @@
      "unit": "em",
      "scope": "global"
   */
-  --footer-line-height: $line-height#em;
-
+  --form-field-text-line-height: 1.45 #em;
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Forms", "Text"],
     "title": "Size",
     "type": "button",
     "editor": "rangePicker",
@@ -69,10 +64,9 @@
     "scope": "global",
     "featured": true
   */
-  --footer-font-size: 10px;
-
+  --form-field-text-font-size: 18px;
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Forms", "Text"],
     "title": "Font weight",
     "type": "button",
     "editor": "toggleIcon",
@@ -83,10 +77,9 @@
     "icon": "bold",
     "scope": "global"
   */
-  --footer-font-weight: 400;
-
+  --form-field-text-font-weight: 400;
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Forms", "Text"],
     "title": "Font style",
     "type": "button",
     "editor": "toggleIcon",
@@ -97,10 +90,9 @@
     "icon": "italic",
     "scope": "global"
   */
-  --footer-font-style: normal;  
-
+  --form-field-text-font-style: normal;
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Forms", "Text"],
     "title": "Text decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -111,10 +103,9 @@
     "icon": "underline",
     "scope": "global"
   */
-  --footer-text-decoration: none;
-
+  --form-field-text-text-decoration: none;
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Forms", "Text"],
     "title": "Text transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -125,15 +116,14 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --footer-text-transform: none;
-
+  --form-field-text-text-transform: none;
   /* VoogStyle
-    "path": ["Footer", "Text"],
+    "path": ["Forms", "Text"],
     "title": "Color",
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",
     "featured": true
   */
-  --footer-text-color: $main-color;  
+  --form-field-text-color: #333;
 }

@@ -1,7 +1,23 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/modules/variables';
+
+// =============================================================================
+// Design editor configuration.
+// =============================================================================
 :root {
-  // ===========================================================================
-  // Header styles: General
-  // ===========================================================================  
+  // scss-lint:disable Comment, Indentation
 
   /* VoogStyle
      "path": ["Header"],
@@ -10,10 +26,6 @@
      "scope": "global"
   */
   --header-background-color: $bg-color;
-
-  // ===========================================================================
-  // Header styles: site title
-  // ===========================================================================    
 
   /* VoogStyle
      "path": ["Header", "Site title"],
@@ -75,7 +87,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --header-site-title-font-style: normal;  
+  --header-site-title-font-style: normal;
 
   /* VoogStyle
     "path": ["Header", "Site title"],
@@ -115,10 +127,6 @@
   */
   --header-site-title-color: $second-color;
 
-  // ===========================================================================
-  // Header styles: main menu links
-  // ===========================================================================  
- 
   /* VoogStyle
      "path": ["Header", "Main menu links", "Normal"],
      "title": "Font family",
@@ -179,7 +187,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --header-mainmenu-active-font-size: $font-size - 2px;  
+  --header-mainmenu-active-font-size: $font-size - 2px;
 
   /* VoogStyle
     "path": ["Header", "Main menu links", "Normal"],
@@ -225,7 +233,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --header-mainmenu-active-font-weight: 400;    
+  --header-mainmenu-active-font-weight: 400;
 
   /* VoogStyle
     "path": ["Header", "Main menu links", "Normal"],
@@ -243,7 +251,7 @@
       "--header-mainmenu-active-font-style"
     ]
   */
-  --header-mainmenu-font-style: normal;  
+  --header-mainmenu-font-style: normal;
 
   /* VoogStyle
     "path": ["Header", "Main menu links", "Hover"],
@@ -271,7 +279,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --header-mainmenu-active-font-style: normal;  
+  --header-mainmenu-active-font-style: normal;
 
   /* VoogStyle
     "path": ["Header", "Main menu links", "Normal"],
@@ -363,7 +371,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --header-mainmenu-active-text-transform: uppercase;   
+  --header-mainmenu-active-text-transform: uppercase;
 
   /* VoogStyle
     "path": ["Header", "Main menu links", "Normal"],

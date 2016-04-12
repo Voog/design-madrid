@@ -1,21 +1,38 @@
 :root {
   /* VoogStyle
-    "path": ["Forms"],
-    "title": "Field background",
+    "pathI18n": ["custom_styles.form"],
+    "titleI18n": "custom_styles.background_color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --form-background-color: transparent;
+  /* VoogStyle
+     "pathI18n": ["custom_styles.form"],
+     "titleI18n": "custom_styles.padding",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 100,
+     "unit": "px",
+     "scope": "global"
+  */
+  --form-padding: 0;
+  /* VoogStyle
+    "pathI18n": ["custom_styles.form"],
+    "titleI18n": "custom_styles.field_bg_color",
     "editor": "colorPicker",
     "scope": "global"
   */
   --form-field-background-color: white;
   /* VoogStyle
-    "path": ["Forms"],
-    "title": "Field border color",
+    "pathI18n": ["custom_styles.form"],
+    "titleI18n": "custom_styles.field_border_color",
     "editor": "colorPicker",
     "scope": "global"
   */
   --form-field-border-color: black;
   /* VoogStyle
-     "path": ["Forms"],
-     "title": "Field border width",
+     "pathI18n": ["custom_styles.form"],
+     "titleI18n": "custom_styles.field_border_thickness",
      "editor": "rangePicker",
      "min": 0,
      "max": 20,
@@ -24,8 +41,8 @@
   */
   --form-field-border-width: 0;
   /* VoogStyle
-     "path": ["Forms"],
-     "title": "Field padding",
+     "pathI18n": ["custom_styles.form"],
+     "titleI18n": "custom_styles.field_padding",
      "editor": "rangePicker",
      "min": 0,
      "max": 100,
@@ -34,8 +51,8 @@
   */
   --form-field-padding: 10px;
   /* VoogStyle
-     "path": ["Forms", "Text"],
-     "title": "Font family",
+     "pathI18n": ["custom_styles.form", "custom_styles.text"],
+     "titleI18n": "custom_styles.field_font",
      "editor": "listPicker",
      "list": {{ base_font_set }},
      "featured": true,
@@ -43,8 +60,8 @@
   */
   --form-field-text-font-family: "Montserrat", Helvetica, Arial, sans-serif;
   /* VoogStyle
-     "path": ["Forms", "Text"],
-     "title": "Line height",
+     "pathI18n": ["custom_styles.form", "custom_styles.text"],
+     "titleI18n": "custom_styles.line_height",
      "editor": "rangePicker",
      "min": 0.8,
      "max": 3,
@@ -54,8 +71,8 @@
   */
   --form-field-text-line-height: 1.45 #em;
   /* VoogStyle
-    "path": ["Forms", "Text"],
-    "title": "Size",
+    "pathI18n": ["custom_styles.form", "custom_styles.text"],
+    "titleI18n": "custom_styles.size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
@@ -66,8 +83,8 @@
   */
   --form-field-text-font-size: 18px;
   /* VoogStyle
-    "path": ["Forms", "Text"],
-    "title": "Font weight",
+    "pathI18n": ["custom_styles.form", "custom_styles.text"],
+    "titleI18n": "custom_styles.font_weight",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -79,8 +96,8 @@
   */
   --form-field-text-font-weight: 400;
   /* VoogStyle
-    "path": ["Forms", "Text"],
-    "title": "Font style",
+    "pathI18n": ["custom_styles.form", "custom_styles.text"],
+    "titleI18n": "custom_styles.font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -92,8 +109,8 @@
   */
   --form-field-text-font-style: normal;
   /* VoogStyle
-    "path": ["Forms", "Text"],
-    "title": "Text decoration",
+    "pathI18n": ["custom_styles.form", "custom_styles.text"],
+    "titleI18n": "custom_styles.text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -105,8 +122,8 @@
   */
   --form-field-text-text-decoration: none;
   /* VoogStyle
-    "path": ["Forms", "Text"],
-    "title": "Text transform",
+    "pathI18n": ["custom_styles.form", "custom_styles.text"],
+    "titleI18n": "custom_styles.text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -118,8 +135,8 @@
   */
   --form-field-text-text-transform: none;
   /* VoogStyle
-    "path": ["Forms", "Text"],
-    "title": "Color",
+    "pathI18n": ["custom_styles.form", "custom_styles.text"],
+    "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",

@@ -362,6 +362,14 @@ main .content {
 }
 
 // FORMS
+.formatted {
+  form,
+  .form {
+    padding: var(--form-padding);
+    background-color: var(--form-background-color);
+  }
+}
+
 .form_field_textfield,
 .form_field_textarea,
 .form_submit input,

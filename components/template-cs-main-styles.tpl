@@ -1,7 +1,7 @@
 :root {
   /* VoogStyle
-     "path": ["Main Styles"],
-     "title": "Font",
+     "pathI18n": ["custom_styles.main_styles"],
+     "titleI18n": "custom_styles.font",
      "editor": "listPicker",
      "list": {{ base_font_set }},
      "featured": true,
@@ -21,8 +21,8 @@
   */
   --font-main: "Montserrat", Helvetica, Arial, sans-serif;
   /* VoogStyle
-     "path": ["Main Styles"],
-     "title": "Background",
+     "pathI18n": ["custom_styles.main_styles"],
+     "titleI18n": "custom_styles.background_color",
      "editor": "colorPicker",
      "scope": "global",
      "boundVariables": [
@@ -32,8 +32,8 @@
   */
   --bg-color: #f4f4f4;
   /* VoogStyle
-     "path": ["Main Styles", "Colors"],
-     "title": "Primary color",
+     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+     "titleI18n": "custom_styles.primary_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,
@@ -51,8 +51,8 @@
   */
   --second-color: black;
   /* VoogStyle
-     "path": ["Main Styles", "Colors"],
-     "title": "Secondary color",
+     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+     "titleI18n": "custom_styles.secondary_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,
@@ -64,8 +64,8 @@
   */
   --main-color: #333;
   /* VoogStyle
-     "path": ["Main Styles", "Colors"],
-     "title": "Third color",
+     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+     "titleI18n": "custom_styles.third_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,
@@ -78,8 +78,8 @@
   */
   --third-color: #818181;
   /* VoogStyle
-     "path": ["Main Styles", "Colors"],
-     "title": "Fourth color",
+     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
+     "titleI18n": "custom_styles.fourth_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,

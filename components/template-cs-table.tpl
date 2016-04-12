@@ -1,21 +1,21 @@
 :root {
   /* VoogStyle
-    "path": ["Tables"],
-    "title": "Background",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.background_color",
     "editor": "colorPicker",
     "scope": "global"
   */
   --table-background-color: rgba(255, 255, 255, 0);
   /* VoogStyle
-    "path": ["Tables"],
-    "title": "Border color",
+    "pathI18n": ["custom_styles.table"],
+    "titleI18n": "custom_styles.border_color",
     "editor": "colorPicker",
     "scope": "global"
   */
   --table-border-color: #818181;
   /* VoogStyle
-     "path": ["Tables"],
-     "title": "Border width",
+     "pathI18n": ["custom_styles.table"],
+     "titleI18n": "custom_styles.border_thickness",
      "editor": "rangePicker",
      "min": 0,
      "max": 20,
@@ -24,8 +24,8 @@
   */
   --table-border-width: 1px;
   /* VoogStyle
-     "path": ["Tables"],
-     "title": "Padding",
+     "pathI18n": ["custom_styles.table"],
+     "titleI18n": "custom_styles.padding",
      "editor": "rangePicker",
      "min": 0,
      "max": 100,

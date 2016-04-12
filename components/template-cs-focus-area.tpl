@@ -1,23 +1,23 @@
 :root {
   /* VoogStyle
-     "path": ["Focus area"],
-     "title": "Area alignment",
+     "pathI18n": ["custom_styles.focus_area"],
+     "titleI18n": "custom_styles.alignment",
      "editor": "listPicker",
-     "list": {{ base_alignment_set }},
+     "list": {{ base_alignment_horizontal_set }},
      "scope": "global"
   */
   --focus-area-alignment: left;
   /* VoogStyle
-     "path": ["Focus area"],
-     "title": "Vertical alignment",
+     "pathI18n": ["custom_styles.focus_area"],
+     "titleI18n": "custom_styles.position",
      "editor": "listPicker",
      "list": {{ base_alignment_vertical_set }},
      "scope": "global"
   */
   --focus-area-vertical-alignment: middle;
   /* VoogStyle
-     "path": ["Focus area"],
-     "title": "Padding",
+     "pathI18n": ["custom_styles.focus_area"],
+     "titleI18n": "custom_styles.padding",
      "editor": "rangePicker",
      "min": 0,
      "max": 99,
@@ -26,8 +26,8 @@
   */
   --focus-area-padding: 45px;
   /* VoogStyle
-     "path": ["Focus area", "Headings"],
-     "title": "Font family",
+     "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+     "titleI18n": "custom_styles.font",
      "editor": "listPicker",
      "list": {{ base_font_set }},
      "featured": true,
@@ -38,8 +38,8 @@
   */
   --focus-area-font-family: "Montserrat", Helvetica, Arial, sans-serif;
   /* VoogStyle
-     "path": ["Focus area", "Headings"],
-     "title": "Letter spacing",
+     "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+     "titleI18n": "custom_styles.letter_spacing",
      "editor": "rangePicker",
      "min": 0,
      "max": 20,
@@ -48,8 +48,8 @@
   */
   --focus-area-letter-spacing: 0;
   /* VoogStyle
-     "path": ["Focus area", "Headings"],
-     "title": "Line height",
+     "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+     "titleI18n": "custom_styles.line_height",
      "editor": "rangePicker",
      "min": 0.8,
      "max": 3,
@@ -59,8 +59,8 @@
   */
   --focus-area-line-height: 1.45;
   /* VoogStyle
-    "path": ["Focus area", "Headings"],
-    "title": "Size",
+    "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+    "titleI18n": "custom_styles.size",
     "type": "button",
     "editor": "rangePicker",
     "min": 8,
@@ -71,8 +71,8 @@
   */
   --focus-area-font-size: 24px;
   /* VoogStyle
-    "path": ["Focus area", "Headings"],
-    "title": "Font weight",
+    "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+    "titleI18n": "custom_styles.font_weight",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -84,8 +84,8 @@
   */
   --focus-area-font-weight: 400;
   /* VoogStyle
-    "path": ["Focus area", "Headings"],
-    "title": "Font style",
+    "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+    "titleI18n": "custom_styles.font_style",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -97,8 +97,8 @@
   */
   --focus-area-font-style: normal;
   /* VoogStyle
-    "path": ["Focus area", "Headings"],
-    "title": "Text decoration",
+    "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+    "titleI18n": "custom_styles.text_decoration",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -110,8 +110,8 @@
   */
   --focus-area-text-decoration: none;
   /* VoogStyle
-    "path": ["Focus area", "Headings"],
-    "title": "Text transform",
+    "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+    "titleI18n": "custom_styles.text_transform",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
@@ -123,8 +123,8 @@
   */
   --focus-area-text-transform: none;
   /* VoogStyle
-    "path": ["Focus area", "Headings"],
-    "title": "Color",
+    "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
+    "titleI18n": "custom_styles.color",
     "type": "button",
     "editor": "colorPicker",
     "scope": "global",

@@ -297,6 +297,12 @@ main .content table th {
   padding: var(--table-cell-padding);
 }
 
+.formatted form,
+.formatted .form {
+  padding: var(--form-padding);
+  background-color: var(--form-background-color);
+}
+
 .form_field_textfield,
 .form_field_textarea,
 .form_submit input,

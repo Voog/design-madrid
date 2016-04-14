@@ -5,7 +5,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --table-background-color: rgba(255, 255, 255, 0);
+  --table-background-color: transparent;
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
     "titleI18n": "custom_styles.border_color",

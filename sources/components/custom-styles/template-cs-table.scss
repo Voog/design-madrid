@@ -25,7 +25,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --table-background-color: rgba($color-white, .0);
+  --table-background-color: transparent;
 
   /* VoogStyle
     "pathI18n": ["custom_styles.table"],
@@ -56,4 +56,6 @@
      "scope": "global"
   */
   --table-cell-padding: 10px;
+
+  // scss-lint:enable Comment, Indentation
 }

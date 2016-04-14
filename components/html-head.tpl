@@ -41,8 +41,6 @@
   {% include "template-cs-style-rules" %}
 {% endcustomstyle %}
 
-{{ site.style_tag }}
-
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr.min.js"></script>
 

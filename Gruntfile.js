@@ -6,55 +6,22 @@ module.exports = function(grunt) {
 
     // Removes old files.
     clean: {
-      assets: ['assets'],
-      images: ['images'],
-      javascripts: ['javascripts'],
-      stylesheets: ['stylesheets']
+      reset: {
+        src: ['assets', 'images', 'javascripts', 'stylesheets']
+      },
+
+      remove: {
+        src: ['sources/components/custom-styles/tmp']
+      }
     },
 
     modernizr_builder: {
       build: {
         options: {
           config: 'modernizr-config.json',
-          dest: 'javascripts/modernizr.min.js',
-          uglify: true
+          dest: 'javascripts/modernizr.js',
+          uglify: false
         }
-      }
-    },
-
-    // Copys the files from the source folders to the layout folders.
-    copy: {
-      assets: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/assets/copy',
-            src: '*',
-            dest: 'assets/'
-          }
-        ]
-      },
-
-      images: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/images/copy',
-            src: '*',
-            dest: 'images/'
-          }
-        ]
-      },
-
-      javascripts: {
-        files: [
-          {
-            expand: true,
-            cwd: 'sources/javascripts/copy',
-            src: '*',
-            dest: 'javascripts/'
-          }
-        ]
       }
     },
 
@@ -63,6 +30,7 @@ module.exports = function(grunt) {
       build: {
         src: [
           'bower_components/jquery/dist/jquery.js',
+          'bower_components/jquery-mousewheel/jquery.mousewheel.js',
           'sources/javascripts/concat/*.js'
         ],
         dest: 'javascripts/application.js'
@@ -87,7 +55,7 @@ module.exports = function(grunt) {
 
     // Compiles the stylesheet files.
     sass: {
-      build: {
+      build_main: {
         options: {
           style: 'expanded',
           sourcemap: 'none'
@@ -97,6 +65,21 @@ module.exports = function(grunt) {
           cwd: 'sources/stylesheets',
           src: 'main.scss',
           dest: 'stylesheets/',
+          ext: '.css'
+        }]
+      },
+
+      // Builds custom style components to temporary folder.
+      build_custom_styles: {
+        options: {
+          style: 'expanded',
+          sourcemap: 'none'
+        },
+        files: [{
+          expand: true,
+          cwd: 'sources/components/custom-styles',
+          src: '*.scss',
+          dest: 'sources/components/custom-styles/tmp',
           ext: '.css'
         }]
       }
@@ -151,6 +134,56 @@ module.exports = function(grunt) {
       }
     },
 
+    // Copys the files from the source folders to the layout folders.
+    copy: {
+      assets: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/assets/copy',
+            src: '*',
+            dest: 'assets/'
+          }
+        ]
+      },
+
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/images/copy',
+            src: '*',
+            dest: 'images/'
+          }
+        ]
+      },
+
+      javascripts: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/javascripts/copy',
+            src: '*',
+            dest: 'javascripts/'
+          }
+        ]
+      },
+
+      // Copies the compiled css files from temporary folder to "components"
+      // folder and renames the files to ""*.tpl".
+      custom_styles: {
+        files: [
+          {
+            expand: true,
+            cwd: 'sources/components/custom-styles/tmp',
+            src: '*.css',
+            dest: 'components',
+            ext: '.tpl'
+          }
+        ]
+      }
+    },
+
     // Executes the Voog Kit toolkit manifest generation and file upload commands.
     exec: {
       kitmanifest: {
@@ -187,12 +220,17 @@ module.exports = function(grunt) {
         tasks: ['concat:build', 'uglify:build', 'exec:kitmanifest']
       },
 
-      css: {
+      css_main: {
         files: [
           'sources/stylesheets/*.scss',
           'sources/stylesheets/*/*.scss'
         ],
-        tasks: ['sass:build', 'postcss', 'cssmin:build', 'exec:kitmanifest']
+        tasks: ['sass:build_main', 'postcss', 'cssmin:build', 'exec:kitmanifest']
+      },
+
+      custom_styles: {
+        files: 'sources/components/custom-styles/*.scss',
+        tasks: ['sass:build_custom_styles', 'copy:custom_styles', 'clean:remove', 'exec:kitmanifest']
       },
 
       img_copy: {
@@ -236,7 +274,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-exec');
 
-  grunt.registerTask('default', ['clean', 'modernizr_builder', 'copy', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin']);
+  grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'uglify', 'sass', 'postcss', 'cssmin', 'imagemin', 'copy', 'clean:remove']);
 
   grunt.event.on('watch', function(action, filepath, target) {
     if (target == 'voog') {

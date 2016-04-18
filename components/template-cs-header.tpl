@@ -7,25 +7,6 @@
   */
   --header-background-color: #f4f4f4;
   /* VoogStyle
-     "pathI18n": ["custom_styles.header", "custom_styles.title"],
-     "titleI18n": "custom_styles.font",
-     "editor": "listPicker",
-     "list": {{ base_font_set }},
-     "featured": true,
-     "scope": "global"
-  */
-  --header-site-title-font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  /* VoogStyle
-     "pathI18n": ["custom_styles.header", "custom_styles.title"],
-     "titleI18n": "custom_styles.letter_spacing",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 20,
-     "unit": "px",
-     "scope": "global"
-  */
-  --header-site-title-letter-spacing: 0;
-  /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.title"],
     "titleI18n": "custom_styles.size",
     "type": "button",
@@ -99,25 +80,6 @@
   */
   --header-site-title-color: black;
   /* VoogStyle
-     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
-     "titleI18n": "custom_styles.font",
-     "editor": "listPicker",
-     "list": {{ base_font_set }},
-     "featured": true,
-     "scope": "global"
-  */
-  --header-mainmenu-font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  /* VoogStyle
-     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
-     "titleI18n": "custom_styles.letter_spacing",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 20,
-     "unit": "px",
-     "scope": "global"
-  */
-  --header-mainmenu-letter-spacing: 0;
-  /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.size",
     "type": "button",
@@ -126,35 +88,9 @@
     "max": 80,
     "unit": "px",
     "scope": "global",
-    "featured": true,
-    "boundVariables": [
-      "--header-mainmenu-hover-font-size",
-      "--header-mainmenu-active-font-size"
-    ]
+    "featured": true
   */
   --header-mainmenu-font-size: 16px;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.hover"],
-    "titleI18n": "custom_styles.size",
-    "type": "button",
-    "editor": "rangePicker",
-    "min": 8,
-    "max": 80,
-    "unit": "px",
-    "scope": "global"
-  */
-  --header-mainmenu-hover-font-size: 16px;
-  /* VoogStyle
-    "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.active"],
-    "titleI18n": "custom_styles.size",
-    "type": "button",
-    "editor": "rangePicker",
-    "min": 8,
-    "max": 80,
-    "unit": "px",
-    "scope": "global"
-  */
-  --header-mainmenu-active-font-size: 16px;
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.font_weight",

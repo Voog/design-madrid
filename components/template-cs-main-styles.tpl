@@ -5,19 +5,7 @@
      "editor": "listPicker",
      "list": {{ base_font_set }},
      "featured": true,
-     "scope": "global",
-     "boundVariables": [
-      "--header-site-title-font-family",
-      "--header-mainmenu-font-family",
-      "--blog-list-headings-font-family",
-      "--h1-font-family",
-      "--h2-font-family",
-      "--h3-font-family",
-      "--content-font-family",
-      "--footer-font-family",
-      "--form-field-text-font-family",
-      "--focus-area-font-family"
-     ]
+     "scope": "global"
   */
   --font-main: "Montserrat", Helvetica, Arial, sans-serif;
   /* VoogStyle

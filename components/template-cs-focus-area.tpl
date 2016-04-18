@@ -27,28 +27,6 @@
   --focus-area-padding: 45px;
   /* VoogStyle
      "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
-     "titleI18n": "custom_styles.font",
-     "editor": "listPicker",
-     "list": {{ base_font_set }},
-     "featured": true,
-     "scope": "global",
-     "boundVariables": [
-     "--focus-area-date-font-family"
-     ]
-  */
-  --focus-area-font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  /* VoogStyle
-     "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
-     "titleI18n": "custom_styles.letter_spacing",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 20,
-     "unit": "px",
-     "scope": "global"
-  */
-  --focus-area-letter-spacing: 0;
-  /* VoogStyle
-     "pathI18n": ["custom_styles.focus_area", "custom_styles.text"],
      "titleI18n": "custom_styles.line_height",
      "editor": "rangePicker",
      "min": 0.8,

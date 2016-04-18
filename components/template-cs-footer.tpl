@@ -8,31 +8,12 @@
   --footer-background-color: #f4f4f4;
   /* VoogStyle
      "pathI18n": ["custom_styles.footer", "custom_styles.text"],
-     "titleI18n": "custom_styles.font",
-     "editor": "listPicker",
-     "list": {{ base_font_set }},
-     "featured": true,
-     "scope": "global"
-  */
-  --footer-font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  /* VoogStyle
-     "pathI18n": ["custom_styles.footer", "custom_styles.text"],
      "titleI18n": "custom_styles.alignment",
      "editor": "listPicker",
      "list": {{ base_alignment_horizontal_set }},
      "scope": "global"
   */
   --footer-alignment: center;
-  /* VoogStyle
-     "pathI18n": ["custom_styles.footer", "custom_styles.text"],
-     "titleI18n": "custom_styles.letter_spacing",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 40,
-     "unit": "px",
-     "scope": "global"
-  */
-  --footer-letter-spacing: 0;
   /* VoogStyle
      "pathI18n": ["custom_styles.footer", "custom_styles.text"],
      "titleI18n": "custom_styles.line_height",

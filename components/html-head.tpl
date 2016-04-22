@@ -25,16 +25,17 @@
 {% customstyle %}
   {% include "template-cs-main-styles" %}
   {% include "template-cs-header" %}
-  {% if html-head == "front_page" %}
+  {% if front_page %}
     {% include "template-cs-focus-area" %}
   {% endif %}
   {% include "template-cs-headings" %}
-  {% if html-head == "blog_listing_page" %}
+  {% if blog_listing_page %}
     {% include "template-cs-blog-list" %}
-  {% else %}
+  {% endif %}
+  {% if common_page %}
     {% include "template-cs-content" %}
   {% endif %}
-  {% comment %}{% include "template-cs-list" %}{% endcomment %}
+  {% include "template-cs-button" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}
   {% include "template-cs-footer" %}

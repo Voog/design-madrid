@@ -36,9 +36,9 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/langmenu.tpl",
-      "layout_name": "langmenu",
-      "title": "langmenu"
+      "file": "components/mainmenu.tpl",
+      "layout_name": "mainmenu",
+      "title": "mainmenu"
     },
     {
       "content_type": "component",
@@ -113,16 +113,16 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/article-image.tpl",
-      "layout_name": "article-image",
-      "title": "article-image"
+      "file": "components/langmenu.tpl",
+      "layout_name": "langmenu",
+      "title": "langmenu"
     },
     {
       "content_type": "component",
       "component": true,
-      "file": "components/mainmenu.tpl",
-      "layout_name": "mainmenu",
-      "title": "mainmenu"
+      "file": "components/article-image.tpl",
+      "layout_name": "article-image",
+      "title": "article-image"
     },
     {
       "content_type": "component",
@@ -158,6 +158,13 @@
       "file": "components/template-cs-blog-list.tpl",
       "layout_name": "template-cs-blog-list",
       "title": "template-cs-blog-list"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-cs-button.tpl",
+      "layout_name": "template-cs-button",
+      "title": "template-cs-button"
     },
     {
       "content_type": "component",
@@ -221,6 +228,13 @@
       "file": "components/template-cs-table.tpl",
       "layout_name": "template-cs-table",
       "title": "template-cs-table"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/template-variables.tpl",
+      "layout_name": "template-variables",
+      "title": "template-variables"
     }
   ],
   "assets": [

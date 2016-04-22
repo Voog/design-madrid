@@ -714,6 +714,7 @@ $header-inner-height: 28px;
       line-height: 1.1;
       color: $third-color;
       text-transform: uppercase;
+      white-space: nowrap;
 
       &:hover, &.active {
         color: $second-color;

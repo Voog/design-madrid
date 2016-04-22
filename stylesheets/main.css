@@ -848,6 +848,7 @@ a:hover {
   line-height: 1.1;
   color: #818181;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .main-menu ul a:hover, .main-menu ul a.active {
   color: black;

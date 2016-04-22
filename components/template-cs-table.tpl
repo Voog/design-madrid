@@ -12,7 +12,7 @@
      "titleI18n": "custom_styles.padding",
      "editor": "rangePicker",
      "min": 0,
-     "max": 100,
+     "max": 60,
      "unit": "px",
      "scope": "global"
   */

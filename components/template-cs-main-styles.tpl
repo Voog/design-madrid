@@ -46,8 +46,7 @@
      "featured": true,
      "boundVariables": [
         "--content-color",
-        "--form-field-text-color",
-        "--footer-text-color"
+        "--footer-text-color",
      ]
   */
   --main-color: #333;

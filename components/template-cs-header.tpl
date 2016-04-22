@@ -9,7 +9,6 @@
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.title"],
     "titleI18n": "custom_styles.size",
-    "type": "button",
     "editor": "rangePicker",
     "min": 8,
     "max": 80,
@@ -82,7 +81,6 @@
   /* VoogStyle
     "pathI18n": ["custom_styles.header", "custom_styles.main_menu", "custom_styles.normal"],
     "titleI18n": "custom_styles.size",
-    "type": "button",
     "editor": "rangePicker",
     "min": 8,
     "max": 80,

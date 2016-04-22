@@ -263,7 +263,7 @@
       "filename": "montserrat-bold.svg"
     },
     {
-      "content_type": "application/x-font-truetype",
+      "content_type": "application/font-sfnt",
       "file": "assets/montserrat-bold.ttf",
       "kind": "assets",
       "filename": "montserrat-bold.ttf"
@@ -293,7 +293,7 @@
       "filename": "montserrat-regular.svg"
     },
     {
-      "content_type": "application/x-font-truetype",
+      "content_type": "application/font-sfnt",
       "file": "assets/montserrat-regular.ttf",
       "kind": "assets",
       "filename": "montserrat-regular.ttf"

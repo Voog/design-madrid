@@ -294,7 +294,7 @@ main .content table {
 }
 main .content table td,
 main .content table th {
-  border: var(--table-border-width) var(--table-border-color) solid;
+  border-style: var(--table-border-style);
   padding: var(--table-cell-padding);
 }
 

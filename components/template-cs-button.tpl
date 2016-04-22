@@ -1,11 +1,15 @@
 :root {
   /* VoogStyle
     "pathI18n": ["custom_styles.button"],
-    "titleI18n": "custom_styles.background_color",
-    "editor": "colorPicker",
+    "titleI18n": "custom_styles.padding",
+    "editor": "rangePicker",
+    "min": 0,
+    "max": 200,
+    "step": 1,
+    "unit": "px",
     "scope": "global"
   */
-  --content-button-background-color: #2b2b2b;
+  --content-button-padding: 12px;
   /* VoogStyle
     "pathI18n": ["custom_styles.button"],
     "titleI18n": "custom_styles.size",
@@ -28,6 +32,13 @@
     "scope": "global"
   */
   --content-button-line-height: 1.2em;
+  /* VoogStyle
+    "pathI18n": ["custom_styles.button"],
+    "titleI18n": "custom_styles.background_color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --content-button-background-color: #2b2b2b;
   /* VoogStyle
     "pathI18n": ["custom_styles.button"],
     "titleI18n": "custom_styles.font_size",

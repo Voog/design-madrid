@@ -2,6 +2,14 @@
   background-color: var(--bg-color);
 }
 
+.lang-menu-btn .lang-title {
+  color: var(--footer-text-color);
+}
+
+main .post-content .post-tags a {
+  color: #fff;
+}
+
 .header,
 .main-menu {
   background-color: var(--header-background-color);

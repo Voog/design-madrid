@@ -20,8 +20,8 @@
   // scss-lint:disable Comment, Indentation
 
   /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles"],
-     "titleI18n": "custom_styles.font",
+     "pathI18n": ["main_styles"],
+     "titleI18n": "font",
      "editor": "listPicker",
      "list": {{ base_font_set }},
      "featured": true,
@@ -30,8 +30,8 @@
   --font-main: $font-main;
 
   /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles"],
-     "titleI18n": "custom_styles.background_color",
+     "pathI18n": ["main_styles"],
+     "titleI18n": "background_color",
      "editor": "colorPicker",
      "scope": "global",
      "boundVariables": [
@@ -42,8 +42,8 @@
   --bg-color: $bg-color;
 
   /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-     "titleI18n": "custom_styles.primary_color",
+     "pathI18n": ["main_styles", "colors"],
+     "titleI18n": "primary_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,
@@ -62,8 +62,8 @@
   --second-color: $second-color;
 
   /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-     "titleI18n": "custom_styles.secondary_color",
+     "pathI18n": ["main_styles", "colors"],
+     "titleI18n": "secondary_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,
@@ -75,8 +75,8 @@
   --main-color: $main-color;
 
   /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-     "titleI18n": "custom_styles.third_color",
+     "pathI18n": ["main_styles", "colors"],
+     "titleI18n": "third_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,
@@ -90,8 +90,8 @@
   --third-color: $third-color;
 
   /* VoogStyle
-     "pathI18n": ["custom_styles.main_styles", "custom_styles.colors"],
-     "titleI18n": "custom_styles.fourth_color",
+     "pathI18n": ["main_styles", "colors"],
+     "titleI18n": "fourth_color",
      "editor": "colorPicker",
      "scope": "global",
      "featured": true,

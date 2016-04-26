@@ -6,7 +6,7 @@
   color: var(--footer-text-color);
 }
 
-main .post-content .post-tags a {
+main .post-content .post-tags a:not(.edy-tag-suggestion) {
   color: #fff;
 }
 
@@ -116,7 +116,6 @@ main .post-content a {
   font-style: var(--h1-font-style);
   font-weight: var(--h1-font-weight);
   line-height: var(--h1-line-height);
-  padding-bottom: var(--h1-padding-bottom);
   text-align: var(--h1-alignment);
   text-decoration: var(--h1-text-decoration);
   text-transform: var(--h1-text-transform);
@@ -130,7 +129,6 @@ main .post-content a {
   font-style: var(--h2-font-style);
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
-  padding-bottom: var(--h2-padding-bottom);
   text-align: var(--h2-alignment);
   text-decoration: var(--h2-text-decoration);
   text-transform: var(--h2-text-transform);
@@ -141,7 +139,6 @@ main .post-content a {
 .formatted h3,
 .formatted h3 a,
 .formatted h3 a:hover {
-  padding-bottom: var(--h3-padding-bottom);
   font-family: var(--font-main);
   font-size: var(--h3-font-size);
   font-style: var(--h3-font-style);
@@ -293,7 +290,6 @@ main .post-content a {
   font-size: var(--blog-list-date-font-size);
   font-style: var(--blog-list-date-font-style);
   font-weight: var(--blog-list-date-font-weight);
-  padding-top: var(--blog-list-date-padding-top);
   text-decoration: var(--blog-list-date-text-decoration);
   text-transform: var(--blog-list-date-text-transform);
 }
@@ -307,12 +303,6 @@ main .content table th {
   padding: var(--table-cell-padding);
 }
 
-.formatted form,
-.formatted .form {
-  padding: var(--form-padding);
-  background-color: var(--form-background-color);
-}
-
 .form_field_textfield,
 .form_field_textarea,
 .form_submit input,
@@ -322,6 +312,7 @@ textarea {
   font-family: var(--font-main);
 }
 
+.form_field_select,
 .form_field_textfield,
 .form_field_textarea {
   background-color: var(--form-field-background-color);
@@ -334,31 +325,6 @@ textarea {
   text-transform: var(--form-field-text-text-transform);
 }
 
-/*
-.form_submit input,
-.submit {
-  padding: var(--form-button-padding);
-  font-family: var(--font-main);
-  font-size: var(--form-button-font-size);
-  font-style: var(--form-button-font-style);
-  font-weight: var(--form-button-font-weight);
-  line-height: var(--form-button-line-height);
-  color: var(--form-button-color);
-  text-decoration: var(--form-button-text-decoration);
-  text-transform: var(--form-button-text-transform);
-  background-color: var(--form-button-background-color);
-
-  &:hover {
-    font-style: var(--form-button-hover-font-style);
-    font-weight: var(--form-button-hover-font-weight);
-    color: var(--form-button-hover-color);
-    text-decoration: var(--form-button-hover-text-decoration);
-    text-transform: var(--form-button-hover-text-transform);
-    background-color: var(--form-button-hover-background-color);
-  }
-}
-
-*/
 label .form_field_checkbox + .form_control_indicator::before {
   background: var(--form-field-background-color);
 }

@@ -6,6 +6,7 @@
     "overthrow": "~0.7.0"
   },
   "devDependencies": {
-    "bourbon": "~4.2.4"
+    "bourbon": "~4.2.4",
+    "jquery-mousewheel": "^3.1.13"
   }
 }

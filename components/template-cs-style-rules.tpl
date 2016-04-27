@@ -51,7 +51,8 @@ blockquote,
   color: var(--third-color);
 }
 
-.wrap {
+.wrap,
+.footer .wrap {
   max-width: var(--main-width);
 }
 
@@ -172,6 +173,10 @@ main .post-content a {
   text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
   opacity: .7;
+}
+.formatted .comment-form h2,
+.formatted .comments h2 {
+  font-size: 24px;
 }
 
 @media screen and (max-width: 500px) {
@@ -312,7 +317,20 @@ textarea {
   font-family: var(--font-main);
 }
 
+.jq-select-content {
+  padding: 0 28px 0 0;
+}
+
+.jq-select-inner {
+  padding: 4px 10px;
+}
+
+.jq-select-arrow {
+  background-color: var(--form-field-background-color);
+}
+
 .form_field_select,
+.jq-select-inner,
 .form_field_textfield,
 .form_field_textarea {
   background-color: var(--form-field-background-color);

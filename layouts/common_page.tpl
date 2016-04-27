@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+{% include "template-variables" %}
 <html class="content-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
-  {% include "html-head" %}
+  {% include "html-head" common_page: true %}
 </head>
 <body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
 
@@ -18,7 +19,7 @@
             <div class="content formatted cfx">
               <div class="content-header">{% contentblock name="content_header" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
               {% include "submenu" %}
-              {% content %}
+              <div class="content-body">{% content %}</div>
             </div>
           </div>
         </div>

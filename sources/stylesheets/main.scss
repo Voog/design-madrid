@@ -1,36 +1,23 @@
-@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
-@import '_mixins';
+/* Voog.com template: Madrid */
 
-/* FONTS */
+// MODULES
+@import '../../bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import 'mixins';
+@import 'modules/variables';
+
+// FONTS
 @include font-face('Montserrat', '../assets/montserrat-regular', 400);
 @include font-face('Montserrat', '../assets/montserrat-bold', 700);
 
-$main-color: #333333;
-$second-color: black;
-$third-color: #818181;
-$fourth-color: white;
-$link-color: #919191;
-$focus-color: #f9ec5a;
+// CONTENT AREAS
+@import 'content/tables';
+@import 'content/forms';
 
-$black: $second-color;
-$white: $fourth-color;
+// COMPONENTS
+@import 'components/search';
+@import 'components/site_header';
 
-$bg-color: #f4f4f4;
-$bg-color-dark: #2b2b2b;
-
-$error-color: #c70909;
-$success-color: #409e13;
-
-$font-size: 18px;
-$line-height: 1.45;
-$font-main: 'Montserrat', Helvetica, Arial, sans-serif;
-
-$main-width: 700px;
-
-$break-medium: 600px;
-$break-small: 500px;
-
-/* nulling */
+// nulling
 %nulling {
   margin: 0;
   padding: 0;
@@ -665,223 +652,6 @@ $header-inner-height: 28px;
   }
 }
 
-/* search */
-.search-holder {
-  float: left;
-  height: $header-inner-height;
-  width: $header-inner-height;
-  position: relative;
-
-}
-
-.search-container {
-  display: none;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: $header-inner-height;
-
-
-  .search-visible & {
-    display: block;
-  }
-}
-
-.search-toggler {
-  display: none;
-  width: $header-inner-height;
-  height: $header-inner-height;
-  background: url('../images/ico-search-black.png') no-repeat center center;
-  position: relative;
-  opacity: 0.35;
-  overflow: hidden;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  .svg & {
-    background: none;
-  }
-
-  svg {
-    display: none;
-
-    .svg & {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin: -9px 0 0 -9px;
-    }
-  }
-
-  .search-enabled & {
-    display: block;
-  }
-
-  .search-visible & {
-    display: none;
-  }
-}
-
-
-.search {
-  background: red;
-  width: 180px;
-  height: $header-inner-height;
-  padding: 0 $header-inner-height + 10px 0 10px;
-  background: $bg-color;
-  box-sizing: border-box;
-
-  .search-input {
-    background: none;
-    outline: 0;
-    padding: 0;
-    height: $header-inner-height;
-    width: 100%;
-    border: none;
-    font-size: 16px;
-    line-height: 1.1;
-    box-sizing: border-box;
-    &::-ms-clear {
-      display: none;
-    }
-  }
-  .search-submit {
-    @extend %button;
-    display: block;
-    width: $header-inner-height;
-    height: $header-inner-height;
-    background: url('../images/ico-search-black.png') no-repeat center center;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    .svg & {
-      background: none;
-    }
-
-    svg {
-      display: none;
-
-      .svg & {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -9px 0 0 -9px;
-      }
-    }
-  }
-
-  .search-close {
-    display: none;
-    width: $header-inner-height;
-    height: $header-inner-height;
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0.5;
-    background: url('../images/close.png') no-repeat center center;
-    overflow: hidden;
-
-    .svg & {
-      background: none;
-    }
-
-    svg {
-      display: none;
-
-      .svg & {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -6px 0 0 -6px;
-      }
-    }
-  }
-
-
-  &.not-empty {
-    .search-submit { display: none; }
-    .search-close { display: block;}
-  }
-}
-
-.search-results {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: $header-inner-height;
-  width: 400px;
-  padding: 15px 25px;
-  @include bg($white, 0.95);
-  box-sizing: border-box;
-  @include box-shadow(0, 0, 40px, rgba(0,0,0,0.1));
-  @include hyphenate(true);
-  overflow: auto;
-  max-height: 400px;
-
-  &.search-results-active {
-    display: block;
-  }
-
-  .voog-search-modal-results {
-    font-size: 16px;
-  }
-
-  .voog-search-modal-result {
-    padding: 10px 0;
-    color: $third-color;
-    font-size: 14px;
-    line-height: 1.5;
-
-    h3 {
-      margin: 0;
-      padding: 0 0 10px 0;
-      font-size: 16px;
-      color: $second-color;
-
-      a {
-        color: $second-color;
-      }
-    }
-    p {
-      margin: 0;
-      padding: 0;
-    }
-
-    em {
-      font-style: normal;
-      background: #fbf5ac;
-    }
-  }
-
-  .voog-search-loader {
-    height: 60px;
-    display: none;
-    .svg & {
-      background: url('../assets/loader.svg') no-repeat center center;
-    }
-  }
-
-  &.search-results.loading {
-    .voog-search-loader {
-      display: block;
-    }
-    .voog-search-modal-results {
-      display: none;
-    }
-  }
-}
-
-
-
-
-
 /* main-menu */
 .main-menu {
   display: block;
@@ -944,6 +714,7 @@ $header-inner-height: 28px;
       line-height: 1.1;
       color: $third-color;
       text-transform: uppercase;
+      white-space: nowrap;
 
       &:hover, &.active {
         color: $second-color;

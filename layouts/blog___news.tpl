@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+{% include "template-variables" %}
 <html class="blog-list-page height-calculation {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% assign blog_page = true %}
   {% include "edicy-tools-variables" %}
-  {% include "html-head" %}
+  {% include "html-head" blog_listing_page: true %}
 </head>
 <body class="main-menu-not-fitting {% if site.search.enabled %} search-enabled{% endif %}">
 

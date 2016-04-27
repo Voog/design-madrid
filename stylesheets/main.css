@@ -1,4 +1,4 @@
-/* FONTS */
+/* Voog.com template: Madrid */
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
@@ -11,7 +11,193 @@
   font-weight: 700;
   src: url("../assets/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("../assets/montserrat-bold.woff2") format("woff2"), url("../assets/montserrat-bold.woff") format("woff"), url("../assets/montserrat-bold.ttf") format("truetype"), url("../assets/montserrat-bold.svg#Montserrat") format("svg");
 }
-/* nulling */
+.search-holder {
+  float: left;
+  height: 28px;
+  position: relative;
+  width: 28px;
+}
+
+.search-container {
+  display: none;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.search-visible .search-container {
+  display: block;
+}
+
+.search-toggler {
+  background: url("../images/ico-search-black.png") no-repeat center center;
+  display: none;
+  height: 28px;
+  opacity: .35;
+  overflow: hidden;
+  position: relative;
+  width: 28px;
+}
+.search-toggler:hover {
+  opacity: 1;
+}
+.svg .search-toggler {
+  background: none;
+}
+.search-toggler svg {
+  display: none;
+}
+.svg .search-toggler svg {
+  display: block;
+  left: 50%;
+  margin: -9px 0 0 -9px;
+  position: absolute;
+  top: 50%;
+}
+.search-enabled .search-toggler {
+  display: block;
+}
+.search-visible .search-toggler {
+  display: none;
+}
+
+.search {
+  background: #f4f4f4;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 38px 0 10px;
+  width: 180px;
+}
+.search .search-input {
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 28px;
+  line-height: 1.1;
+  outline: 0;
+  padding: 0;
+  width: 100%;
+}
+.search .search-input::-ms-clear {
+  display: none;
+}
+.search .search-submit {
+  background: url("../images/ico-search-black.png") no-repeat center center;
+  display: block;
+  height: 28px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
+}
+.svg .search .search-submit {
+  background: none;
+}
+.search .search-submit svg {
+  display: none;
+}
+.svg .search .search-submit svg {
+  display: block;
+  left: 50%;
+  margin: -9px 0 0 -9px;
+  position: absolute;
+  top: 50%;
+}
+.search .search-close {
+  background: url("../images/close.png") no-repeat center center;
+  display: none;
+  height: 28px;
+  opacity: .5;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
+}
+.svg .search .search-close {
+  background: none;
+}
+.search .search-close svg {
+  display: none;
+}
+.svg .search .search-close svg {
+  display: block;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+  position: absolute;
+  top: 50%;
+}
+.search.not-empty .search-submit {
+  display: none;
+}
+.search.not-empty .search-close {
+  display: block;
+}
+
+.search-results {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) ;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  box-sizing: border-box;
+  display: none;
+  max-height: 400px;
+  overflow: auto;
+  padding: 15px 25px;
+  position: absolute;
+  right: 0;
+  top: 28px;
+  width: 400px;
+}
+.search-results.search-results-active {
+  display: block;
+}
+.search-results .voog-search-modal-results {
+  font-size: 16px;
+}
+.search-results .voog-search-modal-result {
+  color: #818181;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 0;
+}
+.search-results .voog-search-modal-result h3 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 16px;
+  color: black;
+}
+.search-results .voog-search-modal-result h3 a {
+  color: black;
+}
+.search-results .voog-search-modal-result p {
+  margin: 0;
+  padding: 0;
+}
+.search-results .voog-search-modal-result em {
+  font-style: normal;
+  background: #fbf5ac;
+}
+.search-results .voog-search-loader {
+  height: 60px;
+  display: none;
+}
+.svg .search-results .voog-search-loader {
+  background: url("../assets/loader.svg") no-repeat center center;
+}
+.search-results.search-results.loading .voog-search-loader {
+  display: block;
+}
+.search-results.search-results.loading .voog-search-modal-results {
+  display: none;
+}
+
 ul,
 ol, ul li,
 ol li, h1, h2, h3, html,
@@ -176,7 +362,7 @@ blockquote {
   position: relative;
   font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
-  color: #333333;
+  color: #333;
   background: white;
 }
 .jq-select select {
@@ -192,7 +378,7 @@ blockquote {
   font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
   cursor: pointer;
   opacity: 0;
-  color: #333333;
+  color: #333;
   border: none;
   -webkit-appearance: none;
   filter: alpha(opacity=0);
@@ -220,7 +406,7 @@ blockquote {
   pointer-events: none;
   border: solid transparent;
   border-width: 6px;
-  border-top-color: #333333;
+  border-top-color: #333;
 }
 
 .jq-select-content {
@@ -256,7 +442,7 @@ blockquote {
   width: 30%;
   padding: 4px 10px;
   font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
-  color: #333333;
+  color: #333;
   border: none;
   outline: none;
   background: white;
@@ -367,7 +553,7 @@ label .form_field_radio + .form_control_indicator:before {
   border: 3px solid white;
 }
 label .form_field_radio:checked + .form_control_indicator:before {
-  background-color: #333333;
+  background-color: #333;
 }
 label .form_control_indicator {
   position: relative;
@@ -438,7 +624,7 @@ html.blog-list-page.editmode {
 body {
   position: relative;
   text-align: left;
-  color: #333333;
+  color: #333;
   background: #f4f4f4;
   max-width: 100%;
   box-sizing: border-box;
@@ -530,7 +716,7 @@ a:hover {
   margin-left: 10px;
   font-size: 0;
   line-height: 0;
-  color: #333333;
+  color: #333;
   text-transform: uppercase;
   position: relative;
 }
@@ -561,7 +747,7 @@ a:hover {
   left: 5px;
   width: 18px;
   height: 3px;
-  background: #333333;
+  background: #333;
   border-radius: 3px;
 }
 .header .main-menu-toggler:before {
@@ -599,195 +785,6 @@ a:hover {
 }
 .site-title a {
   color: black;
-}
-
-/* search */
-.search-holder {
-  float: left;
-  height: 28px;
-  width: 28px;
-  position: relative;
-}
-
-.search-container {
-  display: none;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  height: 28px;
-}
-.search-visible .search-container {
-  display: block;
-}
-
-.search-toggler {
-  display: none;
-  width: 28px;
-  height: 28px;
-  background: url("../images/ico-search-black.png") no-repeat center center;
-  position: relative;
-  opacity: 0.35;
-  overflow: hidden;
-}
-.search-toggler:hover {
-  opacity: 1;
-}
-.svg .search-toggler {
-  background: none;
-}
-.search-toggler svg {
-  display: none;
-}
-.svg .search-toggler svg {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -9px 0 0 -9px;
-}
-.search-enabled .search-toggler {
-  display: block;
-}
-.search-visible .search-toggler {
-  display: none;
-}
-
-.search {
-  background: red;
-  width: 180px;
-  height: 28px;
-  padding: 0 38px 0 10px;
-  background: #f4f4f4;
-  box-sizing: border-box;
-}
-.search .search-input {
-  background: none;
-  outline: 0;
-  padding: 0;
-  height: 28px;
-  width: 100%;
-  border: none;
-  font-size: 16px;
-  line-height: 1.1;
-  box-sizing: border-box;
-}
-.search .search-input::-ms-clear {
-  display: none;
-}
-.search .search-submit {
-  display: block;
-  width: 28px;
-  height: 28px;
-  background: url("../images/ico-search-black.png") no-repeat center center;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.svg .search .search-submit {
-  background: none;
-}
-.search .search-submit svg {
-  display: none;
-}
-.svg .search .search-submit svg {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -9px 0 0 -9px;
-}
-.search .search-close {
-  display: none;
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  opacity: 0.5;
-  background: url("../images/close.png") no-repeat center center;
-  overflow: hidden;
-}
-.svg .search .search-close {
-  background: none;
-}
-.search .search-close svg {
-  display: none;
-}
-.svg .search .search-close svg {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -6px 0 0 -6px;
-}
-.search.not-empty .search-submit {
-  display: none;
-}
-.search.not-empty .search-close {
-  display: block;
-}
-
-.search-results {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 28px;
-  width: 400px;
-  padding: 15px 25px;
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-sizing: border-box;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) ;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  overflow: auto;
-  max-height: 400px;
-}
-.search-results.search-results-active {
-  display: block;
-}
-.search-results .voog-search-modal-results {
-  font-size: 16px;
-}
-.search-results .voog-search-modal-result {
-  padding: 10px 0;
-  color: #818181;
-  font-size: 14px;
-  line-height: 1.5;
-}
-.search-results .voog-search-modal-result h3 {
-  margin: 0;
-  padding: 0 0 10px 0;
-  font-size: 16px;
-  color: black;
-}
-.search-results .voog-search-modal-result h3 a {
-  color: black;
-}
-.search-results .voog-search-modal-result p {
-  margin: 0;
-  padding: 0;
-}
-.search-results .voog-search-modal-result em {
-  font-style: normal;
-  background: #fbf5ac;
-}
-.search-results .voog-search-loader {
-  height: 60px;
-  display: none;
-}
-.svg .search-results .voog-search-loader {
-  background: url("../assets/loader.svg") no-repeat center center;
-}
-.search-results.search-results.loading .voog-search-loader {
-  display: block;
-}
-.search-results.search-results.loading .voog-search-modal-results {
-  display: none;
 }
 
 /* main-menu */
@@ -851,6 +848,7 @@ a:hover {
   line-height: 1.1;
   color: #818181;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .main-menu ul a:hover, .main-menu ul a.active {
   color: black;
@@ -1445,8 +1443,8 @@ a:hover {
 .post-cover .post-cover-inner {
   display: table-cell;
   vertical-align: middle;
-  border: 1px dashed #919191;
-  border-color: rgba(145, 145, 145, 0.3);
+  border: 1px dashed #818181;
+  border-color: rgba(129, 129, 129, 0.3);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1555,7 +1553,7 @@ a:hover {
   padding-top: 1px;
 }
 .footer .voog-reference svg {
-  fill: #333333;
+  fill: #333;
 }
 .footer .tbl {
   margin: 0 auto;
@@ -1898,7 +1896,7 @@ a:hover {
 .lang-options .option-btn {
   font-size: 11px;
   line-height: 1.1;
-  color: #919191;
+  color: #818181;
 }
 .lang-options .option-btn:hover {
   color: black;

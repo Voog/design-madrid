@@ -1,0 +1,143 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/modules/variables';
+
+// =============================================================================
+// Design editor configuration.
+// =============================================================================
+:root {
+  // scss-lint:disable Comment, Indentation
+
+  /* VoogStyle
+     "pathI18n": ["focus_area"],
+     "titleI18n": "padding",
+     "editor": "rangePicker",
+     "min": 0,
+     "max": 99,
+     "unit": "px",
+     "scope": "global"
+  */
+  --focus-area-padding: 45px;
+
+  /* VoogStyle
+     "pathI18n": ["focus_area"],
+     "titleI18n": "alignment",
+     "editor": "listPicker",
+     "list": {{ base_alignment_horizontal_set }},
+     "scope": "global"
+  */
+  --focus-area-alignment: left;
+
+  /* VoogStyle
+     "pathI18n": ["focus_area"],
+     "titleI18n": "position",
+     "editor": "listPicker",
+     "list": {{ base_alignment_vertical_set }},
+     "scope": "global"
+  */
+  --focus-area-vertical-alignment: middle;
+
+  /* VoogStyle
+    "pathI18n": ["focus_area", "text"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 80,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --focus-area-font-size: $h2-size;
+
+  /* VoogStyle
+     "pathI18n": ["focus_area", "text"],
+     "titleI18n": "line_height",
+     "editor": "rangePicker",
+     "min": 0.8,
+     "max": 3,
+     "step": 0.1,
+     "unit": "em",
+     "scope": "global"
+  */
+  --focus-area-line-height: $line-height;
+
+  /* VoogStyle
+    "pathI18n": ["focus_area", "text"],
+    "titleI18n": "font_weight",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --focus-area-font-weight: 400;
+
+  /* VoogStyle
+    "pathI18n": ["focus_area", "text"],
+    "titleI18n": "font_style",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "italic",
+      "off": "normal"
+    },
+    "icon": "italic",
+    "scope": "global"
+  */
+  --focus-area-font-style: normal;
+
+  /* VoogStyle
+    "pathI18n": ["focus_area", "text"],
+    "titleI18n": "text_decoration",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "underline",
+      "off": "none"
+    },
+    "icon": "underline",
+    "scope": "global"
+  */
+  --focus-area-text-decoration: none;
+
+  /* VoogStyle
+    "pathI18n": ["focus_area", "text"],
+    "titleI18n": "text_transform",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "uppercase",
+      "off": "none"
+    },
+    "icon": "uppercase",
+    "scope": "global"
+  */
+  --focus-area-text-transform: none;
+
+  /* VoogStyle
+    "pathI18n": ["focus_area", "text"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true,
+    "boundVariables": [
+      "--focus-area-date-color"
+     ]
+  */
+  --focus-area-color: $fourth-color;
+}

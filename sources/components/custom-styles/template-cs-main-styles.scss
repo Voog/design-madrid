@@ -1,0 +1,107 @@
+// =============================================================================
+// TEMPLATE CUSTOM STYLES.
+// This file sets the configuration for design editor tool.
+//
+// This file will be converted to CSS, copied under "/components" and renamed to
+// "*.tpl".
+//
+// The output component can be included in any "layout" or "component".
+// =============================================================================
+
+// =============================================================================
+// Modules
+// =============================================================================
+@import '../../stylesheets/modules/variables';
+
+// =============================================================================
+// Design editor configuration.
+// =============================================================================
+:root {
+  // scss-lint:disable Comment, Indentation
+
+  /* VoogStyle
+     "pathI18n": ["main_styles"],
+     "titleI18n": "font",
+     "editor": "listPicker",
+     "list": {{ base_font_set }},
+     "featured": true,
+     "scope": "global"
+  */
+  --font-main: $font-main;
+
+  /* VoogStyle
+     "pathI18n": ["main_styles"],
+     "titleI18n": "background_color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "boundVariables": [
+      "--header-background-color",
+      "--footer-background-color"
+    ]
+  */
+  --bg-color: $bg-color;
+
+  /* VoogStyle
+     "pathI18n": ["main_styles", "colors"],
+     "titleI18n": "primary_color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "boundVariables": [
+        "--header-site-title-color",
+        "--header-mainmenu-hover-color",
+        "--header-mainmenu-active-color",
+        "--content-submenu-hover-color",
+        "--content-submenu-active-color",
+        "--h1-color",
+        "--h2-color",
+        "--h3-color",
+        "--content-links-hover-color"
+     ]
+  */
+  --second-color: $second-color;
+
+  /* VoogStyle
+     "pathI18n": ["main_styles", "colors"],
+     "titleI18n": "secondary_color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "boundVariables": [
+        "--content-color",
+        "--footer-text-color",
+     ]
+  */
+  --main-color: $main-color;
+
+  /* VoogStyle
+     "pathI18n": ["main_styles", "colors"],
+     "titleI18n": "third_color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "boundVariables": [
+      "--header-mainmenu-color",
+      "--content-submenu-color",
+      "--content-links-color",
+      "--table-border-color"
+     ]
+  */
+  --third-color: $third-color;
+
+  /* VoogStyle
+     "pathI18n": ["main_styles", "colors"],
+     "titleI18n": "fourth_color",
+     "editor": "colorPicker",
+     "scope": "global",
+     "featured": true,
+     "boundVariables": [
+      "--blog-list-headings-color",
+      "--form-field-background-color",
+      "--focus-area-color"
+    ]
+  */
+  --fourth-color: $fourth-color;
+
+  // scss-lint:disable Comment, Indentation
+}

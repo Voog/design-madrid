@@ -87,5 +87,3 @@
     {% assign content_right_bg_color_data_str = content_right_bg_color_data | json %}
   {% endif %}
 {% endcapture %}
-
-

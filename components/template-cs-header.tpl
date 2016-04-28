@@ -5,7 +5,7 @@
      "editor": "colorPicker",
      "scope": "global"
   */
-  --header-background-color: #f4f4f4;
+  --header-background-color: white;
   /* VoogStyle
     "pathI18n": ["header", "title"],
     "titleI18n": "size",

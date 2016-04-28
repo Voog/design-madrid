@@ -774,14 +774,19 @@ a:hover {
   margin-right: 4px;
 }
 .site-title .site-title-inner {
-  display: inline-block;
-  min-width: 150px;
-  line-height: 1.1;
   word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+  display: inline-block;
+  line-height: 1.1;
+  min-width: 150px;
+}
+.site-title .site-title-inner h1,
+.site-title .site-title-inner h2,
+.site-title .site-title-inner h3 {
+  display: inline;
 }
 .site-title a {
   color: black;

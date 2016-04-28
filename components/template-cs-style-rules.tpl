@@ -56,11 +56,6 @@ blockquote,
   max-width: var(--main-width);
 }
 
-.content-page main .content.formatted {
-  background-color: var(--content-background-color);
-  padding: var(--content-padding);
-}
-
 main .content-body,
 main .post-content {
   color: var(--content-color);

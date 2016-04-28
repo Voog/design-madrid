@@ -25,7 +25,7 @@
      "pathI18n": ["headings", "title"],
      "titleI18n": "alignment",
      "editor": "listPicker",
-     "list": {{ base_alignment_set }},
+     "list": {{ base_alignment_horizontal_set }},
      "scope": "global"
   */
   --h1-alignment: center;
@@ -116,7 +116,7 @@
      "pathI18n": ["headings", "heading"],
      "titleI18n": "alignment",
      "editor": "listPicker",
-     "list": {{ base_alignment_set }},
+     "list": {{ base_alignment_horizontal_set }},
      "scope": "global"
   */
   --h2-alignment: left;
@@ -207,7 +207,7 @@
      "pathI18n": ["headings", "subheading"],
      "titleI18n": "alignment",
      "editor": "listPicker",
-     "list": {{ base_alignment_set }},
+     "list": {{ base_alignment_horizontal_set }},
      "scope": "global"
   */
   --h3-alignment: left;

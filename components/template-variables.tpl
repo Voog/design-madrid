@@ -103,7 +103,7 @@
   ]
   {% endcapture %}
 
-  {% capture base_alignment_set %}
+  {% capture base_alignment_horizontal_set %}
     [
       {
         "titleI18n": "left",

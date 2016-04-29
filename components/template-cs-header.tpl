@@ -83,7 +83,7 @@
     "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
-    "max": 80,
+    "max": 40,
     "unit": "px",
     "scope": "global",
     "featured": true

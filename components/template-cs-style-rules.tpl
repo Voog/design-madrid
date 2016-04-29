@@ -61,7 +61,6 @@ main .post-content {
   color: var(--content-color);
   font-size: var(--content-font-size);
   line-height: var(--content-line-height);
-  text-align: var(--content-alignment);
 }
 
 main .content-body a,

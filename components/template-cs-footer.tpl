@@ -5,7 +5,7 @@
      "editor": "colorPicker",
      "scope": "global"
   */
-  --footer-background-color: #f4f4f4;
+  --footer-background-color: white;
   /* VoogStyle
      "pathI18n": ["footer", "text"],
      "titleI18n": "alignment",

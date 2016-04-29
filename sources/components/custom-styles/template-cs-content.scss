@@ -25,18 +25,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --content-background-color: rgba($color-white, 0);
-
-  /* VoogStyle
-     "pathI18n": ["content"],
-     "titleI18n": "padding",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 200,
-     "unit": "px",
-     "scope": "global"
-  */
-  --content-padding: 0;
+  --bg-color: $bg-color;
 
   /* VoogStyle
      "pathI18n": ["content"],
@@ -300,15 +289,6 @@
      "scope": "global"
   */
   --content-line-height: $line-height#em;
-
-  /* VoogStyle
-     "pathI18n": ["content", "text"],
-     "titleI18n": "alignment",
-     "editor": "listPicker",
-     "list": {{ base_alignment_set }},
-     "scope": "global"
-  */
-  --content-alignment: left;
 
   /* VoogStyle
     "pathI18n": ["content", "text"],

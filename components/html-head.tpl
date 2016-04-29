@@ -28,15 +28,15 @@
   {% if front_page %}
     {% include "template-cs-focus-area" %}
   {% endif %}
-  {% include "template-cs-headings" %}
   {% if blog_listing_page %}
     {% include "template-cs-blog-list" %}
   {% endif %}
   {% include "template-cs-content" %}
+  {% include "template-cs-footer" %}
+  {% include "template-cs-headings" %}
   {% include "template-cs-button" %}
   {% include "template-cs-table" %}
   {% include "template-cs-form" %}
-  {% include "template-cs-footer" %}
   {% include "template-cs-style-rules" %}
 {% endcustomstyle %}
 

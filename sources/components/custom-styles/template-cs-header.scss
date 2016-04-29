@@ -25,7 +25,7 @@
      "editor": "colorPicker",
      "scope": "global"
   */
-  --header-background-color: $bg-color;
+  --header-background-color: $fourth-color;
 
   /* VoogStyle
     "pathI18n": ["header", "title"],
@@ -110,7 +110,7 @@
     "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
-    "max": 80,
+    "max": 40,
     "unit": "px",
     "scope": "global",
     "featured": true

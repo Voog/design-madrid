@@ -641,10 +641,16 @@ $header-inner-height: 28px;
     margin-right: 4px;
   }
   .site-title-inner {
-    display: inline-block;
-    min-width: 150px;
-    line-height: 1.1;
     @include hyphenate(true);
+    display: inline-block;
+    line-height: 1.1;
+    min-width: 150px;
+
+    h1,
+    h2,
+    h3 {
+      display: inline;
+    }
   }
 
   a {

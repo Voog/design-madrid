@@ -5,17 +5,7 @@
     "editor": "colorPicker",
     "scope": "global"
   */
-  --content-background-color: rgba(255, 255, 255, 0);
-  /* VoogStyle
-     "pathI18n": ["content"],
-     "titleI18n": "padding",
-     "editor": "rangePicker",
-     "min": 0,
-     "max": 200,
-     "unit": "px",
-     "scope": "global"
-  */
-  --content-padding: 0;
+  --bg-color: #f4f4f4;
   /* VoogStyle
      "pathI18n": ["content"],
      "titleI18n": "maximum_width",
@@ -260,14 +250,6 @@
      "scope": "global"
   */
   --content-line-height: 1.45 #em;
-  /* VoogStyle
-     "pathI18n": ["content", "text"],
-     "titleI18n": "alignment",
-     "editor": "listPicker",
-     "list": {{ base_alignment_set }},
-     "scope": "global"
-  */
-  --content-alignment: left;
   /* VoogStyle
     "pathI18n": ["content", "text"],
     "titleI18n": "color",

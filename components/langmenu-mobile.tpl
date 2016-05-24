@@ -14,8 +14,8 @@
             <li class="lang-options-holder">
               <div class="lang-options">
                 <a href="#" class="option-btn js-option-toggle-flags{% if flags_state %} js-flags-enabled{% endif %}">
-                    <span class="disable-text">{{ "disable_lang_flags" | lc }}</span>
-                    <span class="enable-text">{{ "enable_lang_flags" | lc }}</span>
+                    <span class="disable-text">{{ "disable_lang_flags" | lc: editor_locale }}</span>
+                    <span class="enable-text">{{ "enable_lang_flags" | lc: editor_locale }}</span>
                   </a>
               </div>
             </li>

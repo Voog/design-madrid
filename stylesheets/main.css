@@ -142,7 +142,6 @@
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1) ;
   word-break: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
   box-sizing: border-box;
@@ -294,7 +293,6 @@ table,
 form {
   word-break: normal;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
@@ -776,7 +774,6 @@ a:hover {
 .site-title .site-title-inner {
   word-break: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
   display: inline-block;
@@ -846,7 +843,6 @@ a:hover {
 .main-menu ul a {
   word-break: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
   font-size: 16px;
@@ -887,7 +883,6 @@ a:hover {
 .sub-menu a {
   word-break: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
   display: inline-block;
@@ -1077,7 +1072,6 @@ a:hover {
   cursor: pointer;
   word-break: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
   box-sizing: border-box;
@@ -1234,7 +1228,6 @@ a:hover {
 .formatted {
   word-break: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }
@@ -1271,7 +1264,6 @@ a:hover {
 .formatted form {
   word-break: normal;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
@@ -1362,7 +1354,6 @@ a:hover {
 .post-header {
   word-break: break-word;
   -webkit-hyphens: auto;
-  -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }

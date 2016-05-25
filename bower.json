@@ -1,12 +1,8 @@
 {
   "name": "voog-design-madrid",
-  "dependencies": {
-    "jquery": "~1.11.0",
-    "modernizr": "~2.8.3",
-    "overthrow": "~0.7.0"
-  },
   "devDependencies": {
-    "bourbon": "~4.2.4",
-    "jquery-mousewheel": "^3.1.13"
+    "jquery-mousewheel": "^3.1.13",
+    "jquery": "^2.2.4",
+    "bourbon": "^4.2.7"
   }
 }

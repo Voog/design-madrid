@@ -475,7 +475,7 @@ oldie = window.oldie || false;
 
 // Stream
 var initScrollOverride = function() {
-  if ($('html').hasClass('no-touch') && $('.blog-list-page .main').length > 0 && $.fn.mousewheel) {
+  if ($('html').hasClass('no-touchevents') && $('.blog-list-page .main').length > 0 && $.fn.mousewheel) {
 
     if (oldie) {
       $('.blog-list-page .main').mousewheel(handleMouseWheel);

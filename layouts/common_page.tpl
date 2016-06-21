@@ -5,7 +5,7 @@
   {% include "edicy-tools-variables" %}
   {% include "html-head" common_page: true %}
 </head>
-<body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
+<body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}{% unless show_menu_btn or editmode %} menu-btn-hidden{% endunless %}">
 
   <div class="holder">
     {% include "header" %}

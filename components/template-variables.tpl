@@ -1,4 +1,10 @@
 {% capture dont_render %}
+  {% if site.visible_menuitems != blank or site.has_many_languages? %}
+    {% assign show_menu_btn = true %}
+  {% else %}
+    {% assign show_menu_btn = false %}
+  {% endif %}
+
   {% comment %}
   ===================================================================
   || Design editor variables.

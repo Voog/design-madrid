@@ -730,6 +730,14 @@ a:hover {
 .header .main-menu-toggler.main-menu-toggler-mobile {
   display: none;
 }
+.header .main-menu-toggler.hidden-mobile {
+  display: none !important;
+}
+@media screen and (min-width: 501px) {
+  .header .main-menu-toggler.hidden-tablet {
+    display: none !important;
+  }
+}
 .header .main-menu-toggler span {
   font-size: 18px;
   line-height: 28px;
@@ -2120,7 +2128,7 @@ a:hover {
   .main-menu-open .header .main-menu-toggler, .search-visible .header .main-menu-toggler, .header .main-menu-toggler {
     display: none !important;
   }
-  .header .main-menu-toggler.main-menu-toggler-mobile {
+  .header .main-menu-toggler.main-menu-toggler-mobile:not(.hidden-mobile) {
     display: block !important;
   }
   .header .main-menu-toggler span {

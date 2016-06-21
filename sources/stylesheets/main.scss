@@ -592,6 +592,16 @@ $header-inner-height: 28px;
     &.main-menu-toggler-mobile {
       display: none;
     }
+    
+    &.hidden-mobile {
+      display: none !important;
+    }
+    
+    @media screen and (min-width: $break-small + 1) {      
+      &.hidden-tablet {
+        display: none !important;
+      }
+    }
 
     span {
       font-size: 18px;
@@ -1998,7 +2008,7 @@ $header-inner-height: 28px;
         display: none !important;
       }
 
-      &.main-menu-toggler-mobile {
+      &.main-menu-toggler-mobile:not(.hidden-mobile) {
         display: block !important;
       }
 

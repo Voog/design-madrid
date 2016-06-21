@@ -9,10 +9,8 @@
       </div>
     {% endif %}
 
-    {% if show_menu_btn or editmode %}
-      <a href="#" class="main-menu-toggler js-main-menu-toggler"><span>{{ "menu" | lc }}</span></a>
-      <a href="#" class="main-menu-toggler main-menu-toggler-mobile js-mobile-main-menu-toggler"><span>{{ "menu" | lc }}</span></a>
-    {% endif %}
+    <a href="#" class="main-menu-toggler{% unless site.visible_menuitems != blank or editmode %} hidden-tablet{% endunless %}{% unless show_menu_btn or editmode %} hidden-mobile{% endunless %} js-main-menu-toggler"><span>{{ "menu" | lc }}</span></a>
+    <a href="#" class="main-menu-toggler main-menu-toggler-mobile{% unless site.visible_menuitems != blank or editmode %} hidden-tablet{% endunless %}{% unless show_menu_btn or editmode %} hidden-mobile{% endunless %} js-mobile-main-menu-toggler"><span>{{ "menu" | lc }}</span></a>
   </div>
 
   <div class="site-title">

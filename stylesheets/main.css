@@ -730,14 +730,6 @@ a:hover {
 .header .main-menu-toggler.main-menu-toggler-mobile {
   display: none;
 }
-.header .main-menu-toggler.hidden-mobile {
-  display: none !important;
-}
-@media screen and (min-width: 501px) {
-  .header .main-menu-toggler.hidden-tablet {
-    display: none !important;
-  }
-}
 .header .main-menu-toggler span {
   font-size: 18px;
   line-height: 28px;
@@ -1843,12 +1835,26 @@ a:hover {
   z-index: 200;
   padding-right: 20px;
 }
+@media screen and (max-width: 500px), screen and (max-height: 325px) {
+  .lang-menu {
+    top: 5px;
+    padding-right: 15px;
+  }
+}
 
 .lang-menu-btn {
   position: relative;
   font-family: inherit;
   vertical-align: middle;
   white-space: nowrap;
+}
+.header .lang-menu-btn {
+  display: none;
+}
+@media screen and (max-width: 500px), screen and (max-height: 325px) {
+  .header .lang-menu-btn {
+    display: block;
+  }
 }
 .flags-enabled .lang-menu-btn {
   width: 21px;
@@ -1883,12 +1889,19 @@ a:hover {
   bottom: 20px;
   left: -12px;
   display: none;
-  min-width: 140px;
+  min-width: 120px;
   padding: 5px 0;
   line-height: 1;
   text-align: left;
   background: #ffffff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) ;
+}
+@media screen and (max-width: 500px), screen and (max-height: 325px) {
+  .lang-menu-popover {
+    right: 10px;
+    bottom: auto;
+    left: auto;
+  }
 }
 .no-boxshadow .lang-menu-popover {
   border: 1px solid #eeeeee;
@@ -1901,6 +1914,11 @@ a:hover {
   font-size: 12px;
   text-align: left;
 }
+@media screen and (max-width: 500px), screen and (max-height: 325px) {
+  .lang-menu-popover li {
+    text-align: right;
+  }
+}
 .lang-menu-popover li.add-lang-btn {
   padding: 10px 18px;
 }
@@ -1909,9 +1927,20 @@ a:hover {
   display: block;
   padding: 6px 13px 5px 40px;
 }
+@media screen and (max-width: 500px), screen and (max-height: 325px) {
+  .lang-menu-popover a.lang-flag {
+    padding: 6px 40px 5px 13px;
+  }
+}
 .lang-menu-popover a.lang-flag:before, .lang-menu-popover a.lang-flag:after {
   top: 4px;
   left: 12px;
+}
+@media screen and (max-width: 500px), screen and (max-height: 325px) {
+  .lang-menu-popover a.lang-flag:before, .lang-menu-popover a.lang-flag:after {
+    left: auto;
+    right: 5px;
+  }
 }
 .lang-menu-popover a.lang-flag.active, .lang-menu-popover a.lang-flag:hover {
   background-color: #cccccc;
@@ -2128,7 +2157,7 @@ a:hover {
   .main-menu-open .header .main-menu-toggler, .search-visible .header .main-menu-toggler, .header .main-menu-toggler {
     display: none !important;
   }
-  .header .main-menu-toggler.main-menu-toggler-mobile:not(.hidden-mobile) {
+  .header .main-menu-toggler.main-menu-toggler-mobile {
     display: block !important;
   }
   .header .main-menu-toggler span {

@@ -1,8 +1,8 @@
 {% capture dont_render %}
-  {% if site.visible_menuitems != blank or site.has_many_languages? %}
-    {% assign show_menu_btn = true %}
-  {% else %}
+  {% if site.visible_menuitems == blank and site.root_item.hidden? %}
     {% assign show_menu_btn = false %}
+  {% else %}
+    {% assign show_menu_btn = true %}
   {% endif %}
 
   {% comment %}

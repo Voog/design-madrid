@@ -592,16 +592,6 @@ $header-inner-height: 28px;
     &.main-menu-toggler-mobile {
       display: none;
     }
-    
-    &.hidden-mobile {
-      display: none !important;
-    }
-    
-    @media screen and (min-width: $break-small + 1) {      
-      &.hidden-tablet {
-        display: none !important;
-      }
-    }
 
     span {
       font-size: 18px;
@@ -1667,6 +1657,11 @@ $header-inner-height: 28px;
     display: inline-block;
     z-index: 200;
     padding-right: 20px;
+    
+    @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
+      top: 5px;
+      padding-right: 15px;
+    }
   }
 
   .lang-menu-btn {
@@ -1676,6 +1671,14 @@ $header-inner-height: 28px;
     font-family: inherit;
     vertical-align: middle;
     white-space: nowrap;
+    
+    .header & {
+      display: none;
+      
+      @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
+        display: block;
+      }
+    }
 
     .flags-enabled & {
       width: 21px;
@@ -1719,12 +1722,18 @@ $header-inner-height: 28px;
     bottom: 20px;
     left: -12px;
     display: none;
-    min-width: 140px;
+    min-width: 120px;
     padding: 5px 0;
     line-height: 1;
     text-align: left;
     background: #ffffff;
     @include box-shadow(0,0,5px,rgba(0,0,0,.3));
+    
+    @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
+      right: 10px;
+      bottom: auto;
+      left: auto;
+    }
 
     .no-boxshadow & {
       border: 1px solid #eeeeee;
@@ -1739,6 +1748,10 @@ $header-inner-height: 28px;
       display: block;
       font-size: 12px;
       text-align: left;
+      
+      @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
+        text-align: right;
+      }  
 
       &.add-lang-btn {
         padding: 10px 18px;
@@ -1750,11 +1763,20 @@ $header-inner-height: 28px;
         position: relative;
         display: block;
         padding: 6px 13px 5px 40px;
+        
+        @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
+          padding: 6px 40px 5px 13px
+        }
 
         &:before,
         &:after {
           top: 4px;
           left: 12px;
+          
+          @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
+            left: auto;
+            right: 5px;
+          }
         }
 
         &.active,
@@ -2008,7 +2030,7 @@ $header-inner-height: 28px;
         display: none !important;
       }
 
-      &.main-menu-toggler-mobile:not(.hidden-mobile) {
+      &.main-menu-toggler-mobile {
         display: block !important;
       }
 

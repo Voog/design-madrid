@@ -9,8 +9,14 @@
       </div>
     {% endif %}
 
-    <a href="#" class="main-menu-toggler{% unless site.visible_menuitems != blank or editmode %} hidden-tablet{% endunless %}{% unless show_menu_btn or editmode %} hidden-mobile{% endunless %} js-main-menu-toggler"><span>{{ "menu" | lc }}</span></a>
-    <a href="#" class="main-menu-toggler main-menu-toggler-mobile{% unless site.visible_menuitems != blank or editmode %} hidden-tablet{% endunless %}{% unless show_menu_btn or editmode %} hidden-mobile{% endunless %} js-mobile-main-menu-toggler"><span>{{ "menu" | lc }}</span></a>
+    {% if show_menu_btn or editmode %}
+      <a href="#" class="main-menu-toggler js-main-menu-toggler"><span>{{ "menu" | lc }}</span></a>
+      <a href="#" class="main-menu-toggler main-menu-toggler-mobile js-mobile-main-menu-toggler"><span>{{ "menu" | lc }}</span></a>
+    {% else %}
+      {% if site.has_many_languages? or editmode %}
+        {% include "langmenu" %}
+      {% endif %}
+    {% endif %}
   </div>
 
   <div class="site-title">
@@ -21,5 +27,7 @@
     </div>
   </div>
 
-  {% include "mainmenu" %}
+  {% if show_menu_btn or editmode %}
+    {% include "mainmenu" %}
+  {% endif %}
 </header>

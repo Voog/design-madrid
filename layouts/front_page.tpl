@@ -7,7 +7,7 @@
   {% include "html-head" front_page: true %}
   {% include "edicy-tools-styles" %}
 </head>
-<body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}{% unless show_menu_btn or editmode %} menu-btn-hidden{% endunless %}">
+<body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
   <div class="holder">
 
     {% include "header" %}

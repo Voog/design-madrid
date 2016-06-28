@@ -1659,7 +1659,6 @@ $header-inner-height: 28px;
     padding-right: 20px;
     
     @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
-      top: 5px;
       padding-right: 15px;
     }
   }
@@ -1730,6 +1729,7 @@ $header-inner-height: 28px;
     @include box-shadow(0,0,5px,rgba(0,0,0,.3));
     
     @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
+      top: 22px;
       right: 10px;
       bottom: auto;
       left: auto;

@@ -1837,7 +1837,6 @@ a:hover {
 }
 @media screen and (max-width: 500px), screen and (max-height: 325px) {
   .lang-menu {
-    top: 5px;
     padding-right: 15px;
   }
 }
@@ -1898,6 +1897,7 @@ a:hover {
 }
 @media screen and (max-width: 500px), screen and (max-height: 325px) {
   .lang-menu-popover {
+    top: 22px;
     right: 10px;
     bottom: auto;
     left: auto;

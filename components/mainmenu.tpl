@@ -33,7 +33,7 @@
             <li>{% menubtn site.hidden_menuitems %}</li>
           {% endif %}
 
-          <li>{% menuadd %}</li>
+          <li {{ edy_intro_add_page }}>{% menuadd %}</li>
         {% endif %}
       </ul>
     </div>

@@ -19,7 +19,7 @@
             <div class="content formatted cfx">
               <div class="content-header">{% contentblock name="content_header" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
               {% include "submenu" %}
-              <div class="content-body">{% content %}</div>
+              <div class="content-body" {{ edy_intro_edit_text }}>{% content %}</div>
             </div>
           </div>
         </div>

@@ -1892,31 +1892,6 @@ $header-inner-height: 28px;
    clear: both;
  }
 
- // Editmode CMS style overrides
- .dark-background {
-  .edy-empty-bordered {
-    color: $white;
-    color: rgba($white, .5);
-    border: 1px dashed #FFFFFF;
-    border: 1px dashed rgba($white, .5);
-  }
-  .placeholder {
-    color: #FFFFFF;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  .edy-content-element-hover {
-    border: 1px solid #FFFFFF;
-    border: 1px solid rgba($white, .2);
-  }
-  .edy-texteditor-active {
-    outline: 1px solid rgba($white, .4);
-
-    &:hover {
-      outline: 1px solid rgba($white, .63);
-    }
-  }
-}
-
 .edy-empty-bordered {
   .content-half & {
     padding: 63px 40px 57px

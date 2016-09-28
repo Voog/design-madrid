@@ -83,7 +83,7 @@
   {% include "edicy-tools" with "blog_list_page" %}
 
   <script>
-    $(window).load(function() {
+    $(window).on('load', function() {
       $('.main').lazyLoad({
         className: '--lazy',
         urlData: 'article-image',

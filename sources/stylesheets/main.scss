@@ -484,14 +484,14 @@ a {
   text-decoration: none;
   color: rgba($black, .43);
 
-  &:hover {
+  &:hover:not(.post-nav-link) {
     @include color($second-color);
   }
 
   .dark-background & {
     color: rgba($white, .43);
 
-    &:hover {
+    &:hover:not(.post-nav-link) {
       @include color($white);
     }
   }
@@ -1412,6 +1412,82 @@ $header-inner-height: 28px;
     }
   }
 
+  .post-nav {
+    padding-top: 20px;
+  }
+
+  .post-nav-inner {
+    @media screen and (min-width: $break-medium + 1) {
+      display: flex;
+    }
+  }
+
+  .post-nav-link {
+    position: relative;
+    display: block;
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: currentColor;
+
+    &:hover {
+      .post-nav-direction {
+        opacity: 1;
+      }
+
+      .post-nav-title {
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        @media screen and (max-width: $break-medium) {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          display: block;
+          border-top-color: currentColor;
+          border-top-style: solid;
+          border-top-width: 1px;
+          content: '';
+          opacity: .2;
+        }
+      }
+    }
+
+    @media screen and (max-width: $break-medium) {
+      text-align: center;
+    }
+  }
+
+  .post-nav-link-older {
+    @media screen and (min-width: $break-medium) {
+      padding-right: 20px;
+    }
+  }
+
+  .post-nav-link-newer {
+    @media screen and (min-width: $break-medium) {
+      padding-left: 20px;
+      text-align: right;
+    }
+  }
+
+  .post-nav-direction {
+    font-size: 13px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    opacity: .3;
+  }
+
+  .post-nav-title {
+    margin-top: 6px;
+    font-size: 18px;
+    opacity: .7;
+  }
 
   /* comment-form */
   .comment-form {
@@ -1657,7 +1733,7 @@ $header-inner-height: 28px;
     display: inline-block;
     z-index: 200;
     padding-right: 20px;
-    
+
     @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
       padding-right: 15px;
     }
@@ -1670,10 +1746,10 @@ $header-inner-height: 28px;
     font-family: inherit;
     vertical-align: middle;
     white-space: nowrap;
-    
+
     .header & {
       display: none;
-      
+
       @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
         display: block;
       }
@@ -1727,7 +1803,7 @@ $header-inner-height: 28px;
     text-align: left;
     background: #ffffff;
     @include box-shadow(0,0,5px,rgba(0,0,0,.3));
-    
+
     @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
       top: 22px;
       right: 10px;
@@ -1748,10 +1824,10 @@ $header-inner-height: 28px;
       display: block;
       font-size: 12px;
       text-align: left;
-      
+
       @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
         text-align: right;
-      }  
+      }
 
       &.add-lang-btn {
         padding: 10px 18px;
@@ -1763,7 +1839,7 @@ $header-inner-height: 28px;
         position: relative;
         display: block;
         padding: 6px 13px 5px 40px;
-        
+
         @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
           padding: 6px 40px 5px 13px
         }
@@ -1772,7 +1848,7 @@ $header-inner-height: 28px;
         &:after {
           top: 4px;
           left: 12px;
-          
+
           @media screen and (max-width: $break-small), screen and (max-height: 325px)  {
             left: auto;
             right: 5px;

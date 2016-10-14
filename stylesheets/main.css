@@ -347,6 +347,10 @@ blockquote {
   color: white;
   background: #2b2b2b;
 }
+.custom-btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
 .custom-btn, .custom-btn:hover {
   color: white;
 }

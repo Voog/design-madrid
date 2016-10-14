@@ -178,6 +178,12 @@ main .post-content {
     }
   }
 
+  .custom-btn {
+    .main & {
+      color: var(--content-button-color);
+    }
+  }
+
   .form_submit input,
   .submit,
   .custom-btn {
@@ -192,6 +198,10 @@ main .post-content {
     padding: .7em 1.4em;
     text-decoration: var(--content-button-text-decoration);
     text-transform: var(--content-button-text-transform);
+
+    &, .content-half & {
+
+    }
 
     &:hover {
       font-style: var(--content-button-font-style);
@@ -429,5 +439,21 @@ label {
         background-color: var(--form-field-text-color);
       }
     }
+  }
+}
+
+
+//==============================================================================
+// ECOMMERCE
+//==============================================================================
+.public {
+  .edy-ecommerce-shopping-cart-button {
+    background-color: var(--content-button-background-color);
+    color: var(--content-button-color);
+    font-family: var(--font-main);
+    font-style: var(--content-button-font-style);
+    font-weight: var(--content-button-font-weight);
+    text-decoration: var(--content-button-text-decoration);
+    text-transform: var(--content-button-text-transform);
   }
 }

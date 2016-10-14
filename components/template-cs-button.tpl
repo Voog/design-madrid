@@ -24,10 +24,10 @@
     "min": 0.8,
     "max": 5,
     "step": 0.1,
-    "unit": "em",
+    "unit": "",
     "scope": "global"
   */
-  --content-button-line-height: 1.2em;
+  --content-button-line-height: 1.2;
   /* VoogStyle
     "pathI18n": ["button"],
     "titleI18n": "font_size",

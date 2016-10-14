@@ -939,25 +939,24 @@ $header-inner-height: 28px;
       &:hover {
         text-decoration: none;
       }
+    }
 
-      &.custom-btn {
-        text-decoration: none;
-        color: rgba($white, 1);
-
-      }
+    .custom-btn {
+      text-decoration: none;
+      color: rgba($white, 1);
     }
 
     .dark-background {
       a {
         color: rgba($white, 1);
+      }
 
-        &.custom-btn {
-          color: rgba($black, 1);
-          background-color: rgba($white, 1);
+      .custom-btn {
+        color: rgba($black, 1);
+        background-color: rgba($white, 1);
 
-          &:hover {
-            background-color: rgba($white, .8);
-          }
+        &:hover {
+          background-color: rgba($white, .8);
         }
       }
     }

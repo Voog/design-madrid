@@ -160,6 +160,10 @@
     display: block;
   }
 
+  .edy-checkout-button-visible & {
+    top: 81; // 41 is the height of the checkout button.
+  }
+
   .voog-search-modal-results {
     font-size: 16px;
   }

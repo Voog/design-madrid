@@ -349,13 +349,3 @@ label .form_field_radio + .form_control_indicator::before {
 label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--form-field-text-color);
 }
-
-.public .edy-ecommerce-shopping-cart-button {
-  background-color: var(--content-button-background-color);
-  color: var(--content-button-color);
-  font-family: var(--font-main);
-  font-style: var(--content-button-font-style);
-  font-weight: var(--content-button-font-weight);
-  text-decoration: var(--content-button-text-decoration);
-  text-transform: var(--content-button-text-transform);
-}

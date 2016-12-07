@@ -2646,38 +2646,3 @@ a:hover:not(.post-nav-link) {
     width: 100% !important;
   }
 }
-.public .edy-ecommerce-shopping-cart-button {
-  display: inline-block;
-  padding: 8px;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.2;
-  cursor: pointer;
-  background: #2b2b2b;
-  border: 0;
-}
-.public .edy-ecommerce-shopping-cart-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-.public .edy-ecommerce-shopping-cart-button, .public .edy-ecommerce-shopping-cart-button:hover {
-  color: white;
-}
-.public .edy-ecommerce-shopping-cart-button:hover {
-  background-color: #2b2b2b;
-  background-color: rgba(43, 43, 43, 0.8);
-}
-@media screen and (max-width: 500px) {
-  .public .edy-ecommerce-shopping-cart-button {
-    top: 4px;
-    right: 39px;
-  }
-}
-@media screen and (min-width: 501px) {
-  .public .edy-ecommerce-shopping-cart-button {
-    top: 64px;
-  }
-}
-.public .edy-ecommerce-shopping-cart-button .edy-ecommerce-shopping-cart-button-flash {
-  line-height: 2.3;
-}

@@ -157,6 +157,9 @@
 .search-results.search-results-active {
   display: block;
 }
+.edy-checkout-button-visible .search-results {
+  top: 81;
+}
 .search-results .voog-search-modal-results {
   font-size: 16px;
 }
@@ -675,6 +678,9 @@ a:hover:not(.post-nav-link) {
 }
 .editmode .header {
   position: absolute !important;
+}
+.edy-checkout-button-visible .header {
+  top: 41px;
 }
 .header.headroom--not-top {
   -webkit-transform: translateY(-100%);
@@ -2446,6 +2452,9 @@ a:hover:not(.post-nav-link) {
     font-size: 12px;
     line-height: 1.1;
   }
+  .edy-checkout-button-visible .lang-menu-btn-holder {
+    top: 55px;
+  }
   .lang-menu-btn-holder .lang-menu-btn {
     color: white;
     white-space: nowrap;
@@ -2552,6 +2561,9 @@ a:hover:not(.post-nav-link) {
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+  .edy-checkout-button-visible .mobile-dialog-close {
+    top: 41px;
+  }
 
   .search-visible .search-container {
     display: block;
@@ -2566,6 +2578,9 @@ a:hover:not(.post-nav-link) {
     overflow: auto;
     background: #f4f4f4;
     -webkit-overflow-scrolling: touch;
+  }
+  .edy-checkout-button-visible .search-container {
+    top: 81px;
   }
 
   .search {
@@ -2638,6 +2653,9 @@ a:hover:not(.post-nav-link) {
   .search-results .voog-search-loader {
     height: 100%;
   }
+  .edy-checkout-button-visible .search-results {
+    top: 121px;
+  }
 
   .form_field_textfield,
   .form_field_textarea,
@@ -2645,39 +2663,4 @@ a:hover:not(.post-nav-link) {
   .form_field .jq-select {
     width: 100% !important;
   }
-}
-.public .edy-ecommerce-shopping-cart-button {
-  display: inline-block;
-  padding: 8px;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.2;
-  cursor: pointer;
-  background: #2b2b2b;
-  border: 0;
-}
-.public .edy-ecommerce-shopping-cart-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-.public .edy-ecommerce-shopping-cart-button, .public .edy-ecommerce-shopping-cart-button:hover {
-  color: white;
-}
-.public .edy-ecommerce-shopping-cart-button:hover {
-  background-color: #2b2b2b;
-  background-color: rgba(43, 43, 43, 0.8);
-}
-@media screen and (max-width: 500px) {
-  .public .edy-ecommerce-shopping-cart-button {
-    top: 4px;
-    right: 39px;
-  }
-}
-@media screen and (min-width: 501px) {
-  .public .edy-ecommerce-shopping-cart-button {
-    top: 64px;
-  }
-}
-.public .edy-ecommerce-shopping-cart-button .edy-ecommerce-shopping-cart-button-flash {
-  line-height: 2.3;
 }

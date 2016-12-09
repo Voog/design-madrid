@@ -315,12 +315,20 @@
     checkMainmenuFitting();
     setLayout();
 
+    document.addEventListener('voog:checkoutbutton:show', function() {
+      setLayout(true);
+    }, false);
+
+    document.addEventListener('voog:checkoutbutton:hide', function() {
+      setLayout();
+    }, false);
+
     $(window).on('resize', function() {
       debounce(checkMainmenuFitting(), 50);
       debounce(setLayout(), 50);
     });
 
-    $('.site-title-inner, .footer').contentMutations({
+    $('body', '.site-title-inner, .footer').contentMutations({
       debounceTime: 50,
       callback: function() {
         checkMainmenuFitting();
@@ -427,16 +435,27 @@ window.template = $.extend(window.template || {}, {
   bindCustomTexteditorStyles: bindCustomTexteditorStyles
 });
 
-var setLayout = function() {
+var setLayout = function(withShoppingCart) {
     var $m = $('.main-inner'),
     $bm = $('.height-calculation .main-inner'),
     $h = $('.header'),
-    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight());
+    mh;
 
-    $m.css({'padding-top': $h.height(), 'min-height': mh});
-    $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh - ($('html').hasClass('editmode') ? 40 : 0));
-    $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
+  if (withShoppingCart == true || $('body').hasClass('edy-checkout-button-visible')) {
+    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height()) - ($('html').hasClass('editmode') ? 40 : 0) - 41;  // 41 is the height of the checkout button.
+  } else {
+    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height()) - ($('html').hasClass('editmode') ? 40 : 0);
+  }
+
+  $m.css({'padding-top': $h.height(), 'min-height': mh});
+  $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh - ($('html').hasClass('editmode') ? 40 : 0));
+  $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
+
+  if (withShoppingCart == true || $('body').hasClass('edy-checkout-button-visible')) {
+    $('.scroller-arrow').css('top', $('.header').height() + 41); // 41 is the height of the checkout button.
+  } else {
     $('.scroller-arrow').css('top', $('.header').height());
+  }
 
   if ($(window).width() > 500) {
     $('.content-half').css('min-height', 0);

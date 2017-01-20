@@ -322,15 +322,10 @@ textarea {
   padding: 4px 10px;
 }
 
-.jq-select-arrow {
-  background-color: var(--form-field-background-color);
-}
-
 .form_field_select,
 .jq-select-inner,
 .form_field_textfield,
 .form_field_textarea {
-  background-color: var(--form-field-background-color);
   color: var(--form-field-text-color);
   font-size: var(--form-field-text-font-size);
   line-height: var(--form-field-text-line-height);
@@ -340,12 +335,6 @@ textarea {
   text-transform: var(--form-field-text-text-transform);
 }
 
-label .form_field_checkbox + .form_control_indicator::before {
-  background: var(--form-field-background-color);
-}
-label .form_field_radio + .form_control_indicator::before {
-  border-color: var(--form-field-background-color);
-}
 label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--form-field-text-color);
 }

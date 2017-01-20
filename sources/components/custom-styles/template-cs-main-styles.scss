@@ -77,6 +77,7 @@
   */
   --third-color: $third-color;
 
+  // TODO: Restore boundVariable "--form-field-background-color" when Safari doesn't crash using it anymore.
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
      "titleI18n": "fourth_color",
@@ -85,7 +86,6 @@
      "featured": true,
      "boundVariables": [
       "--blog-list-headings-color",
-      "--form-field-background-color",
       "--focus-area-color",
       "--header-background-color",
       "--footer-background-color"

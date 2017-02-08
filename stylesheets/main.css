@@ -247,9 +247,9 @@ ol {
 }
 
 /* inputs */
-input[type=submit],
-input[type=text],
-textarea {
+.formatted input[type=submit],
+.formatted input[type=text],
+.formatted textarea {
   border-radius: 0;
   -webkit-appearance: none;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;

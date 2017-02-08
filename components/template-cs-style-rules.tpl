@@ -23,9 +23,9 @@ body,
 .form_field_textarea,
 .form_submit input,
 .submit,
-input[type=submit],
-input[type=text],
-textarea,
+.formatted input[type=submit],
+.formatted input[type=text],
+.formatted textarea,
 .search-submit,
 .lang-menu-btn,
 .option-btn {
@@ -308,9 +308,9 @@ main .content table th {
 .form_field_textfield,
 .form_field_textarea,
 .form_submit input,
-input[type=submit],
-input[type=text],
-textarea {
+.formatted input[type=submit],
+.formatted input[type=text],
+.formatted textarea {
   font-family: var(--font-main);
 }
 

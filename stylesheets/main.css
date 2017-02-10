@@ -636,21 +636,6 @@ body {
   -webkit-text-size-adjust: none;
 }
 
-/* link */
-a {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.43);
-}
-a:hover:not(.post-nav-link) {
-  color: black;
-}
-.dark-background a {
-  color: rgba(255, 255, 255, 0.43);
-}
-.dark-background a:hover:not(.post-nav-link) {
-  color: white;
-}
-
 /* holder */
 .holder {
   height: 100%;
@@ -1266,6 +1251,19 @@ a:hover:not(.post-nav-link) {
 .formatted pre:last-child,
 .formatted code:last-child {
   margin-bottom: 0;
+}
+.formatted a {
+  color: rgba(0, 0, 0, 0.43);
+  text-decoration: none;
+}
+.formatted a:hover:not(.post-nav-link) {
+  color: black;
+}
+.dark-background .formatted a {
+  color: rgba(255, 255, 255, 0.43);
+}
+.dark-background .formatted a:hover:not(.post-nav-link) {
+  color: white;
 }
 .formatted pre,
 .formatted code,

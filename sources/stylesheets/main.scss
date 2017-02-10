@@ -484,24 +484,6 @@ body {
   -webkit-text-size-adjust: none;
 }
 
-/* link */
-a {
-  text-decoration: none;
-  color: rgba($black, .43);
-
-  &:hover:not(.post-nav-link) {
-    @include color($second-color);
-  }
-
-  .dark-background & {
-    color: rgba($white, .43);
-
-    &:hover:not(.post-nav-link) {
-      @include color($white);
-    }
-  }
-}
-
 /* holder */
 .holder {
   height: 100%;
@@ -1202,6 +1184,25 @@ $header-inner-height: 28px;
 
       &:last-child {
         margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: rgba($black, .43);
+      text-decoration: none;
+
+      &:hover:not(.post-nav-link) {
+        @include color($second-color);
+      }
+
+      .dark-background & {
+        color: rgba($white, .43);
+
+        // scss-lint:disable NestingDepth
+        &:hover:not(.post-nav-link) {
+          @include color($white);
+        }
+        // scss-lint:enable NestingDepth
       }
     }
 

@@ -275,7 +275,7 @@
       "filename": "montserrat-bold.woff"
     },
     {
-      "content_type": "text/unknown",
+      "content_type": "application/font-woff",
       "file": "assets/montserrat-bold.woff2",
       "kind": "assets",
       "filename": "montserrat-bold.woff2"

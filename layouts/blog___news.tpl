@@ -14,8 +14,22 @@
     <main class="main swipe" data-search-indexing-allowed="true">
       <a href="#" class="scroller-arrow "><span class="animated-bounce"></span></a>
       <div class="main-inner">
+        {% for article in articles %}
+          {% capture dont_render %}
+            {% if forloop.first %}
+              {% if editmode %}
+                {% assign article_boxes_count = forloop.length | plus: 1 %}
+              {% else %}
+                {% assign article_boxes_count = forloop.length %}
+              {% endif %}
+            {% else %}
+              {% break %}
+            {% endif %}
+          {% endcapture %}
+        {% endfor %}
+
         {% if editmode %}
-          <div class="new-article" data-href="{{ item.url }}?new">
+          <div class="new-article{% if article_boxes_count < 7 %} article-total-{{ article_boxes_count }}{% endif %}" data-href="{{ item.url }}?new">
             <div class="tbl">
               <div class="tbl-row">
                 <div class="tbl-cell">
@@ -41,6 +55,13 @@
         {% for article in articles %}
 
           {% capture dont_render %}
+            {% if forloop.first %}
+              {% if editmode %}
+                {% assign article_boxes_count = forloop.length | plus: 1 %}
+              {% else %}
+                {% assign article_boxes_count = forloop.length %}
+              {% endif %}
+            {% endif %}
 
             {% if article.data.background.color == nil %}
               {% assign bg_color_data = '{"r"=>43, "g"=>43, "b"=>43, "a"=>0.9, "lightness"=>0.01}' %}
@@ -55,10 +76,9 @@
               {% assign bg_color_data = article.data.background.colorData %}
               {% assign bg_color_style = 'background-color: ' | append: article.data.background.color %}
             {% endif%}
-
           {% endcapture %}
 
-          <article class="article" data-article-id="{{ article.id }}">
+          <article class="article{% if article_boxes_count < 7 %} article-total-{{ article_boxes_count }}{% endif %}" data-article-id="{{ article.id }}">
             <div data-href="{{ article.url }}" class="--lazy link" {% if article.data.background.image %}{% if forloop.index < 6 %} style="background-image: url('{{ article.data.background.image }}');" data-lazy-loaded="true"{% else %} data-article-image="{{ article.data.background.image }}" {% endif %}{% endif %} >
               <div class="article-bg-color" style="{{ bg_color_style }}"></div>
               <div class="article-inner">

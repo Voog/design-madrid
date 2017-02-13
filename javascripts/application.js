@@ -11455,11 +11455,11 @@ var setLayout = function(withShoppingCart) {
   if (withShoppingCart == true || $('body').hasClass('edy-checkout-button-visible')) {
     mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height()) - ($('html').hasClass('editmode') ? 40 : 0) - 41;  // 41 is the height of the checkout button.
   } else {
-    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height()) - ($('html').hasClass('editmode') ? 40 : 0);
+    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight()) - ($('html').hasClass('editmode') ? 40 : 0);
   }
 
   $m.css({'padding-top': $h.height(), 'min-height': mh});
-  $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh - ($('html').hasClass('editmode') ? 40 : 0));
+  $bm.css('padding-bottom', ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight() + ($('html').hasClass('editmode') ? 40 : 0))).height(mh);
   $('.header').css('position', ($('.header').height()>150 ? 'absolute' : 'fixed'));
 
   if (withShoppingCart == true || $('body').hasClass('edy-checkout-button-visible')) {

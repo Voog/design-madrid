@@ -55,7 +55,6 @@
         {% endif %}
 
         {% for article in articles %}
-
           {% capture dont_render %}
             {% if forloop.first %}
               {% if editmode %}

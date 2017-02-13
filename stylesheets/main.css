@@ -1675,7 +1675,7 @@ body {
 }
 .footer .voog-reference {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .footer .voog-reference a {
   display: block;

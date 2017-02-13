@@ -56,8 +56,7 @@ blockquote,
   color: var(--third-color);
 }
 
-.wrap,
-.footer .wrap {
+.wrap {
   max-width: var(--main-width);
 }
 

@@ -11453,7 +11453,7 @@ var setLayout = function(withShoppingCart) {
     mh;
 
   if (withShoppingCart == true || $('body').hasClass('edy-checkout-button-visible')) {
-    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').height()) - ($('html').hasClass('editmode') ? 40 : 0) - 41;  // 41 is the height of the checkout button.
+    mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight()) - ($('html').hasClass('editmode') ? 40 : 0) - 41;  // 41 is the height of the checkout button.
   } else {
     mh = $(window).height() - $h.height() - ($('.footer').is(':hidden') ? 0 : $('.footer').innerHeight()) - ($('html').hasClass('editmode') ? 40 : 0);
   }

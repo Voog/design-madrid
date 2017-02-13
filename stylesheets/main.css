@@ -712,6 +712,7 @@ body {
   color: #333;
   text-transform: uppercase;
   position: relative;
+  text-decoration: none;
 }
 .header .main-menu-toggler.menu-not-visible {
   display: block;

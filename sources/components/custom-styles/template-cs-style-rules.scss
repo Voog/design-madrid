@@ -49,9 +49,16 @@ body,
 }
 
 body,
-.header .main-menu-toggler
- {
+.header .main-menu-toggler {
   color: var(--main-color);
+}
+
+.header .main-menu-toggler {
+  &:before,
+  &:after,
+  span:before {
+    background-color: var(--main-color);
+  }
 }
 
 .voog-search-modal-results h3,
@@ -248,27 +255,36 @@ main .post-content {
 .main-menu {
   ul {
     a {
-      color: var(--header-mainmenu-color);
       font-size: var(--header-mainmenu-font-size);
       font-style: var(--header-mainmenu-font-style);
       font-weight: var(--header-mainmenu-font-weight);
       text-decoration: var(--header-mainmenu-text-decoration);
       text-transform: var(--header-mainmenu-text-transform);
 
+      @media screen and (min-width: $break-small + 1) {
+        color: var(--header-mainmenu-color);
+      }
+
       &:hover {
-        color: var(--header-mainmenu-hover-color);
         font-style: var(--header-mainmenu-hover-font-style);
         font-weight: var(--header-mainmenu-hover-font-weight);
         text-decoration: var(--header-mainmenu-hover-text-decoration);
         text-transform: var(--header-mainmenu-hover-text-transform);
+
+        @media screen and (min-width: $break-small + 1) {
+          color: var(--header-mainmenu-hover-color);
+        }
       }
 
       &.active {
-        color: var(--header-mainmenu-active-color);
         font-style: var(--header-mainmenu-active-font-style);
         font-weight: var(--header-mainmenu-active-font-weight);
         text-decoration: var(--header-mainmenu-active-text-decoration);
         text-transform: var(--header-mainmenu-active-text-transform);
+
+        @media screen and (min-width: $break-small + 1) {
+          color: var(--header-mainmenu-active-color);
+        }
       }
     }
   }

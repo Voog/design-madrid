@@ -14,6 +14,8 @@
     <main class="main swipe" data-search-indexing-allowed="true">
       <a href="#" class="scroller-arrow "><span class="animated-bounce"></span></a>
       <div class="main-inner">
+        {% assign article_boxes_count = 0 %}
+
         {% for article in articles %}
           {% capture dont_render %}
             {% if forloop.first %}

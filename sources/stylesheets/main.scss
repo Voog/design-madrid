@@ -949,10 +949,19 @@ $header-inner-height: 28px;
     }
   }
 
+  .blog-list-page.editmode & {
+    .article,
+    .new-article {
+      &.article-total-6 {
+        @media screen and (min-width: $break-small + 1) {
+          width: 16.6666666667%;
+        }
+      }
+    }
+  }
+
   .blog-list-page &,
   .front-page & {
-
-
     height: 100%;
     min-height: 0;
     font-size: 0;
@@ -977,6 +986,7 @@ $header-inner-height: 28px;
       @include hyphenate(true);
       box-sizing: border-box;
 
+      &.article-total-0,
       &.article-total-1 {
         @media screen and (min-width: $break-small + 1) {
           width: 100%;

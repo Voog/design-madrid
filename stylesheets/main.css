@@ -1042,6 +1042,12 @@ body {
 .main .content-half .dark-background .custom-btn:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
+@media screen and (min-width: 501px) {
+  .blog-list-page.editmode .main .article.article-total-6,
+  .blog-list-page.editmode .main .new-article.article-total-6 {
+    width: 16.6666666667%;
+  }
+}
 .blog-list-page .main, .front-page .main {
   height: 100%;
   min-height: 0;
@@ -1075,8 +1081,10 @@ body {
   box-sizing: border-box;
 }
 @media screen and (min-width: 501px) {
-  .blog-list-page .main .article.article-total-1,
-  .blog-list-page .main .new-article.article-total-1, .front-page .main .article.article-total-1,
+  .blog-list-page .main .article.article-total-0, .blog-list-page .main .article.article-total-1,
+  .blog-list-page .main .new-article.article-total-0,
+  .blog-list-page .main .new-article.article-total-1, .front-page .main .article.article-total-0, .front-page .main .article.article-total-1,
+  .front-page .main .new-article.article-total-0,
   .front-page .main .new-article.article-total-1 {
     width: 100%;
   }

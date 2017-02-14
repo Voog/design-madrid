@@ -3,7 +3,7 @@
   "description": "The Madrid design template for Voog",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Voog/design-barcelona.git"
+    "url": "git://github.com/Voog/design-madrid.git"
   },
   "license": "MIT",
   "devDependencies": {

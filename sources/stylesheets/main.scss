@@ -567,6 +567,7 @@ $header-inner-height: 28px;
     color: $main-color;
     text-transform: uppercase;
     position: relative;
+    text-decoration: none;
 
     &.menu-not-visible {
       display: block;
@@ -948,10 +949,19 @@ $header-inner-height: 28px;
     }
   }
 
+  .blog-list-page.editmode & {
+    .article,
+    .new-article {
+      &.article-total-6 {
+        @media screen and (min-width: $break-small + 1) {
+          width: 16.6666666667%;
+        }
+      }
+    }
+  }
+
   .blog-list-page &,
   .front-page & {
-
-
     height: 100%;
     min-height: 0;
     font-size: 0;
@@ -961,7 +971,8 @@ $header-inner-height: 28px;
     width: 100%;
     -webkit-overflow-scrolling: touch;
 
-    .article, .new-article {
+    .article,
+    .new-article {
       font-size: $font-size;
       line-height: 1.45;
       display: inline-block;
@@ -975,10 +986,36 @@ $header-inner-height: 28px;
       @include hyphenate(true);
       box-sizing: border-box;
 
-        /*
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-        */
+      &.article-total-0,
+      &.article-total-1 {
+        @media screen and (min-width: $break-small + 1) {
+          width: 100%;
+        }
+      }
+
+      &.article-total-2 {
+        @media screen and (min-width: $break-small + 1) {
+          width: 50%;
+        }
+      }
+
+      &.article-total-3 {
+        @media screen and (min-width: $break-small + 1) {
+          width: 33.3%;
+        }
+      }
+
+      &.article-total-4 {
+        @media screen and (min-width: $break-small + 1) {
+          width: 25%;
+        }
+      }
+
+      &.article-total-5 {
+        @media screen and (min-width: $break-small + 1) {
+          width: 20%;
+        }
+      }
 
         .link {
           display: block;
@@ -1076,6 +1113,7 @@ $header-inner-height: 28px;
         padding-bottom: 85px;
         box-sizing: border-box;
         height: 100%;
+        background-color: rgba(43,43,43,.9);
       }
 
       .scroller-arrow {
@@ -1254,9 +1292,6 @@ $header-inner-height: 28px;
 
   /* new-article */
   .new-article {
-    background: $bg-color-dark;
-    opacity: 0.95;
-
     &, h3 {
       color: $fourth-color;
     }
@@ -1596,7 +1631,7 @@ $header-inner-height: 28px;
 
     .voog-reference {
       display: inline-block;
-      vertical-align: top;
+      vertical-align: middle;
 
       a {
         display: block;
@@ -1623,6 +1658,9 @@ $header-inner-height: 28px;
 
   /* flags */
   .lang-flag {
+    color: inherit;
+    text-decoration: none;
+
     &:before,
     &:after {
       position: absolute;

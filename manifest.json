@@ -239,154 +239,94 @@
   ],
   "assets": [
     {
-      "content_type": "image/svg+xml",
-      "file": "assets/ico-flags.svg",
-      "kind": "assets",
-      "filename": "ico-flags.svg"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/loader.svg",
-      "kind": "assets",
-      "filename": "loader.svg"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "file": "assets/montserrat-bold.eot",
-      "kind": "assets",
-      "filename": "montserrat-bold.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/montserrat-bold.svg",
-      "kind": "assets",
-      "filename": "montserrat-bold.svg"
-    },
-    {
-      "content_type": "application/font-sfnt",
-      "file": "assets/montserrat-bold.ttf",
-      "kind": "assets",
-      "filename": "montserrat-bold.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "file": "assets/montserrat-bold.woff",
-      "kind": "assets",
-      "filename": "montserrat-bold.woff"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "assets/montserrat-bold.woff2",
-      "kind": "assets",
-      "filename": "montserrat-bold.woff2"
-    },
-    {
-      "content_type": "application/vnd.ms-fontobject",
-      "file": "assets/montserrat-regular.eot",
-      "kind": "assets",
-      "filename": "montserrat-regular.eot"
-    },
-    {
-      "content_type": "image/svg+xml",
-      "file": "assets/montserrat-regular.svg",
-      "kind": "assets",
-      "filename": "montserrat-regular.svg"
-    },
-    {
-      "content_type": "application/font-sfnt",
-      "file": "assets/montserrat-regular.ttf",
-      "kind": "assets",
-      "filename": "montserrat-regular.ttf"
-    },
-    {
-      "content_type": "application/font-woff",
-      "file": "assets/montserrat-regular.woff",
-      "kind": "assets",
-      "filename": "montserrat-regular.woff"
-    },
-    {
-      "content_type": "text/unknown",
-      "file": "assets/montserrat-regular.woff2",
-      "kind": "assets",
-      "filename": "montserrat-regular.woff2"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/check.png",
-      "kind": "images",
-      "filename": "check.png"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/check_small.png",
-      "kind": "images",
-      "filename": "check_small.png"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/close.png",
-      "kind": "images",
-      "filename": "close.png"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-page-left-bg.jpg",
-      "kind": "images",
-      "filename": "front-page-left-bg.jpg"
-    },
-    {
-      "content_type": "image/jpeg",
-      "file": "images/front-page-left-bg_block.jpg",
-      "kind": "images",
-      "filename": "front-page-left-bg_block.jpg"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/ico-flags.png",
-      "kind": "images",
-      "filename": "ico-flags.png"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/ico-search-black.png",
-      "kind": "images",
-      "filename": "ico-search-black.png"
-    },
-    {
-      "content_type": "image/png",
-      "file": "images/new_article.png",
-      "kind": "images",
-      "filename": "new_article.png"
+      "content_type": "application/javascript",
+      "kind": "javascripts",
+      "file": "javascripts/modernizr-custom.min.js",
+      "filename": "modernizr-custom.min.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/application.js",
       "kind": "javascripts",
+      "file": "javascripts/application.js",
       "filename": "application.js"
     },
     {
       "content_type": "application/javascript",
-      "file": "javascripts/application.min.js",
       "kind": "javascripts",
+      "file": "javascripts/application.min.js",
       "filename": "application.min.js"
     },
     {
-      "content_type": "application/javascript",
-      "file": "javascripts/modernizr-custom.min.js",
-      "kind": "javascripts",
-      "filename": "modernizr-custom.min.js"
-    },
-    {
       "content_type": "text/css",
-      "file": "stylesheets/main.css",
       "kind": "stylesheets",
+      "file": "stylesheets/main.css",
       "filename": "main.css"
     },
     {
       "content_type": "text/css",
-      "file": "stylesheets/main.min.css",
       "kind": "stylesheets",
+      "file": "stylesheets/main.min.css",
       "filename": "main.min.css"
+    },
+    {
+      "content_type": "image/png",
+      "kind": "images",
+      "file": "images/check.png",
+      "filename": "check.png"
+    },
+    {
+      "content_type": "image/png",
+      "kind": "images",
+      "file": "images/check_small.png",
+      "filename": "check_small.png"
+    },
+    {
+      "content_type": "image/png",
+      "kind": "images",
+      "file": "images/close.png",
+      "filename": "close.png"
+    },
+    {
+      "content_type": "image/jpeg",
+      "kind": "images",
+      "file": "images/front-page-left-bg.jpg",
+      "filename": "front-page-left-bg.jpg"
+    },
+    {
+      "content_type": "image/jpeg",
+      "kind": "images",
+      "file": "images/front-page-left-bg_block.jpg",
+      "filename": "front-page-left-bg_block.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "kind": "images",
+      "file": "images/ico-search-black.png",
+      "filename": "ico-search-black.png"
+    },
+    {
+      "content_type": "image/png",
+      "kind": "images",
+      "file": "images/new_article.png",
+      "filename": "new_article.png"
+    },
+    {
+      "content_type": "image/png",
+      "kind": "images",
+      "file": "images/ico-flags.png",
+      "filename": "ico-flags.png"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "kind": "assets",
+      "file": "assets/ico-flags.svg",
+      "filename": "ico-flags.svg"
+    },
+    {
+      "content_type": "image/svg+xml",
+      "kind": "assets",
+      "file": "assets/loader.svg",
+      "filename": "loader.svg"
     }
   ]
 }

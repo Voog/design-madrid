@@ -37,6 +37,11 @@ body,
   color: var(--main-color);
 }
 
+.header .main-menu-toggler:before, .header .main-menu-toggler:after,
+.header .main-menu-toggler span:before {
+  background-color: var(--main-color);
+}
+
 .voog-search-modal-results h3,
 .voog-search-modal-results a {
   color: var(--second-color);
@@ -51,8 +56,7 @@ blockquote,
   color: var(--third-color);
 }
 
-.wrap,
-.footer .wrap {
+.wrap {
   max-width: var(--main-width);
 }
 
@@ -201,26 +205,38 @@ main .post-content a {
 }
 
 .main-menu ul a {
-  color: var(--header-mainmenu-color);
   font-size: var(--header-mainmenu-font-size);
   font-style: var(--header-mainmenu-font-style);
   font-weight: var(--header-mainmenu-font-weight);
   text-decoration: var(--header-mainmenu-text-decoration);
   text-transform: var(--header-mainmenu-text-transform);
 }
+@media screen and (min-width: 501px) {
+  .main-menu ul a {
+    color: var(--header-mainmenu-color);
+  }
+}
 .main-menu ul a:hover {
-  color: var(--header-mainmenu-hover-color);
   font-style: var(--header-mainmenu-hover-font-style);
   font-weight: var(--header-mainmenu-hover-font-weight);
   text-decoration: var(--header-mainmenu-hover-text-decoration);
   text-transform: var(--header-mainmenu-hover-text-transform);
 }
+@media screen and (min-width: 501px) {
+  .main-menu ul a:hover {
+    color: var(--header-mainmenu-hover-color);
+  }
+}
 .main-menu ul a.active {
-  color: var(--header-mainmenu-active-color);
   font-style: var(--header-mainmenu-active-font-style);
   font-weight: var(--header-mainmenu-active-font-weight);
   text-decoration: var(--header-mainmenu-active-text-decoration);
   text-transform: var(--header-mainmenu-active-text-transform);
+}
+@media screen and (min-width: 501px) {
+  .main-menu ul a.active {
+    color: var(--header-mainmenu-active-color);
+  }
 }
 
 .sub-menu a {

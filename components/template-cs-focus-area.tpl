@@ -1,6 +1,6 @@
 :root {
   /* VoogStyle
-     "pathI18n": ["focus_area"],
+     "pathI18n": ["feature_area"],
      "titleI18n": "padding",
      "editor": "rangePicker",
      "min": 0,
@@ -10,7 +10,7 @@
   */
   --focus-area-padding: 45px;
   /* VoogStyle
-     "pathI18n": ["focus_area"],
+     "pathI18n": ["feature_area"],
      "titleI18n": "alignment",
      "editor": "listPicker",
      "list": {{ base_alignment_horizontal_set }},
@@ -18,7 +18,7 @@
   */
   --focus-area-alignment: left;
   /* VoogStyle
-     "pathI18n": ["focus_area"],
+     "pathI18n": ["feature_area"],
      "titleI18n": "position",
      "editor": "listPicker",
      "list": {{ base_alignment_vertical_set }},
@@ -26,7 +26,7 @@
   */
   --focus-area-vertical-alignment: middle;
   /* VoogStyle
-    "pathI18n": ["focus_area", "text"],
+    "pathI18n": ["feature_area", "text"],
     "titleI18n": "size",
     "editor": "rangePicker",
     "min": 8,
@@ -37,7 +37,7 @@
   */
   --focus-area-font-size: 24px;
   /* VoogStyle
-     "pathI18n": ["focus_area", "text"],
+     "pathI18n": ["feature_area", "text"],
      "titleI18n": "line_height",
      "editor": "rangePicker",
      "min": 0.8,
@@ -48,7 +48,7 @@
   */
   --focus-area-line-height: 1.45;
   /* VoogStyle
-    "pathI18n": ["focus_area", "text"],
+    "pathI18n": ["feature_area", "text"],
     "titleI18n": "font_weight",
     "type": "button",
     "editor": "toggleIcon",
@@ -61,7 +61,7 @@
   */
   --focus-area-font-weight: 400;
   /* VoogStyle
-    "pathI18n": ["focus_area", "text"],
+    "pathI18n": ["feature_area", "text"],
     "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",
@@ -74,7 +74,7 @@
   */
   --focus-area-font-style: normal;
   /* VoogStyle
-    "pathI18n": ["focus_area", "text"],
+    "pathI18n": ["feature_area", "text"],
     "titleI18n": "text_decoration",
     "type": "button",
     "editor": "toggleIcon",
@@ -87,7 +87,7 @@
   */
   --focus-area-text-decoration: none;
   /* VoogStyle
-    "pathI18n": ["focus_area", "text"],
+    "pathI18n": ["feature_area", "text"],
     "titleI18n": "text_transform",
     "type": "button",
     "editor": "toggleIcon",
@@ -100,7 +100,7 @@
   */
   --focus-area-text-transform: none;
   /* VoogStyle
-    "pathI18n": ["focus_area", "text"],
+    "pathI18n": ["feature_area", "text"],
     "titleI18n": "color",
     "type": "button",
     "editor": "colorPicker",

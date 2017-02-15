@@ -65,9 +65,9 @@
             {% endif %}
 
             {% if article.data.background.color == nil %}
-              {% assign bg_color_data = '{"r"=>43, "g"=>43, "b"=>43, "a"=>0.9, "lightness"=>0.01}' %}
-              {% assign bg_color = 'rgba(43,43,43,0.9)' %}
-              {% assign bg_color_style = 'background-color: rgba(43,43,43,0.9); background-color: rgba(43,43,43,0.9)' %}
+              {% assign bg_color_data = '{"r"=>43, "g"=>43, "b"=>43, "a"=>0.1, "lightness"=>0.17}' %}
+              {% assign bg_color = 'rgba(43,43,43,0.1)' %}
+              {% assign bg_color_style = 'background-color: rgba(43,43,43,0.1); background-color: rgba(43,43,43,0.1)' %}
             {% elsif article.data.background.color == "" %}
               {% assign bg_color_data = '' %}
               {% assign bg_color = 'none' %}

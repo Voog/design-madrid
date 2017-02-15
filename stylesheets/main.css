@@ -1702,6 +1702,10 @@ body {
 }
 
 /* flags */
+.lang-flag {
+  color: inherit;
+  text-decoration: none;
+}
 .lang-flag:before, .lang-flag:after {
   position: absolute;
   top: 0;

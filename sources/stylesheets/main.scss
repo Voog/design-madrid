@@ -1660,6 +1660,9 @@ $header-inner-height: 28px;
 
   /* flags */
   .lang-flag {
+    color: inherit;
+    text-decoration: none;
+
     &:before,
     &:after {
       position: absolute;

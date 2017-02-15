@@ -1113,6 +1113,7 @@ $header-inner-height: 28px;
         padding-bottom: 85px;
         box-sizing: border-box;
         height: 100%;
+        background-color: rgba(43,43,43,1);
       }
 
       .scroller-arrow {
@@ -1291,8 +1292,7 @@ $header-inner-height: 28px;
 
   /* new-article */
   .new-article {
-    background: $bg-color-dark;
-    opacity: 0.95;
+    background: #373737;
 
     &, h3 {
       color: $fourth-color;

@@ -1208,6 +1208,7 @@ body {
   padding-bottom: 85px;
   box-sizing: border-box;
   height: 100%;
+  background-color: #2b2b2b;
 }
 .blog-list-page .main .scroller-arrow, .front-page .main .scroller-arrow {
   display: none;
@@ -1364,8 +1365,7 @@ body {
 
 /* new-article */
 .new-article {
-  background: #2b2b2b;
-  opacity: 0.95;
+  background: #373737;
 }
 .new-article, .new-article h3 {
   color: white;

@@ -302,8 +302,12 @@
 
 
     if ($('.blog-list-page .main').length > 0) {
-      $('.article .link, .new-article').click(function() {
+      $('.article .link').click(function() {
         window.location = $(this).attr('data-href');
+      });
+
+      $('.article .link, .new-article').click(function() {
+        $('.js-new-article-btn-wrapper').find('.edy-add-modal').trigger('click');
       });
     }
 

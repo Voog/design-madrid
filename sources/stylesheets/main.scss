@@ -950,6 +950,10 @@ $header-inner-height: 28px;
   }
 
   .blog-list-page.editmode & {
+    .new-article-button-wrapper {
+      display: none;
+    }
+
     .article,
     .new-article {
       &.article-total-6 {

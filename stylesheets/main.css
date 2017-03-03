@@ -1300,8 +1300,21 @@ body {
 .formatted p:first-child,
 .formatted ul:first-child,
 .formatted ol:first-child,
+.formatted dl:first-child,
+.formatted table:first-child,
 .formatted pre:first-child,
-.formatted code:first-child {
+.formatted code:first-child,
+.formatted iframe:first-child,
+.formatted table:first-child,
+.formatted form:first-child,
+.formatted .table-container:first-child,
+.formatted .edy-positionable-container-left-block:first-child,
+.formatted .edy-positionable-container-center-block:first-child,
+.formatted .edy-positionable-container-right-block:first-child,
+.formatted .edy-texteditor-container-wrapper-left-block:first-child,
+.formatted .edy-texteditor-container-wrapper-center:first-child,
+.formatted .edy-texteditor-container-wrapper-right-block:first-child,
+.formatted .edy-positionable-container-maxwidth:first-child {
   margin-top: 0;
 }
 .formatted h1:last-child,
@@ -1313,8 +1326,21 @@ body {
 .formatted p:last-child,
 .formatted ul:last-child,
 .formatted ol:last-child,
+.formatted dl:last-child,
+.formatted table:last-child,
 .formatted pre:last-child,
-.formatted code:last-child {
+.formatted code:last-child,
+.formatted iframe:last-child,
+.formatted table:last-child,
+.formatted form:last-child,
+.formatted .table-container:last-child,
+.formatted .edy-positionable-container-left-block:last-child,
+.formatted .edy-positionable-container-center-block:last-child,
+.formatted .edy-positionable-container-right-block:last-child,
+.formatted .edy-texteditor-container-wrapper-left-block:last-child,
+.formatted .edy-texteditor-container-wrapper-center:last-child,
+.formatted .edy-texteditor-container-wrapper-right-block:last-child,
+.formatted .edy-positionable-container-maxwidth:last-child {
   margin-bottom: 0;
 }
 .formatted a {

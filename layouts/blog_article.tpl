@@ -22,6 +22,7 @@
               <section class="post-content">
                 <div class="post-excerpt cfx formatted" {{ edy_intro_edit_text }}>{% editable article.excerpt %}</div>
                 <div class="post-body cfx formatted">{% editable article.body %}</div>
+                <div class="post-body cfx formatted">{% content name="additional_body" bind="Article" %}</div>
 
                 {% if editmode or article.tags.size > 0 %}
                 <div class="post-tags">

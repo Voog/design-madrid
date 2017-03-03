@@ -1288,6 +1288,9 @@ body {
   -ms-hyphens: auto;
   hyphens: auto;
 }
+.formatted:empty {
+  display: none;
+}
 .formatted h1:first-child,
 .formatted h2:first-child,
 .formatted h3:first-child,

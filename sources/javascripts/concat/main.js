@@ -305,10 +305,6 @@
       $('.article .link').click(function() {
         window.location = $(this).attr('data-href');
       });
-
-      $('.article .link, .new-article').click(function() {
-        $('.js-new-article-btn-wrapper').find('.edy-add-modal').trigger('click');
-      });
     }
 
     $('.voog-bg-picker-btn').click(function(e) { e.stopPropagation(); });

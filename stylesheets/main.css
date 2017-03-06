@@ -1042,9 +1042,6 @@ body {
 .main .content-half .dark-background .custom-btn:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
-.blog-list-page.editmode .main .new-article-button-wrapper {
-  display: none;
-}
 @media screen and (min-width: 501px) {
   .blog-list-page.editmode .main .article.article-total-6,
   .blog-list-page.editmode .main .new-article.article-total-6 {
@@ -1082,6 +1079,13 @@ body {
   -ms-hyphens: auto;
   hyphens: auto;
   box-sizing: border-box;
+  border: 0;
+  background-color: transparent;
+}
+.blog-list-page .main .article:focus,
+.blog-list-page .main .new-article:focus, .front-page .main .article:focus,
+.front-page .main .new-article:focus {
+  outline: none;
 }
 @media screen and (min-width: 501px) {
   .blog-list-page .main .article.article-total-0, .blog-list-page .main .article.article-total-1,

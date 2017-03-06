@@ -950,10 +950,6 @@ $header-inner-height: 28px;
   }
 
   .blog-list-page.editmode & {
-    .new-article-button-wrapper {
-      display: none;
-    }
-
     .article,
     .new-article {
       &.article-total-6 {
@@ -989,6 +985,12 @@ $header-inner-height: 28px;
       cursor: pointer;
       @include hyphenate(true);
       box-sizing: border-box;
+      border: 0;
+      background-color: transparent;
+
+      &:focus {
+        outline: none;
+      }
 
       &.article-total-0,
       &.article-total-1 {

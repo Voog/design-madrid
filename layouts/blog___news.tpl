@@ -31,9 +31,7 @@
         {% endfor %}
 
         {% if editmode %}
-          <div class="new-article-button-wrapper js-new-article-btn-wrapper">{% addbutton %}</div>
-
-          <div class="new-article{% if article_boxes_count < 7 %} article-total-{{ article_boxes_count }}{% endif %}">
+          <button class="new-article{% if article_boxes_count < 7 %} article-total-{{ article_boxes_count }}{% endif %}" data-behavior="open-add-modal" data-component="article" data-page-id="{{ page.id }}">
             <div class="tbl">
               <div class="tbl-row">
                 <div class="tbl-cell">
@@ -53,7 +51,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </button>
         {% endif %}
 
         {% for article in articles %}

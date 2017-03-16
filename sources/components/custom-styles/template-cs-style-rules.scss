@@ -193,7 +193,6 @@ main .post-content {
   .form_submit input,
   .submit,
   .custom-btn {
-    background-color: var(--content-button-background-color);
     color: var(--content-button-color);
     font-family: var(--font-main);
     font-size: var(--content-button-font-size);
@@ -205,9 +204,9 @@ main .post-content {
     text-decoration: var(--content-button-text-decoration);
     text-transform: var(--content-button-text-transform);
 
-    &, .content-half & {
-
-    }
+    //&, .content-half & {
+    //
+    //}
 
     &:hover {
       font-style: var(--content-button-font-style);
@@ -215,6 +214,15 @@ main .post-content {
       color: var(--content-button-color);
       text-decoration: var(--content-button-text-decoration);
       text-transform: var(--content-button-text-transform);
+    }
+  }
+
+  .form_submit input,
+  .submit,
+  .custom-btn:not(.custom-btn-disabled) {
+    background-color: var(--content-button-background-color);
+
+    &:hover {
       opacity: .7;
     }
   }

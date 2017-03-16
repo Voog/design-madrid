@@ -11,6 +11,10 @@
   font-weight: 700;
   src: url("../assets/montserrat-bold.eot?#iefix") format("embedded-opentype"), url("../assets/montserrat-bold.woff2") format("woff2"), url("../assets/montserrat-bold.woff") format("woff"), url("../assets/montserrat-bold.ttf") format("truetype"), url("../assets/montserrat-bold.svg#Montserrat") format("svg");
 }
+.formatted .edy-buy-button-variations {
+  margin-bottom: 12px;
+}
+
 .search-holder {
   float: left;
   height: 28px;
@@ -343,10 +347,7 @@ blockquote {
 .custom-btn {
   display: inline-block;
   padding: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px;
   font: 18px/1.45 "Montserrat", Helvetica, Arial, sans-serif;
-  cursor: pointer;
   color: white;
   background: #2b2b2b;
 }
@@ -360,6 +361,13 @@ blockquote {
 .custom-btn:hover {
   background-color: #2b2b2b;
   background-color: rgba(43, 43, 43, 0.8);
+}
+.public .custom-btn {
+  cursor: pointer;
+}
+.public .custom-btn-disabled {
+  cursor: default;
+  background-color: #cccccc;
 }
 
 /* select */
@@ -430,6 +438,13 @@ blockquote {
 .edy-fe-field,
 .form_field {
   margin-bottom: 20px;
+}
+
+.form_field:first-child {
+  margin-top: 0;
+}
+.form_field:last-child {
+  margin-bottom: 0;
 }
 
 .edy-fe-label,
@@ -1041,6 +1056,10 @@ body {
 }
 .main .content-half .dark-background .custom-btn:hover {
   background-color: rgba(255, 255, 255, 0.8);
+}
+.public .main .content-half .dark-background .custom-btn-disabled {
+  color: white;
+  background-color: #cccccc;
 }
 @media screen and (min-width: 501px) {
   .blog-list-page.editmode .main .article.article-total-6,

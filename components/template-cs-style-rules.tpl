@@ -153,7 +153,6 @@ main .post-content a {
 .formatted .form_submit input,
 .formatted .submit,
 .formatted .custom-btn {
-  background-color: var(--content-button-background-color);
   color: var(--content-button-color);
   font-family: var(--font-main);
   font-size: var(--content-button-font-size);
@@ -173,6 +172,15 @@ main .post-content a {
   color: var(--content-button-color);
   text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
+}
+.formatted .form_submit input,
+.formatted .submit,
+.formatted .custom-btn:not(.custom-btn-disabled) {
+  background-color: var(--content-button-background-color);
+}
+.formatted .form_submit input:hover,
+.formatted .submit:hover,
+.formatted .custom-btn:not(.custom-btn-disabled):hover {
   opacity: .7;
 }
 .formatted .comment-form h2,

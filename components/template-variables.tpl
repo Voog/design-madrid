@@ -5,11 +5,9 @@
     {% assign show_menu_btn = true %}
   {% endif %}
 
-  {% comment %}
   {% comment %}=================================================================
   | Design editor variables.
   ============================================================= {% endcomment %}
-  {% endcomment %}
   {% capture base_font_set %}
     [
       {
@@ -30,7 +28,7 @@
           },
           {
             "title": "Montserrat",
-            "value": "Montserrat, Helvetica, Arial, sans-serif"
+            "value": "Montserrat, \"Helvetica Neue\", Helvetica, Arial, sans-serif"
           },
           {
             "title": "Open Sans",
@@ -112,6 +110,7 @@
       }
     ]
   {% endcapture %}
+
   {% capture base_alignment_horizontal_set %}
     [
       {

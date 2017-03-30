@@ -7,7 +7,7 @@
      "featured": true,
      "scope": "global"
   */
-  --font-main: Montserrat, sans-serif;
+  --font-main: "Montserrat", sans-serif;
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
      "titleI18n": "primary_color",

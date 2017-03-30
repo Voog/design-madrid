@@ -16,7 +16,7 @@
         "list": [
           {
             "title": "Avenir Next",
-            "value": "\"Avenir Next\", \"Helvetica Neue\", Helvetica, \"Segoe UI\", sans-serif"
+            "value": "\"Avenir Next\", \"Avenir\", \"Helvetica Neue\", \"Helvetica\", \"Segoe UI\", sans-serif"
           },
           {
             "title": "Fira Sans",
@@ -24,23 +24,27 @@
           },
           {
             "title": "Lato",
-            "value": "Lato, sans-serif"
+            "value": "\"Lato\", sans-serif"
           },
           {
             "title": "Montserrat",
-            "value": "Montserrat, sans-serif"
+            "value": "\"Montserrat\", sans-serif"
           },
           {
             "title": "Open Sans",
             "value": "\"Open Sans\", sans-serif"
           },
           {
+            "title": "PT Sans",
+            "value": "\"PT Sans\", sans-serif"
+          },
+          {
             "title": "Raleway",
-            "value": "Raleway, sans-serif"
+            "value": "\"Raleway\", sans-serif"
           },
           {
             "title": "Roboto",
-            "value": "Roboto, sans-serif"
+            "value": "\"Roboto\", sans-serif"
           },
           {
             "title": "Source Sans Pro",
@@ -48,7 +52,7 @@
           },
           {
             "title": "Ubuntu",
-            "value": "Ubuntu, sans-serif"
+            "value": "\"Ubuntu\", sans-serif"
           }
         ]
       },

@@ -215,7 +215,7 @@ body, .lang-menu-btn {
   cursor: pointer;
   border: none;
   background: none;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .search .search-submit:focus, .lang-menu-btn:focus, .lang-options .option-btn:focus, .voog-bg-picker-btn:focus {
   outline: none;
@@ -244,7 +244,7 @@ ol {
 .formatted textarea {
   border-radius: 0;
   -webkit-appearance: none;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -266,7 +266,7 @@ h2 {
 
 h3 {
   margin: 40px 0 20px;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
@@ -330,7 +330,7 @@ blockquote {
 .custom-btn {
   display: inline-block;
   padding: 12px;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 1.45;
   color: white;
@@ -358,7 +358,7 @@ blockquote {
 /* select */
 .jq-select {
   position: relative;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 1.45;
   color: #333;
@@ -375,7 +375,7 @@ blockquote {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 1.45;
   color: #333;
@@ -451,7 +451,7 @@ blockquote {
   border-radius: 0;
   width: 30%;
   padding: 4px 10px;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 1.45;
   color: #333;
@@ -515,7 +515,7 @@ blockquote {
 .form_submit input,
 .submit {
   height: 45px;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   line-height: 1.45;
   color: white;
@@ -622,7 +622,7 @@ html,
 body {
   font-size: 18px;
   line-height: 1.45;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 html.front-page,

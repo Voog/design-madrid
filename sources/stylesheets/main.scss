@@ -259,18 +259,16 @@ blockquote {
 }
 
 /* form */
-.edy-fe-field,
 .form_field {
-  margin-bottom: 20px;
-}
+  padding-top: 10px;
+  padding-bottom: 10px;
 
-.form_field {
   &:first-child {
-    margin-top: 0;
+    padding-top: 0;
   }
 
   &:last-child {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -347,6 +345,10 @@ blockquote {
 .form_field_with_errors textarea {
   @include color($error-color, .8);
   @include bg($error-color, .2);
+}
+
+.form_submit {
+  padding-top: 20px;
 }
 
 .form_submit input,

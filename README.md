@@ -1,4 +1,4 @@
-#The Madrid design template for [Voog](https://www.voog.com)
+# The Madrid design template for [Voog](https://www.voog.com)
 
 To modify this template [Node.js](http://www.nodejs.org/), [Node Package Manager](https://www.npmjs.org/), [Grunt](http://www.gruntjs.com/) and [Bower](http://www.bower.io/) must be installed.
 

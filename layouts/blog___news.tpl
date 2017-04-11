@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
+{% include "blog-article-variables" %}
 <html class="blog-list-page height-calculation {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% assign blog_page = true %}
@@ -88,7 +89,15 @@
                 {% endif %}
                 <div class="article-content">
                   <h2>{{ article.title }}</h2>
-                  <div class="article-date">{{ article.created_at | format_date: "short" }}</div>
+
+                  {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
+                  {% if article_year == current_year %}
+                    {% assign article_date_format = "long_without_year" %}
+                  {% else %}
+                    {% assign article_date_format = "long" %}
+                  {% endif %}
+
+                  <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
                 </div>
               </div>
             </div>

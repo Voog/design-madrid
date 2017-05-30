@@ -116,6 +116,48 @@
     "featured": true
   */
   --header-mainmenu-font-size: $font-size - 2px;
+  
+  /* VoogStyle
+    "pathI18n": ["header", "main_menu", "normal"],
+    "titleI18n": "text_color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --header-mainmenu-color: $third-color;
+
+   /* VoogStyle
+    "pathI18n": ["header", "main_menu", "hover"],
+    "titleI18n": "text_color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --header-mainmenu-hover-color: $second-color;
+
+   /* VoogStyle
+    "pathI18n": ["header", "main_menu", "active"],
+    "titleI18n": "text_color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --header-mainmenu-active-color: $second-color;
+  
+  /* VoogStyle
+    "pathI18n": ["header", "main_menu", "normal"],
+    "titleI18n": "button_color",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
+  --header-mainmenu-btn-color: $main-color;
+
+   /* VoogStyle
+    "pathI18n": ["header", "main_menu", "hover"],
+    "titleI18n": "button_color",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
+  --header-mainmenu-btn-hover-color: $third-color;
 
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],
@@ -300,34 +342,6 @@
     "scope": "global"
   */
   --header-mainmenu-active-text-transform: uppercase;
-
-  /* VoogStyle
-    "pathI18n": ["header", "main_menu", "normal"],
-    "titleI18n": "color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global",
-    "featured": true
-  */
-  --header-mainmenu-color: $third-color;
-
-   /* VoogStyle
-    "pathI18n": ["header", "main_menu", "hover"],
-    "titleI18n": "color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --header-mainmenu-hover-color: $second-color;
-
-   /* VoogStyle
-    "pathI18n": ["header", "main_menu", "active"],
-    "titleI18n": "color",
-    "type": "button",
-    "editor": "colorPicker",
-    "scope": "global"
-  */
-  --header-mainmenu-active-color: $second-color;
 
   // scss-lint:enable Comment, Indentation
 }

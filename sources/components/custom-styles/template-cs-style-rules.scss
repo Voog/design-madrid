@@ -48,16 +48,27 @@ body,
   font-family: var(--font-main);
 }
 
-body,
-.header .main-menu-toggler {
+body {
   color: var(--main-color);
 }
 
 .header .main-menu-toggler {
+  color: var(--header-mainmenu-btn-color);
+  
   &:before,
   &:after,
   span:before {
-    background-color: var(--main-color);
+    background-color: var(--header-mainmenu-btn-color);
+  }
+  
+  &:hover {
+    color: var(--header-mainmenu-btn-hover-color);
+    
+    &:before,
+    &:after,
+    span:before {
+      background-color: var(--header-mainmenu-btn-hover-color);
+    }
   }
 }
 

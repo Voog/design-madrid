@@ -32,14 +32,23 @@ body,
   font-family: var(--font-main);
 }
 
-body,
-.header .main-menu-toggler {
+body {
   color: var(--main-color);
 }
 
+.header .main-menu-toggler {
+  color: var(--header-mainmenu-btn-color);
+}
 .header .main-menu-toggler:before, .header .main-menu-toggler:after,
 .header .main-menu-toggler span:before {
-  background-color: var(--main-color);
+  background-color: var(--header-mainmenu-btn-color);
+}
+.header .main-menu-toggler:hover {
+  color: var(--header-mainmenu-btn-hover-color);
+}
+.header .main-menu-toggler:hover:before, .header .main-menu-toggler:hover:after,
+.header .main-menu-toggler:hover span:before {
+  background-color: var(--header-mainmenu-btn-hover-color);
 }
 
 .voog-search-modal-results h3,

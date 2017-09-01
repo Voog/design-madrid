@@ -28,7 +28,7 @@
      "unit": "px",
      "scope": "global"
   */
-  --focus-area-padding: 45px;
+  #{--focus-area-padding}: 45px;
 
   /* VoogStyle
      "pathI18n": ["feature_area"],
@@ -37,7 +37,7 @@
      "list": {{ base_alignment_horizontal_set }},
      "scope": "global"
   */
-  --focus-area-alignment: left;
+  #{--focus-area-alignment}: left;
 
   /* VoogStyle
      "pathI18n": ["feature_area"],
@@ -46,7 +46,7 @@
      "list": {{ base_alignment_vertical_set }},
      "scope": "global"
   */
-  --focus-area-vertical-alignment: middle;
+  #{--focus-area-vertical-alignment}: middle;
 
   /* VoogStyle
     "pathI18n": ["feature_area", "text"],
@@ -58,7 +58,7 @@
     "scope": "global",
     "featured": true
   */
-  --focus-area-font-size: $h2-size;
+  #{--focus-area-font-size}: $h2-size;
 
   /* VoogStyle
      "pathI18n": ["feature_area", "text"],
@@ -70,7 +70,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --focus-area-line-height: $line-height;
+  #{--focus-area-line-height}: $line-height;
 
   /* VoogStyle
     "pathI18n": ["feature_area", "text"],
@@ -84,7 +84,7 @@
     "icon": "bold",
     "scope": "global"
   */
-  --focus-area-font-weight: 400;
+  #{--focus-area-font-weight}: 400;
 
   /* VoogStyle
     "pathI18n": ["feature_area", "text"],
@@ -98,7 +98,7 @@
     "icon": "italic",
     "scope": "global"
   */
-  --focus-area-font-style: normal;
+  #{--focus-area-font-style}: normal;
 
   /* VoogStyle
     "pathI18n": ["feature_area", "text"],
@@ -112,7 +112,7 @@
     "icon": "underline",
     "scope": "global"
   */
-  --focus-area-text-decoration: none;
+  #{--focus-area-text-decoration}: none;
 
   /* VoogStyle
     "pathI18n": ["feature_area", "text"],
@@ -126,7 +126,7 @@
     "icon": "uppercase",
     "scope": "global"
   */
-  --focus-area-text-transform: none;
+  #{--focus-area-text-transform}: none;
 
   /* VoogStyle
     "pathI18n": ["feature_area", "text"],
@@ -139,5 +139,5 @@
       "--focus-area-date-color"
      ]
   */
-  --focus-area-color: $fourth-color;
+  #{--focus-area-color}: $fourth-color;
 }

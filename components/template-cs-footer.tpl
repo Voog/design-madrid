@@ -24,7 +24,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --footer-line-height: 1.45 #em;
+  --footer-line-height: 1.45;
   /* VoogStyle
     "pathI18n": ["footer", "text"],
     "titleI18n": "size",

@@ -27,7 +27,7 @@
      "featured": true,
      "scope": "global"
   */
-  --font-main: $font-main;
+  #{--font-main}: $font-main;
 
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
@@ -41,7 +41,7 @@
         "--footer-text-color"
      ]
   */
-  --main-color: $main-color;
+  #{--main-color}: $main-color;
 
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
@@ -61,7 +61,7 @@
         "--content-links-hover-color"
      ]
   */
-  --second-color: $second-color;
+  #{--second-color}: $second-color;
 
   /* VoogStyle
      "pathI18n": ["main_styles", "colors"],
@@ -77,7 +77,7 @@
       "--table-border-color"
      ]
   */
-  --third-color: $third-color;
+  #{--third-color}: $third-color;
 
   // TODO: Restore boundVariable "--form-field-background-color" when Safari doesn't crash using it anymore.
   /* VoogStyle
@@ -93,7 +93,7 @@
       "--footer-background-color"
     ]
   */
-  --fourth-color: $fourth-color;
+  #{--fourth-color}: $fourth-color;
 
   // scss-lint:disable Comment, Indentation
 }

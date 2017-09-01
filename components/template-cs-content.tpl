@@ -249,7 +249,7 @@
      "unit": "em",
      "scope": "global"
   */
-  --content-line-height: 1.45 #em;
+  --content-line-height: 1.45;
   /* VoogStyle
     "pathI18n": ["content", "text"],
     "titleI18n": "color",

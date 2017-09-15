@@ -82,7 +82,8 @@ main .footer-content a {
   color: var(--content-links-color);
   font-style: var(--content-links-font-style);
   font-weight: var(--content-links-font-weight);
-  text-decoration: var(--content-links-text-decoration);
+  -webkit-text-decoration: var(--content-links-text-decoration);
+          text-decoration: var(--content-links-text-decoration);
   text-transform: var(--content-links-text-transform);
 }
 main .content-body a:hover,
@@ -91,7 +92,8 @@ main .footer-content a:hover {
   color: var(--content-links-hover-color);
   font-style: var(--content-links-hover-font-style);
   font-weight: var(--content-links-hover-font-weight);
-  text-decoration: var(--content-links-hover-text-decoration);
+  -webkit-text-decoration: var(--content-links-hover-text-decoration);
+          text-decoration: var(--content-links-hover-text-decoration);
   text-transform: var(--content-links-hover-text-transform);
 }
 
@@ -108,7 +110,8 @@ main .post-content a {
   line-height: var(--focus-area-line-height);
   padding: var(--focus-area-padding);
   text-align: var(--focus-area-alignment);
-  text-decoration: var(--focus-area-text-decoration);
+  -webkit-text-decoration: var(--focus-area-text-decoration);
+          text-decoration: var(--focus-area-text-decoration);
   text-transform: var(--focus-area-text-transform);
   vertical-align: var(--focus-area-vertical-alignment);
 }
@@ -125,7 +128,8 @@ main .post-content a {
   font-weight: var(--h1-font-weight);
   line-height: var(--h1-line-height);
   text-align: var(--h1-alignment);
-  text-decoration: var(--h1-text-decoration);
+  -webkit-text-decoration: var(--h1-text-decoration);
+          text-decoration: var(--h1-text-decoration);
   text-transform: var(--h1-text-transform);
 }
 .formatted h2 {
@@ -138,7 +142,8 @@ main .post-content a {
   font-weight: var(--h2-font-weight);
   line-height: var(--h2-line-height);
   text-align: var(--h2-alignment);
-  text-decoration: var(--h2-text-decoration);
+  -webkit-text-decoration: var(--h2-text-decoration);
+          text-decoration: var(--h2-text-decoration);
   text-transform: var(--h2-text-transform);
 }
 .formatted h3 {
@@ -153,7 +158,8 @@ main .post-content a {
   font-weight: var(--h3-font-weight);
   line-height: var(--h3-line-height);
   text-align: var(--h3-alignment);
-  text-decoration: var(--h3-text-decoration);
+  -webkit-text-decoration: var(--h3-text-decoration);
+          text-decoration: var(--h3-text-decoration);
   text-transform: var(--h3-text-transform);
 }
 .main .formatted .custom-btn {
@@ -170,7 +176,8 @@ main .post-content a {
   height: auto;
   line-height: var(--content-button-line-height);
   padding: .7em 1.4em;
-  text-decoration: var(--content-button-text-decoration);
+  -webkit-text-decoration: var(--content-button-text-decoration);
+          text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
 }
 .formatted .form_submit input:hover,
@@ -179,7 +186,8 @@ main .post-content a {
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
   color: var(--content-button-color);
-  text-decoration: var(--content-button-text-decoration);
+  -webkit-text-decoration: var(--content-button-text-decoration);
+          text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
 }
 .formatted .form_submit input,
@@ -215,7 +223,8 @@ main .post-content a {
   text-transform: var(--header-site-title-text-transform);
 }
 .site-title .site-title-inner {
-  text-decoration: var(--header-site-title-text-decoration);
+  -webkit-text-decoration: var(--header-site-title-text-decoration);
+          text-decoration: var(--header-site-title-text-decoration);
 }
 .site-title a {
   color: black;
@@ -225,7 +234,8 @@ main .post-content a {
   font-size: var(--header-mainmenu-font-size);
   font-style: var(--header-mainmenu-font-style);
   font-weight: var(--header-mainmenu-font-weight);
-  text-decoration: var(--header-mainmenu-text-decoration);
+  -webkit-text-decoration: var(--header-mainmenu-text-decoration);
+          text-decoration: var(--header-mainmenu-text-decoration);
   text-transform: var(--header-mainmenu-text-transform);
 }
 @media screen and (min-width: 501px) {
@@ -236,7 +246,8 @@ main .post-content a {
 .main-menu ul a:hover {
   font-style: var(--header-mainmenu-hover-font-style);
   font-weight: var(--header-mainmenu-hover-font-weight);
-  text-decoration: var(--header-mainmenu-hover-text-decoration);
+  -webkit-text-decoration: var(--header-mainmenu-hover-text-decoration);
+          text-decoration: var(--header-mainmenu-hover-text-decoration);
   text-transform: var(--header-mainmenu-hover-text-transform);
 }
 @media screen and (min-width: 501px) {
@@ -247,7 +258,8 @@ main .post-content a {
 .main-menu ul a.active {
   font-style: var(--header-mainmenu-active-font-style);
   font-weight: var(--header-mainmenu-active-font-weight);
-  text-decoration: var(--header-mainmenu-active-text-decoration);
+  -webkit-text-decoration: var(--header-mainmenu-active-text-decoration);
+          text-decoration: var(--header-mainmenu-active-text-decoration);
   text-transform: var(--header-mainmenu-active-text-transform);
 }
 @media screen and (min-width: 501px) {
@@ -261,21 +273,24 @@ main .post-content a {
   font-size: var(--content-submenu-font-size);
   font-style: var(--content-submenu-font-style);
   font-weight: var(--content-submenu-font-weight);
-  text-decoration: var(--content-submenu-text-decoration);
+  -webkit-text-decoration: var(--content-submenu-text-decoration);
+          text-decoration: var(--content-submenu-text-decoration);
   text-transform: var(--content-submenu-text-transform);
 }
 .sub-menu a:hover {
   color: var(--content-submenu-hover-color);
   font-style: var(--content-submenu-hover-font-style);
   font-weight: var(--content-submenu-hover-font-weight);
-  text-decoration: var(--content-submenu-hover-text-decoration);
+  -webkit-text-decoration: var(--content-submenu-hover-text-decoration);
+          text-decoration: var(--content-submenu-hover-text-decoration);
   text-transform: var(--content-submenu-hover-text-transform);
 }
 .sub-menu a.active {
   color: var(--content-submenu-active-color);
   font-style: var(--content-submenu-active-font-style);
   font-weight: var(--content-submenu-active-font-weight);
-  text-decoration: var(--content-submenu-active-text-decoration);
+  -webkit-text-decoration: var(--content-submenu-active-text-decoration);
+          text-decoration: var(--content-submenu-active-text-decoration);
   text-transform: var(--content-submenu-active-text-transform);
 }
 
@@ -289,7 +304,8 @@ main .post-content a {
   font-weight: var(--footer-font-weight);
   line-height: var(--footer-line-height);
   text-align: var(--footer-alignment);
-  text-decoration: var(--footer-text-decoration);
+  -webkit-text-decoration: var(--footer-text-decoration);
+          text-decoration: var(--footer-text-decoration);
   text-transform: var(--footer-text-transform);
 }
 
@@ -316,7 +332,8 @@ main .post-content a {
   font-style: var(--blog-list-headings-font-style);
   font-weight: var(--blog-list-headings-font-weight);
   line-height: var(--blog-list-headings-line-height);
-  text-decoration: var(--blog-list-headings-text-decoration);
+  -webkit-text-decoration: var(--blog-list-headings-text-decoration);
+          text-decoration: var(--blog-list-headings-text-decoration);
   text-transform: var(--blog-list-headings-text-transform);
 }
 .blog-list-page .main .article .article-date,
@@ -325,7 +342,8 @@ main .post-content a {
   font-size: var(--blog-list-date-font-size);
   font-style: var(--blog-list-date-font-style);
   font-weight: var(--blog-list-date-font-weight);
-  text-decoration: var(--blog-list-date-text-decoration);
+  -webkit-text-decoration: var(--blog-list-date-text-decoration);
+          text-decoration: var(--blog-list-date-text-decoration);
   text-transform: var(--blog-list-date-text-transform);
 }
 
@@ -364,7 +382,8 @@ main .content table th {
   line-height: var(--form-field-text-line-height);
   font-style: var(--form-field-text-font-style);
   font-weight: var(--form-field-text-font-weight);
-  text-decoration: var(--form-field-text-text-decoration);
+  -webkit-text-decoration: var(--form-field-text-text-decoration);
+          text-decoration: var(--form-field-text-text-decoration);
   text-transform: var(--form-field-text-text-transform);
 }
 

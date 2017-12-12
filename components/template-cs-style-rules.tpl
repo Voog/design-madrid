@@ -2,10 +2,6 @@
   background-color: var(--bg-color);
 }
 
-.lang-menu-btn .lang-title {
-  color: var(--footer-text-color);
-}
-
 main .post-content .post-tags a:not(.edy-tag-suggestion) {
   color: #fff;
 }
@@ -307,6 +303,9 @@ main .post-content a {
   -webkit-text-decoration: var(--footer-text-decoration);
           text-decoration: var(--footer-text-decoration);
   text-transform: var(--footer-text-transform);
+}
+.footer .lang-menu-btn .lang-title {
+  color: var(--footer-text-color);
 }
 
 @media screen and (min-width: 500px) {

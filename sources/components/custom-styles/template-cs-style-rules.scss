@@ -20,10 +20,6 @@
   background-color: var(--bg-color);
 }
 
-.lang-menu-btn .lang-title {
-  color: var(--footer-text-color);
-}
-
 main .post-content .post-tags a:not(.edy-tag-suggestion) {color: #fff;}
 
 .header,
@@ -54,16 +50,16 @@ body {
 
 .header .main-menu-toggler {
   color: var(--header-mainmenu-btn-color);
-  
+
   &:before,
   &:after,
   span:before {
     background-color: var(--header-mainmenu-btn-color);
   }
-  
+
   &:hover {
     color: var(--header-mainmenu-btn-hover-color);
-    
+
     &:before,
     &:after,
     span:before {
@@ -351,7 +347,15 @@ main .post-content {
     text-decoration: var(--footer-text-decoration);
     text-transform: var(--footer-text-transform);
   }
+
+  .lang-menu-btn {
+    .lang-title {
+      color: var(--footer-text-color);
+    }
+  }
 }
+
+
 
 
 @media screen and (min-width: $break-small) {

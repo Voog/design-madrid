@@ -588,7 +588,7 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
         // String for feedback if no results are found.
         noResults: noResultsString
       });
-    } 
+    }
   };
 
   // Returns the suitable version of the image depending on the viewport width.
@@ -855,7 +855,7 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
     $('.js-search-results').click(function(event) {
       event.preventDefault();
     });
-    
+
     $('.js-comment-form-toggler').click(function(event) {
       event.preventDefault();
       $(this).hide();

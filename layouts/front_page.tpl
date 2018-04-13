@@ -39,6 +39,7 @@
 
   {% include "footer" %}
   {% include "langmenu-mobile" %}
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "edicy-tools" with "front_page" %}
 </body>

@@ -15,6 +15,6 @@
       </a>
     </div>
   </form>
-  <div class="search-results"></div>
+  <div class="search-results js-search-results"></div>
 </div>
 {% endif %}

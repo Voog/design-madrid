@@ -567,6 +567,30 @@ jQuery.fn.autoGrow=function(){return this.each(function(){var createMirror=funct
 var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(this);mirror.style.display="none";mirror.style.wordWrap="break-word";mirror.style.padding=jQuery(this).css("padding");mirror.style.width=jQuery(this).css("width");mirror.style.fontFamily=jQuery(this).css("font-family");mirror.style.fontSize=jQuery(this).css("font-size");mirror.style.lineHeight=jQuery(this).css("line-height");this.style.overflow="hidden";this.style.minHeight=this.rows+"em";this.onkeyup=growTextarea;sendContentToMirror(this)})};
 
 ;(function($) {
+  // ===========================================================================
+  // Binds site search functionality.
+  // ===========================================================================
+  var bindSiteSearch = function(searchForm, languageCode, noResultsString) {
+    if (searchForm) {
+      var search = new VoogSearch(searchForm, {
+        // This defines the number of results per query.
+        per_page: 10,
+        // Language code for restricting the search to page language.
+        lang: languageCode,
+        // If given, an DOM element results are rendered inside that element
+        resultsContainer: $('.js-search-results').get(0),
+        // Defines if modal should close on sideclick.
+        sideclick: true,
+        // Mobile checkpoint.
+        mobileModeWidth: 500,
+        // Updates results on every keypress.
+        updateOnKeypress: true,
+        // String for feedback if no results are found.
+        noResults: noResultsString
+      });
+    }
+  };
+
   // Returns the suitable version of the image depending on the viewport width.
   var getImageByWidth = function(sizes, targetWidth) {
     var prevImage;
@@ -719,7 +743,8 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
       articleBgCommit: articleBgCommit,
       bgPickerPreview: bgPickerPreview,
       bgPickerCommit: bgPickerCommit,
-      bgPickerColorScheme: bgPickerColorScheme
+      bgPickerColorScheme: bgPickerColorScheme,
+      bindSiteSearch: bindSiteSearch
   });
 
   var debounce = function( func, wait, immediate ) {
@@ -825,6 +850,10 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
       $('.js-search-form').removeClass('not-empty').find('.search-input').val('');
       var $c = $('.header .search-holder');
       $c.find('.search-input').get(0).focus();
+    });
+
+    $('.js-search-results').click(function(event) {
+      event.preventDefault();
     });
 
     $('.js-comment-form-toggler').click(function(event) {

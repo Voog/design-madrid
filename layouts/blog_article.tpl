@@ -86,6 +86,7 @@
   </div>
 
   {% include "langmenu-mobile" %}
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "edicy-tools" %}
 

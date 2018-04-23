@@ -40,7 +40,7 @@
                   {% else %}
                     <ul>
                     {% for tag in article.tags %}
-                      <li><a href="{{ page.url }}/tagged/{{ tag.path }}" class="post-tag">{{ tag.name }}</a></li>
+                      <li><a href="/{{ article.page.path_with_lang }}/tagged/{{ tag.path }}" class="post-tag">{{ tag.name }}</a></li>
                     {% endfor %}
                     </ul>
                   {% endif %}
@@ -86,6 +86,7 @@
   </div>
 
   {% include "langmenu-mobile" %}
+  {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "edicy-tools" %}
 

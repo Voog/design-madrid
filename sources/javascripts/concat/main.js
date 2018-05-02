@@ -1,4 +1,28 @@
 ;(function($) {
+  // ===========================================================================
+  // Binds site search functionality.
+  // ===========================================================================
+  var bindSiteSearch = function(searchForm, languageCode, noResultsString) {
+    if (searchForm) {
+      var search = new VoogSearch(searchForm, {
+        // This defines the number of results per query.
+        per_page: 10,
+        // Language code for restricting the search to page language.
+        lang: languageCode,
+        // If given, an DOM element results are rendered inside that element
+        resultsContainer: $('.js-search-results').get(0),
+        // Defines if modal should close on sideclick.
+        sideclick: true,
+        // Mobile checkpoint.
+        mobileModeWidth: 500,
+        // Updates results on every keypress.
+        updateOnKeypress: true,
+        // String for feedback if no results are found.
+        noResults: noResultsString
+      });
+    }
+  };
+
   // Returns the suitable version of the image depending on the viewport width.
   var getImageByWidth = function(sizes, targetWidth) {
     var prevImage;
@@ -151,7 +175,8 @@
       articleBgCommit: articleBgCommit,
       bgPickerPreview: bgPickerPreview,
       bgPickerCommit: bgPickerCommit,
-      bgPickerColorScheme: bgPickerColorScheme
+      bgPickerColorScheme: bgPickerColorScheme,
+      bindSiteSearch: bindSiteSearch
   });
 
   var debounce = function( func, wait, immediate ) {
@@ -257,6 +282,10 @@
       $('.js-search-form').removeClass('not-empty').find('.search-input').val('');
       var $c = $('.header .search-holder');
       $c.find('.search-input').get(0).focus();
+    });
+
+    $('.js-search-results').click(function(event) {
+      event.preventDefault();
     });
 
     $('.js-comment-form-toggler').click(function(event) {

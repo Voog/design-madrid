@@ -29,6 +29,7 @@
   </div>
 
   {% include "langmenu-mobile" %}
+  {% include "site-signout" %}
   {% include "javascripts" %}
 </body>
 </html>

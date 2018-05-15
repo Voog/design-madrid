@@ -3,9 +3,10 @@
 <html class="content-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}
-  {% include "html-head" common_page: true %}
+  {% include "html-head" %}
 </head>
-<body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
+<body class="item-list-page main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
+  {% include "template-svg-spritesheet" %}
 
   <div class="holder">
     {% include "header" %}
@@ -13,13 +14,27 @@
     <main class="main" data-search-indexing-allowed="true">
       <div class="main-inner">
         <div class="content-wrap">
-          {% include "submenu" exclude_products: true %}
+          {% if page.level != 0 %}
+            {% include "submenu_for_current" exclude_products: true %}
+          {% endif %}
           <div class="wrap">
 
             <div class="content formatted cfx">
               <div class="content-header">{% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
-              {% include "submenu" exclude_products: true %}
               <div class="content-body" {{ edy_intro_edit_text }}>{% content %}</div>
+
+              {% include "menu-breadcrumbs" %}
+              <section class="content-item-boxes">
+                {% if site.root_item.selected? %}
+                  {% for level_1 in site.visible_menuitems_with_data %}
+                    {% if level_1.layout_title == product_list_layout or level_1.layout_title == product_layout %}
+                      {% include "product-list-item" menu_level: level_1 %}
+                    {% endif %}
+                  {% endfor %}
+                {% else %}
+                  {% include "product-list-loop" %}
+                {% endif %}
+              </section>
             </div>
           </div>
         </div>
@@ -31,5 +46,7 @@
   {% include "langmenu-mobile" %}
   {% include "site-signout" %}
   {% include "javascripts" %}
+  {% include "edicy-tools" items_page: true  %}
+
 </body>
 </html>

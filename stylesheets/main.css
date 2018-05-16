@@ -265,7 +265,7 @@ body, .lang-menu-btn {
 }
 
 /* button */
-.search .search-submit, .lang-menu-btn, .lang-options .option-btn, .voog-bg-picker-btn {
+.search .search-submit, .lang-menu-btn, .lang-options .option-btn {
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -273,10 +273,10 @@ body, .lang-menu-btn {
   background: none;
   font-family: "Montserrat", sans-serif;
 }
-.search .search-submit:focus, .lang-menu-btn:focus, .lang-options .option-btn:focus, .voog-bg-picker-btn:focus {
+.search .search-submit:focus, .lang-menu-btn:focus, .lang-options .option-btn:focus {
   outline: none;
 }
-.search .search-submit::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .lang-options .option-btn::-moz-focus-inner, .voog-bg-picker-btn::-moz-focus-inner {
+.search .search-submit::-moz-focus-inner, .lang-menu-btn::-moz-focus-inner, .lang-options .option-btn::-moz-focus-inner {
   padding: 0;
   border: none;
 }
@@ -2313,11 +2313,6 @@ body {
 
 .edy-positionable-container-right {
   margin-left: 20px;
-}
-
-.voog-bg-picker-btn {
-  position: absolute;
-  z-index: 50 !important;
 }
 
 .edy-bar-open:after {

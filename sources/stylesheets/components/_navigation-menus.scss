@@ -18,6 +18,14 @@
     .menu-item {
       padding-left: 0;
     }
+
+    .current {
+      &.menu-item {
+        a {
+          color: rgba(0,0,0,1);
+        }
+      }
+    }
   }
 
   .menu-item {

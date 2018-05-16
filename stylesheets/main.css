@@ -3301,6 +3301,9 @@ body {
 .menu-horizontal.menu-breadcrumbs .menu-item {
   padding-left: 0;
 }
+.menu-horizontal.menu-breadcrumbs .current.menu-item a {
+  color: black;
+}
 .menu-horizontal .menu-item {
   display: inline-block;
   font-size: 11px;

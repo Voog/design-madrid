@@ -19,7 +19,7 @@
           {% endif %}
           <div class="wrap">
 
-            <div class="content formatted cfx">
+            <div class="content formatted cfx" {{ edy_intro_edit_text }}>
               <div class="intro-content" data-search-indexing-allowed="true">{% content %}</div>
 
               {% include "menu-breadcrumbs" %}

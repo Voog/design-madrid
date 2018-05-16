@@ -270,5 +270,11 @@
 .item-page {
   .content-header {
     margin-bottom: 20px;
+
+    .content-item-title {
+      h1 {
+        text-align: left;
+      }
+    }
   }
 }

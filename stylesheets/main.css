@@ -3284,6 +3284,9 @@ body {
 .item-page .content-header {
   margin-bottom: 20px;
 }
+.item-page .content-header .content-item-title h1 {
+  text-align: left;
+}
 
 .menu-horizontal {
   padding-left: 0 !important;

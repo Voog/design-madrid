@@ -20,8 +20,7 @@
           <div class="wrap">
 
             <div class="content formatted cfx">
-              <div class="content-header">{% contentblock name="content_header" publish_default_content="true" %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
-              <div class="content-body" {{ edy_intro_edit_text }}>{% content %}</div>
+              <div class="intro-content" data-search-indexing-allowed="true">{% content %}</div>
 
               {% include "menu-breadcrumbs" %}
               <section class="content-item-boxes">

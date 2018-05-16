@@ -6,6 +6,11 @@
     // sass-lint:disable class-name-format
     .form_field {
       padding-top: 12px;
+
+      label {
+        font-size: 14px;
+        padding-bottom: 0;
+      }
     }
     // sass-lint:enable class-name-format
   }
@@ -19,6 +24,7 @@
 
     .form_field_select {
       width: initial;
+      outline: 0;
     }
     // sass-lint:enable class-name-format
   }

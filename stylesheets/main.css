@@ -3297,10 +3297,6 @@ body {
 }
 .menu-horizontal.menu-breadcrumbs {
   line-height: 16px;
-  padding-bottom: 15px;
-}
-.item-list-page .menu-horizontal.menu-breadcrumbs {
-  padding-bottom: 0;
 }
 .menu-horizontal.menu-breadcrumbs .menu-item {
   padding-left: 0;

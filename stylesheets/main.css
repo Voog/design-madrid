@@ -3293,6 +3293,30 @@ body {
   text-align: left;
 }
 
+@media screen and (max-width: 500px), screen and (max-height: 325px) {
+  .item-page .sub-menu,
+  .item-list-page .sub-menu {
+    display: block;
+    margin-right: 0;
+  }
+  .item-page .sub-menu ul,
+  .item-list-page .sub-menu ul {
+    padding: 0;
+  }
+  .item-page .sub-menu ul li,
+  .item-list-page .sub-menu ul li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .item-page .wrap,
+  .item-list-page .wrap {
+    clear: both;
+  }
+  .item-page .wrap .content,
+  .item-list-page .wrap .content {
+    padding: 0 0 70px;
+  }
+}
 .menu-horizontal {
   padding-left: 0 !important;
 }

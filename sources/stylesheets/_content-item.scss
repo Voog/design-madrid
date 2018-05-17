@@ -278,3 +278,30 @@
     }
   }
 }
+
+@media screen and (max-width: $break-small), screen and (max-height: 325px)  {
+  .item-page,
+  .item-list-page {
+    .sub-menu {
+      display: block;
+      margin-right: 0;
+
+      ul {
+        padding: 0;
+
+        li {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    }
+
+    .wrap {
+      clear: both;
+
+      .content {
+        padding: 0 0 70px;
+      }
+    }
+  }
+}

@@ -942,7 +942,6 @@ body {
 
 /* submenu */
 .sub-menu {
-  min-height: 35px;
   padding: 0 50px;
   font-size: 14px;
   line-height: 1.1;

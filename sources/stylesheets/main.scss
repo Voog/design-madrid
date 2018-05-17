@@ -730,6 +730,10 @@ $header-inner-height: 28px;
     li {
       display: inline-block;
       padding: 0 5px;
+
+      &.is-hidden {
+        display: none; 
+      }
     }
 
     a {

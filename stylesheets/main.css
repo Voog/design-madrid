@@ -919,6 +919,9 @@ body {
   display: inline-block;
   padding: 0 5px;
 }
+.main-menu ul li.is-hidden {
+  display: none;
+}
 .main-menu ul a {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;

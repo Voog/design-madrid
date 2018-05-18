@@ -46,6 +46,6 @@
   {% include "site-signout" %}
   {% include "javascripts" %}
   {% include "edicy-tools" items_page: true  %}
-
+  <script>template.initItemsPage();</script>
 </body>
 </html>

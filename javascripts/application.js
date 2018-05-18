@@ -1742,6 +1742,13 @@ $.fn[ pluginName ] = function ( arg ) {
   };
 
   // ===========================================================================
+  // Function to detect if site is displayed in editmode.
+  // ===========================================================================
+  var editmode = function () {
+    return $('html').hasClass('editmode');
+  };
+
+  // ===========================================================================
   // Sets functions that will be initiated globally.
   // ===========================================================================
   var init = function() {

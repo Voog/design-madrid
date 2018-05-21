@@ -106,13 +106,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/submenu_for_current.tpl",
-      "layout_name": "submenu for current",
-      "title": "submenu for current"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/edicy-tools-variables.tpl",
       "layout_name": "edicy-tools-variables",
       "title": "edicy-tools-variables"
@@ -151,6 +144,13 @@
       "file": "components/product-list-item.tpl",
       "layout_name": "product-list-item",
       "title": "product-list-item"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/submenu-for-current.tpl",
+      "layout_name": "submenu-for-current",
+      "title": "submenu-for-current"
     },
     {
       "content_type": "component",

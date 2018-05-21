@@ -38,7 +38,7 @@
       <div class="main-inner">
         <div class="content-wrap">
           {% if page.level != 0 %}
-            {% include "submenu_for_current" exclude_products: true %}
+            {% include "submenu-for-current" exclude_products: true %}
           {% endif %}
           <div class="wrap">
 

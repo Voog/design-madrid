@@ -333,6 +333,31 @@ main .post-content {
     }
   }
 
+// Breadcrumbs menu
+.menu-horizontal {
+  .menu-separator {
+    color: var(--content-submenu-color);
+  }
+
+  &.menu-breadcrumbs {
+    .menu-item {
+      a {
+        color: var(--content-submenu-color);
+        opacity: .43;
+      }
+    }
+
+    .current {
+      &.menu-item {
+        a {
+          color: var(--content-submenu-active-color);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
 // Footer
 .footer {
   background-color: var(--footer-background-color);

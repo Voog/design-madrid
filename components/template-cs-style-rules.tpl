@@ -290,6 +290,18 @@ main .post-content a {
   text-transform: var(--content-submenu-active-text-transform);
 }
 
+.menu-horizontal .menu-separator {
+  color: var(--content-submenu-color);
+}
+.menu-horizontal.menu-breadcrumbs .menu-item a {
+  color: var(--content-submenu-color);
+  opacity: .43;
+}
+.menu-horizontal.menu-breadcrumbs .current.menu-item a {
+  color: var(--content-submenu-active-color);
+  opacity: 1;
+}
+
 .footer {
   background-color: var(--footer-background-color);
 }

@@ -20,7 +20,7 @@
           <div class="wrap">
 
             <div class="content formatted cfx" {{ edy_intro_edit_text }}>
-              <div class="intro-content formatted" data-search-indexing-allowed="true">{% content %}</div>
+              <div class="content-body intro-content formatted" data-search-indexing-allowed="true">{% content %}</div>
 
               {% include "menu-breadcrumbs" %}
               <section class="content-item-boxes">

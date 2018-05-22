@@ -3335,8 +3335,17 @@ body {
 .menu-horizontal.menu-breadcrumbs .menu-item {
   padding-left: 0;
 }
+.menu-horizontal.menu-breadcrumbs .menu-item a {
+  color: #000;
+  opacity: .43;
+}
+.menu-horizontal.menu-breadcrumbs .menu-item a:hover {
+  color: #000;
+  opacity: 1;
+}
 .menu-horizontal.menu-breadcrumbs .current.menu-item a {
-  color: black;
+  color: #000;
+  opacity: 1;
 }
 .menu-horizontal .menu-item {
   display: inline-block;

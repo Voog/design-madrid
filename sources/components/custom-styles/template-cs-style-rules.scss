@@ -343,7 +343,10 @@ main .post-content {
     .menu-item {
       a {
         color: var(--content-submenu-color);
-        opacity: .43;
+
+        &:hover {
+          color: var(--content-submenu-hover-color);
+        }
       }
     }
 
@@ -351,7 +354,6 @@ main .post-content {
       &.menu-item {
         a {
           color: var(--content-submenu-active-color);
-          opacity: 1;
         }
       }
     }

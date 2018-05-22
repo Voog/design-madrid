@@ -17,12 +17,23 @@
 
     .menu-item {
       padding-left: 0;
+
+      a {
+        color: #000;
+        opacity: .43;
+      }
+
+      a:hover {
+        color: #000;
+        opacity: 1;
+      }
     }
 
     .current {
       &.menu-item {
         a {
-          color: rgba(0,0,0,1);
+          color: #000;
+          opacity: 1;
         }
       }
     }

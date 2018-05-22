@@ -295,11 +295,12 @@ main .post-content a {
 }
 .menu-horizontal.menu-breadcrumbs .menu-item a {
   color: var(--content-submenu-color);
-  opacity: .43;
+}
+.menu-horizontal.menu-breadcrumbs .menu-item a:hover {
+  color: var(--content-submenu-hover-color);
 }
 .menu-horizontal.menu-breadcrumbs .current.menu-item a {
   color: var(--content-submenu-active-color);
-  opacity: 1;
 }
 
 .footer {

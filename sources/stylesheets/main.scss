@@ -732,7 +732,7 @@ $header-inner-height: 28px;
       padding: 0 5px;
 
       &.is-hidden {
-        display: none; 
+        display: none;
       }
     }
 
@@ -2325,8 +2325,11 @@ $header-inner-height: 28px;
     a {
       line-height: 1.05;
       display: block;
+      color: rgba(0,0,0,.43) !important;
+
       &.active {
         text-transform: uppercase;
+        color: rgba(0,0,0,1) !important;
       }
     }
   }

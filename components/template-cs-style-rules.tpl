@@ -399,6 +399,10 @@ main .content table th {
   text-transform: var(--form-field-text-text-transform);
 }
 
+.formatted .edy-buy-button-variants .form_field_select {
+  color: var(--form-field-text-color);
+}
+
 label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--form-field-text-color);
 }

@@ -488,6 +488,14 @@ main .content {
   text-transform: var(--form-field-text-text-transform);
 }
 
+.formatted {
+  .edy-buy-button-variants {
+    .form_field_select {
+      color: var(--form-field-text-color);
+    }
+  }
+}
+
 label {
   .form_field_checkbox {
     // TODO: Restore when Safari doesn't crash using it anymore.

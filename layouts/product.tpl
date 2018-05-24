@@ -77,7 +77,7 @@
                         </div>
                       {% endif %}
                     {% endif %}
-                    <div class="formatted" data-search-indexing-allowed="true">{% content name="gallery" %}</div>
+                    <div class="content-body formatted" data-search-indexing-allowed="true">{% content name="gallery" %}</div>
                   </div>
                   <div class="content-body">
                     <header class="content-header">

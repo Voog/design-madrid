@@ -333,6 +333,33 @@ main .post-content {
     }
   }
 
+// Breadcrumbs menu
+.menu-horizontal {
+  .menu-separator {
+    color: var(--content-submenu-color);
+  }
+
+  &.menu-breadcrumbs {
+    .menu-item {
+      a {
+        color: var(--content-submenu-color);
+
+        &:hover {
+          color: var(--content-submenu-hover-color);
+        }
+      }
+    }
+
+    .current {
+      &.menu-item {
+        a {
+          color: var(--content-submenu-active-color);
+        }
+      }
+    }
+  }
+}
+
 // Footer
 .footer {
   background-color: var(--footer-background-color);
@@ -459,6 +486,14 @@ main .content {
   font-weight: var(--form-field-text-font-weight);
   text-decoration: var(--form-field-text-text-decoration);
   text-transform: var(--form-field-text-text-transform);
+}
+
+.formatted {
+  .edy-buy-button-variants {
+    .form_field_select {
+      color: var(--form-field-text-color);
+    }
+  }
 }
 
 label {

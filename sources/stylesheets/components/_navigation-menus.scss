@@ -1,0 +1,60 @@
+
+// Product list menu
+.menu-horizontal {
+  padding-left: 0 !important;
+
+  .menu-separator {
+    opacity: .36;
+    font-size: 12px;
+
+    &:first-child {
+      display: none;
+    }
+  }
+
+  &.menu-breadcrumbs {
+    line-height: 16px;
+
+    .menu-item {
+      padding-left: 0;
+
+      a {
+        color: #000;
+        opacity: .43;
+      }
+
+      a:hover {
+        color: #000;
+        opacity: 1;
+      }
+    }
+
+    .current {
+      &.menu-item {
+        a {
+          color: #000;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .menu-item {
+    display: inline-block;
+    font-size: 11px;
+  }
+}
+
+.item-list-page {
+  .menu-breadcrumbs {
+    margin: 0;
+  }
+}
+
+.menu-item-cms {
+  margin-left: 10px;
+
+  &.float-right {
+    float: right;
+  }
+}

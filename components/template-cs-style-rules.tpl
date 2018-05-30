@@ -290,6 +290,19 @@ main .post-content a {
   text-transform: var(--content-submenu-active-text-transform);
 }
 
+.menu-horizontal .menu-separator {
+  color: var(--content-submenu-color);
+}
+.menu-horizontal.menu-breadcrumbs .menu-item a {
+  color: var(--content-submenu-color);
+}
+.menu-horizontal.menu-breadcrumbs .menu-item a:hover {
+  color: var(--content-submenu-hover-color);
+}
+.menu-horizontal.menu-breadcrumbs .current.menu-item a {
+  color: var(--content-submenu-active-color);
+}
+
 .footer {
   background-color: var(--footer-background-color);
 }
@@ -384,6 +397,10 @@ main .content table th {
   -webkit-text-decoration: var(--form-field-text-text-decoration);
           text-decoration: var(--form-field-text-text-decoration);
   text-transform: var(--form-field-text-text-transform);
+}
+
+.formatted .edy-buy-button-variants .form_field_select {
+  color: var(--form-field-text-color);
 }
 
 label .form_field_radio:checked + .form_control_indicator::before {

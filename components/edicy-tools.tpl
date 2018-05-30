@@ -10,6 +10,19 @@
       id: '{{ page.id }}'
     });
 
+    {% if items_page %}
+      template.bindContentItemImgDropAreas('{{ "drag_picture_for_product_here" | lc: editor_locale }}');
+      template.bindContentItemImageCropToggle();
+
+      {%if site.data.settings_root_item %}
+        rootItemValuesObj = {{ site.data.settings_root_item | json }};
+      {% else %}
+        rootItemValuesObj = {};
+      {% endif %};
+
+      template.bindRootItemSettings(rootItemValuesObj);
+    {% endif %}
+
     $('.js-option-toggle-flags').on('click', function(event) {
       event.preventDefault();
 

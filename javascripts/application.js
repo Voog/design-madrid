@@ -661,11 +661,19 @@ var growTextarea=function(){sendContentToMirror(this)};var mirror=createMirror(t
     $(bgPickerArea).find('.js-background-color').css({'background-color' : bgPickerColor});
   };
 
+  var normalizeValue = function(value) {
+    if (value == null || (typeof value == 'string' && value.match(/^[\\'"]+$/))) {
+      return '';
+    } else {
+      return value;
+    }
+  };
+
   // Header background image and color save logic function.
   var bgPickerCommit = function(dataKey, data) {
     var commitData = $.extend(true, {}, data);
     commitData.image = data.image || '';
-    commitData.imageSizes = data.imageSizes || '';
+    commitData.imageSizes = normalizeValue(data.imageSizes);
     commitData.color = data.color || 'rgba(255,255,255,0)';
     commitData.combinedLightness = bgPickerCombinedLightness;
     pageData.set(dataKey, commitData);

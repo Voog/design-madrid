@@ -8,11 +8,11 @@
 <body class="item-list-page main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
   {% include "template-svg-spritesheet" %}
 
-  <div class="holder">
+  <div class="holder" id="main">
     {% include "header" %}
 
     <main class="main" data-search-indexing-allowed="true">
-      <div class="main-inner">
+      <div class="main-inner {{ page.data.transition_settings.page_transition }}">
         <div class="content-wrap">
           {% if page.level != 0 %}
             {% include "submenu-for-current" exclude_products: true %}

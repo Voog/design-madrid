@@ -8,12 +8,12 @@
   {% include "edicy-tools-styles" %}
 </head>
 <body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
-  <div class="holder">
+  <div class="holder" id="main">
 
     {% include "header" %}
 
     <main class="main" data-search-indexing-allowed="true">
-      <div class="main-inner">
+      <div class="main-inner {{ page.data.transition_settings.page_transition }}">
         <div class="content-half content-left js-bg-picker-area">
           {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-image="{{ content_left_bg_image }}" data-bg-image-sizes="{{ content_left_bg_image_sizes_str | escape }}" data-bg-color="{{ content_left_bg_color }}" data-bg-color-data="{{ content_left_bg_color_data_str | escape }}"></button>{% endif %}
           <div class="background-color js-background-color"></div>

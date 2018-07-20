@@ -9,12 +9,12 @@
 </head>
 <body class="main-menu-not-fitting {% if site.search.enabled %} search-enabled{% endif %}">
 
-  <div class="holder">
+  <div class="holder" id="main">
     {% include "header" %}
 
     <main class="main swipe" data-search-indexing-allowed="true">
       <a href="#" class="scroller-arrow "><span class="animated-bounce"></span></a>
-      <div class="main-inner">
+      <div class="main-inner {{ page.data.transition_settings.page_transition }}">
         {% assign article_boxes_count = 0 %}
 
         {% for article in articles %}

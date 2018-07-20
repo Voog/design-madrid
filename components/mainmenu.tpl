@@ -46,6 +46,7 @@
           {% endif %}
 
           <li {{ edy_intro_add_page }}>{% menuadd %}</li>
+          <li class="edy-pad-small-16 "> {% include "transition-settings-editor" %}</li>
         {% endif %}
       </ul>
     </div>

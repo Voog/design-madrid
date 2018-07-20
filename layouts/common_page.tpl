@@ -7,11 +7,11 @@
 </head>
 <body class="main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
 
-  <div class="holder">
+  <div class="holder" id="main">
     {% include "header" %}
 
     <main class="main" data-search-indexing-allowed="true">
-      <div class="main-inner">
+      <div class="main-inner {{ page.data.transition_settings.page_transition }}">
         <div class="content-wrap">
           {% include "submenu" exclude_products: true %}
           <div class="wrap">

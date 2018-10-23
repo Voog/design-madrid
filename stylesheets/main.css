@@ -2154,6 +2154,11 @@ body {
   content: '';
 }
 
+[data-lang-code^="fr_CA"]:after {
+  background-position: -105px -60px;
+  content: '';
+}
+
 /* langmenu */
 .lang-menu {
   position: relative;

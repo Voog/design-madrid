@@ -1,6 +1,6 @@
 {% if editmode or site.has_many_languages? %}
   <nav class="lang-menu js-popup-menu js-menu-lang-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
-    <button role="button" class="lang-menu-btn js-popup-menu-btn lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_code }}" {{ edy_intro_add_lang }}>
+    <button role="button" class="lang-menu-btn js-popup-menu-btn lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_locale }}" {{ edy_intro_add_lang }}>
 
       {% if editmode or flags_state == nil or flags_state == false %}
       <span class="lang-title">
@@ -14,7 +14,7 @@
       {% if editmode or site.has_many_languages? %}
         <ul class="menu">
           {% for language in site.languages %}
-            <li><a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.code }}">{{ language.title }}</a></li>
+            <li><a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.locale }}">{{ language.title }}</a></li>
           {% endfor %}
 
           {% if editmode %}<li class="add-lang-btn">{% languageadd %}</li>{% endif %}

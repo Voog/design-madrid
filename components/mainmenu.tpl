@@ -2,7 +2,7 @@
 
   {% if editmode or site.has_many_languages? %}
     <div class="lang-menu-btn-holder js-menu-lang-wrap {% if flags_state %}flags-enabled{% else %}flags-disabled{% endif %}">
-      <button role="button" class="lang-menu-btn js-mobile-lang-menu-btn lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_code }}">
+      <button role="button" class="lang-menu-btn js-mobile-lang-menu-btn lang-flag lang-flag-{{ page.language_code }}" data-lang-code="{{ page.language_locale }}">
         <span class="lang-title">
           {% for language in site.languages %}{% if language.selected? %}{{ language.title }}{% endif %}{% endfor %}
           <span class="ico-popover-toggle">▼</span>

@@ -15,9 +15,14 @@
     <main class="main swipe" data-search-indexing-allowed="true">
       <a href="#" class="scroller-arrow "><span class="animated-bounce"></span></a>
       <div class="main-inner">
+        {% if editmode %}
+          {% include "blog-settings-editor" %}
+        {% endif %}
+
         {% assign article_boxes_count = 0 %}
 
         {% for article in articles %}
+          {% include "blog-settings-variables" %}
           {% capture dont_render %}
             {% if forloop.first %}
               {% if editmode %}
@@ -56,6 +61,7 @@
         {% endif %}
 
         {% for article in articles %}
+          {% include "blog-settings-variables" %}
           {% capture dont_render %}
             {% if forloop.first %}
               {% if editmode %}
@@ -97,7 +103,7 @@
                     {% assign article_date_format = "long" %}
                   {% endif %}
 
-                  <time class="article-date" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                  <time class="article-date{% if article_data_show_date_defined != true %} site-data{% endif %}{% if show_article_date == false %} hide-article-date{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
                 </div>
               </div>
             </div>

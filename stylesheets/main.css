@@ -318,7 +318,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-align: center;
-  margin-bottom: 48px;
 }
 
 h2 {
@@ -484,6 +483,10 @@ blockquote {
 .jq-select-inner {
   overflow: hidden;
   white-space: nowrap;
+}
+
+.article-settings-wrap {
+  text-align: center;
 }
 
 /* form */
@@ -1293,6 +1296,11 @@ body {
   bottom: 50px;
   z-index: 10;
 }
+.blog-list-page .main .article .article-content .hide-article-date,
+.blog-list-page .main .new-article .article-content .hide-article-date, .front-page .main .article .article-content .hide-article-date,
+.front-page .main .new-article .article-content .hide-article-date {
+  display: none;
+}
 .blog-list-page .main .article img,
 .blog-list-page .main .new-article img, .front-page .main .article img,
 .front-page .main .new-article img {
@@ -1571,6 +1579,10 @@ body {
           hyphens: auto;
   word-break: break-word;
   word-wrap: break-word;
+  text-align: center;
+}
+.post-header.hide-article-date {
+  padding-bottom: 20px;
 }
 .post-header .post-date {
   display: block;
@@ -1578,6 +1590,12 @@ body {
   font-size: 18px;
   color: #818181;
   padding-top: 10px;
+}
+.post-header.hide-article-date {
+  display: none;
+}
+.post-header.hide-article-date:before {
+  padding-bottom: 20px;
 }
 
 .post-body {
@@ -1606,6 +1624,9 @@ body {
 
 .post-bottom {
   padding: 20px 0 0;
+}
+.post-bottom.hide-article-comments {
+  display: none;
 }
 .post-bottom .left, .post-bottom .right {
   width: 50%;
@@ -3073,6 +3094,12 @@ body {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.blog-settings-wrap {
+  position: absolute;
+  margin: 16px 0 0 10px;
+  z-index: 50;
 }
 
 .content-item-box {

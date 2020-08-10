@@ -83,7 +83,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-align: center;
-  margin-bottom: 48px;
 }
 
 h2 {
@@ -257,6 +256,10 @@ blockquote {
 .jq-select-inner {
   overflow: hidden;
   white-space: nowrap;
+}
+
+.article-settings-wrap {
+  text-align: center;
 }
 
 /* form */
@@ -1117,6 +1120,10 @@ $header-inner-height: 28px;
           right: 30px;
           bottom: 50px;
           z-index: 10;
+
+          .hide-article-date {
+            display: none;
+          }
         }
 
         img {
@@ -1413,6 +1420,11 @@ $header-inner-height: 28px;
   /* post */
   .post-header {
     @include hyphenate(true);
+    text-align: center;
+
+    &.hide-article-date {
+      padding-bottom: 20px;
+    }
 
     .post-date {
       display: block;
@@ -1420,6 +1432,13 @@ $header-inner-height: 28px;
       font-size: 18px;
       color: $third-color;
       padding-top: 10px;
+    }
+
+    &.hide-article-date {
+      display: none;
+      &:before {
+        padding-bottom: 20px;
+      }
     }
   }
 
@@ -1448,6 +1467,10 @@ $header-inner-height: 28px;
 
   .post-bottom {
     padding: 20px 0 0;
+
+    &.hide-article-comments {
+      display: none;
+    }
 
     .left, .right {
       width: 50%;
@@ -2866,6 +2889,12 @@ $header-inner-height: 28px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.blog-settings-wrap {
+  position: absolute;
+  margin: 16px 0 0 10px;
+  z-index: 50;
 }
 
 // COMPONENTS

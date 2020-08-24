@@ -1581,9 +1581,6 @@ body {
   word-wrap: break-word;
   text-align: center;
 }
-.post-header.hide-article-date {
-  padding-bottom: 20px;
-}
 .post-header .post-date {
   display: block;
   font-weight: normal;
@@ -1591,10 +1588,10 @@ body {
   color: #818181;
   padding-top: 10px;
 }
-.post-header.hide-article-date {
+.post-header .hide-article-date {
   display: none;
 }
-.post-header.hide-article-date:before {
+.post-header .hide-article-date:before {
   padding-bottom: 20px;
 }
 
@@ -3100,6 +3097,12 @@ body {
   position: absolute;
   margin: 16px 0 0 10px;
   z-index: 50;
+}
+
+.article-settings-wrap {
+  line-height: 0px;
+  padding-bottom: 16px;
+  padding-top: 10px;
 }
 
 .content-item-box {

@@ -22,7 +22,6 @@
         {% assign article_boxes_count = 0 %}
 
         {% for article in articles %}
-          {% include "blog-settings-variables" %}
           {% capture dont_render %}
             {% if forloop.first %}
               {% if editmode %}

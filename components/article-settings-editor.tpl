@@ -87,26 +87,19 @@
 
       preview: function(data) {
        var $articleDate = $('.post-date'),
-        $articleHeader = $('.post-header'),
         $articleComment =$('.post-bottom');
         if (data.show_date == true) {
           $articleDate.removeClass('hide-article-date');
           $articleDate.addClass('show-article-date');
-          $articleHeader.removeClass('hide-article-date');
-          $articleHeader.addClass('show-article-date');
         } else if (data.show_date == false) {
-          $articleHeader.removeClass('show-article-date');
-          $articleHeader.addClass('hide-article-date');
           $articleDate.removeClass('show-article-date');
           $articleDate.addClass('hide-article-date');
         }
 
         if (data.show_comments == true) {
-          $articleComment.removeClass('hide-article-comments');
-          $articleComment.addClass('show-article-comments');
+          $articleComment.show();
         } else if (data.show_comments == false) {
-          $articleComment.removeClass('show-article-comments');
-          $articleComment.addClass('hide-article-comments');
+          $articleComment.hide();
         }
       },
 

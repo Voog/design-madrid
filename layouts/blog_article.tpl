@@ -18,7 +18,7 @@
           <div class="wrap">
             <div class="content formatted cfx">
 
-              <header>
+              <header class="post-header">
                 {% assign article_year = article.created_at | format_date: "%Y" | to_num %}
                 {% if article_year == current_year %}
                   {% assign article_date_format = "long_without_year" %}
@@ -29,13 +29,13 @@
                 <h1>
                   {% editable article.title %}
                 </h1>  
-
-                <div class="post-header">
-                  <time class="post-date{% if show_article_date == false %} hide-article-date{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                <div>
+                  {% if editmode or show_article_date != false %}
+                    <time class="post-date{% if show_article_date == false %} hide-article-date{% endif %}" datetime="{{ article.created_at | date: '%Y-%m-%d' }}">{{ article.created_at | format_date: article_date_format }}</time>
+                  {% endif %}
                 </div>
-
                 {% if editmode %}
-                    {% include "article-settings-editor" %}
+                  {% include "article-settings-editor" %}
                 {% endif %}
 
               </header>             
@@ -83,10 +83,12 @@
                 </div>
               {% endif %}
 
-              <section class="post-bottom formatted cfx{% if show_article_comments == false %} hide-article-comments{% endif %}">
-                {% include "comment-form" %}
-                {% include "comments" %}
-              </section>
+              {% if editmode or show_article_comments == true %}
+                <section class="post-bottom formatted cfx"{% if editmode and show_article_comments == false %} style="display: none;"{% endif %}>
+                  {% include "comment-form" %}
+                  {% include "comments" %}
+                </section>
+              {% endif %}
 
             </div>
           </div>

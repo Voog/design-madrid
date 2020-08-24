@@ -1422,10 +1422,6 @@ $header-inner-height: 28px;
     @include hyphenate(true);
     text-align: center;
 
-    &.hide-article-date {
-      padding-bottom: 20px;
-    }
-
     .post-date {
       display: block;
       font-weight: normal;
@@ -1434,7 +1430,7 @@ $header-inner-height: 28px;
       padding-top: 10px;
     }
 
-    &.hide-article-date {
+    .hide-article-date {
       display: none;
       &:before {
         padding-bottom: 20px;
@@ -2890,11 +2886,15 @@ $header-inner-height: 28px;
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
-
 .blog-settings-wrap {
   position: absolute;
   margin: 16px 0 0 10px;
   z-index: 50;
+}
+.article-settings-wrap {
+  line-height: 0px;
+  padding-bottom: 16px;
+  padding-top: 10px;
 }
 
 // COMPONENTS

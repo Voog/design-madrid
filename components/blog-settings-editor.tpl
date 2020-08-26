@@ -13,14 +13,14 @@
   <!-- Setings popover initiation. -->
   <script>
     var siteData = new Edicy.CustomData({
-      type: 'site',
+      type: 'site'
     });
 
     {% if site.data.article_settings %}
       var globalDataValues = {{ site.data.article_settings | json }};
     {% else %}
-       var globalDataValues = {}
-    {% endif %};
+       var globalDataValues = {};
+    {% endif %}
 
     var show_comments, show_dates;
 
@@ -53,7 +53,7 @@
           "states": {
             "on": true,
             "off": false
-          },
+          }
         },
         {
           "titleI18n": "publishing_date",
@@ -63,8 +63,8 @@
           "states": {
             "on": true,
             "off": false
-          },
-        },
+          }
+        }
       ],
 
       // Binded data object which should contain custom data object.

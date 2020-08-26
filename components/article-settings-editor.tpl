@@ -20,14 +20,14 @@
     {% if article.data.article_settings %}
       var articleDataValues = {{ article.data.article_settings | json }};
     {% else %}
-      var articleDataValues = {}
-    {% endif %};
+      var articleDataValues = {};
+    {% endif %}
 
     {% if site.data.article_settings %}
       var globalDataValues = {{ site.data.article_settings | json }};
     {% else %}
-       var globalDataValues = {}
-    {% endif %};
+       var globalDataValues = {};
+    {% endif %}
 
     var show_comments, show_date;
 
@@ -63,18 +63,18 @@
           "states": {
             "on": true,
             "off": false
-          },
+          }
         },
-      {
-        "titleI18n": "publishing_date",
-        "type": "toggle",
-        "key": "show_date",
-        "tooltipI18n": "toggle_current_article_date",
-        "states": {
-          "on": true,
-          "off": false
-        },
-      },
+        {
+          "titleI18n": "publishing_date",
+          "type": "toggle",
+          "key": "show_date",
+          "tooltipI18n": "toggle_current_article_date",
+          "states": {
+            "on": true,
+            "off": false
+          }
+        }
       ],
 
       // Binded data object which should contain custom data object.

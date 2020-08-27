@@ -24,13 +24,13 @@
 
     var show_comments, show_dates;
 
-    if (globalDataValues.show_comments !== null && globalDataValues.show_comments !== '') {
+    if (globalDataValues.show_comments != null && globalDataValues.show_comments !== '') {
       show_comments = Boolean(globalDataValues.show_comments)
     } else {
       show_comments = true;
     }
 
-    if (globalDataValues.show_dates !== null && globalDataValues.show_dates !== '') {
+    if (globalDataValues.show_dates != null && globalDataValues.show_dates !== '') {
       show_dates = Boolean(globalDataValues.show_dates)
     } else {
       show_dates = true;

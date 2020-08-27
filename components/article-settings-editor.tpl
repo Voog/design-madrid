@@ -31,17 +31,17 @@
 
     var show_comments, show_date;
 
-    if (articleDataValues.show_comments !== null && articleDataValues.show_comments !== '') {
+    if (articleDataValues.show_comments != null && articleDataValues.show_comments !== '') {
       show_comments = Boolean(articleDataValues.show_comments)
-    } else if (globalDataValues.show_comments !== null && globalDataValues.show_comments !== '') {
+    } else if (globalDataValues.show_comments != null && globalDataValues.show_comments !== '') {
       show_comments = Boolean(globalDataValues.show_comments)
     } else {
       show_comments = true;
     }
 
-    if (articleDataValues.show_date !== null && articleDataValues.show_date !== '') {
+    if (articleDataValues.show_date != null && articleDataValues.show_date !== '') {
       show_date = Boolean(articleDataValues.show_date)
-    } else if (globalDataValues.show_dates !== null && globalDataValues.show_dates !== '') {
+    } else if (globalDataValues.show_dates != null && globalDataValues.show_dates !== '') {
       show_date = Boolean(globalDataValues.show_dates)
     } else {
       show_date = true;

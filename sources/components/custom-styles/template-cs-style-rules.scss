@@ -97,9 +97,9 @@ main .post-content {
   line-height: var(--content-line-height);
 }
 
-main .content-body,
+main .content-wrap .content-body,
 main .post-content,
-main .footer-content {
+footer.footer .footer-content {
   a {
     color: var(--content-links-color);
     font-style: var(--content-links-font-style);

@@ -209,21 +209,21 @@
     "featured": true
   */
   --content-submenu-color: #818181;
- /* VoogStyle
-  "pathI18n": ["content", "sub_menu", "hover"],
-  "titleI18n": "color",
-  "type": "button",
-  "editor": "colorPicker",
-  "scope": "global"
-*/
+  /* VoogStyle
+    "pathI18n": ["content", "sub_menu", "hover"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
   --content-submenu-hover-color: black;
- /* VoogStyle
-  "pathI18n": ["content", "sub_menu", "active"],
-  "titleI18n": "color",
-  "type": "button",
-  "editor": "colorPicker",
-  "scope": "global"
-*/
+  /* VoogStyle
+    "pathI18n": ["content", "sub_menu", "active"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global"
+  */
   --content-submenu-active-color: black;
   /* VoogStyle
     "pathI18n": ["content", "text"],
@@ -262,20 +262,20 @@
   */
   --content-color: #333;
   /* VoogStyle
-      "pathI18n": ["content", "link", "normal"],
-      "titleI18n": "font_weight",
-      "type": "button",
-      "editor": "toggleIcon",
-      "states": {
-        "on": "600",
-        "off": "400"
-      },
-      "icon": "bold",
-      "scope": "global",
-      "boundVariables": [
-        "--content-links-hover-font-weight"
-      ]
-    */
+    "pathI18n": ["content", "link", "normal"],
+    "titleI18n": "font_weight",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global",
+    "boundVariables": [
+      "--content-links-hover-font-weight"
+    ]
+  */
   --content-links-font-weight: 400;
   /* VoogStyle
     "pathI18n": ["content", "link", "hover"],
@@ -386,13 +386,13 @@
     "featured": true
   */
   --content-links-color: #818181;
- /* VoogStyle
-  "pathI18n": ["content", "link", "hover"],
-  "titleI18n": "color",
-  "type": "button",
-  "editor": "colorPicker",
-  "scope": "global",
-  "featured": true
-*/
+  /* VoogStyle
+    "pathI18n": ["content", "link", "hover"],
+    "titleI18n": "color",
+    "type": "button",
+    "editor": "colorPicker",
+    "scope": "global",
+    "featured": true
+  */
   --content-links-hover-color: black;
 }

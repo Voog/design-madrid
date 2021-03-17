@@ -35,13 +35,16 @@ body {
 .header .main-menu-toggler {
   color: var(--header-mainmenu-btn-color);
 }
+
 .header .main-menu-toggler:before, .header .main-menu-toggler:after,
 .header .main-menu-toggler span:before {
   background-color: var(--header-mainmenu-btn-color);
 }
+
 .header .main-menu-toggler:hover {
   color: var(--header-mainmenu-btn-hover-color);
 }
+
 .header .main-menu-toggler:hover:before, .header .main-menu-toggler:hover:after,
 .header .main-menu-toggler:hover span:before {
   background-color: var(--header-mainmenu-btn-hover-color);
@@ -82,6 +85,7 @@ footer.footer .footer-content a {
           text-decoration: var(--content-links-text-decoration);
   text-transform: var(--content-links-text-transform);
 }
+
 main .content-wrap .content-body a:hover,
 main .post-content a:hover,
 footer.footer .footer-content a:hover {
@@ -115,6 +119,7 @@ main .post-content a {
 .formatted h1 {
   color: var(--h1-color);
 }
+
 .formatted h1,
 .formatted h1 a,
 .formatted h1 a:hover {
@@ -128,10 +133,14 @@ main .post-content a {
           text-decoration: var(--h1-text-decoration);
   text-transform: var(--h1-text-transform);
 }
+
 .formatted h2 {
   color: var(--h2-color);
 }
-.formatted h2, .formatted h2 a, .formatted h2 a:hover {
+
+.formatted h2,
+.formatted h2 a,
+.formatted h2 a:hover {
   font-family: var(--font-main);
   font-size: var(--h2-font-size);
   font-style: var(--h2-font-style);
@@ -142,9 +151,11 @@ main .post-content a {
           text-decoration: var(--h2-text-decoration);
   text-transform: var(--h2-text-transform);
 }
+
 .formatted h3 {
   color: var(--h3-color);
 }
+
 .formatted h3,
 .formatted h3 a,
 .formatted h3 a:hover {
@@ -158,9 +169,11 @@ main .post-content a {
           text-decoration: var(--h3-text-decoration);
   text-transform: var(--h3-text-transform);
 }
+
 .main .formatted .custom-btn {
   color: var(--content-button-color);
 }
+
 .formatted .form_submit input,
 .formatted .submit,
 .formatted .custom-btn {
@@ -176,6 +189,7 @@ main .post-content a {
           text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
 }
+
 .formatted .form_submit input:hover,
 .formatted .submit:hover,
 .formatted .custom-btn:hover {
@@ -186,16 +200,19 @@ main .post-content a {
           text-decoration: var(--content-button-text-decoration);
   text-transform: var(--content-button-text-transform);
 }
+
 .formatted .form_submit input,
 .formatted .submit,
 .formatted .custom-btn:not(.custom-btn-disabled) {
   background-color: var(--content-button-background-color);
 }
+
 .formatted .form_submit input:hover,
 .formatted .submit:hover,
 .formatted .custom-btn:not(.custom-btn-disabled):hover {
   opacity: .7;
 }
+
 .formatted .comment-form h2,
 .formatted .comments h2 {
   font-size: 24px;
@@ -212,16 +229,19 @@ main .post-content a {
     font-size: calc(var(--h3-font-size) - 2px);
   }
 }
+
 .site-title {
   color: var(--header-site-title-color);
   font-style: var(--header-site-title-font-style);
   font-weight: var(--header-site-title-font-weight);
   text-transform: var(--header-site-title-text-transform);
 }
+
 .site-title .site-title-inner {
   -webkit-text-decoration: var(--header-site-title-text-decoration);
           text-decoration: var(--header-site-title-text-decoration);
 }
+
 .site-title a {
   color: black;
 }
@@ -234,11 +254,13 @@ main .post-content a {
           text-decoration: var(--header-mainmenu-text-decoration);
   text-transform: var(--header-mainmenu-text-transform);
 }
+
 @media screen and (min-width: 501px) {
   .main-menu ul a {
     color: var(--header-mainmenu-color);
   }
 }
+
 .main-menu ul a:hover {
   font-style: var(--header-mainmenu-hover-font-style);
   font-weight: var(--header-mainmenu-hover-font-weight);
@@ -246,11 +268,13 @@ main .post-content a {
           text-decoration: var(--header-mainmenu-hover-text-decoration);
   text-transform: var(--header-mainmenu-hover-text-transform);
 }
+
 @media screen and (min-width: 501px) {
   .main-menu ul a:hover {
     color: var(--header-mainmenu-hover-color);
   }
 }
+
 .main-menu ul a.active {
   font-style: var(--header-mainmenu-active-font-style);
   font-weight: var(--header-mainmenu-active-font-weight);
@@ -258,6 +282,7 @@ main .post-content a {
           text-decoration: var(--header-mainmenu-active-text-decoration);
   text-transform: var(--header-mainmenu-active-text-transform);
 }
+
 @media screen and (min-width: 501px) {
   .main-menu ul a.active {
     color: var(--header-mainmenu-active-color);
@@ -273,6 +298,7 @@ main .post-content a {
           text-decoration: var(--content-submenu-text-decoration);
   text-transform: var(--content-submenu-text-transform);
 }
+
 .sub-menu a:hover {
   color: var(--content-submenu-hover-color);
   font-style: var(--content-submenu-hover-font-style);
@@ -281,6 +307,7 @@ main .post-content a {
           text-decoration: var(--content-submenu-hover-text-decoration);
   text-transform: var(--content-submenu-hover-text-transform);
 }
+
 .sub-menu a.active {
   color: var(--content-submenu-active-color);
   font-style: var(--content-submenu-active-font-style);
@@ -293,12 +320,15 @@ main .post-content a {
 .menu-horizontal .menu-separator {
   color: var(--content-submenu-color);
 }
+
 .menu-horizontal.menu-breadcrumbs .menu-item a {
   color: var(--content-submenu-color);
 }
+
 .menu-horizontal.menu-breadcrumbs .menu-item a:hover {
   color: var(--content-submenu-hover-color);
 }
+
 .menu-horizontal.menu-breadcrumbs .current.menu-item a {
   color: var(--content-submenu-active-color);
 }
@@ -306,6 +336,7 @@ main .post-content a {
 .footer {
   background-color: var(--footer-background-color);
 }
+
 .footer .footer-content {
   color: var(--footer-text-color);
   font-size: var(--footer-font-size);
@@ -317,6 +348,7 @@ main .post-content a {
           text-decoration: var(--footer-text-decoration);
   text-transform: var(--footer-text-transform);
 }
+
 .footer .lang-menu-btn .lang-title {
   color: var(--footer-text-color);
 }
@@ -325,18 +357,19 @@ main .post-content a {
   .site-title {
     font-size: var(--header-site-title-font-size);
   }
-
   .blog-list-page .main .article,
   .blog-list-page .main .new-article {
     width: var(--blog-list-article-width);
   }
 }
+
 .blog-list-page .main .article .article-content,
 .blog-list-page .main .new-article .article-content {
   text-align: var(--blog-list-alignment);
   left: var(--blog-list-padding);
   right: var(--blog-list-padding);
 }
+
 .blog-list-page .main .article h2,
 .blog-list-page .main .new-article h2 {
   color: var(--blog-list-headings-color);
@@ -348,6 +381,7 @@ main .post-content a {
           text-decoration: var(--blog-list-headings-text-decoration);
   text-transform: var(--blog-list-headings-text-transform);
 }
+
 .blog-list-page .main .article .article-date,
 .blog-list-page .main .new-article .article-date {
   color: var(--blog-list-date-color);
@@ -362,6 +396,7 @@ main .post-content a {
 main .content table {
   background-color: var(--table-background-color);
 }
+
 main .content table td,
 main .content table th {
   border-style: var(--table-border-style);

@@ -57,6 +57,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/add-page-button.tpl",
+      "layout_name": "add-page-button",
+      "title": "add-page-button"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/menu-level-1-link.tpl",
       "layout_name": "menu-level-1-link",
       "title": "menu-level-1-link"

@@ -15,6 +15,12 @@
 @import 'components/site_header';
 @import 'components/site-signout';
 
+// LAYOUTS
+@import 'layouts/auto-generated-product';
+
+// BROWSER-SPECIFIC HACKS
+@import 'browser-hacks';
+
 // nulling
 %nulling {
   margin: 0;
@@ -179,13 +185,16 @@ blockquote {
     cursor: pointer;
   }
 
-  &-disabled {
+  &-disabled,
+  &-disabled.edy-buy-button-disabled {
     // scss-lint:disable NestingDepth
-    .public & {
-      cursor: default;
+    cursor: default;
+    background-color: rgba($disabled-color, 1);
+    // scss-lint:enable NestingDepth
+
+    &:hover {
       background-color: rgba($disabled-color, 1);
     }
-    // scss-lint:enable NestingDepth
   }
 }
 
@@ -2754,7 +2763,7 @@ $header-inner-height: 28px;
 }
 
 @media screen and (min-width: 641px) {
-  .item-page .content-body {
+  .item-page .content-body:not(.js-product-content-right) {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;

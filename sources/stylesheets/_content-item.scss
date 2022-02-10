@@ -77,6 +77,10 @@
   position: relative;
   @include aspect-ratio(1, 1);
 
+  .editmode & {
+    cursor: pointer;
+  }
+
   &:hover {
     .btn,
     .edy-img-drop-area-remove-image {
@@ -195,7 +199,6 @@
     }
 
     .with-image & {
-      background-color: rgba($color-black, .05);
       border: 0;
     }
 
@@ -207,6 +210,12 @@
       .dark-background & {
         border-color: rgba($color-white, .1);
       }
+    }
+
+    &.product-page-image > .item-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     .item-placeholder {

@@ -1,6 +1,6 @@
 /* Voog.com template: Madrid */
 .formatted .edy-buy-button-container .form_field {
-  padding-top: 12px;
+  padding: 12px 0;
 }
 
 .formatted .edy-buy-button-container .form_field label {
@@ -294,6 +294,67 @@
   margin-top: 3px;
 }
 
+.product-content {
+  margin-top: 16px;
+}
+
+.product-content .without-image .item-top {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image: url("../assets/ico-placeholder.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+
+.product-content .product-price {
+  padding: 12px 0 24px;
+}
+
+.product-content .product-price .price-separator {
+  padding: 0 4px;
+}
+
+.product-content .content-gallery {
+  padding: 24px 0;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.flex-col .content-illustrations,
+.flex-col .content-body {
+  max-width: 100%;
+}
+
+.flex-col .content-body {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 104px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  img {
+    image-rendering: -webkit-optimize-contrast !important;
+  }
+}
+
+/* Unset for Safari 11+ */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+    img {
+      image-rendering: unset !important;
+    }
+  }
+}
+
 ul,
 ol, ul li,
 ol li, html,
@@ -462,8 +523,12 @@ blockquote {
   cursor: pointer;
 }
 
-.public .custom-btn-disabled {
+.custom-btn-disabled, .custom-btn-disabled.edy-buy-button-disabled {
   cursor: default;
+  background-color: #cccccc;
+}
+
+.custom-btn-disabled:hover, .custom-btn-disabled.edy-buy-button-disabled:hover {
   background-color: #cccccc;
 }
 
@@ -3227,7 +3292,7 @@ body {
 }
 
 @media screen and (min-width: 641px) {
-  .item-page .content-body {
+  .item-page .content-body:not(.js-product-content-right) {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -3483,6 +3548,10 @@ body {
   left: 0;
 }
 
+.editmode .item-top {
+  cursor: pointer;
+}
+
 .item-top:hover .btn,
 .item-top:hover .edy-img-drop-area-remove-image {
   opacity: 1;
@@ -3606,7 +3675,6 @@ body {
 }
 
 .with-image .item-top .top-inner {
-  background-color: rgba(0, 0, 0, 0.05);
   border: 0;
 }
 
@@ -3618,6 +3686,13 @@ body {
 
 .dark-background .without-image .item-top .top-inner {
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+.item-top .top-inner.product-page-image > .item-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .item-top .top-inner .item-placeholder {

@@ -441,3 +441,30 @@ main .content table th {
 label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--form-field-text-color);
 }
+
+.item-page .product-price {
+  color: var(--content-area-product-price__color);
+  font-size: var(--content-area-product-price__font-size);
+  font-weight: var(--content-area-product-price__font-weight);
+  font-style: var(--content-area-product-price__font-style);
+  -webkit-text-decoration: var(--content-area-product-price__text-decoration);
+          text-decoration: var(--content-area-product-price__text-decoration);
+}
+
+.item-page .product-description {
+  color: var(--content-area-product-description__color);
+  font-size: var(--content-area-product-description__font-size);
+  font-weight: var(--content-area-product-description__font-weight);
+  font-style: var(--content-area-product-description__font-style);
+  -webkit-text-decoration: var(--content-area-product-description__text-decoration);
+          text-decoration: var(--content-area-product-description__text-decoration);
+}
+
+.item-page .content-item-title h1 {
+  color: var(--content-area-product-title__color);
+  font-size: var(--content-area-product-title__font-size);
+  font-weight: var(--content-area-product-title__font-weight);
+  font-style: var(--content-area-product-title__font-style);
+  -webkit-text-decoration: var(--content-area-product-title__text-decoration);
+          text-decoration: var(--content-area-product-title__text-decoration);
+}

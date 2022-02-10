@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
-<html class="content-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
+<html class="content-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "html-head" %}
   {% include "edicy-tools-variables" %}
@@ -52,7 +52,7 @@
                       {% endif %}
 
                       <div class="content-item-box {{ item_image_state }} js-content-item-box">
-                        <div class="item-top">
+                        <div class="item-top product-image">
                           {%- if product.image != blank -%}
                             <div class="top-inner aspect-ratio-inner product-page">
                               {%- assign image_class = "item-image not-cropped" -%}
@@ -124,6 +124,11 @@
   {% include "langmenu-mobile" %}
   {% include "site-signout" %}
   {% include "javascripts" %}
-  <script>template && template.handleProductPageContent();</script>
+  <script>
+    template && template.handleProductPageContent();
+    {% if product and editmode -%}
+      template && template.handleProductImageClick({{ product.id }});
+    {% endif -%}
+  </script>
 </body>
 </html>

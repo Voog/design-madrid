@@ -1214,6 +1214,18 @@ $.fn[ pluginName ] = function ( arg ) {
   };
 
   // ===========================================================================
+  // Opens product admin view on product image click
+  // ===========================================================================
+
+  var handleProductImageClick = function(product_id) {
+    if (editmode()) {
+      $('.product-content .product-image').click(function() {
+        window.open('/admin/ecommerce/products/' + product_id, '_blank').focus();
+      });
+    }
+  };
+
+  // ===========================================================================
   // Function to detect if site is displayed in editmode.
   // ===========================================================================
   var editmode = function () {
@@ -1242,7 +1254,8 @@ $.fn[ pluginName ] = function ( arg ) {
     bindRootItemSettings: bindRootItemSettings,
     bindContentItemImgDropAreas: bindContentItemImgDropAreas,
     bindContentItemImageCropToggle: bindContentItemImageCropToggle,
-    handleProductPageContent: handleProductPageContent
+    handleProductPageContent: handleProductPageContent,
+    handleProductImageClick: handleProductImageClick
   });
 
   // ===========================================================================

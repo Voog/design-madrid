@@ -3548,6 +3548,10 @@ body {
   left: 0;
 }
 
+[data-view-state="editmode"] .item-top {
+  cursor: pointer;
+}
+
 .item-top:hover .btn,
 .item-top:hover .edy-img-drop-area-remove-image {
   opacity: 1;

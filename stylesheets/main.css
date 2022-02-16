@@ -3760,10 +3760,6 @@ body {
   margin-bottom: 20px;
 }
 
-.item-page .content-header .content-item-title h1 {
-  text-align: left;
-}
-
 @media screen and (max-width: 500px), screen and (max-height: 325px) {
   .item-page .sub-menu,
   .item-list-page .sub-menu {

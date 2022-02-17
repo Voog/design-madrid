@@ -338,6 +338,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 104px;
+  z-index: 10601;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
@@ -3757,10 +3758,6 @@ body {
 
 .item-page .content-header {
   margin-bottom: 20px;
-}
-
-.item-page .content-header .content-item-title h1 {
-  text-align: left;
 }
 
 @media screen and (max-width: 500px), screen and (max-height: 325px) {

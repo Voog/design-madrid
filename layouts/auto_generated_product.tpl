@@ -22,7 +22,7 @@
 
 {%- assign gallery_content_size = gallery_content_html | strip | size -%}
 
-<body class="item-page main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
+<body class="item-page product-page main-menu-not-fitting{% if site.search.enabled %} search-enabled{% endif %}">
   {% include "template-svg-spritesheet" %}
 
   <div class="holder">

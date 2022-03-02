@@ -170,13 +170,15 @@ main .post-content a {
   text-transform: var(--h3-text-transform);
 }
 
-.main .formatted .custom-btn {
+.main .formatted .custom-btn, .main
+.formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   color: var(--content-button-color);
 }
 
 .formatted .form_submit input,
 .formatted .submit,
-.formatted .custom-btn {
+.formatted .custom-btn,
+.formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   color: var(--content-button-color);
   font-family: var(--font-main);
   font-size: var(--content-button-font-size);
@@ -192,7 +194,8 @@ main .post-content a {
 
 .formatted .form_submit input:hover,
 .formatted .submit:hover,
-.formatted .custom-btn:hover {
+.formatted .custom-btn:hover,
+.formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   font-style: var(--content-button-font-style);
   font-weight: var(--content-button-font-weight);
   color: var(--content-button-color);
@@ -203,13 +206,16 @@ main .post-content a {
 
 .formatted .form_submit input,
 .formatted .submit,
-.formatted .custom-btn:not(.custom-btn-disabled) {
+.formatted .custom-btn:not(.custom-btn-disabled),
+.formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   background-color: var(--content-button-background-color);
 }
 
 .formatted .form_submit input:hover,
 .formatted .submit:hover,
-.formatted .custom-btn:not(.custom-btn-disabled):hover {
+.formatted .custom-btn:not(.custom-btn-disabled):hover,
+.formatted .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
+  background-color: var(--content-button-background-color);
   opacity: .7;
 }
 

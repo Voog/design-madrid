@@ -191,7 +191,8 @@ main .post-content {
     }
   }
 
-  .custom-btn {
+  .custom-btn,
+  .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
     .main & {
       color: var(--content-button-color);
     }
@@ -199,7 +200,8 @@ main .post-content {
 
   .form_submit input,
   .submit,
-  .custom-btn {
+  .custom-btn,
+  .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
     color: var(--content-button-color);
     font-family: var(--font-main);
     font-size: var(--content-button-font-size);
@@ -226,10 +228,12 @@ main .post-content {
 
   .form_submit input,
   .submit,
-  .custom-btn:not(.custom-btn-disabled) {
+  .custom-btn:not(.custom-btn-disabled),
+  .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
     background-color: var(--content-button-background-color);
 
     &:hover {
+      background-color: var(--content-button-background-color);
       opacity: .7;
     }
   }

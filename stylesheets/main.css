@@ -496,7 +496,8 @@ blockquote {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.custom-btn {
+.custom-btn,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   display: inline-block;
   padding: 12px;
   font-family: "Montserrat", sans-serif;
@@ -506,30 +507,39 @@ blockquote {
   background: #2b2b2b;
 }
 
-.custom-btn::-moz-focus-inner {
+.custom-btn::-moz-focus-inner,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-.custom-btn, .custom-btn:hover {
+.custom-btn, .custom-btn:hover,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   color: white;
 }
 
-.custom-btn:hover {
+.custom-btn:hover,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   background-color: #2b2b2b;
   background-color: rgba(43, 43, 43, 0.8);
 }
 
-.public .custom-btn {
+.public .custom-btn, .public
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   cursor: pointer;
 }
 
-.custom-btn-disabled, .custom-btn-disabled.edy-buy-button-disabled {
+.custom-btn-disabled, .custom-btn-disabled.edy-buy-button-disabled,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled.edy-buy-button-disabled {
   cursor: default;
   background-color: #cccccc;
 }
 
-.custom-btn-disabled:hover, .custom-btn-disabled.edy-buy-button-disabled:hover {
+.custom-btn-disabled:hover, .custom-btn-disabled.edy-buy-button-disabled:hover,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled:hover,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled.edy-buy-button-disabled:hover {
   background-color: #cccccc;
 }
 
@@ -1327,7 +1337,8 @@ body {
   text-decoration: none;
 }
 
-.main .content-half .custom-btn {
+.main .content-half .custom-btn,
+.main .content-half .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   text-decoration: none;
   color: white;
 }
@@ -1336,16 +1347,19 @@ body {
   color: white;
 }
 
-.main .content-half .dark-background .custom-btn {
+.main .content-half .dark-background .custom-btn,
+.main .content-half .dark-background .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   color: black;
   background-color: white;
 }
 
-.main .content-half .dark-background .custom-btn:hover {
+.main .content-half .dark-background .custom-btn:hover,
+.main .content-half .dark-background .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.public .main .content-half .dark-background .custom-btn-disabled {
+.public .main .content-half .dark-background .custom-btn-disabled, .public
+.main .content-half .dark-background .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled {
   color: white;
   background-color: #cccccc;
 }

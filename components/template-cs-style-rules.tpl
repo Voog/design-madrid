@@ -448,7 +448,7 @@ label .form_field_radio:checked + .form_control_indicator::before {
   background-color: var(--form-field-text-color);
 }
 
-.item-page .product-price {
+.product-page .product-price {
   color: var(--content-area-product-price__color);
   font-size: var(--content-area-product-price__font-size);
   font-weight: var(--content-area-product-price__font-weight);
@@ -457,7 +457,7 @@ label .form_field_radio:checked + .form_control_indicator::before {
           text-decoration: var(--content-area-product-price__text-decoration);
 }
 
-.item-page .product-description {
+.product-page .product-description {
   color: var(--content-area-product-description__color);
   font-size: var(--content-area-product-description__font-size);
   font-weight: var(--content-area-product-description__font-weight);
@@ -466,7 +466,7 @@ label .form_field_radio:checked + .form_control_indicator::before {
           text-decoration: var(--content-area-product-description__text-decoration);
 }
 
-.item-page .content-item-title h1 {
+.product-page .content-item-title h1 {
   color: var(--content-area-product-title__color);
   font-size: var(--content-area-product-title__font-size);
   font-weight: var(--content-area-product-title__font-weight);
@@ -474,4 +474,51 @@ label .form_field_radio:checked + .form_control_indicator::before {
   -webkit-text-decoration: var(--content-area-product-title__text-decoration);
           text-decoration: var(--content-area-product-title__text-decoration);
   text-align: var(--content-area-product-title__alignment);
+}
+
+.dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-title,
+.dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-link {
+  color: var(--fourth-color);
+}
+
+.dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-price,
+.dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-description {
+  color: var(--fourth-color);
+  opacity: .7;
+}
+
+.dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-top-outer .edy-product-widget-item-top.edy-product-widget-item-without-image {
+  border: 1px solid var(--fourth-color);
+  opacity: .5;
+}
+
+.dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-flex-wrap .edy-product-widget-item-out-of-stock,
+.dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-flex-wrap .edy-product-widget-item-btn {
+  color: var(--fourth-color);
+}
+
+.dark-background .edy-product-widget-grid .edy-product-widget-item:hover .edy-product-widget-item-price {
+  opacity: 0;
+}
+
+.dark-background .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-header .edy-product-widget-item-title .edy-product-widget-item-link {
+  color: var(--fourth-color);
+}
+
+.dark-background .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-header .edy-product-widget-item-price {
+  color: var(--fourth-color);
+  opacity: .7;
+}
+
+.dark-background .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-header .edy-product-widget-item-out-of-stock {
+  color: var(--fourth-color);
+}
+
+.dark-background .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-description {
+  color: var(--fourth-color);
+}
+
+.dark-background .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-without-image {
+  border: 1px solid var(--fourth-color);
+  opacity: .5;
 }

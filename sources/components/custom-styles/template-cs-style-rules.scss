@@ -613,3 +613,24 @@ label {
     }
   }
 }
+
+.edy-product-widget-filters {
+  color: var(--second-color);
+
+  .dark-background & {
+    color: var(--fourth-color);
+  }
+}
+
+.edy-product-widget-filter-sort option {
+  color: var(--second-color);
+}
+
+.dark-background {
+  .edy-product-widget-filter-name,
+  .edy-product-widget-filter-sort,
+  .edy-product-widget-filter-label,
+  .edy-product-widget-filter-search-input {
+    color: var(--fourth-color);
+  }
+}

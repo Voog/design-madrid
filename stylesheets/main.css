@@ -341,6 +341,15 @@
   z-index: 10601;
 }
 
+.dark-background .edy-product-widget-filter-sort,
+.dark-background .edy-product-widget-filter-search-input {
+  opacity: .7;
+}
+
+.dark-background .edy-product-widget-filter-label {
+  opacity: .5;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   img {
     image-rendering: -webkit-optimize-contrast !important;

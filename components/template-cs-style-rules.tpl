@@ -522,3 +522,22 @@ label .form_field_radio:checked + .form_control_indicator::before {
   border: 1px solid var(--fourth-color);
   opacity: .5;
 }
+
+.edy-product-widget-filters {
+  color: var(--second-color);
+}
+
+.dark-background .edy-product-widget-filters {
+  color: var(--fourth-color);
+}
+
+.edy-product-widget-filter-sort option {
+  color: var(--second-color);
+}
+
+.dark-background .edy-product-widget-filter-name,
+.dark-background .edy-product-widget-filter-sort,
+.dark-background .edy-product-widget-filter-label,
+.dark-background .edy-product-widget-filter-search-input {
+  color: var(--fourth-color);
+}

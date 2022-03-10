@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-{% include "template-variables" %}
-{% include "blog-article-variables" %}
-{% include "blog-settings-variables" %}
+{%- include "template-settings" -%}
+{%- include "template-variables" -%}
+{%- include "blog-article-variables" -%}
+{%- include "blog-settings-variables" -%}
 <html class="content-page {% if editmode %}editmode{% else %}public{% endif %}" lang="{{ page.language_code }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "edicy-tools-variables" %}

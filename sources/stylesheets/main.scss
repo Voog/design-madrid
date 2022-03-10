@@ -158,7 +158,8 @@ blockquote {
   }
 }
 
-.custom-btn {
+.custom-btn,
+.edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   display: inline-block;
   padding: 12px;
   font-family: $font-main;
@@ -969,7 +970,8 @@ $header-inner-height: 28px;
       }
     }
 
-    .custom-btn {
+    .custom-btn,
+    .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
       text-decoration: none;
       color: rgba($white, 1);
     }
@@ -980,7 +982,8 @@ $header-inner-height: 28px;
       }
 
       // scss-lint:disable NestingDepth
-      .custom-btn {
+      .custom-btn,
+      .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
         color: rgba($black, 1);
         background-color: rgba($white, 1);
 

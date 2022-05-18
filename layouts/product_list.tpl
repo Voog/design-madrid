@@ -21,7 +21,8 @@
           <div class="wrap">
 
             <div class="content formatted cfx" {{ edy_intro_edit_text }}>
-              <div class="content-body intro-content formatted" data-search-indexing-allowed="true">{% content %}</div>
+              {%- assign content_default_title = "content" | lce -%}
+              <div class="content-body intro-content formatted" data-search-indexing-allowed="true">{% content title=content_default_title %}</div>
 
               {% include "menu-breadcrumbs" %}
               <section class="content-item-boxes">

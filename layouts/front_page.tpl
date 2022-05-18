@@ -12,6 +12,7 @@
   <div class="holder">
 
     {% include "header" %}
+    {%- assign content_default_title = "content" | lce -%}
 
     <main class="main" data-search-indexing-allowed="true">
       <div class="main-inner">
@@ -20,7 +21,8 @@
           <div class="background-color js-background-color"></div>
           <div class="inner js-background-type {{ content_left_bg_type }}">
             <div class="align-middle">
-              <div class="content formatted cfx" {{ edy_intro_edit_text }}>{% content %}</div>
+
+              <div class="content formatted cfx" {{ edy_intro_edit_text }}>{% content title=content_default_title %}</div>
             </div>
           </div>
         </div>
@@ -30,7 +32,7 @@
           <div class="background-color js-background-color"></div>
           <div class="inner js-background-type {{ content_right_bg_type }}">
             <div class="align-middle">
-              <div class="content formatted cfx">{% content name="default" %}</div>
+              <div class="content formatted cfx">{% content name="default" title=content_default_title %}</div>
             </div>
           </div>
         </div>

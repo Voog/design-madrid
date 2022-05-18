@@ -10,8 +10,8 @@
                   {% include "langmenu" %}
                 </div>
                 <div class="tbl-cell">
-
-                  <div class="formatted">{% xcontent name="footer" %}</div>
+                  {%- assign footer_content_title_tooltip = "content_tooltip_all_pages_same_language" | lce -%}
+                  <div class="formatted">{% xcontent name="footer" title_tooltip=footer_content_title_tooltip %}</div>
 
                   <div class="voog-reference">
                     {% loginblock %}

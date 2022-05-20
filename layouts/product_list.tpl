@@ -20,9 +20,10 @@
           {% endif %}
           <div class="wrap">
 
-            <div class="content formatted cfx" {{ edy_intro_edit_text }}>
+            <div class="content formatted cfx">
               {%- assign content_default_title = "content" | lce -%}
-              <div class="content-body intro-content formatted" data-search-indexing-allowed="true">{% content title=content_default_title %}</div>
+              {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+              <div class="content-body intro-content formatted" data-search-indexing-allowed="true">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</div>
 
               {% include "menu-breadcrumbs" %}
               <section class="content-item-boxes">

@@ -23,7 +23,8 @@
               <div class="content-header">{% contentblock name="content_header" publish_default_content="true" title=page_title_content_title title_tooltip=page_title_content_title_tooltip %}<h1>{{ page.title }}</h1>{% endcontentblock %}</div>
               {% include "submenu" exclude_products: true %}
               {%- assign content_default_title = "content" | lce -%}
-              <div class="content-body" {{ edy_intro_edit_text }}>{% content title=content_default_title %}</div>
+              {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+              <div class="content-body">{% content title=content_default_title title_tooltip=content_default_title_tooltip %}</div>
             </div>
           </div>
         </div>

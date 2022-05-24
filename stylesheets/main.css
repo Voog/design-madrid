@@ -318,6 +318,10 @@
   padding: 24px 0;
 }
 
+.product-content .product-cross-page-info {
+  margin-bottom: 32px;
+}
+
 .flex-col {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2763,10 +2767,6 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-
-.content-half .edy-empty-bordered {
-  padding: 63px 40px 57px;
 }
 
 @media screen and (max-width: 600px) {

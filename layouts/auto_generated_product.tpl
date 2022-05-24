@@ -119,7 +119,7 @@
                         {%- assign content_title = "content" | lce -%}
                         {%- assign content_title_tooltip = "content_tooltip_specific_page" | lce -%}
                         {% content bind=product title=content_title title_tooltip=content_title_tooltip %}
-                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

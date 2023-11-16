@@ -75,6 +75,13 @@ main .post-content {
   line-height: var(--content-line-height);
 }
 
+main .content-body .edy-buy-button-price-container .edy-buy-button-price-original,
+main .content-body .edy-buy-button-price-container .edy-buy-button-effective-price,
+main .post-content .edy-buy-button-price-container .edy-buy-button-price-original,
+main .post-content .edy-buy-button-price-container .edy-buy-button-effective-price {
+  color: var(--content-color);
+}
+
 main .content-wrap .content-body a,
 main .post-content a,
 footer.footer .footer-content a {
@@ -114,6 +121,11 @@ main .post-content a {
           text-decoration: var(--focus-area-text-decoration);
   text-transform: var(--focus-area-text-transform);
   vertical-align: var(--focus-area-vertical-alignment);
+}
+
+.main .content-half .content .edy-buy-button-price-container .edy-buy-button-price-original,
+.main .content-half .content .edy-buy-button-price-container .edy-buy-button-effective-price {
+  color: var(--focus-area-color);
 }
 
 .formatted h1 {
@@ -476,12 +488,24 @@ label .form_field_radio:checked + .form_control_indicator::before {
   text-align: var(--content-area-product-title__alignment);
 }
 
+.dark-background .edy-product-widget-item-price-original,
+.dark-background .edy-product-widget-item-price-final {
+  color: var(--fourth-color);
+}
+
+.dark-background .edy-product-widget-item-price-original {
+  opacity: .4;
+}
+
+.dark-background .edy-product-widget-item-price-final {
+  opacity: .7;
+}
+
 .dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-title,
 .dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-link {
   color: var(--fourth-color);
 }
 
-.dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-price,
 .dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-description {
   color: var(--fourth-color);
   opacity: .7;

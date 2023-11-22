@@ -8,6 +8,10 @@
   padding-bottom: 0;
 }
 
+.formatted .edy-buy-button-container .edy-buy-button-price-container .edy-buy-button-price-original {
+  opacity: .4;
+}
+
 .formatted .edy-buy-button-variants .form_field {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -310,8 +314,14 @@
   padding: 12px 0 24px;
 }
 
-.product-content .product-price .price-separator {
-  padding: 0 4px;
+.product-content .product-price .product-price-original {
+  display: inline-block;
+  padding-right: 4px;
+  opacity: .4;
+}
+
+.product-content .product-price .product-price-final {
+  display: inline-block;
 }
 
 .product-content .content-gallery {

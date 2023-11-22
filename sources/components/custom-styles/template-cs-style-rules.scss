@@ -86,15 +86,18 @@ blockquote,
   max-width: var(--main-width);
 }
 
-.content-page main .content.formatted {
-
-}
-
 main .content-body,
 main .post-content {
   color: var(--content-color);
   font-size: var(--content-font-size);
   line-height: var(--content-line-height);
+
+  .edy-buy-button-price-container {
+    .edy-buy-button-price-original,
+    .edy-buy-button-effective-price {
+      color: var(--content-color);
+    }
+  }
 }
 
 main .content-wrap .content-body,
@@ -136,6 +139,13 @@ main .post-content {
   text-decoration: var(--focus-area-text-decoration);
   text-transform: var(--focus-area-text-transform);
   vertical-align: var(--focus-area-vertical-alignment);
+
+  .edy-buy-button-price-container {
+    .edy-buy-button-price-original,
+    .edy-buy-button-effective-price {
+      color: var(--focus-area-color);
+    }
+  }
 }
 
 // Headings and content
@@ -532,6 +542,7 @@ label {
     font-style: var(--content-area-product-price__font-style);
     text-decoration: var(--content-area-product-price__text-decoration);
   }
+
   .product-description {
     color: var(--content-area-product-description__color);
     font-size: var(--content-area-product-description__font-size);
@@ -539,6 +550,7 @@ label {
     font-style: var(--content-area-product-description__font-style);
     text-decoration: var(--content-area-product-description__text-decoration);
   }
+
   .content-item-title h1 {
     color: var(--content-area-product-title__color);
     font-size: var(--content-area-product-title__font-size);
@@ -550,6 +562,19 @@ label {
 }
 
 .dark-background {
+  .edy-product-widget-item-price-original,
+  .edy-product-widget-item-price-final {
+    color: var(--fourth-color);
+  }
+
+  .edy-product-widget-item-price-original {
+    opacity: .4;
+  }
+
+  .edy-product-widget-item-price-final {
+    opacity: .7;
+  }
+
   .edy-product-widget-grid .edy-product-widget-item {
     .edy-product-widget-item-details-wrap {
       .edy-product-widget-item-title,
@@ -557,7 +582,6 @@ label {
         color: var(--fourth-color);
       }
 
-      .edy-product-widget-item-price,
       .edy-product-widget-item-description {
         color: var(--fourth-color);
         opacity: .7;

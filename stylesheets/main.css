@@ -302,7 +302,7 @@
   margin-top: 16px;
 }
 
-.product-content .without-image .item-top {
+.product-content .without-images .item-top {
   background-color: rgba(0, 0, 0, 0.05);
   background-image: url("../assets/ico-placeholder.svg");
   background-position: center;
@@ -4087,7 +4087,7 @@ body {
   left: 0;
 }
 
-.editmode .item-top {
+.editmode .item-top:not(.without-pointer) {
   cursor: pointer;
 }
 

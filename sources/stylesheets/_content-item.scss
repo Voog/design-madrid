@@ -77,8 +77,10 @@
   position: relative;
   @include aspect-ratio(1, 1);
 
-  .editmode & {
-    cursor: pointer;
+  &:not(.without-pointer) {
+    .editmode & {
+      cursor: pointer;
+    }
   }
 
   &:hover {

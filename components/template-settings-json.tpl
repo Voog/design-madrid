@@ -1,3 +1,3 @@
 {
-  "version": "madrid-2.4.1"
+  "version": "madrid-2.4.2"
 }
